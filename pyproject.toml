@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-exploration-thesis"
+version = "0.1.0"
+description = "Prompt optimization for strategic exploration in LLM guessing games"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.0,<3.0",
+    "python-dotenv>=1.0,<2.0",
+]
+
+[project.scripts]
+llm-explore = "llm_exploration_thesis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
