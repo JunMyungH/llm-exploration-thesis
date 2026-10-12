@@ -22,21 +22,60 @@ IMPORTANT INTERACTION RULE:
 - If making a final guess, phrase it as one yes-or-no question.
 """.strip()
 
+GUESS_MY_CITY_AGENT_PROTOCOL = """
+IMPORTANT INTERACTION RULE:
+- Output exactly ONE question per turn.
+- Do not answer your own question.
+- Do not simulate the other player or future turns.
+- Do not output multiple questions.
+- Do not use labels such as "Question:" or "Answer:".
+- Stop immediately after the single question and wait for the other player's reply.
+- While gathering information, do not directly ask for the name of the city or country.
+- Open-ended questions about geography, climate, culture, landmarks, cuisine, language, or other characteristics are allowed.
+- When making a final guess, make exactly one guess in the form:
+  "Is the city <city>, <country>?"
+""".strip()
+
+GUESS_MY_CITY_ENVIRONMENT_PROTOCOL = """
+IMPORTANT INTERACTION RULE:
+- Respond only to the player's current question.
+- Do not simulate the player or future turns.
+- Do not ask questions back to the player.
+- Keep the response concise.
+- Never reveal the name of the city or its country directly unless the player is explicitly making a guess that names them.
+- If the player correctly guesses the city, respond exactly with "Goal reached".
+- Otherwise, answer the current question truthfully without saying "Goal reached".
+""".strip()
+
+
 @dataclass(frozen=True)
 class Scenario:
     env: str
     agent: str
 
+
 class PaprikaGameConfig:
-    def __init__(self, name: str, data: dict[str, Any]) -> None:
+    def __init__(
+        self,
+        name: str,
+        data: dict[str, Any],
+    ) -> None:
         self.name = name
         self.data = data
 
     @property
     def max_turns(self) -> int:
-        return int(self.data.get("max_turns", 20))
+        return int(
+            self.data.get(
+                "max_turns",
+                20,
+            )
+        )
 
-    def scenarios(self, split: str) -> list[Scenario]:
+    def scenarios(
+        self,
+        split: str,
+    ) -> list[Scenario]:
         if split not in self.data:
             available = [
                 key
@@ -44,25 +83,32 @@ class PaprikaGameConfig:
                 if isinstance(value, list)
             ]
             raise ValueError(
-                f"Splict {split!r} does not exist. "
+                f"Split {split!r} does not exist. "
                 f"Available dataset splits: {available}"
             )
         raw_scenarios = self.data[split]
 
-        if not isinstance(raw_scenarios, list):
+        if not isinstance(
+            raw_scenarios,
+            list,
+        ):
             raise ValueError(
-                f"Split {split!r} is not a flat list of scenarios."
+                f"Split {split!r} is not a flat list "
+                "of scenarios."
             )
-        
+
         return [
             Scenario(
                 env=item["env"],
-                agent=item["agent"]
+                agent=item["agent"],
             )
             for item in raw_scenarios
         ]
 
-    def agent_prompt(self, scenario: Scenario) -> str:
+    def agent_prompt(
+        self,
+        scenario: Scenario,
+    ) -> str:
         prompt = self.data["agent"].format(
             agent=scenario.agent,
             env=scenario.env,
@@ -74,75 +120,126 @@ class PaprikaGameConfig:
                 + TWENTY_QUESTIONS_AGENT_PROTOCOL
             )
 
+        elif self.name == "guess_my_city":
+            prompt += (
+                "\n\n"
+                + GUESS_MY_CITY_AGENT_PROTOCOL
+            )
         return prompt
 
-    def environment_prompt(self, scenario: Scenario) -> str:
-        return self.data["env"].format(
+    def environment_prompt(
+        self,
+        scenario: Scenario,
+    ) -> str:
+        prompt = self.data["env"].format(
             agent=scenario.agent,
-            env=scenario.env
+            env=scenario.env,
         ).strip()
 
+        if self.name == "guess_my_city":
+            prompt += (
+                "\n\n"
+                + GUESS_MY_CITY_ENVIRONMENT_PROTOCOL
+            )
+        return prompt
+
     def environment_optional_message(
-            self,
-            scenario: Scenario
+        self,
+        scenario: Scenario,
     ) -> str | None:
-        template = self.data.get("env_optional_message")
+        template = self.data.get(
+            "env_optional_message"
+        )
 
         if template is None:
             return None
 
         return template.format(
             agent=scenario.agent,
-            env=scenario.env
+            env=scenario.env,
         ).strip()
 
     @property
-    def environment_default_response(self) -> str | None:
-        response = self.data.get("environment_default_response")
+    def environment_default_response(
+        self,
+    ) -> str | None:
+        response = self.data.get(
+            "environment_default_response"
+        )
 
         if response is None:
             return None
 
         return response.strip()
 
-    def judge_prompt(self, scenario: Scenario) -> str | None:
-        template = self.data.get("judge_prompt_agent")
-        
+    def judge_prompt(
+        self,
+        scenario: Scenario,
+    ) -> str | None:
+        template = self.data.get(
+            "judge_prompt_agent"
+        )
+
         if template is None:
             return None
-        
+
         return template.format(
             agent=scenario.agent,
-            env=scenario.env
+            env=scenario.env,
         ).strip()
 
-    def judge_suffix(self, scenario: Scenario) -> str:
-        return self.data["judge_prompt_suffix"].format(
+    def judge_suffix(
+        self,
+        scenario: Scenario,
+    ) -> str:
+        return self.data[
+            "judge_prompt_suffix"
+        ].format(
             agent=scenario.agent,
-            env=scenario.env
+            env=scenario.env,
         ).strip()
+
 
 def default_paprika_root() -> Path:
-    override = os.getenv("PAPRIKA_ROOT")
+    override = os.getenv(
+        "PAPRIKA_ROOT"
+    )
 
     if override:
-        return Path(override).expanduser().resolve()
+        return (
+            Path(override)
+            .expanduser()
+            .resolve()
+        )
 
-    repository_root = Path(__file__).resolve().parents[2]
+    repository_root = (
+        Path(__file__)
+        .resolve()
+        .parents[2]
+    )
 
-    return repository_root / "third_party" / "paprika"
+    return (
+        repository_root
+        / "third_party"
+        / "paprika"
+    )
+
 
 def load_game_config(
     game: str,
-    paprika_root: Path | None = None
+    paprika_root: Path | None = None,
 ) -> PaprikaGameConfig:
     if game not in SUPPORTED_GAMES:
         raise ValueError(
-            f"Unsupported game: {game!r}."
-            f"Supported games are: {sorted(SUPPORTED_GAMES)}."
+            f"Unsupported game: {game!r}. "
+            f"Supported games are: "
+            f"{sorted(SUPPORTED_GAMES)}."
         )
-        
-    root = paprika_root or default_paprika_root()
+
+    root = (
+        paprika_root
+        or default_paprika_root()
+    )
 
     config_path = (
         root
@@ -154,8 +251,10 @@ def load_game_config(
 
     if not config_path.exists():
         raise FileNotFoundError(
-            f"PAPARIKA config not found: \n{config_path}\n\n"
-            "Did you initialize the PAPRIKA git submodule?"
+            "PAPRIKA config not found:\n"
+            f"{config_path}\n\n"
+            "Did you initialize the "
+            "PAPRIKA git submodule?"
         )
 
     with config_path.open(
@@ -166,6 +265,5 @@ def load_game_config(
 
     return PaprikaGameConfig(
         name=game,
-        data=data
+        data=data,
     )
-
