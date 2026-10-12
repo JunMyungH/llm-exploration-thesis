@@ -21,12 +21,16 @@ class PaprikaGameConfig:
         self.name = name
         self.data = data
 
+    @property
+    def max_turns(self) -> int:
+        return int(self.data.get("max_turns", 20))
+
     def scenarios(self, split: str) -> list[Scenario]:
         if split not in self.data:
             available = [
                 key
                 for key, value in self.data.items()
-                if instance(value, list)
+                if isinstance(value, list)
             ]
             raise ValueError(
                 f"Splict {split!r} does not exist. "
@@ -42,10 +46,107 @@ class PaprikaGameConfig:
         return [
             Scenario(
                 env=item["env"],
-                    agent=item["agnet"],
+                agent=item["agnet"]
             )
-        for item in raw_scenarios
+            for item in raw_scenarios
         ]
 
-    def load_config(self) -> dict[str, Any]:
-        return self.data
+    def agent_prompt(self, scenario: Scenario) -> str:
+        return self.data["agent"].format(
+            agent=scenario.agent,
+            env=scenario.env
+        ).strip()
+
+    def environment_prompt(self, scenario: Scenario) -> str:
+        return self.data["env"].format(
+            gent=scenario.agent,
+            env=scenario.env
+        ).strip()
+
+    def environment_optional_message(
+            self,
+            scenario: Scenario
+    ) -> str | None:
+        template = self.data.get("env_optional_message")
+
+        if template is None:
+            return None
+
+        return template.format(
+            gent=scenario.agent,
+            env=scenario.env
+        ).strip()
+
+    @property
+    def environment_default_response(self) -> str | None:
+        response = self.data.get("environment_default_response")
+
+        if response is None:
+            return None
+
+        return response.strip()
+
+    def judge_prompt(self, scenario: Scenario) -> str | None:
+        template = self.data.get("judge_prompot_agent")
+        
+        if template is None:
+            return None
+        
+        return template.format(
+            gent=scenario.agent,
+            env=scenario.env
+        ).strip()
+
+    def judge_suffix(self, scenario: Scenario) -> str:
+        return self.data["judge_prompt_suffix"].format(
+            gent=scenario.agent,
+            env=scenario.env
+        ).strip()
+
+def default_paprika_root() -> Path:
+    override = os.getenv("PAPRIKA_ROOT")
+
+    if override:
+        return Path(override).expanduser().resolve()
+
+    repository_root = Path(__file__).resolve().parents[2]
+
+    return repository_root / "third_party" / "paprika"
+
+def load_game_config(
+    game: str,
+    paprika_root: Path | None = None
+) -> PaprikaGameConfig:
+    if game not in SUPPORTED_GAMES:
+        raise ValueError(
+            f"Unsupported game: {game!r}."
+            f"Supported games are: {sorted(SUPPORTED_GAMES)}."
+        )
+        
+    root = paprika_root or default_paprika_root()
+
+    config_path = (
+        root
+        / "llm_exploration"
+        / "game"
+        / "game_configs"
+        / SUPPORTED_GAMES[game]
+    )
+
+    if not config_path.exists():
+        raise FileNotFoundError(
+            f"PAPARIKA config not found: \n{config_path}\n\n"
+            "Did you initialize the PAPRIKA git submodule?"
+        )
+
+    with config_path.open(
+        "r",
+        encoding="utf-8,"
+    ) as file:
+        data = json.load(file)
+
+    return PaprikaGameConfig(
+        name=game,
+        data=data
+    )
+
