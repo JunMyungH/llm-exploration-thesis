@@ -11,6 +11,17 @@ SUPPORTED_GAMES = {
     "guess_my_city": "guess_my_city.json",
 }
 
+TWENTY_QUESTIONS_AGENT_PROTOCOL = """
+IMPORTANT INTERACTION RULE:
+- Output exactly ONE yes-or-no question per turn.
+- Do not answer your own question.
+- Do not simulate the environment or future turns.
+- Do not output multiple questions.
+- Do not use labels such as "Question:" or "Answer:".
+- Stop immediately after the single question.
+- If making a final guess, phrase it as one yes-or-no question.
+""".strip()
+
 @dataclass(frozen=True)
 class Scenario:
     env: str
@@ -52,10 +63,18 @@ class PaprikaGameConfig:
         ]
 
     def agent_prompt(self, scenario: Scenario) -> str:
-        return self.data["agent"].format(
+        prompt = self.data["agent"].format(
             agent=scenario.agent,
-            env=scenario.env
+            env=scenario.env,
         ).strip()
+
+        if self.name == "twenty_questions":
+            prompt += (
+                "\n\n"
+                + TWENTY_QUESTIONS_AGENT_PROTOCOL
+            )
+
+        return prompt
 
     def environment_prompt(self, scenario: Scenario) -> str:
         return self.data["env"].format(

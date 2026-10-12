@@ -27,6 +27,9 @@ def build_backend(
     model = os.getenv(f"{prefix}_MODEL")
     api_key = os.getenv(f"{prefix}_API_KEY")
     base_url = os.getenv(f"{prefix}_BASE_URL")
+    reasoning_effort = os.getenv(
+        f"{prefix}_REASONING_EFFORT"
+    )
 
     if model is None and fallback is not None:
         model = fallback.model
@@ -36,6 +39,9 @@ def build_backend(
 
     if base_url is None and fallback is not None:
         base_url = fallback.base_url
+
+    if reasoning_effort is None and fallback is not None:
+        reasoning_effort = fallback.reasoning_effort
 
     if not model:
         raise RuntimeError(
@@ -51,6 +57,7 @@ def build_backend(
         model=model,
         api_key=api_key,
         base_url=base_url,
+        reasoning_effort=reasoning_effort,
     )
 
 
