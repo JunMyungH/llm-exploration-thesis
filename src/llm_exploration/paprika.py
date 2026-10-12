@@ -46,7 +46,7 @@ class PaprikaGameConfig:
         return [
             Scenario(
                 env=item["env"],
-                agent=item["agnet"]
+                agent=item["agent"]
             )
             for item in raw_scenarios
         ]
@@ -59,7 +59,7 @@ class PaprikaGameConfig:
 
     def environment_prompt(self, scenario: Scenario) -> str:
         return self.data["env"].format(
-            gent=scenario.agent,
+            agent=scenario.agent,
             env=scenario.env
         ).strip()
 
@@ -73,7 +73,7 @@ class PaprikaGameConfig:
             return None
 
         return template.format(
-            gent=scenario.agent,
+            agent=scenario.agent,
             env=scenario.env
         ).strip()
 
@@ -87,19 +87,19 @@ class PaprikaGameConfig:
         return response.strip()
 
     def judge_prompt(self, scenario: Scenario) -> str | None:
-        template = self.data.get("judge_prompot_agent")
+        template = self.data.get("judge_prompt_agent")
         
         if template is None:
             return None
         
         return template.format(
-            gent=scenario.agent,
+            agent=scenario.agent,
             env=scenario.env
         ).strip()
 
     def judge_suffix(self, scenario: Scenario) -> str:
         return self.data["judge_prompt_suffix"].format(
-            gent=scenario.agent,
+            agent=scenario.agent,
             env=scenario.env
         ).strip()
 
@@ -141,7 +141,7 @@ def load_game_config(
 
     with config_path.open(
         "r",
-        encoding="utf-8,"
+        encoding="utf-8",
     ) as file:
         data = json.load(file)
 
