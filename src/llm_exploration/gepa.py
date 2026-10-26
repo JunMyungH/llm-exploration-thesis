@@ -157,46 +157,207 @@ def city_name_leaked(target: str, question: str, answer: str) -> bool:
 
 
 class EpisodeFeedback:
-    """A train/dev-only metric. Targets are used here, never in the agent input."""
+    """
+    Development-only GEPA optimization metric.
 
-    def __init__(self, game: str, scenarios: list[Scenario], max_turns: int) -> None:
+    Final benchmark metrics must still report actual success
+    separately from this shaped training reward.
+    """
+
+    def __init__(
+        self,
+        game: str,
+        scenarios: list[Scenario],
+        max_turns: int,
+    ) -> None:
         self.game = game
         self.scenarios = scenarios
         self.max_turns = max_turns
 
-    def __call__(self, gold, pred, trace=None, pred_name=None, pred_trace=None):
-        target = self.scenarios[int(gold.scenario_index)].env
+    def __call__(
+        self,
+        gold,
+        pred,
+        trace=None,
+        pred_name=None,
+        pred_trace=None,
+    ):
+        target = self.scenarios[
+            int(gold.scenario_index)
+        ].env
+
         questions = list(pred.questions)
         answers = list(pred.environment_answers)
         turns = int(pred.num_turns)
-        final_question = questions[-1] if questions else ""
-        correct_guess = explicitly_guessed(self.game, target, final_question)
-        success = bool(pred.environment_goal and correct_guess)
+        n = len(questions)
 
-        invalid = sum(q.count("?") != 1 or not q.strip().endswith("?") for q in questions)
-        normalized_questions = [normalize(q) for q in questions]
-        repeats = len(normalized_questions) - len(set(normalized_questions))
+        # Detect invalid question formats and exact repeats.
+        invalid_turns = []
+        repeated_pairs = []
+        first_seen = {}
+
+        for turn_number, question in enumerate(
+            questions, start=1
+        ):
+            valid = (
+                question.count("?") == 1
+                and question.strip().endswith("?")
+            )
+
+            if not valid:
+                invalid_turns.append(turn_number)
+
+            key = normalize(question)
+
+            if key in first_seen:
+                repeated_pairs.append(
+                    (turn_number, first_seen[key])
+                )
+            else:
+                first_seen[key] = turn_number
+
+        invalid_count = len(invalid_turns)
+        repeat_count = len(repeated_pairs)
+
+        valid_ratio = (
+            (n - invalid_count) / n
+            if n else 0.0
+        )
+
+        unique_ratio = (
+            len(first_seen) / n
+            if n else 0.0
+        )
+
+        # Verify that the last question explicitly guesses
+        # the hidden target.
+        final_question = questions[-1] if questions else ""
+
+        correct_guess = explicitly_guessed(
+            self.game,
+            target,
+            final_question,
+        )
+
+        success = bool(
+            pred.environment_goal and correct_guess
+        )
+
+        # Detect answer leakage in Guess My City.
         leaked = (
             self.game == "guess_my_city"
-            and any(city_name_leaked(target, q, a) for q, a in zip(questions, answers))
+            and any(
+                city_name_leaked(target, q, a)
+                for q, a in zip(questions, answers)
+            )
         )
 
-        score = (0.7 + 0.3 * (self.max_turns - turns) / self.max_turns) if success and not leaked else 0.0
-        score = max(0.0, score - 0.04 * invalid - 0.02 * repeats)
+        # Dense training reward:
+        # - Successful episodes: approximately 0.80–1.00
+        # - Failed episodes: 0.00–0.20
+        # - Leaked episodes: 0
+        #
+        # Success remains far more valuable than
+        # merely asking valid, non-repeated questions.
 
-        recent = [f"{i+1}. {q} -> {a}" for i, (q, a) in enumerate(zip(questions, answers))]
-        compact_trace = "\n".join(recent[-min(len(recent), 12):])
-        feedback = (
-            f"Game: {self.game}; success: {success}; turns: {turns}/{self.max_turns}; "
-            f"invalid questions: {invalid}; exact repeats: {repeats}; environment leakage: {leaked}.\n"
-            f"Recent interactions:\n{compact_trace}\n"
-            "Improve the strategy of selecting the next informative question while respecting all fixed game rules. "
-            "Do not assume the target is known to the agent."
-        )
+        quality = valid_ratio * unique_ratio
+
+        if leaked or n == 0:
+            score = 0.0
+
+        elif success:
+            speed = max(
+                0.0,
+                (self.max_turns - turns) / self.max_turns,
+            )
+
+            score = (
+                0.75
+                + 0.20 * speed
+                + 0.05 * quality
+            )
+
+        else:
+            score = 0.20 * quality
+
+        # Produce actionable feedback for GEPA reflection.
+        feedback_lines = [
+            f"Game: {self.game}",
+            f"Goal reached: {bool(pred.environment_goal)}",
+            f"Correct final guess: {correct_guess}",
+            f"Verified success: {success and not leaked}",
+            f"Turns: {turns}/{self.max_turns}",
+            f"Invalid question turns: {invalid_turns}",
+            f"Exact repeated questions: {repeat_count}",
+            f"Environment leakage: {leaked}",
+            f"Training reward: {score:.4f}",
+        ]
+
+        if repeated_pairs:
+            feedback_lines.append(
+                "\nRepeated questions:"
+            )
+
+            for current, original in repeated_pairs:
+                previous_answer = (
+                    answers[original - 1]
+                    if original <= len(answers)
+                    else "unknown"
+                )
+
+                feedback_lines.append(
+                    f"- Turn {current} repeated turn "
+                    f"{original}, already answered "
+                    f"{previous_answer!r}."
+                )
+
+        if invalid_turns:
+            feedback_lines.append(
+                "\nEach turn must contain exactly "
+                "one properly formatted question."
+            )
+
+        if not success:
+            feedback_lines.append(
+                "\nThe agent did not identify the target. "
+                "Improve the strategy for choosing "
+                "informative questions. "
+                "Track which hypotheses have been "
+                "excluded by previous answers. "
+                "Avoid cycling through minor variations "
+                "of the same unproductive hypothesis."
+            )
+
         if leaked:
-            feedback += "\nThis trajectory is invalid because the environment revealed the answer."
-        return dspy.Prediction(score=score, feedback=feedback)
+            feedback_lines.append(
+                "\nThe environment revealed protected "
+                "information. This trajectory is "
+                "not valid for success evaluation."
+            )
 
+        feedback_lines.append(
+            "\nDo not merely rewrite or restate the "
+            "fixed game rules. Focus on improving "
+            "question-selection strategy, information "
+            "gain, and the use of previous answers."
+        )
+
+        recent = [
+            f"{i}. {q} -> {a}"
+            for i, (q, a) in enumerate(
+                zip(questions, answers), start=1
+            )
+        ]
+
+        feedback_lines.append(
+            "\nRecent interactions:\n"
+            + "\n".join(recent[-12:])
+        )
+
+        return dspy.Prediction(
+            score=float(score),
+            feedback="\n".join(feedback_lines),
+        )
 
 def make_lm(prefix: str, *, max_tokens: int, temperature: float) -> dspy.LM:
     model = os.environ[f"{prefix}_MODEL"]
@@ -245,7 +406,7 @@ def main() -> None:
     trainset = [dspy.Example(scenario_index=i).with_inputs("scenario_index") for i in train_indices]
     valset = [dspy.Example(scenario_index=i).with_inputs("scenario_index") for i in val_indices]
 
-    dspy.configure(lm=make_lm("AGENT", max_tokens=256, temperature=0.7))
+    dspy.configure(lm=make_lm("AGENT", max_tokens=256, temperature=0.0))
     
     # Fall back to same Ollama model if a separate reflection model is not configured.
     for suffix in ("MODEL", "API_KEY", "BASE_URL", "REASONING_EFFORT"):
