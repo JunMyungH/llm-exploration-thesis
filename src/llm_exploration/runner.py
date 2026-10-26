@@ -54,6 +54,7 @@ class GuessingGameRunner:
         judge_top_p: float = 1.0,
         judge_max_tokens: int = 128,
         max_environment_attempts: int = 5,
+        use_judge: bool = True
     ) -> None:
         self.agent = agent
         self.environment = environment
@@ -72,6 +73,13 @@ class GuessingGameRunner:
         self.judge_max_tokens = judge_max_tokens
 
         self.max_environment_attempts = max_environment_attempts
+
+        self.use_judge - use_judge
+
+        if use_judge and judge is None:
+            raise ValueError(
+                "judge must be provided when use_judge=True"
+            )
 
     @staticmethod
     def _extract_twenty_questions_environment_response(
@@ -309,14 +317,15 @@ class GuessingGameRunner:
                 in extracted_environment_response.lower()
             )
 
-            first_judge_label, _ = (
-                self._run_judge(
+            if self.use_judge:
+                first_judge_label, _ = self._run_judge(
                     game_config,
                     scenario,
                     agent_response,
                 )
-            )
-
+            else:
+                first_judge_label = False
+                
             goal_reached = (
                 env_says_goal_reached
                 or first_judge_label
@@ -325,6 +334,9 @@ class GuessingGameRunner:
             # PAPRIKA performs an additional judge
             # verification when the game appears solved.
             if goal_reached:
+                if not self.use_judge:
+                    break
+
                 (
                     judge_label,
                     final_judge_messages,
