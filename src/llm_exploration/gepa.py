@@ -16,6 +16,10 @@ from llm_exploration.cli import build_backend
 from llm_exploration.paprika import PaprikaGameConfig, Scenario, load_game_config
 from llm_exploration.runner import GuessingGameRunner
 
+from dataclasses import asdict
+
+from llm_exploration.backend import OpenAICompatibleBackend
+
 
 class AskQuestion(dspy.Signature):
     """Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply."""
@@ -57,8 +61,14 @@ class GepaEpisode(dspy.Module):
         self.ask = dspy.Predict(AskQuestion)
         self.game_config = game_config
         self.scenarios = scenarios
-        self.environment = environment
-        self.judge = judge
+        self.environment_settings = asdict(environment)
+
+        self.judge_settings = (
+            asdict(judge)
+            if judge is not None
+            else None
+        )
+
         self.use_judge = use_judge
 
     def forward(self, scenario_index: int) -> dspy.Prediction:
@@ -69,18 +79,39 @@ class GepaEpisode(dspy.Module):
             raise ValueError("The agent prompt must never contain the hidden target")
         rules = self.game_config.agent_prompt(scenario)
         agent = DspyAgentBackend(self.ask, rules)
-        runner = GuessingGameRunner(
-            agent=agent,
-            environment=self.environment,
-            judge=self.judge,
-            use_judge=self.use_judge,
+
+        environment = OpenAICompatibleBackend(
+            **self.environment_settings
         )
-        result = runner.run(
-            game_config=self.game_config,
-            scenario=scenario,
-            split="train",
-            scenario_index=index,
-        )
+
+        judge = None
+
+        try:
+            if self.judge_settings is not None:
+                judge = OpenAICompatibleBackend(
+                    **self.judge_settings
+                )
+
+            runner = GuessingGameRunner(
+                agent=agent,
+                environment=environment,
+                judge=judge,
+                use_judge=self.use_judge,
+            )
+
+            result = runner.run(
+                game_config=self.game_config,
+                scenario=scenario,
+                split="train",
+                scenario_index=index,
+            )
+
+        finally:
+            environment.client.close()
+
+            if judge is not None:
+                judge.client.close()
+
         return dspy.Prediction(
             questions=[m["content"] for m in result.conversation if m["role"] == "assistant"],
             environment_answers=[m["content"] for m in result.env_conversation if m["role"] == "assistant"],
@@ -220,10 +251,30 @@ def main() -> None:
     for suffix in ("MODEL", "API_KEY", "BASE_URL", "REASONING_EFFORT"):
         os.environ.setdefault(f"REFLECTION_{suffix}", os.getenv(f"AGENT_{suffix}", ""))
     reflection_lm = make_lm("REFLECTION", max_tokens=4096, temperature=0.7)
-    environment = build_backend("ENV", fallback=build_backend("AGENT"))
-    judge = build_backend("JUDGE", fallback=environment) if args.use_judge else None
+    
+    agent_backend = build_backend("AGENT")
 
-    student = GepaEpisode(config, scenarios, environment, judge, use_judge=args.use_judge)
+    environment = build_backend("ENV", fallback=agent_backend)
+
+    judge = (build_backend("JUDGE", fallback=environment)
+        if args.use_judge
+        else None
+    )
+
+    student = GepaEpisode(
+        config,
+        scenarios,
+        environment,
+        judge,
+        use_judge=args.use_judge,
+    )
+
+    agent_backend.client.close()
+    environment.client.close()
+
+    if judge is not None:
+        judge.client.close()
+
     metric = EpisodeFeedback(args.game, scenarios, config.max_turns)
     output_dir = args.output_dir or (Path("results") / "gepa" / args.game / datetime.now().strftime("%Y%m%d_%H%M%S"))
     output_dir.mkdir(parents=True, exist_ok=True)

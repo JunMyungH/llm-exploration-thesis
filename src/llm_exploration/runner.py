@@ -74,7 +74,7 @@ class GuessingGameRunner:
 
         self.max_environment_attempts = max_environment_attempts
 
-        self.use_judge - use_judge
+        self.use_judge = use_judge
 
         if use_judge and judge is None:
             raise ValueError(
