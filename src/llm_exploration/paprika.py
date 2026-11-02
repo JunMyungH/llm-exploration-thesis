@@ -59,9 +59,16 @@ class PaprikaGameConfig:
         self,
         name: str,
         data: dict[str, Any],
+        prompt_mode: str = "extended",
     ) -> None:
+        if prompt_mode not in ("extended", "paprika"):
+            raise ValueError(
+                f"Unsupported prompt mode: {prompt_mode}"
+            )
+
         self.name = name
         self.data = data
+        self.prompt_mode = prompt_mode
 
     @property
     def max_turns(self) -> int:
@@ -109,11 +116,19 @@ class PaprikaGameConfig:
         self,
         scenario: Scenario,
     ) -> str:
+
+        # Read the original PAPRIKA prompt.
         prompt = self.data["agent"].format(
             agent=scenario.agent,
             env=scenario.env,
         ).strip()
 
+        # Return the untouched original prompt.
+        if self.prompt_mode == "paprika":
+            return prompt
+
+        # Extended mode: retain the additional
+        # interaction protocols.
         if self.name == "twenty_questions":
             prompt += (
                 "\n\n"
@@ -125,22 +140,28 @@ class PaprikaGameConfig:
                 "\n\n"
                 + GUESS_MY_CITY_AGENT_PROTOCOL
             )
+
         return prompt
 
     def environment_prompt(
         self,
         scenario: Scenario,
     ) -> str:
+
         prompt = self.data["env"].format(
             agent=scenario.agent,
             env=scenario.env,
         ).strip()
+
+        if self.prompt_mode == "paprika":
+            return prompt
 
         if self.name == "guess_my_city":
             prompt += (
                 "\n\n"
                 + GUESS_MY_CITY_ENVIRONMENT_PROTOCOL
             )
+
         return prompt
 
     def environment_optional_message(
@@ -228,7 +249,9 @@ def default_paprika_root() -> Path:
 def load_game_config(
     game: str,
     paprika_root: Path | None = None,
+    prompt_mode: str = "extended",
 ) -> PaprikaGameConfig:
+
     if game not in SUPPORTED_GAMES:
         raise ValueError(
             f"Unsupported game: {game!r}. "
@@ -266,4 +289,5 @@ def load_game_config(
     return PaprikaGameConfig(
         name=game,
         data=data,
+        prompt_mode=prompt_mode,
     )

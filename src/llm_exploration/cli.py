@@ -201,6 +201,23 @@ def parse_args() -> argparse.Namespace:
         default=None,
     )
 
+    parser.add_argument(
+    "--prompt-mode",
+    choices=("extended", "paprika"),
+    default="extended",
+    help=(
+        "extended: PAPRIKA prompts plus interaction rules; "
+        "paprika: original PAPRIKA JSON prompts only"
+        ),
+    )
+
+    parser.add_argument(
+        "--agent-max-tokens",
+        type=int,
+        default=128,
+        help="Maximum generation tokens for the agent.",
+    )
+
     return parser.parse_args()
 
 def save_json(
@@ -255,6 +272,7 @@ def main() -> None:
     game_config = load_game_config(
         game,
         paprika_root=args.paprika_root,
+        prompt_mode=args.prompt_mode,
     )
 
     scenarios = game_config.scenarios(
@@ -299,6 +317,7 @@ def main() -> None:
         agent=agent,
         environment=environment,
         judge=judge,
+        agent_max_tokens=args.agent_max_tokens,
     )
 
     timestamp = datetime.now().strftime(
@@ -311,6 +330,7 @@ def main() -> None:
             / game
             / (
                 f"{timestamp}_"
+                f"{args.prompt_mode}_"
                 f"{args.split}_"
                 f"n{runs}"
             )
@@ -340,6 +360,7 @@ def main() -> None:
     )
     print(f"Output: {output_dir}")
     print("=" * 60)
+    print(f"Prompt mode: {args.prompt_mode}")
 
     for run_number in range(
         1,
@@ -445,6 +466,11 @@ def main() -> None:
         "split": args.split,
         "runs": runs,
         "start_index": args.index,
+        "prompt_mode": args.prompt_mode,
+        "agent_max_tokens": args.agent_max_tokens,
+        "agent_reasoning_effort": agent.reasoning_effort,
+        "environment_reasoning_effort": environment.reasoning_effort,
+        "judge_reasoning_effort": judge.reasoning_effort,
         "repeat_same_scenario": (
             args.repeat_same_scenario
         ),
