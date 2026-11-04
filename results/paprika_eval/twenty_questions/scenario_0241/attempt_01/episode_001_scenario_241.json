@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 241,
+  "agent_game_scenario": "brand",
+  "env_game_scenario": "NVIDIA",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily associated with technology or electronics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing smartphones?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for making personal computers or laptops?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing gaming consoles or video games?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing televisions or home entertainment systems?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing audio equipment, such as headphones or speakers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing smart home devices or wearables (like fitness trackers or smartwatches)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing peripherals, such as keyboards, mice, or monitors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing software or operating systems?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing networking equipment, such as routers or modems?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing servers or enterprise data center hardware?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for its server hardware rather than storage solutions or networking gear?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Hewlett-Packard (specifically its enterprise server division, now HPE) or Dell?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand IBM?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Lenovo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Cisco?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Oracle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand HPE (Hewlett Packard Enterprise)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for manufacturing mainframe computers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Fujitsu?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is NVIDIA."
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily associated with technology or electronics?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing smartphones?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for making personal computers or laptops?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing gaming consoles or video games?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing televisions or home entertainment systems?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing audio equipment, such as headphones or speakers?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing smart home devices or wearables (like fitness trackers or smartwatches)?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing peripherals, such as keyboards, mice, or monitors?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing software or operating systems?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing networking equipment, such as routers or modems?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing servers or enterprise data center hardware?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for its server hardware rather than storage solutions or networking gear?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Hewlett-Packard (specifically its enterprise server division, now HPE) or Dell?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand IBM?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Lenovo?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Cisco?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Oracle?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand HPE (Hewlett Packard Enterprise)?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for manufacturing mainframe computers?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Fujitsu?\n(Remember the player is trying to guess a brand, and the correct answer is NVIDIA. Reply with Yes or No in relation to NVIDIA.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

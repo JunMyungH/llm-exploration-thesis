@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 313,
+  "agent_game_scenario": "weather",
+  "env_game_scenario": "Supercell",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a weather. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this weather phenomenon related to precipitation falling from the sky?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it solid precipitation?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it snow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it hail?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it sleet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it ice pellets?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it graupel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it rain?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it considered a severe weather event, such as a torrential downpour or part of a larger storm system?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically associated with a tropical cyclone (such as a hurricane or typhoon)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically associated with a thunderstorm?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically heavy rain associated with a microburst or downburst?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically heavy rain associated with a squall line?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically rain that is part of a tornado?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically heavy rain associated with a derecho?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically rain associated with a monsoon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it rain associated with a front, such as a cold front or warm front?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically rain associated with a tropical storm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically rain associated with a tropical depression?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it rain associated with a depression (low-pressure system)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a weather, and the correct answer is Supercell."
+    },
+    {
+      "role": "user",
+      "content": "Is this weather phenomenon related to precipitation falling from the sky?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it solid precipitation?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it snow?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it hail?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it sleet?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it ice pellets?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it graupel?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it rain?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it considered a severe weather event, such as a torrential downpour or part of a larger storm system?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically associated with a tropical cyclone (such as a hurricane or typhoon)?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically associated with a thunderstorm?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically heavy rain associated with a microburst or downburst?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically heavy rain associated with a squall line?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically rain that is part of a tornado?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically heavy rain associated with a derecho?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically rain associated with a monsoon?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it rain associated with a front, such as a cold front or warm front?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically rain associated with a tropical storm?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically rain associated with a tropical depression?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it rain associated with a depression (low-pressure system)?\n(Remember the player is trying to guess a weather, and the correct answer is Supercell. Reply with Yes or No in relation to Supercell.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

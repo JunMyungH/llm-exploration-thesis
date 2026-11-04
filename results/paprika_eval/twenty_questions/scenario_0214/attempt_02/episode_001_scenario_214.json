@@ -1,0 +1,198 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 214,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Hoodie",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 10,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an item of clothing that is worn on the feet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an item of clothing that covers the upper body (such as a shirt, jacket, or coat)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a garment that is typically worn on the upper body and has sleeves?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a garment that is typically worn by men and women for casual or formal occasions, such as a shirt or blouse?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a garment that is open at the front and worn over other clothes for warmth or style, such as a jacket or coat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sleeveless garment worn on the upper body, such as a vest or a tank top?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a garment traditionally associated with formal wear, such as a suit jacket or tuxedo top?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a loose-fitting upper-body garment that is pulled over the head, such as a sweater or hoodie?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a garment typically made of knit fabric, such as a sweater or pullover?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of sweater that has a hood?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Hoodie."
+    },
+    {
+      "role": "user",
+      "content": "Is it an item of clothing that is worn on the feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an item of clothing that covers the upper body (such as a shirt, jacket, or coat)?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a garment that is typically worn on the upper body and has sleeves?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a garment that is typically worn by men and women for casual or formal occasions, such as a shirt or blouse?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a garment that is open at the front and worn over other clothes for warmth or style, such as a jacket or coat?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sleeveless garment worn on the upper body, such as a vest or a tank top?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a garment traditionally associated with formal wear, such as a suit jacket or tuxedo top?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a loose-fitting upper-body garment that is pulled over the head, such as a sweater or hoodie?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a garment typically made of knit fabric, such as a sweater or pullover?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of sweater that has a hood?\n(Remember the player is trying to guess a clothing, and the correct answer is Hoodie. Reply with Yes or No in relation to Hoodie.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Hoodie in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct clothing, which is: Hoodie, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it a type of sweater that has a hood?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct clothing, which is Hoodie in this particular game. Reply with <VALID> only if the player has guessed Hoodie in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Hoodie is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

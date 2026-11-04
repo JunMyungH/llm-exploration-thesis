@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 20,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Bucket Hat",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an article of clothing worn on the feet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn on the upper body?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn on the head?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily used for protection from the weather (like sun or rain) rather than for warmth or fashion?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hat?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I guess it is a **hat**.\n\nWait, let me refine that. Since you confirmed it is worn on the head and primarily used for protection from the weather (sun/rain), but \"hat\" is a broad category, let's see if I can get more specific to ensure I have the exact item in mind, or if \"hat\" is sufficient.\n\nActually, the prompt asks me to guess the *name* of the thing. \"Hat\" is a valid guess. However, given the constraints of 20 Questions, usually, there is a specific item in mind. Let me try to narrow it down further"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of hat with a wide brim, often associated with sun protection (like a sun hat or sunbonnet)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a wide-brimmed hat specifically designed for gardening or outdoor work, often called a **sun hat** or **sunbonnet**?\n\n*(Self-correction: I should aim for a specific noun. Let's try to distinguish between a generic sun hat and something more specific like a cowboy hat or a fedora, or perhaps a rain hat like a poncho hood? No, poncho is not headwear primarily. Let's stick to hats.)*\n\nIs it a **cowboy hat**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **fedora**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **cap** with a visor (like a baseball cap)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **beanie**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **beret**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **straw hat**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **top hat**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **bonnet**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **hood**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **helmet**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **fedora**? (I asked this before, but let's try a different angle. I've ruled out most specific styles. Let's think about materials or specific cultural items.)\n\nIs it a **turban**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **beret**? (I asked this before, but let's try a different angle. I've ruled out most specific styles. Let's think about materials or specific cultural items.)\n\nIs it a **turban**? (I asked this before.)\n\nLet's step back. It's headwear, worn for sun/rain protection, but not a hat, cap, beanie, fedora, straw hat, top hat, bonnet, hood, helmet, or turban.\n\nIs it a **veil**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a **muffler**? (Note: In some regions, a muffler is a scarf, but sometimes head coverings are confused. However, a muffler is usually for the neck. Let's try something else.)\n\nIs it a **wide-brimmed rain hat** specifically known as a **slicker hat** or **oilskin hat**?\n\nActually, let's look at the \"protection from weather\" clue again. It's not a hat, cap, etc.\n\nIs it a **poncho** with an integrated hood? (Though I asked about hoods, a poncho is a full"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Bucket Hat."
+    },
+    {
+      "role": "user",
+      "content": "Is it an article of clothing worn on the feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn on the head?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily used for protection from the weather (like sun or rain) rather than for warmth or fashion?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hat?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I guess it is a **hat**.\n\nWait, let me refine that. Since you confirmed it is worn on the head and primarily used for protection from the weather (sun/rain), but \"hat\" is a broad category, let's see if I can get more specific to ensure I have the exact item in mind, or if \"hat\" is sufficient.\n\nActually, the prompt asks me to guess the *name* of the thing. \"Hat\" is a valid guess. However, given the constraints of 20 Questions, usually, there is a specific item in mind. Let me try to narrow it down further\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of hat with a wide brim, often associated with sun protection (like a sun hat or sunbonnet)?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a wide-brimmed hat specifically designed for gardening or outdoor work, often called a **sun hat** or **sunbonnet**?\n\n*(Self-correction: I should aim for a specific noun. Let's try to distinguish between a generic sun hat and something more specific like a cowboy hat or a fedora, or perhaps a rain hat like a poncho hood? No, poncho is not headwear primarily. Let's stick to hats.)*\n\nIs it a **cowboy hat**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **fedora**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **cap** with a visor (like a baseball cap)?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **beanie**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **beret**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **straw hat**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **top hat**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **bonnet**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **hood**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **helmet**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **fedora**? (I asked this before, but let's try a different angle. I've ruled out most specific styles. Let's think about materials or specific cultural items.)\n\nIs it a **turban**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **beret**? (I asked this before, but let's try a different angle. I've ruled out most specific styles. Let's think about materials or specific cultural items.)\n\nIs it a **turban**? (I asked this before.)\n\nLet's step back. It's headwear, worn for sun/rain protection, but not a hat, cap, beanie, fedora, straw hat, top hat, bonnet, hood, helmet, or turban.\n\nIs it a **veil**?\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a **muffler**? (Note: In some regions, a muffler is a scarf, but sometimes head coverings are confused. However, a muffler is usually for the neck. Let's try something else.)\n\nIs it a **wide-brimmed rain hat** specifically known as a **slicker hat** or **oilskin hat**?\n\nActually, let's look at the \"protection from weather\" clue again. It's not a hat, cap, etc.\n\nIs it a **poncho** with an integrated hood? (Though I asked about hoods, a poncho is a full\n(Remember the player is trying to guess a clothing, and the correct answer is Bucket Hat. Reply with Yes or No in relation to Bucket Hat.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,230 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 116,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Samarkand, Uzbekistan",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 12,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Great, I'm ready to play! Let's start narrowing down the possibilities.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in the Northern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. That narrows it down to North America, Europe, Asia, and Northern Africa.\n\n**Question 2:** Is your home city located in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in Asia."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we are looking for a city in Asia. This is still a huge region, so I need to narrow it down geographically.\n\n**Question 3:** Is your home city located in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in East Asia."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood, so it's not in East Asia (which would include countries like China, Japan, South Korea, etc.).\n\n**Question 4:** Is your home city located in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in South Asia."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's in Asia, but not East Asia and not South Asia. This likely places it in Southeast Asia, Central Asia, or West Asia (the Middle East).\n\n**Question 5:** Is your home city located in Southeast Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Southeast Asia."
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, so the city is in Asia, but not in East, South, or Southeast Asia. This leaves two main possibilities: West Asia (the Middle East) or Central Asia.\n\n**Question 6:** Is your home city located in West Asia (the Middle East)?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in West Asia."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we have eliminated East, South, Southeast, and West Asia. By process of elimination, the city must be in **Central Asia**.\n\nThis is a much smaller group of countries: Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan.\n\n**Question 7:** Is your home city the capital of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not the capital of its country."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's a major or notable city in Central Asia, but not the capital. This significantly reduces the pool of likely candidates. The most famous non-capital cities in the region are typically Almaty (Kazakhstan), Namangan or Fergana (Uzbekistan), or Dushanbe is the capital of Tajikistan so that's out, Bishkek is capital of Kyrgyzstan, Ashgabat is capital of Turkmenistan, Nur-Sultan is capital of Kazakhstan.\n\nSo, the strongest candidate so far is **Almaty, Kazakhstan**, as it was the former capital and remains the"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not Almaty."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's not Almaty. That leaves other major cities in Central Asia.\n\n**Question 8:** Is your home city located in Kazakhstan?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Kazakhstan."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Central Asia, but not in Kazakhstan, and not a capital city.\n\nThe remaining Central Asian countries are:\n1. Uzbekistan\n2. Kyrgyzstan\n3. Tajikistan\n4. Turkmenistan\n\nSince it's not a capital, it can't be Tashkent (Uzbekistan), Bishkek (Kyrgyzstan), Dushanbe (Tajikistan), or Ashgabat (Turkmenistan).\n\nThis leaves significant cities like:\n*   **Uzbekistan:** Samarkand, Bukhara, Khiva.\n*"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in Uzbekistan."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. So we are looking for a non-capital city in Uzbekistan. The most prominent candidates here are Samarkand, Bukhara, and Khiva, known for their historic significance on the Silk Road.\n\n**Question 9:** Is your home city famous for its well-preserved medieval architecture and status as a former capital of empires (like the Timurid Empire)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is famous for its well-preserved medieval architecture and was a major capital of the Timurid Empire."
+    },
+    {
+      "role": "assistant",
+      "content": "The clues are pointing very strongly in one direction. Samarkand is widely known as the jewel of the Silk Road, famous for the Registan Square, and was indeed the capital of Timur's (Tamerlane's) empire, featuring stunning blue-tiled architecture. Bukhara is also a Silk Road hub but was less distinctly the \"capital\" of the Timurid Empire in the same iconic sense, and Khiva is known for its walled city (Itchan Kala) but is smaller.\n\n**Question 10:** Is your home city Samarkand?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Samarkand, Uzbekistan"
+    },
+    {
+      "role": "user",
+      "content": "Great, I'm ready to play! Let's start narrowing down the possibilities.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in the Northern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Got it. That narrows it down to North America, Europe, Asia, and Northern Africa.\n\n**Question 2:** Is your home city located in Asia?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in Asia."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we are looking for a city in Asia. This is still a huge region, so I need to narrow it down geographically.\n\n**Question 3:** Is your home city located in East Asia?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in East Asia."
+    },
+    {
+      "role": "user",
+      "content": "Understood, so it's not in East Asia (which would include countries like China, Japan, South Korea, etc.).\n\n**Question 4:** Is your home city located in South Asia?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in South Asia."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's in Asia, but not East Asia and not South Asia. This likely places it in Southeast Asia, Central Asia, or West Asia (the Middle East).\n\n**Question 5:** Is your home city located in Southeast Asia?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Southeast Asia."
+    },
+    {
+      "role": "user",
+      "content": "Alright, so the city is in Asia, but not in East, South, or Southeast Asia. This leaves two main possibilities: West Asia (the Middle East) or Central Asia.\n\n**Question 6:** Is your home city located in West Asia (the Middle East)?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in West Asia."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we have eliminated East, South, Southeast, and West Asia. By process of elimination, the city must be in **Central Asia**.\n\nThis is a much smaller group of countries: Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan.\n\n**Question 7:** Is your home city the capital of its country?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not the capital of its country."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's a major or notable city in Central Asia, but not the capital. This significantly reduces the pool of likely candidates. The most famous non-capital cities in the region are typically Almaty (Kazakhstan), Namangan or Fergana (Uzbekistan), or Dushanbe is the capital of Tajikistan so that's out, Bishkek is capital of Kyrgyzstan, Ashgabat is capital of Turkmenistan, Nur-Sultan is capital of Kazakhstan.\n\nSo, the strongest candidate so far is **Almaty, Kazakhstan**, as it was the former capital and remains the\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not Almaty."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's not Almaty. That leaves other major cities in Central Asia.\n\n**Question 8:** Is your home city located in Kazakhstan?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Kazakhstan."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Central Asia, but not in Kazakhstan, and not a capital city.\n\nThe remaining Central Asian countries are:\n1. Uzbekistan\n2. Kyrgyzstan\n3. Tajikistan\n4. Turkmenistan\n\nSince it's not a capital, it can't be Tashkent (Uzbekistan), Bishkek (Kyrgyzstan), Dushanbe (Tajikistan), or Ashgabat (Turkmenistan).\n\nThis leaves significant cities like:\n*   **Uzbekistan:** Samarkand, Bukhara, Khiva.\n*\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in Uzbekistan."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. So we are looking for a non-capital city in Uzbekistan. The most prominent candidates here are Samarkand, Bukhara, and Khiva, known for their historic significance on the Silk Road.\n\n**Question 9:** Is your home city famous for its well-preserved medieval architecture and status as a former capital of empires (like the Timurid Empire)?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is famous for its well-preserved medieval architecture and was a major capital of the Timurid Empire."
+    },
+    {
+      "role": "user",
+      "content": "The clues are pointing very strongly in one direction. Samarkand is widely known as the jewel of the Silk Road, famous for the Registan Square, and was indeed the capital of Timur's (Tamerlane's) empire, featuring stunning blue-tiled architecture. Bukhara is also a Silk Road hub but was less distinctly the \"capital\" of the Timurid Empire in the same iconic sense, and Khiva is known for its walled city (Itchan Kala) but is smaller.\n\n**Question 10:** Is your home city Samarkand?\n(Remember the player is trying to guess a city, and the correct answer is Samarkand, Uzbekistan. Reply to the question in relation to Samarkand, Uzbekistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: The clues are pointing very strongly in one direction. Samarkand is widely known as the jewel of the Silk Road, famous for the Registan Square, and was indeed the capital of Timur's (Tamerlane's) empire, featuring stunning blue-tiled architecture. Bukhara is also a Silk Road hub but was less distinctly the \"capital\" of the Timurid Empire in the same iconic sense, and Khiva is known for its walled city (Itchan Kala) but is smaller.\n\n**Question 10:** Is your home city Samarkand?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Samarkand, Uzbekistan in this particular game. Reply with <VALID> only if the player has guessed Samarkand, Uzbekistan (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

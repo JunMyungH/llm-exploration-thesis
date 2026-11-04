@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 360,
+  "agent_game_scenario": "astronomical object",
+  "env_game_scenario": "Planet Nine",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a astronomical object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a star?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a planet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the planet located in our own Solar System?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an inner planet (Mercury, Venus, Earth, or Mars)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a gas giant (Jupiter or Saturn)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an ice giant (Uranus or Neptune)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a dwarf planet (such as Pluto)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "That is a bit of a puzzle. If it's a planet in our Solar System, but not an inner planet, not a gas giant, not an ice giant, and not a dwarf planet, it leaves very few options.\n\nCould it be **Earth**? (Sometimes people forget to categorize Earth as an \"inner\" or \"rocky\" planet in these games, or perhaps the previous \"No\" to inner planets was based on a specific definition I missed, but Earth is the only remaining major planet option.)\n\nAlternatively, did I misinterpret \"inner planet\"? Let me double-check the classification.\n1. Inner/"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is getting tricky. Let me re-evaluate the Solar System planets:\n1. Mercury (Inner/Rocky) - No\n2. Venus (Inner/Rocky) - No\n3. Earth (Inner/Rocky) - No\n4. Mars (Inner/Rocky) - No\n5. Jupiter (Gas Giant) - No\n6. Saturn (Gas Giant) - No\n7. Uranus (Ice Giant) - No\n8. Neptune (Ice Giant) - No\n9. Pluto (Dwarf Planet) - No\n\nIf it is strictly a \"planet\" in our Solar System"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, if it's a planet in our Solar System, but not inner, not gas giant, not ice giant, and not a dwarf planet, and not Earth... that seems impossible based on standard IAU definitions.\n\nLet me backtrack. Did I make a mistake in the classification of \"Inner Planet\"? Usually, that means Mercury, Venus, Earth, Mars.\nDid I make a mistake with \"Gas Giant\"? Jupiter, Saturn.\n\"Ice Giant\"? Uranus, Neptune.\n\nIf the answer to \"Is it an inner planet?\" was No, and \"Is it a gas giant?\" was No, and \"Is"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is very strange. If it is a planet in our Solar System, it must be one of the eight major planets or a dwarf planet. Let's try to isolate the specific identity by asking about its position relative to the Sun.\n\nIs it one of the four planets closest to the Sun (Mercury, Venus, Earth, or Mars)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it one of the two outermost planets (Uranus or Neptune)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it one of the two largest planets (Jupiter or Saturn)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is a logical contradiction based on the standard definitions of Solar System planets.\n- Not Inner (Mercury, Venus, Earth, Mars)\n- Not Outer Gas/Ice Giants (Jupiter, Saturn, Uranus, Neptune)\n\nThat leaves no planets. However, you stated it **is** a planet in our Solar System.\n\nCould it be that the definition of \"Planet\" includes **Dwarf Planets**, but my previous question \"Is it a dwarf planet?\" was interpreted as \"Is it *only* a dwarf planet and not a major planet?\" or perhaps the object is **Ceres**?\n\nLet me"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is a very difficult puzzle because standard astronomical classification leaves no options for a \"Planet\" in the Solar System that isn't Inner, Gas Giant, Ice Giant, or Dwarf.\n\nHowever, sometimes in casual or older contexts, or perhaps due to a specific trick in the question, people might consider **Pluto** a planet (des IAU reclassification), but I already asked about dwarf planets and got \"No\".\n\nLet me check if there is an ambiguity in \"Solar System\". Could it be an object *like* a planet, but technically a moon? No, the prompt said \"astronomical object\" and then"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is becoming logically impossible under standard definitions. Let me reconsider the initial premise.\n\nYou said it is a **planet**.\nYou said it is in the **Solar System**.\nIt is **not** Mercury, Venus, Earth, or Mars.\nIt is **not** Jupiter or Saturn.\nIt is **not** Uranus or Neptune.\nIt is **not** a dwarf planet (like Pluto).\n\nThere are no other objects in the Solar System classified as \"planets.\"\n\nHowever, sometimes people mistakenly call **Earth** a \"planet\" but then answer \"No\" to \"Is it an inner planet"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is extremely confusing. If it is a planet in our Solar System, but not an inner planet, not a gas giant, not an ice giant, and not a dwarf planet, then it doesn't exist in standard astronomy.\n\nLet me try a different angle. Perhaps the term \"Planet\" is being used loosely, or there is a specific trick.\n\nIs the object **Earth**? (I ask this again because sometimes \"Inner Planet\" questions are tricky if the asker considers Earth unique or if they made a mistake. But you said No.)\n\nLet's try to identify it by a unique physical characteristic.\n\nDoes the object"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "I have eliminated all known planets and dwarf planets in our Solar System based on your answers. This suggests there might be a misunderstanding in the classification or I need to check if \"Planet\" is being used in a non-standard way, or if I made an error in the logic tree.\n\nLet's try to identify it by a very specific characteristic that might distinguish it from the standard categories I've eliminated.\n\nDoes the object have rings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is a logical paradox. If it is a planet in the Solar System, it must be one of the eight classical planets or a recognized dwarf planet. I have eliminated all of them via your \"No\" answers.\n\nLet me try to identify it by its position relative to the asteroid belt.\n\nIs it located outside the asteroid belt?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is outside the asteroid belt. This leaves us with Jupiter, Saturn, Uranus, Neptune, and the Dwarf Planets (like Pluto, Eris, Haumea, Makemake).\n\nI have already asked if it is a Gas Giant (Jupiter/Saturn) and an Ice Giant (Uranus/Neptune), and you said No to both.\nI have also asked if it is a Dwarf Planet, and you said No.\n\nThis is extremely difficult. Let me double-check if I missed a category. Is it possible the object is **Pluto**, but you consider it a"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a astronomical object, and the correct answer is Planet Nine."
+    },
+    {
+      "role": "user",
+      "content": "Is the object a star?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a planet?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the planet located in our own Solar System?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it an inner planet (Mercury, Venus, Earth, or Mars)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a gas giant (Jupiter or Saturn)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an ice giant (Uranus or Neptune)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a dwarf planet (such as Pluto)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "That is a bit of a puzzle. If it's a planet in our Solar System, but not an inner planet, not a gas giant, not an ice giant, and not a dwarf planet, it leaves very few options.\n\nCould it be **Earth**? (Sometimes people forget to categorize Earth as an \"inner\" or \"rocky\" planet in these games, or perhaps the previous \"No\" to inner planets was based on a specific definition I missed, but Earth is the only remaining major planet option.)\n\nAlternatively, did I misinterpret \"inner planet\"? Let me double-check the classification.\n1. Inner/\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is getting tricky. Let me re-evaluate the Solar System planets:\n1. Mercury (Inner/Rocky) - No\n2. Venus (Inner/Rocky) - No\n3. Earth (Inner/Rocky) - No\n4. Mars (Inner/Rocky) - No\n5. Jupiter (Gas Giant) - No\n6. Saturn (Gas Giant) - No\n7. Uranus (Ice Giant) - No\n8. Neptune (Ice Giant) - No\n9. Pluto (Dwarf Planet) - No\n\nIf it is strictly a \"planet\" in our Solar System\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, if it's a planet in our Solar System, but not inner, not gas giant, not ice giant, and not a dwarf planet, and not Earth... that seems impossible based on standard IAU definitions.\n\nLet me backtrack. Did I make a mistake in the classification of \"Inner Planet\"? Usually, that means Mercury, Venus, Earth, Mars.\nDid I make a mistake with \"Gas Giant\"? Jupiter, Saturn.\n\"Ice Giant\"? Uranus, Neptune.\n\nIf the answer to \"Is it an inner planet?\" was No, and \"Is it a gas giant?\" was No, and \"Is\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is very strange. If it is a planet in our Solar System, it must be one of the eight major planets or a dwarf planet. Let's try to isolate the specific identity by asking about its position relative to the Sun.\n\nIs it one of the four planets closest to the Sun (Mercury, Venus, Earth, or Mars)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it one of the two outermost planets (Uranus or Neptune)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it one of the two largest planets (Jupiter or Saturn)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is a logical contradiction based on the standard definitions of Solar System planets.\n- Not Inner (Mercury, Venus, Earth, Mars)\n- Not Outer Gas/Ice Giants (Jupiter, Saturn, Uranus, Neptune)\n\nThat leaves no planets. However, you stated it **is** a planet in our Solar System.\n\nCould it be that the definition of \"Planet\" includes **Dwarf Planets**, but my previous question \"Is it a dwarf planet?\" was interpreted as \"Is it *only* a dwarf planet and not a major planet?\" or perhaps the object is **Ceres**?\n\nLet me\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is a very difficult puzzle because standard astronomical classification leaves no options for a \"Planet\" in the Solar System that isn't Inner, Gas Giant, Ice Giant, or Dwarf.\n\nHowever, sometimes in casual or older contexts, or perhaps due to a specific trick in the question, people might consider **Pluto** a planet (des IAU reclassification), but I already asked about dwarf planets and got \"No\".\n\nLet me check if there is an ambiguity in \"Solar System\". Could it be an object *like* a planet, but technically a moon? No, the prompt said \"astronomical object\" and then\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is becoming logically impossible under standard definitions. Let me reconsider the initial premise.\n\nYou said it is a **planet**.\nYou said it is in the **Solar System**.\nIt is **not** Mercury, Venus, Earth, or Mars.\nIt is **not** Jupiter or Saturn.\nIt is **not** Uranus or Neptune.\nIt is **not** a dwarf planet (like Pluto).\n\nThere are no other objects in the Solar System classified as \"planets.\"\n\nHowever, sometimes people mistakenly call **Earth** a \"planet\" but then answer \"No\" to \"Is it an inner planet\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is extremely confusing. If it is a planet in our Solar System, but not an inner planet, not a gas giant, not an ice giant, and not a dwarf planet, then it doesn't exist in standard astronomy.\n\nLet me try a different angle. Perhaps the term \"Planet\" is being used loosely, or there is a specific trick.\n\nIs the object **Earth**? (I ask this again because sometimes \"Inner Planet\" questions are tricky if the asker considers Earth unique or if they made a mistake. But you said No.)\n\nLet's try to identify it by a unique physical characteristic.\n\nDoes the object\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "I have eliminated all known planets and dwarf planets in our Solar System based on your answers. This suggests there might be a misunderstanding in the classification or I need to check if \"Planet\" is being used in a non-standard way, or if I made an error in the logic tree.\n\nLet's try to identify it by a very specific characteristic that might distinguish it from the standard categories I've eliminated.\n\nDoes the object have rings?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is a logical paradox. If it is a planet in the Solar System, it must be one of the eight classical planets or a recognized dwarf planet. I have eliminated all of them via your \"No\" answers.\n\nLet me try to identify it by its position relative to the asteroid belt.\n\nIs it located outside the asteroid belt?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is outside the asteroid belt. This leaves us with Jupiter, Saturn, Uranus, Neptune, and the Dwarf Planets (like Pluto, Eris, Haumea, Makemake).\n\nI have already asked if it is a Gas Giant (Jupiter/Saturn) and an Ice Giant (Uranus/Neptune), and you said No to both.\nI have also asked if it is a Dwarf Planet, and you said No.\n\nThis is extremely difficult. Let me double-check if I missed a category. Is it possible the object is **Pluto**, but you consider it a\n(Remember the player is trying to guess a astronomical object, and the correct answer is Planet Nine. Reply with Yes or No in relation to Planet Nine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

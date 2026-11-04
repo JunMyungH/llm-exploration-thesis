@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 353,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Theory of Everything",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the behavior of particles at the atomic or subatomic level?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to wave-particle duality?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept described by the Heisenberg Uncertainty Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept involving the phenomenon where particles become interconnected such that the state of one instantly influences the state of another, regardless of distance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Pauli Exclusion Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the double-slit experiment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Schrödinger Equation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the concept of \"spin\" in quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the specific concept related to the quantization of angular momentum?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the property that distinguishes fermions from bosons?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the intrinsic form of angular momentum carried by elementary particles, composite particles (hadrons), and atomic nuclei?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the spin-statistics theorem?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Stern-Gerlach experiment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the magnetic moment associated with the spin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the concept of \"spin up\" and \"spin down\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the idea that half-integer spin particles are fermions and integer spin particles are bosons?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the addition of angular momenta (spin coupling)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Theory of Everything."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the behavior of particles at the atomic or subatomic level?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to wave-particle duality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept described by the Heisenberg Uncertainty Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum entanglement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept involving the phenomenon where particles become interconnected such that the state of one instantly influences the state of another, regardless of distance?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Pauli Exclusion Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the double-slit experiment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Schrödinger Equation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the concept of \"spin\" in quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the specific concept related to the quantization of angular momentum?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the property that distinguishes fermions from bosons?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the intrinsic form of angular momentum carried by elementary particles, composite particles (hadrons), and atomic nuclei?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the spin-statistics theorem?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Stern-Gerlach experiment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the magnetic moment associated with the spin?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the concept of \"spin up\" and \"spin down\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the idea that half-integer spin particles are fermions and integer spin particles are bosons?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the addition of angular momenta (spin coupling)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Everything. Reply with Yes or No in relation to Theory of Everything.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

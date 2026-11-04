@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 2,
+  "agent_game_scenario": "utensil",
+  "env_game_scenario": "Cup",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a utensil. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil typically made of metal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil typically made of plastic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil typically made of wood?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil typically made of ceramic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil primarily used for stirring or serving liquids (like a spoon)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for eating solid food (like a fork)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for cracking open shells, such as a nutcracker?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for cutting food (like a knife)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for holding or lifting food, such as tongs or a spatula?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for pouring or serving sauces and dressings (like a gravy boat)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for peeling vegetables or fruits (like a peeler)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for whisking or beating ingredients (like a whisk)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for grating cheese or vegetables (like a grater)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for shredding or grating food, but specifically designed to hold the food steady while shredding (like a mandoline slicer)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for shaping or molding food, such as a cookie press or a piping bag?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for peeling garlic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for extracting juice from citrus fruits (like a lemon squeezer)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for opening bottles (like a corkscrew or bottle opener)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for serving ice cream or soft foods (like an ice cream scoop)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the utensil used for cleaning or polishing, such as a chimney brush or a bottle brush?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a utensil, and the correct answer is Cup."
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil typically made of metal?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil typically made of plastic?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil typically made of wood?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil typically made of ceramic?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil primarily used for stirring or serving liquids (like a spoon)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for eating solid food (like a fork)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for cracking open shells, such as a nutcracker?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for cutting food (like a knife)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for holding or lifting food, such as tongs or a spatula?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for pouring or serving sauces and dressings (like a gravy boat)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for peeling vegetables or fruits (like a peeler)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for whisking or beating ingredients (like a whisk)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for grating cheese or vegetables (like a grater)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for shredding or grating food, but specifically designed to hold the food steady while shredding (like a mandoline slicer)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for shaping or molding food, such as a cookie press or a piping bag?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for peeling garlic?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for extracting juice from citrus fruits (like a lemon squeezer)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for opening bottles (like a corkscrew or bottle opener)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for serving ice cream or soft foods (like an ice cream scoop)?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the utensil used for cleaning or polishing, such as a chimney brush or a bottle brush?\n(Remember the player is trying to guess a utensil, and the correct answer is Cup. Reply with Yes or No in relation to Cup.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

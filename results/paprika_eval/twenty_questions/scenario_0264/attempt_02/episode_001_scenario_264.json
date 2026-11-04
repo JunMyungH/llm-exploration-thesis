@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 264,
+  "agent_game_scenario": "tv show",
+  "env_game_scenario": "Arrested Development",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tv show. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show currently airing (i.e., is it still in production and has recent seasons)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a sitcom (comedy)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in an office setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in a family home?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show an American production?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main family in the show African American?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in the 1990s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in the 2000s?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a teenage boy who is somewhat popular but often gets into trouble?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a family with young children (pre-teens)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show air on ABC?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show air on NBC?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show air on CBS?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show air on Fox?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature an alien character who is adopted by the family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a teenage girl who is somewhat rebellious or sarcastic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show *Malcolm in the Middle*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show *That '70s Show*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show *Modern Family*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tv show, and the correct answer is Arrested Development."
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show animated?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show currently airing (i.e., is it still in production and has recent seasons)?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a sitcom (comedy)?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in an office setting?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in a family home?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show an American production?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the main family in the show African American?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in the 1990s?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in the 2000s?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a teenage boy who is somewhat popular but often gets into trouble?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a family with young children (pre-teens)?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show air on ABC?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show air on NBC?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show air on CBS?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show air on Fox?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature an alien character who is adopted by the family?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a teenage girl who is somewhat rebellious or sarcastic?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show *Malcolm in the Middle*?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show *That '70s Show*?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show *Modern Family*?\n(Remember the player is trying to guess a tv show, and the correct answer is Arrested Development. Reply with Yes or No in relation to Arrested Development.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

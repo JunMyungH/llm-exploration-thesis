@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 357,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Neuron",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to biology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of biology that deals with living organisms and their interactions with one another and their environments?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of biology that deals with the structure and function of the building blocks of life?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically about DNA?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about proteins?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about cells?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically about the cell membrane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the nucleus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the mitochondria?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the ribosome?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the endoplasmic reticulum?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the Golgi apparatus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the cytoplasm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the cytoskeleton?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the lysosome?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about the cell cycle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about mitosis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about meiosis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept about apoptosis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Neuron."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of biology that deals with living organisms and their interactions with one another and their environments?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of biology that deals with the structure and function of the building blocks of life?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically about DNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about proteins?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about cells?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically about the cell membrane?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the nucleus?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the mitochondria?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the ribosome?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the endoplasmic reticulum?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the Golgi apparatus?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the cytoplasm?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the cytoskeleton?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the lysosome?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about the cell cycle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about mitosis?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about meiosis?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept about apoptosis?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

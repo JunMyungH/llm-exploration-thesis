@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 269,
+  "agent_game_scenario": "tv show",
+  "env_game_scenario": "The Defenders",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tv show. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show currently airing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a comedy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a drama?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show set in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show set in the present day?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a medical setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a legal setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a police or crime investigation setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a political setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a military setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a supernatural or paranormal setting?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature vampires?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature werewolves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature ghosts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature witches or wizardry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature time travel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature zombies?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature demons?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show titled *Supernatural*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tv show, and the correct answer is The Defenders."
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show animated?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show currently airing?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a comedy?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a drama?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show set in the United States?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show set in the present day?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a medical setting?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a legal setting?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a police or crime investigation setting?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a political setting?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a military setting?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a supernatural or paranormal setting?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature vampires?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature werewolves?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature ghosts?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature witches or wizardry?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature time travel?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature zombies?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature demons?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show titled *Supernatural*?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

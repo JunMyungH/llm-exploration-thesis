@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 173,
+  "agent_game_scenario": "mineral",
+  "env_game_scenario": "Tiger's Eye",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed of a single element?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a silicate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a common rock-forming mineral found in the Earth's crust, such as quartz or feldspar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a carbonate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sulfide mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an oxide mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a phosphate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a silicate mineral that contains aluminum?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a silicate mineral that contains iron or magnesium (a ferromagnesian silicate)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mica mineral (such as muscovite or biotite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a clay mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a feldspar mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a gemstone?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of quartz (such as amethyst, citrine, or rose quartz)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it amethyst?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it citrine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it rose quartz?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it beryl (such as emerald or aquamarine)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it topaz?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it tourmaline?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Tiger's Eye."
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed of a single element?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a silicate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a common rock-forming mineral found in the Earth's crust, such as quartz or feldspar?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a carbonate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sulfide mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an oxide mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a phosphate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a silicate mineral that contains aluminum?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a silicate mineral that contains iron or magnesium (a ferromagnesian silicate)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mica mineral (such as muscovite or biotite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a clay mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a feldspar mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a gemstone?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of quartz (such as amethyst, citrine, or rose quartz)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it amethyst?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it citrine?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it rose quartz?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it beryl (such as emerald or aquamarine)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it topaz?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it tourmaline?\n(Remember the player is trying to guess a mineral, and the correct answer is Tiger's Eye. Reply with Yes or No in relation to Tiger's Eye.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

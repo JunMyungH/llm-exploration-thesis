@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 361,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Higgs Field",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to classical mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to wave-particle duality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the uncertainty principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to superposition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Pauli exclusion principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to spin?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically referring to \"Intrinsic Angular Momentum\" (as the formal definition of spin)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept referring to \"Spin Up\" or \"Spin Down\" states?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept referring to the specific value of \"Spin 1/2\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the \"Spin-Statistics Theorem\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the \"Spin Quantum Number\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to \"Spin Orbits\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to \"Spin Waves\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to \"Spin Echo\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to \"Spintronics\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to \"Spin Glasses\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to \"Spin-Orbit Coupling\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Higgs Field."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to classical mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to wave-particle duality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to entanglement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the uncertainty principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to superposition?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Pauli exclusion principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to spin?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically referring to \"Intrinsic Angular Momentum\" (as the formal definition of spin)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept referring to \"Spin Up\" or \"Spin Down\" states?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept referring to the specific value of \"Spin 1/2\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the \"Spin-Statistics Theorem\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the \"Spin Quantum Number\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to \"Spin Orbits\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to \"Spin Waves\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to \"Spin Echo\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to \"Spintronics\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to \"Spin Glasses\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to \"Spin-Orbit Coupling\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

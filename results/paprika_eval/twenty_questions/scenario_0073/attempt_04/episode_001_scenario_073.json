@@ -1,0 +1,326 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 73,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Joan of Arc",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 18,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person you are thinking of male?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person you are thinking of alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a historical figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a member of a royal family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for being a writer or poet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for being an actress or singer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for being a scientist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for being a political leader or revolutionary?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person from Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person associated with the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person associated with the Russian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person associated with the unification of Italy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person associated with the English Civil War or the Glorious Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person from the 19th or 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person from the Middle Ages or Renaissance?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person from England?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person from France?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Joan of Arc?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Joan of Arc."
+    },
+    {
+      "role": "user",
+      "content": "Is the person you are thinking of male?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person you are thinking of alive?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a member of a royal family?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for being a writer or poet?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for being an actress or singer?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for being a scientist?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for being a political leader or revolutionary?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person from Europe?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person associated with the French Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person associated with the Russian Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person associated with the unification of Italy?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person associated with the English Civil War or the Glorious Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person from the 19th or 20th century?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person from the Middle Ages or Renaissance?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person from England?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person from France?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Joan of Arc?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Joan of Arc in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct person, which is: Joan of Arc, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the person Joan of Arc?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct person, which is Joan of Arc in this particular game. Reply with <VALID> only if the player has guessed Joan of Arc in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Joan of Arc is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

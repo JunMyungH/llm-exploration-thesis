@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 335,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Information Theory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a physical object?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept abstract?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to emotions or feelings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics or logic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a specific number?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a branch of mathematics (such as algebra, geometry, or calculus)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a fundamental operation or property in mathematics (such as addition, symmetry, or infinity)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a theorem or a conjecture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a field of study within mathematics (such as number theory, topology, or statistics)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the concept of \"zero\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to probability or chance?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept conditional probability?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the law of large numbers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the expected value?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept variance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept standard deviation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept entropy?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have successfully guessed the concept!\n\nThe concept is **Entropy**."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "That is surprising, given the previous answer. Let me backtrack slightly to ensure I understand the context of your \"Yes\" regarding probability.\n\nIs the concept **Bayes' Theorem**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to randomness or disorder?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Information Theory."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept abstract?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to emotions or feelings?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a specific number?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a branch of mathematics (such as algebra, geometry, or calculus)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a fundamental operation or property in mathematics (such as addition, symmetry, or infinity)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a theorem or a conjecture?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a field of study within mathematics (such as number theory, topology, or statistics)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the concept of \"zero\"?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to probability or chance?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept conditional probability?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the law of large numbers?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the expected value?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept variance?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept standard deviation?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept entropy?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have successfully guessed the concept!\n\nThe concept is **Entropy**.\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "That is surprising, given the previous answer. Let me backtrack slightly to ensure I understand the context of your \"Yes\" regarding probability.\n\nIs the concept **Bayes' Theorem**?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to randomness or disorder?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,342 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 350,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Trojan War",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war fought in the 18th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 17th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 16th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war fought in the 15th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war fought in the 14th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war fought in the 13th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war fought in the 12th century or earlier?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war part of the Crusades?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Hundred Years' War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Thirty Years' War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Peloponnesian War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Thirty Years' War? (Wait, I already asked that. Let me re-evaluate.)\n\nOkay, so it is a war in Europe, fought in the 12th century or earlier, not the Crusades, not the Hundred Years' War, not the Thirty Years' War, not the French Revolution, and not the Peloponnesian War.\n\nWas this war the Norman Conquest?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war the Viking Age conflicts (such as the Battle of Hastings)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this war the Trojan War?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Trojan War."
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 20th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 19th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war fought in the 18th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 17th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 16th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war fought in the 15th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war fought in the 14th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war fought in the 13th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war fought in the 12th century or earlier?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this war part of the Crusades?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in Europe?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Hundred Years' War?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Thirty Years' War?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the French Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Peloponnesian War?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Thirty Years' War? (Wait, I already asked that. Let me re-evaluate.)\n\nOkay, so it is a war in Europe, fought in the 12th century or earlier, not the Crusades, not the Hundred Years' War, not the Thirty Years' War, not the French Revolution, and not the Peloponnesian War.\n\nWas this war the Norman Conquest?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war the Viking Age conflicts (such as the Battle of Hastings)?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this war the Trojan War?\n(Remember the player is trying to guess a historical event, and the correct answer is Trojan War. Reply with Yes or No in relation to Trojan War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Trojan War in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct historical event, which is: Trojan War, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is this war the Trojan War?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct historical event, which is Trojan War in this particular game. Reply with <VALID> only if the player has guessed Trojan War in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Trojan War is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

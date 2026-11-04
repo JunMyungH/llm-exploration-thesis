@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 279,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Cold War",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to war or military conflict?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a political change, such as a revolution, election, or the establishment of a new government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this political change related to the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Did this event occur in the 18th century (1700–1799)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Did this event occur in the 19th century (1800–1899)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Did this event occur in the 20th century (1900–1999)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the Civil Rights Movement in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the election or inauguration of a U.S. President?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the Civil Rights Act of 1964 or the Voting Rights Act of 1965?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the Watergate scandal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the end of the Cold War or the dissolution of the Soviet Union?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the dissolution of the Soviet Union itself?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the fall of the Berlin Wall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the election of Mikhail Gorbachev as General Secretary of the Communist Party of the Soviet Union?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the signing of the Reykjavík Summit agreement between Ronald Reagan and Mikhail Gorbachev?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the signing of the Intermediate-Range Nuclear Forces (INF) Treaty?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the fall of the Berlin Wall? (Wait, I already asked that. Let me re-evaluate.)\n\nI know it is related to the end of the Cold War/dissolution of the Soviet Union, but it is not the dissolution itself, the fall of the Berlin Wall, Gorbachev's election, the Reykjavík Summit, or the INF Treaty.\n\nIs the event the adoption of Glasnost or Perestroika policies?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Chernobyl disaster?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the signing of the Warsaw Pact treaty?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Prague Spring?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Cold War."
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to war or military conflict?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a political change, such as a revolution, election, or the establishment of a new government?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this political change related to the United States?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Did this event occur in the 18th century (1700–1799)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Did this event occur in the 19th century (1800–1899)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Did this event occur in the 20th century (1900–1999)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the Civil Rights Movement in the United States?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the election or inauguration of a U.S. President?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the Civil Rights Act of 1964 or the Voting Rights Act of 1965?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the Watergate scandal?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the end of the Cold War or the dissolution of the Soviet Union?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the dissolution of the Soviet Union itself?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the fall of the Berlin Wall?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the election of Mikhail Gorbachev as General Secretary of the Communist Party of the Soviet Union?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the signing of the Reykjavík Summit agreement between Ronald Reagan and Mikhail Gorbachev?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the signing of the Intermediate-Range Nuclear Forces (INF) Treaty?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the fall of the Berlin Wall? (Wait, I already asked that. Let me re-evaluate.)\n\nI know it is related to the end of the Cold War/dissolution of the Soviet Union, but it is not the dissolution itself, the fall of the Berlin Wall, Gorbachev's election, the Reykjavík Summit, or the INF Treaty.\n\nIs the event the adoption of Glasnost or Perestroika policies?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Chernobyl disaster?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the signing of the Warsaw Pact treaty?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Prague Spring?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

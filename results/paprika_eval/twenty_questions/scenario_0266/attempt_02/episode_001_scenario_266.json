@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 266,
+  "agent_game_scenario": "tv show",
+  "env_game_scenario": "The Good Place",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tv show. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show currently airing (i.e., does it have new episodes being released)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show an animated series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show primarily a drama?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show primarily a comedy?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a sitcom (single-camera or multi-camera)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a core group of friends living in or near New York City?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in California?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in the Midwest (e.g., Illinois, Indiana, Ohio, Michigan, Wisconsin, Minnesota, Iowa, Missouri)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in the South (e.g., Texas, Georgia, Florida, Tennessee)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in the Pacific Northwest (e.g., Washington, Oregon)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show take place in the Northeast (e.g., New York, Massachusetts, Pennsylvania, New Jersey, Connecticut) but *not* specifically New York City?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a family as the main focus (e.g., a show about parents and their children living in the same house)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a workplace setting as its primary backdrop (e.g., an office, a hospital, a police station)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a group of people working in a restaurant or cafe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a group of people working in a newsroom or media organization?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a group of people working in a tech startup or a similar modern corporate environment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a group of people working in a legal setting (e.g., a law firmor a courtroom)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a group of people working in a police department or law enforcement agency?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature a group of people working in a hospital or medical field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tv show, and the correct answer is The Good Place."
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show currently airing (i.e., does it have new episodes being released)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show an animated series?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show primarily a drama?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show primarily a comedy?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a sitcom (single-camera or multi-camera)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in the United States?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a core group of friends living in or near New York City?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in California?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in the Midwest (e.g., Illinois, Indiana, Ohio, Michigan, Wisconsin, Minnesota, Iowa, Missouri)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in the South (e.g., Texas, Georgia, Florida, Tennessee)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in the Pacific Northwest (e.g., Washington, Oregon)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show take place in the Northeast (e.g., New York, Massachusetts, Pennsylvania, New Jersey, Connecticut) but *not* specifically New York City?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a family as the main focus (e.g., a show about parents and their children living in the same house)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a workplace setting as its primary backdrop (e.g., an office, a hospital, a police station)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a group of people working in a restaurant or cafe?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a group of people working in a newsroom or media organization?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a group of people working in a tech startup or a similar modern corporate environment?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a group of people working in a legal setting (e.g., a law firmor a courtroom)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a group of people working in a police department or law enforcement agency?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature a group of people working in a hospital or medical field?\n(Remember the player is trying to guess a tv show, and the correct answer is The Good Place. Reply with Yes or No in relation to The Good Place.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

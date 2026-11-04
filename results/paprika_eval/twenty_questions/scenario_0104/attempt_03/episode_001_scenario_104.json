@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 104,
+  "agent_game_scenario": "movie",
+  "env_game_scenario": "Avatar",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the past (i.e., is it a historical film or set in any era prior to the present day)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the future?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the year 2000 or later?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a science fiction film?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in space?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of a franchise?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Star Wars franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Star Trek franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Marvel Cinematic Universe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Lord of the Rings franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Harry Potter franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Matrix franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Mad Max franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Transformers franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Hunger Games franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Back to the Future franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Fast & Furious franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Dune franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Jurassic Park franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Avatar."
+    },
+    {
+      "role": "user",
+      "content": "Is the movie animated?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the past (i.e., is it a historical film or set in any era prior to the present day)?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the future?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the year 2000 or later?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a science fiction film?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in space?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of a franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Star Wars franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Star Trek franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Marvel Cinematic Universe?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Lord of the Rings franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Harry Potter franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Matrix franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Mad Max franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Transformers franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Hunger Games franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Back to the Future franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Fast & Furious franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Dune franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Jurassic Park franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Avatar. Reply with Yes or No in relation to Avatar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

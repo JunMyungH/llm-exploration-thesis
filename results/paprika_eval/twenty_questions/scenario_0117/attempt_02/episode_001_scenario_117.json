@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 117,
+  "agent_game_scenario": "animal",
+  "env_game_scenario": "Kangaroo",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a animal. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a mammal?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live primarily in water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live primarily in the air (as a bird, though we established mammal, so this implies flying mammals like bats)? Or rather, does the animal have wings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live primarily in the wild (not domesticated)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live primarily in a forest or jungle environment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live primarily in a savanna or grassland environment?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a mane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a trunk?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have horns?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have long legs adapted for running?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a giraffe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a zebra?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a cheetah?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a lion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a rhinoceros?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a hippopotamus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have stripes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have spots?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal an elephant?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal an antelope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a animal, and the correct answer is Kangaroo."
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a mammal?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live primarily in water?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live primarily in the air (as a bird, though we established mammal, so this implies flying mammals like bats)? Or rather, does the animal have wings?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live primarily in the wild (not domesticated)?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live primarily in a forest or jungle environment?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live primarily in a savanna or grassland environment?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a mane?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a trunk?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have horns?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have long legs adapted for running?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a giraffe?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a zebra?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a cheetah?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a lion?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a rhinoceros?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a hippopotamus?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have stripes?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have spots?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal an elephant?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal an antelope?\n(Remember the player is trying to guess a animal, and the correct answer is Kangaroo. Reply with Yes or No in relation to Kangaroo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

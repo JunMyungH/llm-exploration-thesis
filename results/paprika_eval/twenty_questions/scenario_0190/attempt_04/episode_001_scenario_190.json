@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 190,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Fishing",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on a court (such as basketball, tennis, or volleyball)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on grass or a field (such as soccer, baseball, or rugby)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on ice or snow (such as hockey, skiing, or figure skating)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played in a pool or water (such as swimming, water polo, or diving)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily individual (such as swimming or diving) rather than a team game (such as water polo)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport diving?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport surfing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport water polo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport synchronized swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport kayaking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport rowing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport competitive sailing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport martial arts performed in water, such as water polo's counterpart (which doesn't really exist as a distinct major sport, so let's pivot)?\n\nWait, let's look at Olympic water sports again. We've covered Swimming, Diving, Synchronized Swimming, Water Polo, Surfing, Kayaking, Rowing, and Sailing.\n\nIs the sport canoe slalom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport water skiing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport underwater hockey?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport surfing a winter sport (like snowboarding or skiing)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport associated with riding a horse in water, such as water polo's less common relative, or perhaps a niche sport like **water ballet** (which is another name for synchronized swimming, already ruled out)?\n\nLet's try a different angle. Is the sport **triathlon**? (Note: Triathlon includes swimming, but is it considered *primarily* a water sport in the context of our previous \"Yes\" to \"played in a pool or water\"? Usually, triathlon is multi-sport. Let's stick to single-domain water sports first.)\n\nIs the sport **open water swimming**? (Distinct from pool swimming"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport **windsurfing**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport **jet skiing**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Fishing."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on a court (such as basketball, tennis, or volleyball)?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on grass or a field (such as soccer, baseball, or rugby)?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on ice or snow (such as hockey, skiing, or figure skating)?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played in a pool or water (such as swimming, water polo, or diving)?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily individual (such as swimming or diving) rather than a team game (such as water polo)?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport swimming?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport diving?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport surfing?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport water polo?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport synchronized swimming?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport kayaking?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport rowing?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport competitive sailing?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport martial arts performed in water, such as water polo's counterpart (which doesn't really exist as a distinct major sport, so let's pivot)?\n\nWait, let's look at Olympic water sports again. We've covered Swimming, Diving, Synchronized Swimming, Water Polo, Surfing, Kayaking, Rowing, and Sailing.\n\nIs the sport canoe slalom?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport water skiing?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport underwater hockey?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport surfing a winter sport (like snowboarding or skiing)?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport associated with riding a horse in water, such as water polo's less common relative, or perhaps a niche sport like **water ballet** (which is another name for synchronized swimming, already ruled out)?\n\nLet's try a different angle. Is the sport **triathlon**? (Note: Triathlon includes swimming, but is it considered *primarily* a water sport in the context of our previous \"Yes\" to \"played in a pool or water\"? Usually, triathlon is multi-sport. Let's stick to single-domain water sports first.)\n\nIs the sport **open water swimming**? (Distinct from pool swimming\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport **windsurfing**?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport **jet skiing**?\n(Remember the player is trying to guess a sport, and the correct answer is Fishing. Reply with Yes or No in relation to Fishing.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

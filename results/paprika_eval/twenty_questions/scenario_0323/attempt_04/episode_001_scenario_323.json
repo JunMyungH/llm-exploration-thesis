@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 323,
+  "agent_game_scenario": "object",
+  "env_game_scenario": "Satellite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object electronic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it require a power source to function (e.g., batteries, electricity)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it designed to be portable (e.g., handheld or easily moved)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily used for computing or data processing (e.g., a computer, server)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it used for entertainment or media consumption (e.g., television, home theater system)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it used for communication (e.g., landline phone, intercom)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a landline telephone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a two-way radio or walkie-talkie?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a smart speaker or voice assistant (e.g., Amazon Echo, Google Home)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a computer monitor or a screen display?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a printer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a video game console?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a security camera?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a smart thermostat or home climate control device?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a microwave oven?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fax machine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a router or modem?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a desktop computer tower?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a home security system or alarm panel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a doorbell (specifically a wired or video doorbell)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a object, and the correct answer is Satellite."
+    },
+    {
+      "role": "user",
+      "content": "Is the object electronic?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it require a power source to function (e.g., batteries, electricity)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it designed to be portable (e.g., handheld or easily moved)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily used for computing or data processing (e.g., a computer, server)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it used for entertainment or media consumption (e.g., television, home theater system)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it used for communication (e.g., landline phone, intercom)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a landline telephone?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a two-way radio or walkie-talkie?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a smart speaker or voice assistant (e.g., Amazon Echo, Google Home)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a computer monitor or a screen display?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a printer?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a video game console?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a security camera?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a smart thermostat or home climate control device?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a microwave oven?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fax machine?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a router or modem?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a desktop computer tower?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a home security system or alarm panel?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a doorbell (specifically a wired or video doorbell)?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

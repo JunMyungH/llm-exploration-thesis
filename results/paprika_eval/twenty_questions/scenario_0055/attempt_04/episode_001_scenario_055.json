@@ -1,0 +1,326 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 55,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Jerusalem",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 18,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in North America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Southeast Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in West Asia (the Middle East)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Arabian Peninsula?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Iran?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a country?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a city?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city the capital of its country?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city Tehran?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city Istanbul?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city Baghdad?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city Amman?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city Beirut?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this city Jerusalem?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Jerusalem."
+    },
+    {
+      "role": "user",
+      "content": "Is this location in North America?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Europe?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Asia?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in East Asia?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in South Asia?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Southeast Asia?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in West Asia (the Middle East)?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Arabian Peninsula?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Iran?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a country?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a city?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this city the capital of its country?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this city Tehran?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this city Istanbul?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this city Baghdad?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this city Amman?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this city Beirut?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this city Jerusalem?\n(Remember the player is trying to guess a location, and the correct answer is Jerusalem. Reply with Yes or No in relation to Jerusalem.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Jerusalem in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct location, which is: Jerusalem, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is this city Jerusalem?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct location, which is Jerusalem in this particular game. Reply with <VALID> only if the player has guessed Jerusalem in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Jerusalem is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

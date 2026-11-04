@@ -1,0 +1,214 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 59,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Matterhorn",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 11,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location outdoors?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the location exist in the real world?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a capital city?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a famous landmark or monument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it located in the United Kingdom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a natural landmark?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mountain or a volcano?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it in Italy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it in Switzerland?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Matterhorn?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Matterhorn."
+    },
+    {
+      "role": "user",
+      "content": "Is the location outdoors?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the location exist in the real world?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Europe?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a capital city?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a famous landmark or monument?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it located in the United Kingdom?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a natural landmark?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mountain or a volcano?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it in Italy?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it in Switzerland?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Matterhorn?\n(Remember the player is trying to guess a location, and the correct answer is Matterhorn. Reply with Yes or No in relation to Matterhorn.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Matterhorn in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct location, which is: Matterhorn, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it the Matterhorn?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct location, which is Matterhorn in this particular game. Reply with <VALID> only if the player has guessed Matterhorn in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Matterhorn is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

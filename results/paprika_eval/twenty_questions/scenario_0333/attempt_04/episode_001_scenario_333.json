@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 333,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Evolutionary Psychology",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a physical object?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a person?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a place or location?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept an abstract idea or emotion?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics or logic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to science or nature?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to biology or living organisms?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the human body?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the brain or nervous system?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to memory?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the hippocampus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to neurons or nerve cells?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to consciousness or awareness?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to sleep?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to dreams?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to intelligence or cognition?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to learning?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to attention or focus?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to short-term memory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to working memory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Evolutionary Psychology."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a person?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a place or location?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept an abstract idea or emotion?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to science or nature?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to biology or living organisms?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the human body?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the brain or nervous system?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to memory?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the hippocampus?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to neurons or nerve cells?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to consciousness or awareness?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to sleep?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to dreams?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to intelligence or cognition?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to learning?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to attention or focus?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to short-term memory?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to working memory?\n(Remember the player is trying to guess a concept, and the correct answer is Evolutionary Psychology. Reply with Yes or No in relation to Evolutionary Psychology.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

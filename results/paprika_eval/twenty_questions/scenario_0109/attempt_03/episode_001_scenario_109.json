@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 109,
+  "agent_game_scenario": "movie",
+  "env_game_scenario": "Logan",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily in the science fiction or fantasy genre?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in space?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the future?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set on Earth?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the movie released before the year 2000?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a post-apocalyptic thriller?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a woman?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Mad Max: Fury Road*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Dune*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Blade Runner 2049*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *The Hunger Games*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Snowpiercer*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Children of Men*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Edge of Tomorrow*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Terminator 2: Judgment Day*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a robot or android?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *The Matrix*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Interstellar*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *District 9*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Logan."
+    },
+    {
+      "role": "user",
+      "content": "Is the movie animated?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily in the science fiction or fantasy genre?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in space?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the future?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set on Earth?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the movie released before the year 2000?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a post-apocalyptic thriller?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a woman?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Mad Max: Fury Road*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Dune*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Blade Runner 2049*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *The Hunger Games*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Snowpiercer*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Children of Men*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Edge of Tomorrow*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Terminator 2: Judgment Day*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a robot or android?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *The Matrix*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Interstellar*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *District 9*?\n(Remember the player is trying to guess a movie, and the correct answer is Logan. Reply with Yes or No in relation to Logan.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

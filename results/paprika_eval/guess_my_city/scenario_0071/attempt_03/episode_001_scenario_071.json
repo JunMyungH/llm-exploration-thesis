@@ -1,0 +1,166 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 71,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Cochabamba, Bolivia",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 8,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the location geographically.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you. Since the city is in the Southern Hemisphere, I will narrow down the continent.\n\n**Question 2:** Is your home city located in Australia or New Zealand?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not in Australia or New Zealand."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. Since it is not in Australia or New Zealand, it is likely in South America, Africa, or perhaps Southern Asia (though most of Asia is Northern, parts like Indonesia are Southern, but I'll stick to the major landmasses first).\n\n**Question 3:** Is your home city located in South America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in South America."
+    },
+    {
+      "role": "assistant",
+      "content": "Great, we've narrowed it down to South America. This continent has a wide range of climates and major metropolitan areas.\n\n**Question 4:** Is your home city located near the Atlantic Ocean coastline?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is landlocked and not near any ocean coastline."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So the city is in South America and is landlocked. The major landlocked countries in South America are Bolivia, Paraguay, and landlocked parts of Brazil, Colombia, Peru, and Chile (though Chile is a long coastline, it has landlocked regions). However, most major cities are near the coast.\n\n**Question 5:** Is your home city the capital city of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not the capital of its country."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So, we have a non-capital city in a landlocked region of South America. The major landlocked countries with significant cities that are not capitals are primarily Bolivia (e.g., Santa Cruz de la Sierra, Cochabamba) and Paraguay (e.g., Ciudad del Este). There are also landlocked regions in Brazil (e.g., Goiânia, Brasília is the capital, but other cities exist), but Bolivia and Paraguay have the highest concentration of major inland urban centers.\n\n**Question 6:** Is your home city located in Bolivia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in Bolivia."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. We are in Bolivia, and the city is not the capital (La Paz) nor the constitutional capital (Sucre). The major cities in Bolivia are typically La Paz, Santa Cruz de la Sierra, Cochabamba, Sucre, Oruro, and Potosí. Since it's not the capital, it is likely either Santa Cruz de la Sierra, Cochabamba, Oruro, or Potosí. Santa Cruz is by far the largest and most economically significant, but let's differentiate.\n\n**Question 7:** Is your home city the largest city in Bolivia by population?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not the largest city in Bolivia by population."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. Since it is not the largest city (Santa Cruz de la Sierra) and not the capital (La Paz or Sucre), the most likely candidates are Cochabamba, Oruro, or Potosí. Cochabamba is significantly larger than Oruro and Potosí and is known as the \"Garden City.\"\n\n**Question 8:** Is your home city Cochabamba?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Cochabamba, Bolivia"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the location geographically.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Thank you. Since the city is in the Southern Hemisphere, I will narrow down the continent.\n\n**Question 2:** Is your home city located in Australia or New Zealand?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not in Australia or New Zealand."
+    },
+    {
+      "role": "user",
+      "content": "Understood. Since it is not in Australia or New Zealand, it is likely in South America, Africa, or perhaps Southern Asia (though most of Asia is Northern, parts like Indonesia are Southern, but I'll stick to the major landmasses first).\n\n**Question 3:** Is your home city located in South America?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in South America."
+    },
+    {
+      "role": "user",
+      "content": "Great, we've narrowed it down to South America. This continent has a wide range of climates and major metropolitan areas.\n\n**Question 4:** Is your home city located near the Atlantic Ocean coastline?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is landlocked and not near any ocean coastline."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So the city is in South America and is landlocked. The major landlocked countries in South America are Bolivia, Paraguay, and landlocked parts of Brazil, Colombia, Peru, and Chile (though Chile is a long coastline, it has landlocked regions). However, most major cities are near the coast.\n\n**Question 5:** Is your home city the capital city of its country?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not the capital of its country."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So, we have a non-capital city in a landlocked region of South America. The major landlocked countries with significant cities that are not capitals are primarily Bolivia (e.g., Santa Cruz de la Sierra, Cochabamba) and Paraguay (e.g., Ciudad del Este). There are also landlocked regions in Brazil (e.g., Goiânia, Brasília is the capital, but other cities exist), but Bolivia and Paraguay have the highest concentration of major inland urban centers.\n\n**Question 6:** Is your home city located in Bolivia?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in Bolivia."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. We are in Bolivia, and the city is not the capital (La Paz) nor the constitutional capital (Sucre). The major cities in Bolivia are typically La Paz, Santa Cruz de la Sierra, Cochabamba, Sucre, Oruro, and Potosí. Since it's not the capital, it is likely either Santa Cruz de la Sierra, Cochabamba, Oruro, or Potosí. Santa Cruz is by far the largest and most economically significant, but let's differentiate.\n\n**Question 7:** Is your home city the largest city in Bolivia by population?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not the largest city in Bolivia by population."
+    },
+    {
+      "role": "user",
+      "content": "Understood. Since it is not the largest city (Santa Cruz de la Sierra) and not the capital (La Paz or Sucre), the most likely candidates are Cochabamba, Oruro, or Potosí. Cochabamba is significantly larger than Oruro and Potosí and is known as the \"Garden City.\"\n\n**Question 8:** Is your home city Cochabamba?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Understood. Since it is not the largest city (Santa Cruz de la Sierra) and not the capital (La Paz or Sucre), the most likely candidates are Cochabamba, Oruro, or Potosí. Cochabamba is significantly larger than Oruro and Potosí and is known as the \"Garden City.\"\n\n**Question 8:** Is your home city Cochabamba?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Cochabamba, Bolivia in this particular game. Reply with <VALID> only if the player has guessed Cochabamba, Bolivia (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

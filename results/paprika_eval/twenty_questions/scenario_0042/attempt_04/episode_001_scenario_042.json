@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 42,
+  "agent_game_scenario": "object",
+  "env_game_scenario": "Kite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object smaller than a microwave?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of clothing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made of metal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made of plastic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made of wood?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made of fabric or cloth?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn on the feet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn on the head?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it clothing for the upper body, such as a shirt or jacket?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an accessory, such as a scarf, tie, or hat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it used for cleaning or drying, such as a towel or rag?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it used to cover a bed or window, such as a blanket, sheet, or curtain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bag or pouch?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cushion or pillow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a glove or mitten?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sock or stocking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of luggage, such as a backpack or duffel bag?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of footwear, such as a shoe or sandal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a belt or a strap?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a object, and the correct answer is Kite."
+    },
+    {
+      "role": "user",
+      "content": "Is the object smaller than a microwave?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of clothing?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it electronic?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made of metal?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made of plastic?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made of wood?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made of fabric or cloth?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn on the feet?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn on the head?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it clothing for the upper body, such as a shirt or jacket?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an accessory, such as a scarf, tie, or hat?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it used for cleaning or drying, such as a towel or rag?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it used to cover a bed or window, such as a blanket, sheet, or curtain?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bag or pouch?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cushion or pillow?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a glove or mitten?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sock or stocking?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of luggage, such as a backpack or duffel bag?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of footwear, such as a shoe or sandal?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a belt or a strap?\n(Remember the player is trying to guess a object, and the correct answer is Kite. Reply with Yes or No in relation to Kite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

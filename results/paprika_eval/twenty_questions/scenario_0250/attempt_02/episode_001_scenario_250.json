@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 250,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Aerospace Engineer",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on healthcare or medicine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on teaching or education?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on law or law enforcement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on technology or engineering?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve a significant amount of coding or software development?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation focused on front-end web development (user interface and design)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve working with data analysis, machine learning, or artificial intelligence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve working with back-end development, such as server-side logic, databases, or APIs?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve working with mobile application development?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve working with cybersecurity or information security?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve working with hardware, embedded systems, or robotics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve designing or manufacturing physical hardware components (such as circuits or processors)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve programming or maintaining robotic systems?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve working with network infrastructure, such as routers, switches, or servers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve testing and quality assurance for hardware devices?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation specifically focused on embedded systems or IoT (Internet of Things) devices?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve creating prototypes or conducting stress tests on physical components?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation commonly known as a Hardware Test Engineer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation focused on manufacturing quality control, such as inspecting products on an assembly line?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this occupation involve validating hardware performance against specific technical specifications or standards?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Aerospace Engineer."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on healthcare or medicine?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on teaching or education?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on law or law enforcement?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on technology or engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve a significant amount of coding or software development?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation focused on front-end web development (user interface and design)?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve working with data analysis, machine learning, or artificial intelligence?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve working with back-end development, such as server-side logic, databases, or APIs?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve working with mobile application development?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve working with cybersecurity or information security?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve working with hardware, embedded systems, or robotics?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve designing or manufacturing physical hardware components (such as circuits or processors)?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve programming or maintaining robotic systems?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve working with network infrastructure, such as routers, switches, or servers?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve testing and quality assurance for hardware devices?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation specifically focused on embedded systems or IoT (Internet of Things) devices?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve creating prototypes or conducting stress tests on physical components?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation commonly known as a Hardware Test Engineer?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation focused on manufacturing quality control, such as inspecting products on an assembly line?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this occupation involve validating hardware performance against specific technical specifications or standards?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

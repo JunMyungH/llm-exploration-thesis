@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 302,
+  "agent_game_scenario": "shape",
+  "env_game_scenario": "Semi-circle",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape three-dimensional?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a polygon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a circle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a straight line?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an oval?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a star?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a square?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a rectangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a curved shape that is not a circle or oval, such as a spiral or a crescent?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a spiral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a crescent?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a heart?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a teardrop?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a zigzag line?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a wave?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a clover?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a lightning bolt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flower?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an irregular shape, such as a blob or a cloud?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Semi-circle."
+    },
+    {
+      "role": "user",
+      "content": "Is the shape three-dimensional?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a straight line?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an oval?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a star?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a triangle?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a square?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a rectangle?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a curved shape that is not a circle or oval, such as a spiral or a crescent?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a spiral?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a crescent?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a heart?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a teardrop?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a zigzag line?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a wave?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a clover?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a lightning bolt?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flower?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an irregular shape, such as a blob or a cloud?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

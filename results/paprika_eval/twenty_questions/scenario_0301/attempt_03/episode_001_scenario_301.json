@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 301,
+  "agent_game_scenario": "shape",
+  "env_game_scenario": "Cylinder",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a circle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a square?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a rectangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have four sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have three sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have five or more sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a line?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a star?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have any straight sides?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly one curved side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly two straight sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly three straight sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly four straight sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have more than four straight sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly two curved sides?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape an oval?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a crescent?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly two straight sides and two curved sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly one straight side and two curved sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Cylinder."
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a square?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a triangle?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a rectangle?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have four sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have three sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have five or more sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a line?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a star?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have any straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly one curved side?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly two straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly three straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly four straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have more than four straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly two curved sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape an oval?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a crescent?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly two straight sides and two curved sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly one straight side and two curved sides?\n(Remember the player is trying to guess a shape, and the correct answer is Cylinder. Reply with Yes or No in relation to Cylinder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

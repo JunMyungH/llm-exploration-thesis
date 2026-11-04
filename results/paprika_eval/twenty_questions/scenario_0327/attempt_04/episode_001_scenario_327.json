@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 327,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "DNA Double Helix",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to biology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a process rather than a physical object or organism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a multicellular organism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a microorganism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a plant?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an animal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fungus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a virus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cellular structure or organelle?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it found in both plant and animal cells?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the powerhouse of the cell, responsible for generating most of the cell's supply of adenosine triphosphate (ATP)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the site of photosynthesis in plant cells?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the site of protein synthesis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the control center of the cell, containing the cell's genetic material?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Golgi apparatus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the endoplasmic reticulum?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the lysosome?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the ribosome?\n\n(Note: I previously asked if it was the *site* of protein synthesis, which it is, but perhaps the distinction between the structure itself and its function led to a \"No\" if I was interpreted as asking if it *is* the abstract concept of synthesis. However, Ribosomes are found in both plant and animal cells. Let me re-evaluate. If the answer to \"Is it the site of protein synthesis?\" was No, then it is not the Ribosome. Let's backtrack.)\n\nLet's try a different major organelle.\n\nIs it the nucleus?\n\n(Wait"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the mitochondria?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is DNA Double Helix."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to physics?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to biology?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a process rather than a physical object or organism?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a multicellular organism?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a microorganism?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a plant?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an animal?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fungus?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a virus?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cellular structure or organelle?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it found in both plant and animal cells?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the powerhouse of the cell, responsible for generating most of the cell's supply of adenosine triphosphate (ATP)?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the site of photosynthesis in plant cells?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the site of protein synthesis?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the control center of the cell, containing the cell's genetic material?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Golgi apparatus?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the endoplasmic reticulum?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the lysosome?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the ribosome?\n\n(Note: I previously asked if it was the *site* of protein synthesis, which it is, but perhaps the distinction between the structure itself and its function led to a \"No\" if I was interpreted as asking if it *is* the abstract concept of synthesis. However, Ribosomes are found in both plant and animal cells. Let me re-evaluate. If the answer to \"Is it the site of protein synthesis?\" was No, then it is not the Ribosome. Let's backtrack.)\n\nLet's try a different major organelle.\n\nIs it the nucleus?\n\n(Wait\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the mitochondria?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

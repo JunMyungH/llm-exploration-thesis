@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 319,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Typewriter",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it powered by human muscle force?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the rotation of a wheel or axle?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tool used for grinding or milling grain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for lifting heavy objects?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for pumping water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for drawing water from a well?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for tightening or loosening objects, such as a screw or a clamp?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for cutting, such as shears or scissors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used to measure something, such as time or distance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a musical instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for weaving or knitting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for printing?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use movable type?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for transferring ink onto paper using a roller or plate (such as a roller press)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use a screen or mesh to force ink through (such as a screen printer)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the Gutenberg printing press (which uses movable type) the invention, despite my previous question being interpreted as \"No\" to movable type? Or perhaps I misunderstood. Let's look at non-movable type printing.\n\nIs it a woodblock printing device?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for letterpress printing that uses a single solid plate (such as a lithographic stone or plate)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for making paper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Typewriter."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it powered by human muscle force?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the rotation of a wheel or axle?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tool used for grinding or milling grain?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for lifting heavy objects?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for pumping water?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for drawing water from a well?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for tightening or loosening objects, such as a screw or a clamp?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for cutting, such as shears or scissors?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used to measure something, such as time or distance?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a musical instrument?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for weaving or knitting?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for printing?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it use movable type?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for transferring ink onto paper using a roller or plate (such as a roller press)?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use a screen or mesh to force ink through (such as a screen printer)?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the Gutenberg printing press (which uses movable type) the invention, despite my previous question being interpreted as \"No\" to movable type? Or perhaps I misunderstood. Let's look at non-movable type printing.\n\nIs it a woodblock printing device?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for letterpress printing that uses a single solid plate (such as a lithographic stone or plate)?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for making paper?\n(Remember the player is trying to guess a invention, and the correct answer is Typewriter. Reply with Yes or No in relation to Typewriter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

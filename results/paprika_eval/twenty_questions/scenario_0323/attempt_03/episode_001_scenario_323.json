@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 323,
+  "agent_game_scenario": "object",
+  "env_game_scenario": "Satellite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object electronic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the object require electricity from a wall outlet to operate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the object use a battery for power?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the object operate using solar power?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object primarily used for generating power, such as a solar panel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a calculator?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a watch or a clock?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a toy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a piece of outdoor lighting, such as a garden light?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a sensor or a weather station component?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a GPS tracker or a similar navigation device?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a portable speaker?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a wearable device, such as fitness tracker or smart glasses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a garden ornament or decoration that lights up?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the object have a display screen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a keychain or a small accessory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a flashlight?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a lamp or a light fixture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a phone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a calculator? (Wait, I already asked this. Let me pivot.)\n\nIs the object a toy car or vehicle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a object, and the correct answer is Satellite."
+    },
+    {
+      "role": "user",
+      "content": "Is the object electronic?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the object require electricity from a wall outlet to operate?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the object use a battery for power?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the object operate using solar power?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the object primarily used for generating power, such as a solar panel?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a calculator?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a watch or a clock?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a toy?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a piece of outdoor lighting, such as a garden light?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a sensor or a weather station component?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a GPS tracker or a similar navigation device?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a portable speaker?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a wearable device, such as fitness tracker or smart glasses?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a garden ornament or decoration that lights up?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the object have a display screen?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a keychain or a small accessory?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a flashlight?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a lamp or a light fixture?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a phone?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a calculator? (Wait, I already asked this. Let me pivot.)\n\nIs the object a toy car or vehicle?\n(Remember the player is trying to guess a object, and the correct answer is Satellite. Reply with Yes or No in relation to Satellite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

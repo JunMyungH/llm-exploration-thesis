@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 92,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "Invisible Man",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this book a work of fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book primarily targeted towards children or young adults?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book written in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this book published in the 20th century (1901–2000)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the book belong to the science fiction or fantasy genre?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a mystery or thriller?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a romance novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the book feature a historical setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the book feature a detective or police protagonist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book considered literary fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author American?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the book feature a protagonist who is struggling with addiction or mental health issues?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in New York City?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *The Great Gatsby*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *Catch-22*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *On the Road*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *American Psycho*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is Invisible Man."
+    },
+    {
+      "role": "user",
+      "content": "Is this book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book primarily targeted towards children or young adults?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this book published in the 20th century (1901–2000)?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the book belong to the science fiction or fantasy genre?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a mystery or thriller?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a romance novel?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the book feature a historical setting?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author male?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the book feature a detective or police protagonist?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book considered literary fiction?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the author American?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the 20th century?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the book feature a protagonist who is struggling with addiction or mental health issues?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in New York City?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *The Great Gatsby*?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *Catch-22*?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *On the Road*?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *American Psycho*?\n(Remember the player is trying to guess a book, and the correct answer is Invisible Man. Reply with Yes or No in relation to Invisible Man.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 343,
+  "agent_game_scenario": "object",
+  "env_game_scenario": "Magnet",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a piece of clothing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object found in a kitchen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object typically found outdoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object made of wood?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object made of metal?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a tool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a key?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a vehicle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a piece of jewelry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a weapon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a coin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a piece of furniture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a container?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a musical instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a part of a building or structure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a utensil?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a fastener (like a nail, screw, or bolt)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a decorative item?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object a toy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a object, and the correct answer is Magnet."
+    },
+    {
+      "role": "user",
+      "content": "Is the object a piece of clothing?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object electronic?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object found in a kitchen?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object typically found outdoors?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object made of wood?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object made of metal?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a tool?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a key?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a vehicle?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a piece of jewelry?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a weapon?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a coin?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a piece of furniture?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a container?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a musical instrument?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a part of a building or structure?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a utensil?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a fastener (like a nail, screw, or bolt)?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a decorative item?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the object a toy?\n(Remember the player is trying to guess a object, and the correct answer is Magnet. Reply with Yes or No in relation to Magnet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

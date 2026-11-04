@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 307,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Firestorm",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a natural occurrence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to physics or mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the behavior of fluids (liquids or gases)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the flow of fluids?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where a fluid flows in parallel layers with no disruption between them?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where fluid flows in a chaotic, irregular manner with eddies and vortices?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where a fluid increases in volume or decreases in density when heated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where a fluid's pressure decreases as its velocity increases?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where a fluid exerts an upward force on an object submerged in it?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where a fluid exerts friction against a solid surface it flows over?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as surface tension?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where a fluid moves through a porous medium?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as cavitiation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as drag?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as viscosity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as the Coandă effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as turbulence? (Wait, I asked about chaotic flow earlier, let me rephrase to ensure I'm not double-counting).\n\nLet's try a different angle. Is the phenomenon related to the transmission of sound waves through a fluid?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the transmission of heat through a fluid via bulk movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the reflection or refraction of light as it passes through a fluid?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the capillary action of a fluid moving through narrow spaces without the assistance of external forces?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Firestorm."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a natural occurrence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to physics or mechanics?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the behavior of fluids (liquids or gases)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the flow of fluids?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where a fluid flows in parallel layers with no disruption between them?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where fluid flows in a chaotic, irregular manner with eddies and vortices?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where a fluid increases in volume or decreases in density when heated?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where a fluid's pressure decreases as its velocity increases?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where a fluid exerts an upward force on an object submerged in it?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where a fluid exerts friction against a solid surface it flows over?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as surface tension?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where a fluid moves through a porous medium?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as cavitiation?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as drag?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as viscosity?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as the Coandă effect?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as turbulence? (Wait, I asked about chaotic flow earlier, let me rephrase to ensure I'm not double-counting).\n\nLet's try a different angle. Is the phenomenon related to the transmission of sound waves through a fluid?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the transmission of heat through a fluid via bulk movement?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the reflection or refraction of light as it passes through a fluid?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the capillary action of a fluid moving through narrow spaces without the assistance of external forces?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

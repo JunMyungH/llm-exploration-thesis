@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 357,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Neuron",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept a branch of physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of biology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the study of cells?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it microbiology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it genetics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it ecology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it immunology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it anatomy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it physiology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it botany?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it zoology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it neuroscience?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the study of the nervous system's structure and development?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it neuroplasticity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it neuroanatomy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it neurophysiology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it neuroscience itself?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the study of how the nervous system functions, specifically regarding nerve impulses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it neurobiology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the study of the chemical processes and substances that occur within the nervous system?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Neuron."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept a branch of physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the study of cells?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it microbiology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it genetics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it ecology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it immunology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it anatomy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it physiology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it botany?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it zoology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it neuroscience?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the study of the nervous system's structure and development?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it neuroplasticity?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it neuroanatomy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it neurophysiology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it neuroscience itself?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the study of how the nervous system functions, specifically regarding nerve impulses?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it neurobiology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the study of the chemical processes and substances that occur within the nervous system?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Neuron. Reply with Yes or No in relation to Neuron.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

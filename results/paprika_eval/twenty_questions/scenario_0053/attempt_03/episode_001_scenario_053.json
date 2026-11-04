@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 53,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Galapagos Islands",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location outdoors in a natural setting (e.g., forest, mountain, desert, ocean)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Southern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Australia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in South America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Antarctica?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Southern Ocean or on an island south of the equator (e.g., New Zealand, Madagascar, or an island nation)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location New Zealand?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location Madagascar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in South America? (Wait, I already asked that. Let's re-evaluate. The user said \"Yes\" to \"Southern Ocean or on an island south of the equator (e.g., New Zealand, Madagascar, or an island nation)\". I ruled out Australia, South America, Africa, Antarctica. Remaining major landmasses in Southern Hemisphere: South America (ruled out), Africa (ruled out), Australia (ruled out), Antarctica (ruled out). Islands: New Zealand (ruled out), Madagascar (ruled out). Other possibilities: Iceland? No, Northern Hemisphere. Hawaii? Northern"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Indian Ocean?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Pacific Ocean?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Polynesia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Micronesia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Melanesia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location part of South America? (Wait, I asked this earlier and the answer was No. Let me re-check the logic.\n1. Indoors: No\n2. Natural outdoor: Yes\n3. Northern Hemisphere: No\n4. Southern Hemisphere: Yes\n5. Australia: No\n6. South America: No\n7. Africa: No\n8. Antarctica: No\n9. NZ/Madagascar/Island: Yes\n10. NZ: No\n11. Madagascar: No\n12. Indian Ocean: No\n13. Pacific Ocean: Yes\n14. Pol"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a country?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a mountain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Galapagos Islands."
+    },
+    {
+      "role": "user",
+      "content": "Is this location indoors?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location outdoors in a natural setting (e.g., forest, mountain, desert, ocean)?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Northern Hemisphere?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Southern Hemisphere?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Australia?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in South America?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Africa?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Antarctica?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Southern Ocean or on an island south of the equator (e.g., New Zealand, Madagascar, or an island nation)?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location New Zealand?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location Madagascar?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in South America? (Wait, I already asked that. Let's re-evaluate. The user said \"Yes\" to \"Southern Ocean or on an island south of the equator (e.g., New Zealand, Madagascar, or an island nation)\". I ruled out Australia, South America, Africa, Antarctica. Remaining major landmasses in Southern Hemisphere: South America (ruled out), Africa (ruled out), Australia (ruled out), Antarctica (ruled out). Islands: New Zealand (ruled out), Madagascar (ruled out). Other possibilities: Iceland? No, Northern Hemisphere. Hawaii? Northern\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Indian Ocean?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Pacific Ocean?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Polynesia?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Micronesia?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Melanesia?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location part of South America? (Wait, I asked this earlier and the answer was No. Let me re-check the logic.\n1. Indoors: No\n2. Natural outdoor: Yes\n3. Northern Hemisphere: No\n4. Southern Hemisphere: Yes\n5. Australia: No\n6. South America: No\n7. Africa: No\n8. Antarctica: No\n9. NZ/Madagascar/Island: Yes\n10. NZ: No\n11. Madagascar: No\n12. Indian Ocean: No\n13. Pacific Ocean: Yes\n14. Pol\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a country?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a mountain?\n(Remember the player is trying to guess a location, and the correct answer is Galapagos Islands. Reply with Yes or No in relation to Galapagos Islands.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

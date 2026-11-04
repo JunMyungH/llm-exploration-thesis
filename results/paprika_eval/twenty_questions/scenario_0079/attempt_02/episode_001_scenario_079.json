@@ -1,0 +1,342 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 79,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Che Guevara",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person alive today?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a historical figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for their contributions to politics or government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being a head of state or government?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the founding of the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for leading a major revolution or independence movement?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the American Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Latin American independence movements?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Indian independence movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Haitian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Russian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Chinese Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Irish struggle for independence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for leading a revolution in Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Greek War of Independence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Cuban Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Fidel Castro?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Che Guevara?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Che Guevara."
+    },
+    {
+      "role": "user",
+      "content": "Is this person alive today?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for their contributions to politics or government?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being a head of state or government?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the founding of the United States?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for leading a major revolution or independence movement?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the French Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the American Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Latin American independence movements?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Indian independence movement?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Haitian Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Russian Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Chinese Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Irish struggle for independence?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for leading a revolution in Africa?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Greek War of Independence?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Cuban Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Fidel Castro?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Che Guevara?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Che Guevara in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct person, which is: Che Guevara, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is this person Che Guevara?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct person, which is Che Guevara in this particular game. Reply with <VALID> only if the player has guessed Che Guevara in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Che Guevara is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

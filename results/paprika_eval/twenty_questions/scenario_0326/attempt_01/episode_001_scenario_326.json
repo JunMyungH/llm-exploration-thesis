@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 326,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "String Theory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the behavior of subatomic particles?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the position and momentum of a particle?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Heisenberg's Uncertainty Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the dual nature of particles (acting as both waves and particles)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Wave-Particle Duality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Quantum Entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Superposition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Quantum Tunneling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Wave Function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Photon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Planck's Constant?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Spin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept De Broglie Wavelength?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Quantum Field Theory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Schrödinger's Equation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Zero-Point Energy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Photoelectric Effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Complementarity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is String Theory."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the behavior of subatomic particles?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the position and momentum of a particle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Heisenberg's Uncertainty Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the dual nature of particles (acting as both waves and particles)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Wave-Particle Duality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Quantum Entanglement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Superposition?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Quantum Tunneling?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Wave Function?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Photon?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Planck's Constant?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Spin?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept De Broglie Wavelength?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Quantum Field Theory?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Schrödinger's Equation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Zero-Point Energy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Photoelectric Effect?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Complementarity?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

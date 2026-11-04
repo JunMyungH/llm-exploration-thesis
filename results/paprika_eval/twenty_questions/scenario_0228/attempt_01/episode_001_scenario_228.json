@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 228,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Espadrilles",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an article of clothing worn on the feet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn on the ground?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of leather?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of shoe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily used for sports or athletic activities?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it formal footwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of boot?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it open-toed?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sneaker?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sandal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a slip-on style?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it commonly made of fabric or canvas?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a loafer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a moccasin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flat shoe, like a ballet flat?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a ballet flat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a slipper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a house shoe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sneaker-style slip-on, like a Vans Canvas shoe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Espadrilles."
+    },
+    {
+      "role": "user",
+      "content": "Is it an article of clothing worn on the feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn indoors?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn on the ground?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of leather?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of shoe?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily used for sports or athletic activities?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it formal footwear?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of boot?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it open-toed?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sneaker?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sandal?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a slip-on style?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it commonly made of fabric or canvas?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a loafer?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a moccasin?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flat shoe, like a ballet flat?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a ballet flat?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a slipper?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a house shoe?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sneaker-style slip-on, like a Vans Canvas shoe?\n(Remember the player is trying to guess a clothing, and the correct answer is Espadrilles. Reply with Yes or No in relation to Espadrilles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

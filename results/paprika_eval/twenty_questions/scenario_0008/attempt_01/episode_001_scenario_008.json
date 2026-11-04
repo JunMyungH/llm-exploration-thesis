@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 8,
+  "agent_game_scenario": "tool",
+  "env_game_scenario": "Pencil",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tool. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for cutting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for gripping or holding?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for driving or removing fasteners (like screws or nails)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring or marking?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool rigid (does not bend or stretch)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring length or distance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring angles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring weight?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring time?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring volume?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring temperature?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for measuring electrical properties?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool primarily used for checking levels (horizontal or vertical)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool a square (used for checking right angles)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool a caliper (used for measuring small distances or thickness)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool a ruler or straightedge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool a protractor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool a tape measure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the tool a compass (used for drawing circles or arcs)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tool, and the correct answer is Pencil."
+    },
+    {
+      "role": "user",
+      "content": "Is the tool electronic?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for cutting?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for gripping or holding?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for driving or removing fasteners (like screws or nails)?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring or marking?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool rigid (does not bend or stretch)?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring length or distance?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring angles?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring weight?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring time?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring volume?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring temperature?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for measuring electrical properties?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool primarily used for checking levels (horizontal or vertical)?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool a square (used for checking right angles)?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool a caliper (used for measuring small distances or thickness)?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool a ruler or straightedge?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool a protractor?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool a tape measure?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the tool a compass (used for drawing circles or arcs)?\n(Remember the player is trying to guess a tool, and the correct answer is Pencil. Reply with Yes or No in relation to Pencil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

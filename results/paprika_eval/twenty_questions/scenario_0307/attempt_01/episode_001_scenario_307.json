@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 307,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Firestorm",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a natural occurrence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to physics or mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a force?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of energy?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a form of renewable energy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a form of non-renewable energy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it kinetic energy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it potential energy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it thermal energy?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is thermal energy related to heat transfer?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically related to the transfer of heat through direct contact (conduction)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the transfer of heat through the movement of fluids (convection)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly observed in liquids or gases?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the primary mechanism for heat distribution in the Earth's atmosphere (weather systems)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the specific process where warm air rises and cool air sinks, creating currents?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the process where heat is transferred by electromagnetic waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it radiation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where warm air rises and cool air sinks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon known as the greenhouse effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Coriolis effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Firestorm."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a natural occurrence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to physics or mechanics?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a force?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of energy?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a form of renewable energy?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a form of non-renewable energy?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it kinetic energy?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it potential energy?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it thermal energy?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is thermal energy related to heat transfer?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically related to the transfer of heat through direct contact (conduction)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the transfer of heat through the movement of fluids (convection)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly observed in liquids or gases?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the primary mechanism for heat distribution in the Earth's atmosphere (weather systems)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the specific process where warm air rises and cool air sinks, creating currents?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the process where heat is transferred by electromagnetic waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it radiation?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where warm air rises and cool air sinks?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon known as the greenhouse effect?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Coriolis effect?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,342 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 245,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Architect",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on healthcare or medicine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on the arts or entertainment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on technology or computer science?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on business, finance, or management?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on education or teaching?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on law, justice, or public safety?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on construction, manufacturing, or manual labor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on science, engineering, or research?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on the physical sciences (such as physics, chemistry, or geology) rather than biological sciences?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve significant laboratory work or experimentation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve significant fieldwork or outdoor exploration (such as geological surveys or mining)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve theoretical work, such as mathematical modeling or computational analysis?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of a Mathematician or Statistician?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of a Physicist or Astronomer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of a Meteorologist or Climatologist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of a Geographer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of a Geologist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of an Engineer (such as Civil, Mechanical, or Electrical)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of an Architect?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Architect."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on healthcare or medicine?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on the arts or entertainment?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on technology or computer science?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on business, finance, or management?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on education or teaching?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on law, justice, or public safety?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on construction, manufacturing, or manual labor?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on science, engineering, or research?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on the physical sciences (such as physics, chemistry, or geology) rather than biological sciences?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve significant laboratory work or experimentation?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve significant fieldwork or outdoor exploration (such as geological surveys or mining)?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve theoretical work, such as mathematical modeling or computational analysis?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of a Mathematician or Statistician?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of a Physicist or Astronomer?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of a Meteorologist or Climatologist?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of a Geographer?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of a Geologist?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of an Engineer (such as Civil, Mechanical, or Electrical)?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of an Architect?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Architect in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct occupation, which is: Architect, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the occupation specifically that of an Architect?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct occupation, which is Architect in this particular game. Reply with <VALID> only if the player has guessed Architect in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Architect is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

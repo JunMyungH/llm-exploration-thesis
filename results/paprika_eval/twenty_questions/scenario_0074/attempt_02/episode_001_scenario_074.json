@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 74,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Helen Keller",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person male?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a historical figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known primarily for her role in royalty or nobility?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known primarily for her contributions to science or mathematics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known primarily for her contributions to the arts, such as literature, music, or painting?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known primarily as a writer or poet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person English?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person French?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person American?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known primarily as a novelist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a poet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for writing plays or screenplays?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for writing essays or journalism?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person from the 20th century or later?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for political or social commentary?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for feminist writings?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Gloria Steinem?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Maya Angelou?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Hannah Arendt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Helen Keller."
+    },
+    {
+      "role": "user",
+      "content": "Is the person alive?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person male?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known primarily for her role in royalty or nobility?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known primarily for her contributions to science or mathematics?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known primarily for her contributions to the arts, such as literature, music, or painting?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known primarily as a writer or poet?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person English?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person French?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person American?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known primarily as a novelist?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a poet?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for writing plays or screenplays?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for writing essays or journalism?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person from the 20th century or later?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for political or social commentary?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for feminist writings?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Gloria Steinem?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Maya Angelou?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Hannah Arendt?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

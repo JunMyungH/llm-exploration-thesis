@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 339,
+  "agent_game_scenario": "natural phenomenon",
+  "env_game_scenario": "Snowflake",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a natural phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this natural phenomenon visible in the night sky?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this natural phenomenon related to water?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a form of precipitation (such as rain, snow, hail, or sleet)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it solid (such as snow or hail)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it snow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it hail?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it sleet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it freezing rain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it graupel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fog?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cloud?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a rainbow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tornado?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tsunami?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hurricane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a whirlpool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a waterfall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a whirlwind?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tsunami? (Wait, I already asked that. Let me correct my path.)\n\nIs it an earthquake?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a volcanic eruption?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a natural phenomenon, and the correct answer is Snowflake."
+    },
+    {
+      "role": "user",
+      "content": "Is this natural phenomenon visible in the night sky?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this natural phenomenon related to water?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a form of precipitation (such as rain, snow, hail, or sleet)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it solid (such as snow or hail)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it snow?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it hail?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it sleet?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it freezing rain?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it graupel?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fog?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cloud?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a rainbow?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tornado?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tsunami?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hurricane?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a whirlpool?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a waterfall?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a whirlwind?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tsunami? (Wait, I already asked that. Let me correct my path.)\n\nIs it an earthquake?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a volcanic eruption?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Snowflake. Reply with Yes or No in relation to Snowflake.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

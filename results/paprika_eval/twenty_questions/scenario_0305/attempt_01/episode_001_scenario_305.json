@@ -1,0 +1,294 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 305,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Thunder",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 16,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to weather or atmospheric conditions?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a visual display of light in the sky?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a phenomenon involving sound?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it caused by thunder?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the propagation of sound through water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the sound of wind?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the human voice or speech?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the sound produced by celestial bodies?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the sound produced by earthquakes or tectonic activity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the sound of an explosion or shockwave (such as a sonic boom)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sonic boom produced by an aircraft traveling faster than the speed of sound?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sonic boom produced by a meteor or asteroid entering the atmosphere?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sonic boom produced by a volcanic eruption?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sonic boom produced by a human-made explosive device, such as a bomb or gunshot?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sonic boom produced by a volcanic eruption's ash cloud or pyroclastic flow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the sound produced by a lightning strike (thunder)?\n\n*(Note: Although I previously asked \"Is it caused by thunder?\" and the answer was \"No,\" in the context of 20 Questions, sometimes questions are interpreted strictly as \"Is the phenomenon 'Thunder'?\" vs \"Is it caused by the event that creates thunder?\". However, since I already asked if it was a visual display (No) and then asked if it was caused by thunder (No), let's re-evaluate.)*\n\nWait, let's look back.\n1. Weather/Atmospheric? Yes.\n2. Visual light"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Thunder."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to weather or atmospheric conditions?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a visual display of light in the sky?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a phenomenon involving sound?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it caused by thunder?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the propagation of sound through water?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the sound of wind?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the human voice or speech?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the sound produced by celestial bodies?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the sound produced by earthquakes or tectonic activity?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the sound of an explosion or shockwave (such as a sonic boom)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sonic boom produced by an aircraft traveling faster than the speed of sound?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sonic boom produced by a meteor or asteroid entering the atmosphere?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sonic boom produced by a volcanic eruption?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sonic boom produced by a human-made explosive device, such as a bomb or gunshot?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sonic boom produced by a volcanic eruption's ash cloud or pyroclastic flow?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the sound produced by a lightning strike (thunder)?\n\n*(Note: Although I previously asked \"Is it caused by thunder?\" and the answer was \"No,\" in the context of 20 Questions, sometimes questions are interpreted strictly as \"Is the phenomenon 'Thunder'?\" vs \"Is it caused by the event that creates thunder?\". However, since I already asked if it was a visual display (No) and then asked if it was caused by thunder (No), let's re-evaluate.)*\n\nWait, let's look back.\n1. Weather/Atmospheric? Yes.\n2. Visual light\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Thunder in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct phenomenon, which is: Thunder, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it the sound produced by a lightning strike (thunder)?\n\n*(Note: Although I previously asked \"Is it caused by thunder?\" and the answer was \"No,\" in the context of 20 Questions, sometimes questions are interpreted strictly as \"Is the phenomenon 'Thunder'?\" vs \"Is it caused by the event that creates thunder?\". However, since I already asked if it was a visual display (No) and then asked if it was caused by thunder (No), let's re-evaluate.)*\n\nWait, let's look back.\n1. Weather/Atmospheric? Yes.\n2. Visual light\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct phenomenon, which is Thunder in this particular game. Reply with <VALID> only if the player has guessed Thunder in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Thunder is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

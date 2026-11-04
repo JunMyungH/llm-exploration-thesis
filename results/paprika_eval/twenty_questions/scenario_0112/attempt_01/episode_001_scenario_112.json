@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 112,
+  "agent_game_scenario": "movie",
+  "env_game_scenario": "Argo",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie from the 21st century (released after the year 2000)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie an animated film?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a live-action film produced in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the genre of the movie Science Fiction?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a Comedy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a Drama?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character of the movie an older male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"The Shawshank Redemption\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie based on a true story?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"Schindler's List\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a criminal or someone involved in the legal system?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"Good Will Hunting\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"Forrest Gump\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a biographical drama about a musician or artist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"The Social Network\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character an athlete?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a scientist or involved in academia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"A Beautiful Mind\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie \"The Pursuit of Happyness\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Argo."
+    },
+    {
+      "role": "user",
+      "content": "Is the movie from the 21st century (released after the year 2000)?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie an animated film?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a live-action film produced in the United States?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the genre of the movie Science Fiction?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a Comedy?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a Drama?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character of the movie an older male?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"The Shawshank Redemption\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie based on a true story?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"Schindler's List\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the 20th century?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a criminal or someone involved in the legal system?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"Good Will Hunting\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"Forrest Gump\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a biographical drama about a musician or artist?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"The Social Network\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character an athlete?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a scientist or involved in academia?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"A Beautiful Mind\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie \"The Pursuit of Happyness\"?\n(Remember the player is trying to guess a movie, and the correct answer is Argo. Reply with Yes or No in relation to Argo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

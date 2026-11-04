@@ -1,0 +1,278 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 183,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Skateboarding",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 15,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily based on martial arts or hand-to-hand combat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily practiced on water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily practiced on snow or ice?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily practiced on a track or field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily practiced indoors (such as in a gym, arena, or court)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily driven by animal power?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily driven by human muscle power (such as running, swimming, or rowing)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on precision with equipment (such as shooting, archery, or billiards)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on speed and endurance using non-motorized vehicles (such as cycling, skateboarding, or skiing)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vehicle two-wheeled (such as a bicycle, motorcycle, or skateboard)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vehicle four-wheeled (such as a car, kart, or quad)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vehicle a sled or bobsled?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vehicle a boat or kayak?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vehicle a skateboard or roller skates?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Skateboarding."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily based on martial arts or hand-to-hand combat?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily practiced on water?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily practiced on snow or ice?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily practiced on a track or field?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily practiced indoors (such as in a gym, arena, or court)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily driven by animal power?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily driven by human muscle power (such as running, swimming, or rowing)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on precision with equipment (such as shooting, archery, or billiards)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on speed and endurance using non-motorized vehicles (such as cycling, skateboarding, or skiing)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the vehicle two-wheeled (such as a bicycle, motorcycle, or skateboard)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vehicle four-wheeled (such as a car, kart, or quad)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vehicle a sled or bobsled?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vehicle a boat or kayak?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vehicle a skateboard or roller skates?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Skateboarding in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct sport, which is: Skateboarding, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the vehicle a skateboard or roller skates?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct sport, which is Skateboarding in this particular game. Reply with <VALID> only if the player has guessed Skateboarding in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Skateboarding is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+Checking Ninja...
+/home/jh92/micromamba/envs/vllm-server/bin/ninja
+1.13.2
+====================================
+Job ID: 36294
+Node: cloud-206
+====================================
+GPU 0: NVIDIA A100 80GB PCIe (UUID: GPU-6b74378d-d133-0906-a6d4-e754bd67d5f9)
+GPU 1: NVIDIA A100 80GB PCIe (UUID: GPU-4cc7b360-c3cf-74e5-12d5-02a0b7f395e1)
+Starting vLLM...
+Waiting for API server...
+vLLM API is ready.
+Testing Qwen response...
+{"id":"chatcmpl-b4129e196afb34be","object":"chat.completion","created":1793142948,"model":"Qwen/Qwen3.6-35B-A3B","choices":[{"index":0,"message":{"role":"assistant","content":"Hello!","refusal":null,"annotations":null,"audio":null,"function_call":null,"reasoning":null},"logprobs":null,"finish_reason":"stop","stop_reason":null,"token_ids":null,"routed_experts":null}],"service_tier":null,"system_fingerprint":"vllm-0.32.0-tp2-74e9e819","usage":{"prompt_tokens":18,"total_tokens":21,"completion_tokens":3,"prompt_tokens_details":null,"completion_tokens_details":null},"prompt_logprobs":null,"prompt_token_ids":null,"prompt_text":null,"kv_transfer_params":null,"ec_transfer_params":null,"metrics":null}
+Starting Twenty Questions...
+
+============================================================
+Game: twenty_questions
+Split: train
+Episodes: 1
+Mode: successive scenarios
+Output: results/twenty_questions/20261028_001551_656738_train_n1
+============================================================
+
+[1/1] Scenario 0
+Category: clothing
+Hidden target: Corset
+Success: False
+Turns: 20/20
+
+============================================================
+Batch finished
+Success: 0/1 (0.0%)
+Average turns (all episodes): 20.00
+Average turns (successful episodes): N/A
+Summary: results/twenty_questions/20261028_001551_656738_train_n1/summary.json
+============================================================
+Test finished.

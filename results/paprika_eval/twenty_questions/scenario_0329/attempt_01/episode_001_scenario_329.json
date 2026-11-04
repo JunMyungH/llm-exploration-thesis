@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 329,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Fractals",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a physical object?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept an abstract idea?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to emotions or feelings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics or logic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of mathematics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fundamental concept in arithmetic, such as a number type (e.g., integer, prime) or an operation (e.g., addition, division)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a concept from geometry, such as a shape, a theorem, or a property (e.g., parallel, congruent)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a specific geometric shape, such as a circle, triangle, or square?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a geometric theorem or a property of shapes (e.g., Pythagorean theorem, parallel)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a geometric term related to measurement, such as area, volume, or perimeter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a concept related to coordinates or position in space, such as dimension, axis, or vector?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically \"dimension\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"axis\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"vector\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to symmetry?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"axis of symmetry\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"symmetry\" itself?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"reflection\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"rotation\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"translation\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Fractals."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept an abstract idea?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to emotions or feelings?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of mathematics?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fundamental concept in arithmetic, such as a number type (e.g., integer, prime) or an operation (e.g., addition, division)?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a concept from geometry, such as a shape, a theorem, or a property (e.g., parallel, congruent)?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a specific geometric shape, such as a circle, triangle, or square?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a geometric theorem or a property of shapes (e.g., Pythagorean theorem, parallel)?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a geometric term related to measurement, such as area, volume, or perimeter?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a concept related to coordinates or position in space, such as dimension, axis, or vector?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically \"dimension\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"axis\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"vector\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to symmetry?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"axis of symmetry\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"symmetry\" itself?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"reflection\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"rotation\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"translation\"?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

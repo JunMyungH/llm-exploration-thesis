@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 45,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Niagara Falls",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location outdoors in a natural setting (e.g., a forest, desert, mountain, or body of water)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a body of water?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an ocean or sea?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a river?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the river located in North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the river located in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Mississippi River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Missouri River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Colorado River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Rio Grande?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Columbia River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Ohio River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Colorado River? (Wait, I already asked that. Let me try a different major one.)\n\nIs it the Snake River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Hudson River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Potomac River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Colorado River? (Wait, I already asked that. Let me try a different major one.)\n\nIs it the Snake River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Let me clarify my previous questions to ensure I am on the right track. I have asked about the Mississippi, Missouri, Colorado, Rio Grande, Columbia, Ohio, Snake, Hudson, and Potomac rivers, and the answer was \"No\" to all of them.\n\nLet's narrow down the geography further within the United States.\n\nIs the river located in the Western United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the river located in the Eastern United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Delaware River?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Niagara Falls."
+    },
+    {
+      "role": "user",
+      "content": "Is the location indoors?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location outdoors in a natural setting (e.g., a forest, desert, mountain, or body of water)?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a body of water?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it an ocean or sea?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a river?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the river located in North America?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the river located in the United States?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Mississippi River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Missouri River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Colorado River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Rio Grande?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Columbia River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Ohio River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Colorado River? (Wait, I already asked that. Let me try a different major one.)\n\nIs it the Snake River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Hudson River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Potomac River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Colorado River? (Wait, I already asked that. Let me try a different major one.)\n\nIs it the Snake River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Let me clarify my previous questions to ensure I am on the right track. I have asked about the Mississippi, Missouri, Colorado, Rio Grande, Columbia, Ohio, Snake, Hudson, and Potomac rivers, and the answer was \"No\" to all of them.\n\nLet's narrow down the geography further within the United States.\n\nIs the river located in the Western United States?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the river located in the Eastern United States?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Delaware River?\n(Remember the player is trying to guess a location, and the correct answer is Niagara Falls. Reply with Yes or No in relation to Niagara Falls.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

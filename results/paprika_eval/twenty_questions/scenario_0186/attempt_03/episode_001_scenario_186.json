@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 186,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Triathlon",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport played primarily with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport contested on ice?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport primarily a combat sport (involving fighting or grappling)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport primarily performed in a pool or involves water?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving a boat or canoe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport diving?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport synchronized swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport water polo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport surfing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport rowing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport water skiing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport sailing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport kayaking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involved in the Olympics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport judged based on how fast a person or team can complete a course or distance?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport competitive swimming (including freestyle, backstroke, breaststroke, or butterfly)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport synchronized swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport diving (platform or springboard)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport canoe slalom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Triathlon."
+    },
+    {
+      "role": "user",
+      "content": "Is this sport played primarily with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport contested on ice?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport primarily a combat sport (involving fighting or grappling)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport primarily performed in a pool or involves water?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport swimming?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving a boat or canoe?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport diving?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport synchronized swimming?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport water polo?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport surfing?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport rowing?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport water skiing?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport sailing?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport kayaking?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involved in the Olympics?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport judged based on how fast a person or team can complete a course or distance?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport competitive swimming (including freestyle, backstroke, breaststroke, or butterfly)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport synchronized swimming?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport diving (platform or springboard)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport canoe slalom?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

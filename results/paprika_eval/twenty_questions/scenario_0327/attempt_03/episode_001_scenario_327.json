@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 327,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "DNA Double Helix",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a physical object?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a living thing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it man-made?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it smaller than a car?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it found underwater?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of rock or mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a part of a tree or plant?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an animal that lives on land?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an insect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a gemstone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cloud or a weather phenomenon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of bird?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fruit?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flower?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of fish?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of mushroom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of fungus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a celestial body, such as a star or planet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a natural feature of the Earth, such as a mountain, valley, or cave?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a natural occurrence like lightning, thunder, or a rainbow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is DNA Double Helix."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a living thing?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it man-made?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it smaller than a car?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it found underwater?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of rock or mineral?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a part of a tree or plant?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an animal that lives on land?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an insect?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a gemstone?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cloud or a weather phenomenon?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of bird?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fruit?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flower?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of fish?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of mushroom?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of fungus?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a celestial body, such as a star or planet?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a natural feature of the Earth, such as a mountain, valley, or cave?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a natural occurrence like lightning, thunder, or a rainbow?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

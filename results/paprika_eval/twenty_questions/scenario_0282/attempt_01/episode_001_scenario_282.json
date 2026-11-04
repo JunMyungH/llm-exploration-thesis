@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 282,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Fountain Pen",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use a mechanical mechanism to function?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was it invented before the year 1900?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the printing of text onto paper?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the printing press?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the movement of water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the transmission of sound?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the measurement of time?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the grinding or crushing of materials?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the lifting of heavy objects?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the measurement of distance or angles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the spinning or twisting of fibers to create thread or rope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the extraction of liquid from solids?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the processing of grain into flour?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the cutting or shaping of wood?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the spinning of wire or metal into a specific shape?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the generation of heat or fire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the preservation of food, such as canning or bottling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve the writing or drawing of images?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the pencil?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Fountain Pen."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use a mechanical mechanism to function?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was it invented before the year 1900?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the printing of text onto paper?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the printing press?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the movement of water?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the transmission of sound?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the measurement of time?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the grinding or crushing of materials?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the lifting of heavy objects?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the measurement of distance or angles?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the spinning or twisting of fibers to create thread or rope?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the extraction of liquid from solids?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the processing of grain into flour?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the cutting or shaping of wood?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the spinning of wire or metal into a specific shape?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the generation of heat or fire?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the preservation of food, such as canning or bottling?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve the writing or drawing of images?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the pencil?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

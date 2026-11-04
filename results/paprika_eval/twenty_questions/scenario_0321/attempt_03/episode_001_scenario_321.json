@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 321,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Turbine",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention mechanical in nature?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to transportation?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it operate on land?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it have an internal combustion engine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it run on electricity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use steam power?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a locomotive (train engine)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered boat or ship?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered car?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered airplane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a stationary steam engine, such as one used in a factory or mill?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use steam power to propel itself on tracks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use steam power to propel itself on water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use steam power to propel itself on land?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use steam power for something other than transportation (e.g., agriculture, construction, or industrial machinery)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered tractor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered excavator or crane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered pump?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered agricultural machine, such as a threshing engine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a steam-powered lawnmower?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Turbine."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention mechanical in nature?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it operate on land?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it have an internal combustion engine?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it run on electricity?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use steam power?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a locomotive (train engine)?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered boat or ship?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered car?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered airplane?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a stationary steam engine, such as one used in a factory or mill?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use steam power to propel itself on tracks?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use steam power to propel itself on water?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use steam power to propel itself on land?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it use steam power for something other than transportation (e.g., agriculture, construction, or industrial machinery)?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered tractor?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered excavator or crane?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered pump?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered agricultural machine, such as a threshing engine?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a steam-powered lawnmower?\n(Remember the player is trying to guess a invention, and the correct answer is Turbine. Reply with Yes or No in relation to Turbine.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

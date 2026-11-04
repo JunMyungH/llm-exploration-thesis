@@ -1,0 +1,246 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 151,
+  "agent_game_scenario": "vegetable",
+  "env_game_scenario": "Bean Sprouts",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 13,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a root vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a leafy green vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fruiting vegetable (botanically speaking, meaning it develops from the flower of the plant, like tomatoes, peppers, or cucumbers)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bulb vegetable (like onions or garlic)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a stem vegetable (like asparagus, celery, or broccoli)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fungal vegetable (like mushrooms or truffles)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a seed vegetable (like peas, beans, or corn)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flower vegetable (like cauliflower or artichokes)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is tricky. We have ruled out root, leafy green, fruiting, bulb, stem, fungal, seed, and flower vegetables.\n\nThe remaining common categories for vegetables are:\n1.  **Seaweed/Algae** (often treated as vegetables in culinary contexts).\n2.  **Sprouts** (like alfalfa or bean sprouts).\n3.  **Microgreens**.\n4.  **Corms/Tubers** (though these are often grouped with roots, e.g., potatoes, yams).\n5.  **Rhizomes** (e.g., ginger,"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a corm or tuber (such as a potato, yam, or taro)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a seaf vegetable (such as seaweed or kelp)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sprout (such as alfalfa, bean, or broccoli sprouts)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bean sprout (such as mung bean sprouts)?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Bean Sprouts."
+    },
+    {
+      "role": "user",
+      "content": "Is it a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a leafy green vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fruiting vegetable (botanically speaking, meaning it develops from the flower of the plant, like tomatoes, peppers, or cucumbers)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bulb vegetable (like onions or garlic)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a stem vegetable (like asparagus, celery, or broccoli)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fungal vegetable (like mushrooms or truffles)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a seed vegetable (like peas, beans, or corn)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flower vegetable (like cauliflower or artichokes)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is tricky. We have ruled out root, leafy green, fruiting, bulb, stem, fungal, seed, and flower vegetables.\n\nThe remaining common categories for vegetables are:\n1.  **Seaweed/Algae** (often treated as vegetables in culinary contexts).\n2.  **Sprouts** (like alfalfa or bean sprouts).\n3.  **Microgreens**.\n4.  **Corms/Tubers** (though these are often grouped with roots, e.g., potatoes, yams).\n5.  **Rhizomes** (e.g., ginger,\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a corm or tuber (such as a potato, yam, or taro)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a seaf vegetable (such as seaweed or kelp)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sprout (such as alfalfa, bean, or broccoli sprouts)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bean sprout (such as mung bean sprouts)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Bean Sprouts in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct vegetable, which is: Bean Sprouts, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it a bean sprout (such as mung bean sprouts)?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct vegetable, which is Bean Sprouts in this particular game. Reply with <VALID> only if the player has guessed Bean Sprouts in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Bean Sprouts is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

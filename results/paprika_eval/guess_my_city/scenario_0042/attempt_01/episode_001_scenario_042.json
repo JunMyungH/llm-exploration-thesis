@@ -1,0 +1,310 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 42,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Kingston, Jamaica",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 17,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a fun challenge! I'm ready to play.\n\nMy first question is:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. The city is in the Southern Hemisphere.\n\nMy next question is:\n\n**Is your home city located in South America?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in South America."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The city is in the Southern Hemisphere but not in South America.\n\nMy next question is:\n\n**Is your home city located in Australia or New Zealand?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Australia or New Zealand."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in the Southern Hemisphere, but not in South America, Australia, or New Zealand. This narrows it down significantly to regions like Southern Africa, parts of Southern Asia (like Indonesia, though mostly equatorial, some parts are south), or the Indian Ocean islands.\n\nMy next question is:\n\n**Is your home city located in Africa?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Africa."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in the Southern Hemisphere, but not in South America, Australia, New Zealand, or Africa.\n\nThis leaves a few possibilities:\n1.  **Indonesia** (partially in the Southern Hemisphere)\n2.  **Madagascar**\n3.  **Mauritius**\n4.  **Reunion** (French territory)\n5.  Parts of **Chile** (Wait, I excluded South America, so Chile is out).\n6.  Parts of **Argentina** (Excluded).\n7.  Parts of **Botswana/Namibia/Zimbabwe**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in any of those regions."
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, let me re-evaluate. If the city is in the Southern Hemisphere, and it is **not** in South America, Australia, New Zealand, Africa, or the regions I just listed (which I assume included Indonesia/Madagascar based on your \"No, my home city is not located in any of those regions\" response to my previous thought process, though my last explicit question was just \"Is your home city located in Africa?\").\n\nLet's reset the logic clearly based on the explicit answers given:\n1.  Southern Hemisphere? **Yes**.\n2.  South America? **No**.\n3."
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in the Southern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Ah, I see! That was a crucial correction. I apologize for the confusion in my previous thought process. Let me realign with the correct information.\n\nSo far, we know:\n1.  The city is **not** in the Southern Hemisphere.\n2.  Therefore, the city is in the **Northern Hemisphere**.\n\nMy next question is:\n\n**Is your home city located in Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Asia."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in the Northern Hemisphere, but not in Asia.\n\nMy next question is:\n\n**Is your home city located in Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Europe."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in the Northern Hemisphere, but not in Asia or Europe.\n\nMy next question is:\n\n**Is your home city located in North America?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in North America."
+    },
+    {
+      "role": "assistant",
+      "content": "Great! Now I know the city is in North America.\n\nMy next question is:\n\n**Is your home city located in the United States?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in the United States."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in North America, but not in the United States. This leaves countries like Canada, Mexico, and the nations of Central America and the Caribbean.\n\nMy next question is:\n\n**Is your home city located in Canada?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Canada."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in North America, but not in the US, Canada, or (based on previous negations) Asia, Europe, South America, Australia, New Zealand, or Africa.\n\nThis leaves **Mexico**, **Central America** (Guatemala, Belize, Honduras, El Salvador, Nicaragua, Costa Rica, Panama), or the **Caribbean**.\n\nMy next question is:\n\n**Is your home city located in Mexico?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Mexico."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in North America, but not in the US, Canada, or Mexico. This leaves Central America and the Caribbean.\n\nMy next question is:\n\n**Is your home city located in Central America (e.g., Guatemala, Belize, Honduras, El Salvador, Nicaragua, Costa Rica, or Panama)?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in Central America."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in North America, but not in the US, Canada, Mexico, or Central America.\n\nThis leaves one major region: **The Caribbean**.\n\nMy next question is:\n\n**Is your home city located in the Caribbean?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located in the Caribbean."
+    },
+    {
+      "role": "assistant",
+      "content": "Great! Now I know the city is in the Caribbean.\n\nMy next question is:\n\n**Is your home city located on one of the Greater Antilles islands (Cuba, Jamaica, Hispaniola, or Puerto Rico)?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located on one of the Greater Antilles islands."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is on one of the Greater Antilles islands: Cuba, Jamaica, Hispaniola (which contains Haiti and the Dominican Republic), or Puerto Rico.\n\nMy next question is:\n\n**Is your home city located in a Spanish-speaking country?** (This would narrow it down to Cuba, Dominican Republic, or Puerto Rico, excluding Jamaica)."
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not located in a Spanish-speaking country."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in the Greater Antilles, but not in a Spanish-speaking country. This leaves us with only one major option: **Jamaica** (since English is the official language, and it's the only English-speaking country among the Greater Antilles).\n\nMy next question is:\n\n**Is your home city Kingston, Jamaica?**"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Kingston, Jamaica"
+    },
+    {
+      "role": "user",
+      "content": "That sounds like a fun challenge! I'm ready to play.\n\nMy first question is:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Got it. The city is in the Southern Hemisphere.\n\nMy next question is:\n\n**Is your home city located in South America?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in South America."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The city is in the Southern Hemisphere but not in South America.\n\nMy next question is:\n\n**Is your home city located in Australia or New Zealand?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Australia or New Zealand."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in the Southern Hemisphere, but not in South America, Australia, or New Zealand. This narrows it down significantly to regions like Southern Africa, parts of Southern Asia (like Indonesia, though mostly equatorial, some parts are south), or the Indian Ocean islands.\n\nMy next question is:\n\n**Is your home city located in Africa?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Africa."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in the Southern Hemisphere, but not in South America, Australia, New Zealand, or Africa.\n\nThis leaves a few possibilities:\n1.  **Indonesia** (partially in the Southern Hemisphere)\n2.  **Madagascar**\n3.  **Mauritius**\n4.  **Reunion** (French territory)\n5.  Parts of **Chile** (Wait, I excluded South America, so Chile is out).\n6.  Parts of **Argentina** (Excluded).\n7.  Parts of **Botswana/Namibia/Zimbabwe**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in any of those regions."
+    },
+    {
+      "role": "user",
+      "content": "Wait, let me re-evaluate. If the city is in the Southern Hemisphere, and it is **not** in South America, Australia, New Zealand, Africa, or the regions I just listed (which I assume included Indonesia/Madagascar based on your \"No, my home city is not located in any of those regions\" response to my previous thought process, though my last explicit question was just \"Is your home city located in Africa?\").\n\nLet's reset the logic clearly based on the explicit answers given:\n1.  Southern Hemisphere? **Yes**.\n2.  South America? **No**.\n3.\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in the Southern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Ah, I see! That was a crucial correction. I apologize for the confusion in my previous thought process. Let me realign with the correct information.\n\nSo far, we know:\n1.  The city is **not** in the Southern Hemisphere.\n2.  Therefore, the city is in the **Northern Hemisphere**.\n\nMy next question is:\n\n**Is your home city located in Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Asia."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in the Northern Hemisphere, but not in Asia.\n\nMy next question is:\n\n**Is your home city located in Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Europe."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in the Northern Hemisphere, but not in Asia or Europe.\n\nMy next question is:\n\n**Is your home city located in North America?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in North America."
+    },
+    {
+      "role": "user",
+      "content": "Great! Now I know the city is in North America.\n\nMy next question is:\n\n**Is your home city located in the United States?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in the United States."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in North America, but not in the United States. This leaves countries like Canada, Mexico, and the nations of Central America and the Caribbean.\n\nMy next question is:\n\n**Is your home city located in Canada?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Canada."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in North America, but not in the US, Canada, or (based on previous negations) Asia, Europe, South America, Australia, New Zealand, or Africa.\n\nThis leaves **Mexico**, **Central America** (Guatemala, Belize, Honduras, El Salvador, Nicaragua, Costa Rica, Panama), or the **Caribbean**.\n\nMy next question is:\n\n**Is your home city located in Mexico?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Mexico."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in North America, but not in the US, Canada, or Mexico. This leaves Central America and the Caribbean.\n\nMy next question is:\n\n**Is your home city located in Central America (e.g., Guatemala, Belize, Honduras, El Salvador, Nicaragua, Costa Rica, or Panama)?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in Central America."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in North America, but not in the US, Canada, Mexico, or Central America.\n\nThis leaves one major region: **The Caribbean**.\n\nMy next question is:\n\n**Is your home city located in the Caribbean?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located in the Caribbean."
+    },
+    {
+      "role": "user",
+      "content": "Great! Now I know the city is in the Caribbean.\n\nMy next question is:\n\n**Is your home city located on one of the Greater Antilles islands (Cuba, Jamaica, Hispaniola, or Puerto Rico)?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located on one of the Greater Antilles islands."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is on one of the Greater Antilles islands: Cuba, Jamaica, Hispaniola (which contains Haiti and the Dominican Republic), or Puerto Rico.\n\nMy next question is:\n\n**Is your home city located in a Spanish-speaking country?** (This would narrow it down to Cuba, Dominican Republic, or Puerto Rico, excluding Jamaica).\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not located in a Spanish-speaking country."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in the Greater Antilles, but not in a Spanish-speaking country. This leaves us with only one major option: **Jamaica** (since English is the official language, and it's the only English-speaking country among the Greater Antilles).\n\nMy next question is:\n\n**Is your home city Kingston, Jamaica?**\n(Remember the player is trying to guess a city, and the correct answer is Kingston, Jamaica. Reply to the question in relation to Kingston, Jamaica. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Okay, so the city is in the Greater Antilles, but not in a Spanish-speaking country. This leaves us with only one major option: **Jamaica** (since English is the official language, and it's the only English-speaking country among the Greater Antilles).\n\nMy next question is:\n\n**Is your home city Kingston, Jamaica?**\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Kingston, Jamaica in this particular game. Reply with <VALID> only if the player has guessed Kingston, Jamaica (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

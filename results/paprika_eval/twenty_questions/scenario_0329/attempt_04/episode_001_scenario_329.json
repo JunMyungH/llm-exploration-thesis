@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 329,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Fractals",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept you are thinking of a living organism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept abstract, such as an idea, emotion, or theory?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to arithmetic operations (like addition, subtraction, multiplication, or division)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to geometry?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to shapes or figures in two dimensions (2D)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to circles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to triangles?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Pythagorean theorem?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the sum of the interior angles of a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to congruence or similarity of triangles?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically about the conditions for triangle congruence, such as SSS, SAS, or ASA?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the properties of similar triangles, such as the ratio of their corresponding sides?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Pythagorean theorem? (Wait, I already asked this and got a No. Let me re-evaluate based on the previous \"No\" to congruence conditions.)\n\nLet's backtrack slightly. We know it's a concept in 2D geometry, specifically about similar triangles, but not SSS/SAS/ASA congruence.\n\nIs the concept related to the ratio of the areas of two similar triangles being equal to the square of the ratio of their corresponding sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Triangle Proportionality Theorem (also known as Thales's basic proportionality theorem)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Law of Sines?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Law of Cosines?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the centroid of a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the circumcircle or circumcenter of a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the incenter or incircle of a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Fractals."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept you are thinking of a living organism?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept abstract, such as an idea, emotion, or theory?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to arithmetic operations (like addition, subtraction, multiplication, or division)?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to geometry?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to shapes or figures in two dimensions (2D)?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to circles?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to triangles?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Pythagorean theorem?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the sum of the interior angles of a triangle?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to congruence or similarity of triangles?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically about the conditions for triangle congruence, such as SSS, SAS, or ASA?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the properties of similar triangles, such as the ratio of their corresponding sides?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Pythagorean theorem? (Wait, I already asked this and got a No. Let me re-evaluate based on the previous \"No\" to congruence conditions.)\n\nLet's backtrack slightly. We know it's a concept in 2D geometry, specifically about similar triangles, but not SSS/SAS/ASA congruence.\n\nIs the concept related to the ratio of the areas of two similar triangles being equal to the square of the ratio of their corresponding sides?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Triangle Proportionality Theorem (also known as Thales's basic proportionality theorem)?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Law of Sines?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Law of Cosines?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the centroid of a triangle?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the circumcircle or circumcenter of a triangle?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the incenter or incircle of a triangle?\n(Remember the player is trying to guess a concept, and the correct answer is Fractals. Reply with Yes or No in relation to Fractals.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

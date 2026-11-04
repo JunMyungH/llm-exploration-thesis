@@ -1,0 +1,342 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 163,
+  "agent_game_scenario": "shape",
+  "env_game_scenario": "Diamond",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a circle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a square?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a rectangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a star?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a polygon?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the polygon a regular polygon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the polygon convex?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the polygon have 5 sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the polygon have 3 sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the polygon have 4 sides?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the quadrilateral a parallelogram?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the parallelogram a rhombus?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the rhombus a square?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the rhombus a kite?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the rhombus a square? (Wait, I already asked that and got No). Let me re-evaluate.\n\nA rhombus is a parallelogram with 4 equal sides.\nA kite is a quadrilateral with two pairs of equal-length sides that are adjacent to each other.\nAll rhombi are kites, but not all kites are rhombi. Since I already confirmed it is a rhombus, the fact that it is a kite is redundant but consistent.\n\nI need to distinguish it from a square (which I already ruled out). Are there other specific types of rhomb"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Since it is a rhombus, a kite, and NOT a square, the shape is a **rhombus** that is not a square.\n\nIs your guess **Rhombus**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is getting tricky. Let's re-trace the logic:\n1. It is a polygon.\n2. It is not a regular polygon.\n3. It is convex.\n4. It is a quadrilateral (4 sides).\n5. It is a parallelogram.\n6. It is a rhombus.\n7. It is NOT a square.\n8. It is a kite.\n\nA rhombus is always a kite. So \"Kite\" doesn't narrow it down further than \"Rhombus\". Since it's not a square, it's just a general rhomb"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Let's step back. I have established that the shape is a convex quadrilateral, a parallelogram, and a rhombus, but not a square.\n\nIs the shape a **diamond** (as in the suit symbol)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Diamond."
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a square?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a triangle?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a rectangle?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a star?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the polygon a regular polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the polygon convex?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the polygon have 5 sides?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the polygon have 3 sides?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the polygon have 4 sides?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the quadrilateral a parallelogram?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the parallelogram a rhombus?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the rhombus a square?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the rhombus a kite?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the rhombus a square? (Wait, I already asked that and got No). Let me re-evaluate.\n\nA rhombus is a parallelogram with 4 equal sides.\nA kite is a quadrilateral with two pairs of equal-length sides that are adjacent to each other.\nAll rhombi are kites, but not all kites are rhombi. Since I already confirmed it is a rhombus, the fact that it is a kite is redundant but consistent.\n\nI need to distinguish it from a square (which I already ruled out). Are there other specific types of rhomb\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Since it is a rhombus, a kite, and NOT a square, the shape is a **rhombus** that is not a square.\n\nIs your guess **Rhombus**?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is getting tricky. Let's re-trace the logic:\n1. It is a polygon.\n2. It is not a regular polygon.\n3. It is convex.\n4. It is a quadrilateral (4 sides).\n5. It is a parallelogram.\n6. It is a rhombus.\n7. It is NOT a square.\n8. It is a kite.\n\nA rhombus is always a kite. So \"Kite\" doesn't narrow it down further than \"Rhombus\". Since it's not a square, it's just a general rhomb\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Let's step back. I have established that the shape is a convex quadrilateral, a parallelogram, and a rhombus, but not a square.\n\nIs the shape a **diamond** (as in the suit symbol)?\n(Remember the player is trying to guess a shape, and the correct answer is Diamond. Reply with Yes or No in relation to Diamond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Diamond in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct shape, which is: Diamond, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Let's step back. I have established that the shape is a convex quadrilateral, a parallelogram, and a rhombus, but not a square.\n\nIs the shape a **diamond** (as in the suit symbol)?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct shape, which is Diamond in this particular game. Reply with <VALID> only if the player has guessed Diamond in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Diamond is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

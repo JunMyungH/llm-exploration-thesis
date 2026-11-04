@@ -1,0 +1,294 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 287,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Prohibition Era",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 16,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, it is not related to a war.\n\nIs the historical event related to a political revolution or the formation of a new government?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is not a war or a political revolution.\n\nIs the historical event primarily related to scientific discovery or exploration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, or exploration.\n\nIs the historical event related to a cultural movement, such as art, music, or literature?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is not related to war, political revolution, scientific discovery, exploration, or cultural movements.\n\nIs the historical event related to a natural disaster?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, exploration, cultural movements, or natural disasters.\n\nIs the historical event related to a significant technological invention or industrial development?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so far we have eliminated:\n1. War\n2. Political revolution/government formation\n3. Scientific discovery/exploration\n4. Cultural movement (art, music, literature)\n5. Natural disaster\n6. Technological invention/industrial development\n\nThis leaves a few categories, such as:\n- Sports events\n- Assassinations or political scandals (that didn't lead to revolution)\n- Economic developments/crashes\n- Religious events\n- Major crimes or trials\n- Space exploration (if considered separate from general scientific discovery)\n\nLet's try to narrow it down by time period or location."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, I need to clarify my previous step. I didn't ask a yes/no question in the last turn; I just listed possibilities. Let me ask a proper question.\n\nIs the historical event related to an economic crisis or a major financial crash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, exploration, cultural movements, natural disasters, technological invention, or economic crises.\n\nIs the historical event related to a religious event or the founding of a religion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, exploration, cultural movements, natural disasters, technological invention, economic crises, or religious events.\n\nIs the historical event related to a major crime, trial, or scandal?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Great, so it is a major crime, trial, or scandal.\n\nIs the person involved in this event a well-known historical figure (e.g., a head of state, famous criminal, or celebrity)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a major crime, trial, or scandal, but the person involved is not a widely recognized historical figure (like a head of state or famous celebrity).\n\nIs the event related to a specific famous trial, such as the trial of a person for treason, murder, or espionage?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a major crime, trial, or scandal, involving a non-famous person, and it is not a specific famous trial like treason or espionage.\n\nIs the event related to the assassination of a prominent political or religious leader?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a major crime, trial, or scandal, involving a non-famous person, not a famous trial for treason/espionage, and not an assassination of a prominent leader.\n\nIs the event related to a large-scale organized crime syndicate or mafia activity?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a historical event related to organized crime or the mafia.\n\nIs the event primarily associated with the American Mafia (La Cosa Nostra) in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a historical event related to the American Mafia in the United States.\n\nIs the event the Prohibition era in the United States (1920–1933), which significantly boosted organized crime?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Prohibition Era."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, it is not related to a war.\n\nIs the historical event related to a political revolution or the formation of a new government?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is not a war or a political revolution.\n\nIs the historical event primarily related to scientific discovery or exploration?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, or exploration.\n\nIs the historical event related to a cultural movement, such as art, music, or literature?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is not related to war, political revolution, scientific discovery, exploration, or cultural movements.\n\nIs the historical event related to a natural disaster?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, exploration, cultural movements, or natural disasters.\n\nIs the historical event related to a significant technological invention or industrial development?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so far we have eliminated:\n1. War\n2. Political revolution/government formation\n3. Scientific discovery/exploration\n4. Cultural movement (art, music, literature)\n5. Natural disaster\n6. Technological invention/industrial development\n\nThis leaves a few categories, such as:\n- Sports events\n- Assassinations or political scandals (that didn't lead to revolution)\n- Economic developments/crashes\n- Religious events\n- Major crimes or trials\n- Space exploration (if considered separate from general scientific discovery)\n\nLet's try to narrow it down by time period or location.\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, I need to clarify my previous step. I didn't ask a yes/no question in the last turn; I just listed possibilities. Let me ask a proper question.\n\nIs the historical event related to an economic crisis or a major financial crash?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, exploration, cultural movements, natural disasters, technological invention, or economic crises.\n\nIs the historical event related to a religious event or the founding of a religion?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not related to war, political revolution, scientific discovery, exploration, cultural movements, natural disasters, technological invention, economic crises, or religious events.\n\nIs the historical event related to a major crime, trial, or scandal?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Great, so it is a major crime, trial, or scandal.\n\nIs the person involved in this event a well-known historical figure (e.g., a head of state, famous criminal, or celebrity)?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a major crime, trial, or scandal, but the person involved is not a widely recognized historical figure (like a head of state or famous celebrity).\n\nIs the event related to a specific famous trial, such as the trial of a person for treason, murder, or espionage?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a major crime, trial, or scandal, involving a non-famous person, and it is not a specific famous trial like treason or espionage.\n\nIs the event related to the assassination of a prominent political or religious leader?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a major crime, trial, or scandal, involving a non-famous person, not a famous trial for treason/espionage, and not an assassination of a prominent leader.\n\nIs the event related to a large-scale organized crime syndicate or mafia activity?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a historical event related to organized crime or the mafia.\n\nIs the event primarily associated with the American Mafia (La Cosa Nostra) in the United States?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a historical event related to the American Mafia in the United States.\n\nIs the event the Prohibition era in the United States (1920–1933), which significantly boosted organized crime?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Prohibition Era in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct historical event, which is: Prohibition Era, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Okay, so it is a historical event related to the American Mafia in the United States.\n\nIs the event the Prohibition era in the United States (1920–1933), which significantly boosted organized crime?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct historical event, which is Prohibition Era in this particular game. Reply with <VALID> only if the player has guessed Prohibition Era in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Prohibition Era is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

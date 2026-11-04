@@ -1,0 +1,166 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 71,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Cochabamba, Bolivia",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 8,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a fun challenge! I'm ready to play. Let's start by narrowing down the location geographically.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The Southern Hemisphere narrows it down significantly, primarily pointing towards South America, Southern Africa, Australia, and parts of Southeast Asia/Oceania.\n\n**Question 2:** Is your home city located on a continent other than Australia/Oceania?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my home city is located on the continent of South America."
+    },
+    {
+      "role": "assistant",
+      "content": "Great, we are now focused on South America. This eliminates Australia, Africa, and Asia.\n\n**Question 3:** Is your home city located on the western coast of South America (along the Pacific Ocean)?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is landlocked and located in the central highlands of the continent."
+    },
+    {
+      "role": "assistant",
+      "content": "Interesting! A landlocked city in the central highlands. This strongly suggests the Andean region, likely in countries like Peru, Bolivia, Ecuador, or perhaps Colombia.\n\n**Question 4:** Is your home city the capital city of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not the capital of its country."
+    },
+    {
+      "role": "assistant",
+      "content": "Alright, so we have a non-capital city in the central highlands of South America. This makes cities like La Paz (Bolivia) and Quito (Ecuador) less likely if they are capitals, but wait—La Paz is the administrative capital, and Quito is the constitutional capital. So if it's *not* a capital, it might be a major secondary city.\n\nIn Peru, the capital is Lima (coastal). The main highland city is Cusco.\nIn Bolivia, the capital is Sucre (constitutional) or La Paz (administrative). Other highland cities include Oruro or P"
+    },
+    {
+      "role": "user",
+      "content": "Correct. It is a major secondary city, often referred to as the \"Garden City\" due to its mild climate and agricultural surroundings."
+    },
+    {
+      "role": "assistant",
+      "content": "The clue \"Garden City\" is very specific. In South America, this nickname is most famously associated with **Cuenca** in Ecuador. Cuenca is known for its well-preserved historic center, its pleasant climate, and its location in the Andean highlands. It is the third-largest city in Ecuador, making it a major secondary city (since the capital, Quito, is in the north).\n\nLet me verify the other clues:\n1.  **Southern Hemisphere?** Yes, Ecuador is just south of the equator.\n2.  **South America?** Yes.\n3.  **Land"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not Cuenca. While it shares some similarities, it is located in a different country."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. It is not Cuenca, Ecuador.\n\nThe \"Garden City\" nickname is also strongly associated with **Medellín** in Colombia. Medellín is located in the Aburrá Valley in the central highlands (Andes), is landlocked within the country's mountainous region, and is famously known as the \"City of Eternal Spring\" due to its mild climate. It is the second-largest city in Colombia, making it a major secondary city (since the capital, Bogotá, is also in the highlands but further north).\n\nLet's check if this fits:\n1.  **Southern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "No, my home city is not Medellín. It is located further south, in a country that is entirely within the Southern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, that rules out Colombia and Ecuador. The city is in a country **entirely** within the Southern Hemisphere. This leaves us with South American countries like Argentina, Chile, Uruguay, Paraguay, Bolivia, Peru (partially, but mostly Southern Hemisphere), and Brazil (partially).\n\nCombined with the previous clues:\n*   South America\n*   Landlocked\n*   Central Highlands\n*   Not the capital\n*   \"Garden City\" nickname (or similar reputation for mild climate/greenery)\n\nThe phrase \"Garden City\" is sometimes used for **Cochabamba** in Bolivia."
+    },
+    {
+      "role": "user",
+      "content": "Yes, you have guessed correctly! Goal reached."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Cochabamba, Bolivia"
+    },
+    {
+      "role": "user",
+      "content": "That sounds like a fun challenge! I'm ready to play. Let's start by narrowing down the location geographically.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The Southern Hemisphere narrows it down significantly, primarily pointing towards South America, Southern Africa, Australia, and parts of Southeast Asia/Oceania.\n\n**Question 2:** Is your home city located on a continent other than Australia/Oceania?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my home city is located on the continent of South America."
+    },
+    {
+      "role": "user",
+      "content": "Great, we are now focused on South America. This eliminates Australia, Africa, and Asia.\n\n**Question 3:** Is your home city located on the western coast of South America (along the Pacific Ocean)?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is landlocked and located in the central highlands of the continent."
+    },
+    {
+      "role": "user",
+      "content": "Interesting! A landlocked city in the central highlands. This strongly suggests the Andean region, likely in countries like Peru, Bolivia, Ecuador, or perhaps Colombia.\n\n**Question 4:** Is your home city the capital city of its country?\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not the capital of its country."
+    },
+    {
+      "role": "user",
+      "content": "Alright, so we have a non-capital city in the central highlands of South America. This makes cities like La Paz (Bolivia) and Quito (Ecuador) less likely if they are capitals, but wait—La Paz is the administrative capital, and Quito is the constitutional capital. So if it's *not* a capital, it might be a major secondary city.\n\nIn Peru, the capital is Lima (coastal). The main highland city is Cusco.\nIn Bolivia, the capital is Sucre (constitutional) or La Paz (administrative). Other highland cities include Oruro or P\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Correct. It is a major secondary city, often referred to as the \"Garden City\" due to its mild climate and agricultural surroundings."
+    },
+    {
+      "role": "user",
+      "content": "The clue \"Garden City\" is very specific. In South America, this nickname is most famously associated with **Cuenca** in Ecuador. Cuenca is known for its well-preserved historic center, its pleasant climate, and its location in the Andean highlands. It is the third-largest city in Ecuador, making it a major secondary city (since the capital, Quito, is in the north).\n\nLet me verify the other clues:\n1.  **Southern Hemisphere?** Yes, Ecuador is just south of the equator.\n2.  **South America?** Yes.\n3.  **Land\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not Cuenca. While it shares some similarities, it is located in a different country."
+    },
+    {
+      "role": "user",
+      "content": "Understood. It is not Cuenca, Ecuador.\n\nThe \"Garden City\" nickname is also strongly associated with **Medellín** in Colombia. Medellín is located in the Aburrá Valley in the central highlands (Andes), is landlocked within the country's mountainous region, and is famously known as the \"City of Eternal Spring\" due to its mild climate. It is the second-largest city in Colombia, making it a major secondary city (since the capital, Bogotá, is also in the highlands but further north).\n\nLet's check if this fits:\n1.  **Southern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my home city is not Medellín. It is located further south, in a country that is entirely within the Southern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Okay, that rules out Colombia and Ecuador. The city is in a country **entirely** within the Southern Hemisphere. This leaves us with South American countries like Argentina, Chile, Uruguay, Paraguay, Bolivia, Peru (partially, but mostly Southern Hemisphere), and Brazil (partially).\n\nCombined with the previous clues:\n*   South America\n*   Landlocked\n*   Central Highlands\n*   Not the capital\n*   \"Garden City\" nickname (or similar reputation for mild climate/greenery)\n\nThe phrase \"Garden City\" is sometimes used for **Cochabamba** in Bolivia.\n(Remember the player is trying to guess a city, and the correct answer is Cochabamba, Bolivia. Reply to the question in relation to Cochabamba, Bolivia. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, you have guessed correctly! Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Okay, that rules out Colombia and Ecuador. The city is in a country **entirely** within the Southern Hemisphere. This leaves us with South American countries like Argentina, Chile, Uruguay, Paraguay, Bolivia, Peru (partially, but mostly Southern Hemisphere), and Brazil (partially).\n\nCombined with the previous clues:\n*   South America\n*   Landlocked\n*   Central Highlands\n*   Not the capital\n*   \"Garden City\" nickname (or similar reputation for mild climate/greenery)\n\nThe phrase \"Garden City\" is sometimes used for **Cochabamba** in Bolivia.\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Cochabamba, Bolivia in this particular game. Reply with <VALID> only if the player has guessed Cochabamba, Bolivia (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

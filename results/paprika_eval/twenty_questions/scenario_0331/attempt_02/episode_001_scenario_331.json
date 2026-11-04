@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 331,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Cognitive Dissonance",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this concept belong to the natural sciences (e.g., physics, biology, chemistry)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this concept belong to the social sciences or humanities (e.g., history, psychology, philosophy, literature)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this concept a specific historical event?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this concept a person?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this concept a work of art or literature (e.g., a book, movie, song, painting)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this concept a philosophical idea or theory?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with existentialism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with utilitarianism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with stoicism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with nihilism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with Marxism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with empiricism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with rationalism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with idealism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea primarily associated with pragmatism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea associated with the concept of \"virtue\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea associated with the concept of \"justice\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea associated with the concept of \"ethics\" or \"morality\" in general?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea a specific school of ethics, such as Deontology, Virtue Ethics, or Consequentialism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this philosophical idea related to the nature of knowledge or belief (epistemology), such as skepticism or solipsism?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Cognitive Dissonance."
+    },
+    {
+      "role": "user",
+      "content": "Does this concept belong to the natural sciences (e.g., physics, biology, chemistry)?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this concept belong to the social sciences or humanities (e.g., history, psychology, philosophy, literature)?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this concept a specific historical event?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this concept a person?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this concept a work of art or literature (e.g., a book, movie, song, painting)?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this concept a philosophical idea or theory?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with existentialism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with utilitarianism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with stoicism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with nihilism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with Marxism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with empiricism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with rationalism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with idealism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea primarily associated with pragmatism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea associated with the concept of \"virtue\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea associated with the concept of \"justice\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea associated with the concept of \"ethics\" or \"morality\" in general?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea a specific school of ethics, such as Deontology, Virtue Ethics, or Consequentialism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this philosophical idea related to the nature of knowledge or belief (epistemology), such as skepticism or solipsism?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

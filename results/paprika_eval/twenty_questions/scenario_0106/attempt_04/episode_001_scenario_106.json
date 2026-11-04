@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 106,
+  "agent_game_scenario": "movie",
+  "env_game_scenario": "Apocalypse Now",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the past?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set before World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a superhero or does the movie involve supernatural elements?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a drama?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie based on a true story?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set during World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set after World War II?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the 21st century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the 1990s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the 1980s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the 1970s?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in the United Kingdom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in Japan?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in India?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in China?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Apocalypse Now."
+    },
+    {
+      "role": "user",
+      "content": "Is the movie animated?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily in English?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the past?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set before World War II?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a superhero or does the movie involve supernatural elements?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a drama?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie based on a true story?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set during World War II?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set after World War II?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the 21st century?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the 1990s?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the 1980s?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the 1970s?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the United States?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in the United Kingdom?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in Europe?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in Asia?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in Japan?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in India?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in China?\n(Remember the player is trying to guess a movie, and the correct answer is Apocalypse Now. Reply with Yes or No in relation to Apocalypse Now.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

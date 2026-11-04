@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 358,
+  "agent_game_scenario": "astronomical object",
+  "env_game_scenario": "Moons of Jupiter",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a astronomical object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the astronomical object a star?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the astronomical object a planet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the astronomical object a satellite (moon)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Earth?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Jupiter?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite one of the four Galilean moons (Io, Europa, Ganymede, or Callisto)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite Io?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite Europa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite Ganymede?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite Callisto?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "That is strange. Let me re-evaluate. I asked if it was one of the four Galilean moons, and the answer was \"Yes.\" Then I asked if it was Io, Europa, or Ganymede, and the answers were all \"No.\" Logically, it should be Callisto. However, you answered \"No\" to Callisto as well.\n\nLet me double-check my previous questions.\n1. Is it a satellite? Yes.\n2. Does it orbit Earth? No.\n3. Does it orbit Jupiter? Yes.\n4. Is it one of the four Galilean moons"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Saturn?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Mars?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Uranus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Neptune?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting Pluto?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting the Sun directly (i.e., is it a dwarf planet like Ceres or Haumea, or a large asteroid)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this satellite orbiting an asteroid?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this astronomical object a comet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this astronomical object an asteroid?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter."
+    },
+    {
+      "role": "user",
+      "content": "Is the astronomical object a star?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the astronomical object a planet?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the astronomical object a satellite (moon)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Earth?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Jupiter?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite one of the four Galilean moons (Io, Europa, Ganymede, or Callisto)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite Io?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite Europa?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite Ganymede?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite Callisto?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "That is strange. Let me re-evaluate. I asked if it was one of the four Galilean moons, and the answer was \"Yes.\" Then I asked if it was Io, Europa, or Ganymede, and the answers were all \"No.\" Logically, it should be Callisto. However, you answered \"No\" to Callisto as well.\n\nLet me double-check my previous questions.\n1. Is it a satellite? Yes.\n2. Does it orbit Earth? No.\n3. Does it orbit Jupiter? Yes.\n4. Is it one of the four Galilean moons\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Saturn?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Mars?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Uranus?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Neptune?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting Pluto?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting the Sun directly (i.e., is it a dwarf planet like Ceres or Haumea, or a large asteroid)?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this satellite orbiting an asteroid?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this astronomical object a comet?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this astronomical object an asteroid?\n(Remember the player is trying to guess a astronomical object, and the correct answer is Moons of Jupiter. Reply with Yes or No in relation to Moons of Jupiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

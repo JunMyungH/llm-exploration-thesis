@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 78,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Sigmund Freud",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a historical figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a head of state or ruler?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a scientist or inventor?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the person live before the year 1900?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Albert Einstein?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Isaac Newton?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Charles Darwin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Nikola Tesla?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for contributions to physics or astronomy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for contributions to biology or medicine?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Louis Pasteur?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Gregor Mendel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person Edward Jenner?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for the discovery of penicillin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for the discovery of the structure of DNA?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for discovering the germ theory of disease?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for the theory of evolution by natural selection?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person known for contributions to anatomy or physiology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Sigmund Freud."
+    },
+    {
+      "role": "user",
+      "content": "Is the person male?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person alive?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a head of state or ruler?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a scientist or inventor?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Did the person live before the year 1900?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Albert Einstein?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Isaac Newton?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Charles Darwin?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Nikola Tesla?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for contributions to physics or astronomy?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for contributions to biology or medicine?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Louis Pasteur?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Gregor Mendel?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person Edward Jenner?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for the discovery of penicillin?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for the discovery of the structure of DNA?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for discovering the germ theory of disease?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for the theory of evolution by natural selection?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person known for contributions to anatomy or physiology?\n(Remember the player is trying to guess a person, and the correct answer is Sigmund Freud. Reply with Yes or No in relation to Sigmund Freud.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

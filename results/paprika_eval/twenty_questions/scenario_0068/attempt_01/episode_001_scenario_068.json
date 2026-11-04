@@ -1,0 +1,198 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 68,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Charles Darwin",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 10,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a real, living individual?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a fictional character from a book, movie, or TV show?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a historical figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known primarily for their role in politics or government?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known primarily for their contributions to science or mathematics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for work in physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for work in biology or medicine?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for the development of the theory of evolution?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have a clear guess: Is the person Charles Darwin?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Charles Darwin."
+    },
+    {
+      "role": "user",
+      "content": "Is this person a real, living individual?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a fictional character from a book, movie, or TV show?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known primarily for their role in politics or government?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known primarily for their contributions to science or mathematics?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person male?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for work in physics?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for work in biology or medicine?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for the development of the theory of evolution?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have a clear guess: Is the person Charles Darwin?\n(Remember the player is trying to guess a person, and the correct answer is Charles Darwin. Reply with Yes or No in relation to Charles Darwin.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Charles Darwin in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct person, which is: Charles Darwin, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: I have a clear guess: Is the person Charles Darwin?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct person, which is Charles Darwin in this particular game. Reply with <VALID> only if the player has guessed Charles Darwin in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Charles Darwin is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

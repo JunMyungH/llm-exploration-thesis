@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 354,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Cloning",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to biology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to genetics or DNA?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a specific molecule, such as DNA or RNA?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a process that involves the transfer of genetic information?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is that process transcription?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is that process translation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process replication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process mutation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process related to gene expression regulation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process CRISPR-Cas9 gene editing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process meiosis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process mitosis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process horizontal gene transfer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process natural selection?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process recombination?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process epigenetics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process endocytosis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process apoptosis (programmed cell death)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the process cell differentiation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Cloning."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to genetics or DNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a specific molecule, such as DNA or RNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a process that involves the transfer of genetic information?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is that process transcription?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is that process translation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process replication?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process mutation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process related to gene expression regulation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process CRISPR-Cas9 gene editing?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process meiosis?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process mitosis?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process horizontal gene transfer?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process natural selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process recombination?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process epigenetics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process endocytosis?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process apoptosis (programmed cell death)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the process cell differentiation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cloning. Reply with Yes or No in relation to Cloning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

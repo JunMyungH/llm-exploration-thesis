@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 58,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Bora Bora",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location inside a building?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location outdoors in a natural setting (like a forest, mountain, or beach)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location primarily composed of water (like an ocean, lake, or river)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location on a continent?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location an island?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island located in the Pacific Ocean?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Hawaii?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Japan?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Indonesia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of the Philippines?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of New Zealand?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Australia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Fiji?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of the Maldives?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of the Caribbean?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of the United Kingdom (such as the Isle of Man or the Channel Islands)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Madagascar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island part of Japan?\n*(Wait, I already asked this. Let me backtrack.)*\n\nIs the island part of New Zealand?\n*(Asked. No.)*\n\nIs the island part of the Caribbean?\n*(Asked. No.)*\n\nOkay, let me try a different geographic region in the Pacific.\n\nIs the island part of French Polynesia (e.g., Tahiti)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island Tahiti?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the island Moorea?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Bora Bora."
+    },
+    {
+      "role": "user",
+      "content": "Is the location inside a building?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location outdoors in a natural setting (like a forest, mountain, or beach)?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location primarily composed of water (like an ocean, lake, or river)?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location on a continent?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location an island?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the island located in the Pacific Ocean?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Hawaii?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Japan?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Indonesia?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of the Philippines?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of New Zealand?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Australia?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Fiji?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of the Maldives?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of the Caribbean?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of the United Kingdom (such as the Isle of Man or the Channel Islands)?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Madagascar?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island part of Japan?\n*(Wait, I already asked this. Let me backtrack.)*\n\nIs the island part of New Zealand?\n*(Asked. No.)*\n\nIs the island part of the Caribbean?\n*(Asked. No.)*\n\nOkay, let me try a different geographic region in the Pacific.\n\nIs the island part of French Polynesia (e.g., Tahiti)?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the island Tahiti?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the island Moorea?\n(Remember the player is trying to guess a location, and the correct answer is Bora Bora. Reply with Yes or No in relation to Bora Bora.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

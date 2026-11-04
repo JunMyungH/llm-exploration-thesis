@@ -1,0 +1,310 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 199,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Electric Guitar",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 17,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the invention invented in the 20th century or later?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for entertainment or media consumption?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a hardware device (like a console, TV, or camera) rather than just a software application?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a video game console?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a personal computer (PC) or laptop?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a smartphone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a digital camera?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a home entertainment system component, such as a streaming media player (e.g., Roku, Apple TV) or a Blu-ray/DVD player?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a virtual reality (VR) headset?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a wearable device, such as a smartwatch or fitness tracker?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a gaming peripheral, such as a VR controller, motion sensor (like Kinect or Wii Remote), or arcade cabinet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a musical instrument, such as a synthesizer or digital drum kit?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a keyboard or piano-style instrument (with keys)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a guitar or guitar-shaped controller (like a Guitar Hero controller)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a real electric guitar?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Electric Guitar."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the invention invented in the 20th century or later?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for entertainment or media consumption?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a hardware device (like a console, TV, or camera) rather than just a software application?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a video game console?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a personal computer (PC) or laptop?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a smartphone?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a digital camera?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a home entertainment system component, such as a streaming media player (e.g., Roku, Apple TV) or a Blu-ray/DVD player?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a virtual reality (VR) headset?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a wearable device, such as a smartwatch or fitness tracker?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a gaming peripheral, such as a VR controller, motion sensor (like Kinect or Wii Remote), or arcade cabinet?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a musical instrument, such as a synthesizer or digital drum kit?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a keyboard or piano-style instrument (with keys)?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a guitar or guitar-shaped controller (like a Guitar Hero controller)?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a real electric guitar?\n(Remember the player is trying to guess a invention, and the correct answer is Electric Guitar. Reply with Yes or No in relation to Electric Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Electric Guitar in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct invention, which is: Electric Guitar, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it a real electric guitar?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct invention, which is Electric Guitar in this particular game. Reply with <VALID> only if the player has guessed Electric Guitar in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Electric Guitar is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

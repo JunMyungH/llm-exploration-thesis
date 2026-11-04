@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 289,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Treaty of Tordesillas",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to space exploration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to politics or government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the establishment or signing of a constitution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the election or inauguration of a head of state?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to the signing of a major international treaty or peace agreement?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the end of World War I?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the end of World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the Cold War era (roughly 1947–1991)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the end of the Vietnam War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the establishment of the European Union or its predecessors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the American Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the independence of India?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the abolition of slavery?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the unification of Germany?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the peace process in Northern Ireland?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the establishment of the State of Israel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the end of the Cold War and the dissolution of the Soviet Union?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the end of the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this treaty related to the separation of Czechoslovakia into the Czech Republic and Slovakia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas."
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to space exploration?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to politics or government?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the establishment or signing of a constitution?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the election or inauguration of a head of state?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to the signing of a major international treaty or peace agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the end of World War I?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the end of World War II?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the Cold War era (roughly 1947–1991)?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the end of the Vietnam War?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the establishment of the European Union or its predecessors?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the American Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the independence of India?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the abolition of slavery?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the unification of Germany?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the peace process in Northern Ireland?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the establishment of the State of Israel?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the end of the Cold War and the dissolution of the Soviet Union?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the end of the American Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this treaty related to the separation of Czechoslovakia into the Czech Republic and Slovakia?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Tordesillas. Reply with Yes or No in relation to Treaty of Tordesillas.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

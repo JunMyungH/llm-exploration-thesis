@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 23,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Garter Belt",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item intended to be worn on the upper body?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item intended to be worn on the feet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the head?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the hands?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the legs?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a form-fitting garment like leggings or tights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of trousers, jeans, or slacks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a skirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it swimwear, such as swim trunks or board shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it underwear, such as boxers or briefs?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it socks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a garment worn over other clothing for warmth or style, such as trousers with suspenders or a specific type of athletic pant?\n\nWait, let me re-evaluate. We've ruled out upper body, feet, head, hands, legs (specifically trousers, skirts, shorts, swimwear, underwear, socks).\n\nLet's check accessories or specific types of legwear that might have been missed, or perhaps I need to clarify \"worn on the legs\".\n\nIs it a garter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a belt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of jewelry, such as a necklace?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of headwear, such as a beanie or cap?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a scarf?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tie?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a glove?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Garter Belt."
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item intended to be worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item intended to be worn on the feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the head?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the hands?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the legs?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a form-fitting garment like leggings or tights?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of trousers, jeans, or slacks?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a skirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it swimwear, such as swim trunks or board shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it underwear, such as boxers or briefs?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it socks?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a garment worn over other clothing for warmth or style, such as trousers with suspenders or a specific type of athletic pant?\n\nWait, let me re-evaluate. We've ruled out upper body, feet, head, hands, legs (specifically trousers, skirts, shorts, swimwear, underwear, socks).\n\nLet's check accessories or specific types of legwear that might have been missed, or perhaps I need to clarify \"worn on the legs\".\n\nIs it a garter?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a belt?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hat?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of jewelry, such as a necklace?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of headwear, such as a beanie or cap?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a scarf?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tie?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a glove?\n(Remember the player is trying to guess a clothing, and the correct answer is Garter Belt. Reply with Yes or No in relation to Garter Belt.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

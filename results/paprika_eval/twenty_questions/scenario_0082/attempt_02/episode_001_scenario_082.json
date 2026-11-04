@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 82,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Florence Nightingale",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person male?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a historical figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a member of a royal family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being a scientist or inventor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being an artist or musician?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being a writer or poet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being a politician or head of state?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being a religious figure or prophet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being an athlete or sports figure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for being an activist or civil rights leader?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for advocating for women's rights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for advocating for racial equality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for advocating for labor rights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for advocating for LGBTQ+ rights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for advocating for animal rights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person known for advocating for environmental rights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the Indian independence movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the American civil rights movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person associated with the anti-apartheid movement in South Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Florence Nightingale."
+    },
+    {
+      "role": "user",
+      "content": "Is this person alive?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person male?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a member of a royal family?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being a scientist or inventor?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being an artist or musician?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being a writer or poet?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being a politician or head of state?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being a religious figure or prophet?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being an athlete or sports figure?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for being an activist or civil rights leader?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for advocating for women's rights?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for advocating for racial equality?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for advocating for labor rights?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for advocating for LGBTQ+ rights?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for advocating for animal rights?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person known for advocating for environmental rights?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the Indian independence movement?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the American civil rights movement?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person associated with the anti-apartheid movement in South Africa?\n(Remember the player is trying to guess a person, and the correct answer is Florence Nightingale. Reply with Yes or No in relation to Florence Nightingale.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

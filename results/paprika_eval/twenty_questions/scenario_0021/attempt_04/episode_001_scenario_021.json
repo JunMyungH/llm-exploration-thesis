@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 21,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Ankle Socks",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it something you wear on your feet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily used for protection or warmth rather than formal fashion?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn by multiple people at the same time?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn during cold weather?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it strictly for indoor use?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of rubber or waterproof material?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of boot?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of sandal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of slipper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of shoe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of sock?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn inside the house?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn for sports or athletic activities?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically worn for running?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically worn for basketball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn for soccer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn for tennis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn for walking or hiking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn for weightlifting or gym activities?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it typically worn for swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Ankle Socks."
+    },
+    {
+      "role": "user",
+      "content": "Is it something you wear on your feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily used for protection or warmth rather than formal fashion?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn by multiple people at the same time?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn during cold weather?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it strictly for indoor use?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of rubber or waterproof material?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of boot?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of sandal?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of slipper?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of shoe?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of sock?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn inside the house?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn for sports or athletic activities?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically worn for running?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically worn for basketball?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn for soccer?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn for tennis?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn for walking or hiking?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn for weightlifting or gym activities?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it typically worn for swimming?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

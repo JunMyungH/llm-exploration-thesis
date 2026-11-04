@@ -1,0 +1,358 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 251,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Chemist",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a medical professional?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person an engineer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a teacher or professor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the creative arts (e.g., artist, musician, writer)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the business or finance sector?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in law enforcement or the military?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the technology or software industry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the legal sector (e.g., lawyer, judge)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the culinary or hospitality industry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the construction or trades industry (e.g., electrician, plumber)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person in the education sector (e.g., school administrator, counselor)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a farmer or works in agriculture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person an athlete or coach?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a scientist or researcher?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientist primarily involved in biological or medical research?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientist primarily involved in physical sciences (such as physics, chemistry, or astronomy)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientist primarily involved in physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientist primarily involved in chemistry?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the person work specifically with organic chemistry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a chemist who specializes in inorganic chemistry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Chemist."
+    },
+    {
+      "role": "user",
+      "content": "Is the person a medical professional?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person an engineer?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a teacher or professor?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the creative arts (e.g., artist, musician, writer)?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the business or finance sector?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in law enforcement or the military?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the technology or software industry?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the legal sector (e.g., lawyer, judge)?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the culinary or hospitality industry?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the construction or trades industry (e.g., electrician, plumber)?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person in the education sector (e.g., school administrator, counselor)?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a farmer or works in agriculture?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person an athlete or coach?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a scientist or researcher?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the scientist primarily involved in biological or medical research?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the scientist primarily involved in physical sciences (such as physics, chemistry, or astronomy)?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the scientist primarily involved in physics?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the scientist primarily involved in chemistry?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the person work specifically with organic chemistry?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a chemist who specializes in inorganic chemistry?\n(Remember the player is trying to guess a occupation, and the correct answer is Chemist. Reply with Yes or No in relation to Chemist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Chemist in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct occupation, which is: Chemist, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the person a chemist who specializes in inorganic chemistry?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct occupation, which is Chemist in this particular game. Reply with <VALID> only if the player has guessed Chemist in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Chemist is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

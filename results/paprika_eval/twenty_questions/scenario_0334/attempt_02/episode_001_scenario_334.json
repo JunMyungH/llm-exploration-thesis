@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 334,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Membrane Theory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept something that exists in the physical world?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept an abstract idea?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics or logic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a fundamental branch of mathematics, such as algebra, geometry, or calculus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to numbers or quantities?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to proofs, axioms, or rules of inference?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to sets, groups, or structures?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a specific type of algebraic structure, such as a group, ring, field, or vector space?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to graph theory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to topology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a fundamental topological property, such as compactness, connectedness, or homeomorphism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to fundamental groups or homotopy theory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a topological space?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a topological invariant?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to knots or knot theory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to manifolds?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically a \"smooth manifold\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a \"topological manifold\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a \"manifold with boundary\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a \"manifold with corners\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Membrane Theory."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept something that exists in the physical world?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept an abstract idea?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a fundamental branch of mathematics, such as algebra, geometry, or calculus?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to numbers or quantities?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to proofs, axioms, or rules of inference?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to sets, groups, or structures?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a specific type of algebraic structure, such as a group, ring, field, or vector space?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to graph theory?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to topology?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a fundamental topological property, such as compactness, connectedness, or homeomorphism?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to fundamental groups or homotopy theory?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a topological space?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a topological invariant?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to knots or knot theory?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to manifolds?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically a \"smooth manifold\"?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a \"topological manifold\"?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a \"manifold with boundary\"?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a \"manifold with corners\"?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

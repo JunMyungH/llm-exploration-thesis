@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 134,
+  "agent_game_scenario": "animal",
+  "env_game_scenario": "Buffalo",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a animal. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a mammal?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live primarily in the water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have four legs?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live on a farm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal live in the wild in North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have antlers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have stripes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a bushy tail?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have spots?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have large ears?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a long neck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a black and white coat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a mane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a distinctive white belly?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a long snout?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have a bushy tail? (Wait, I asked this already. Let me check my history.)\n\nPrevious questions:\n1. Mammal? Yes\n2. Live in water? No\n3. Four legs? Yes\n4. Live on farm? No\n5. Live in North America? Yes\n6. Antlers? No\n7. Stripes? No\n8. Bushy tail? No\n9. Spots? No\n10. Large ears? No\n11. Long neck? No\n12. Black and white coat? No\n13. Mane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have paws?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have hooves?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the animal have horns?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the animal a deer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a animal, and the correct answer is Buffalo."
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a mammal?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live primarily in the water?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have four legs?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live on a farm?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal live in the wild in North America?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have antlers?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have stripes?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a bushy tail?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have spots?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have large ears?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a long neck?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a black and white coat?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a mane?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a distinctive white belly?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a long snout?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have a bushy tail? (Wait, I asked this already. Let me check my history.)\n\nPrevious questions:\n1. Mammal? Yes\n2. Live in water? No\n3. Four legs? Yes\n4. Live on farm? No\n5. Live in North America? Yes\n6. Antlers? No\n7. Stripes? No\n8. Bushy tail? No\n9. Spots? No\n10. Large ears? No\n11. Long neck? No\n12. Black and white coat? No\n13. Mane?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have paws?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have hooves?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the animal have horns?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the animal a deer?\n(Remember the player is trying to guess a animal, and the correct answer is Buffalo. Reply with Yes or No in relation to Buffalo.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

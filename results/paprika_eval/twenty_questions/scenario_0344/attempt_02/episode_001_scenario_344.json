@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 344,
+  "agent_game_scenario": "object",
+  "env_game_scenario": "Fireworks",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a object. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the object man-made?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of wood?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of metal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of plastic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of paper or cardboard?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a book?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a newspaper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a box?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of paper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a card (like a playing card or greeting card)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a notebook or a notepad?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a label or a sticker?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a map?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an envelope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of clothing made from paper or cardboard material (like a costume or accessory)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a toilet paper roll or a paper towel roll?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a magazine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a poster?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a photograph?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a object, and the correct answer is Fireworks."
+    },
+    {
+      "role": "user",
+      "content": "Is the object man-made?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it electronic?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of wood?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of metal?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of plastic?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of paper or cardboard?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a book?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a newspaper?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a box?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of paper?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a card (like a playing card or greeting card)?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a notebook or a notepad?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a label or a sticker?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a map?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an envelope?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of clothing made from paper or cardboard material (like a costume or accessory)?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a toilet paper roll or a paper towel roll?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a magazine?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a poster?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a photograph?\n(Remember the player is trying to guess a object, and the correct answer is Fireworks. Reply with Yes or No in relation to Fireworks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

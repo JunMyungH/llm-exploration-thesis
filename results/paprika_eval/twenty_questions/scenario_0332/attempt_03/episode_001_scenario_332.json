@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 332,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Quantum Tunneling",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a physical object?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics or logic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of equation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fundamental theorem?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of mathematics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of logic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a specific definition or axiom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mathematical notation or symbol?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mathematical problem or conjecture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a method of calculation or an algorithm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the concept of infinity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a set theory concept?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a concept related to probability or statistics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a specific type of distribution (e.g., Normal, Poisson)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a measure of variability, such as variance or standard deviation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a measure of central tendency, such as the mean, median, or mode?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a measure of association or correlation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hypothesis test (such as a t-test or chi-squared test)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a core principle or law of probability (such as Bayes' Theorem or the Law of Large Numbers)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a concept related to sampling or experimental design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Quantum Tunneling."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of equation?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fundamental theorem?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of mathematics?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of logic?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a specific definition or axiom?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mathematical notation or symbol?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mathematical problem or conjecture?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a method of calculation or an algorithm?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the concept of infinity?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a set theory concept?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a concept related to probability or statistics?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a specific type of distribution (e.g., Normal, Poisson)?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a measure of variability, such as variance or standard deviation?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a measure of central tendency, such as the mean, median, or mode?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a measure of association or correlation?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hypothesis test (such as a t-test or chi-squared test)?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a core principle or law of probability (such as Bayes' Theorem or the Law of Large Numbers)?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a concept related to sampling or experimental design?\n(Remember the player is trying to guess a concept, and the correct answer is Quantum Tunneling. Reply with Yes or No in relation to Quantum Tunneling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

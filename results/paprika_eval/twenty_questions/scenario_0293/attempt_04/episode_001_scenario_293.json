@@ -1,0 +1,326 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 293,
+  "agent_game_scenario": "color",
+  "env_game_scenario": "Maroon",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 18,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a color. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color a primary color?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color in the rainbow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color typically associated with nature (e.g., earth, plants)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color typically associated with metal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color typically associated with artificial or synthetic materials (e.g., plastic, neon signs)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color typically associated with light or illumination (e.g., neon, glowing)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color associated with sadness or melancholy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color associated with love or passion?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color red?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color pink?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color purple?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color orange?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color yellow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color brown?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color black?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color white?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color gray?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is getting tricky. We've eliminated the primary colors (Red, Blue, Yellow), the rainbow colors (Orange, Green, Purple), and the neutrals (Black, White, Gray, Brown).\n\nWe established it is associated with love/passion, but it's not Red, Pink, Purple, or Orange.\n\nLet's look at other colors associated with passion or warmth that aren't in the standard rainbow list.\n\nIs the color maroon?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a color, and the correct answer is Maroon."
+    },
+    {
+      "role": "user",
+      "content": "Is the color a primary color?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color in the rainbow?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color typically associated with nature (e.g., earth, plants)?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color typically associated with metal?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color typically associated with artificial or synthetic materials (e.g., plastic, neon signs)?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color typically associated with light or illumination (e.g., neon, glowing)?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color associated with sadness or melancholy?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color associated with love or passion?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the color red?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color pink?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color purple?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color orange?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color yellow?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color brown?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color black?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color white?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color gray?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is getting tricky. We've eliminated the primary colors (Red, Blue, Yellow), the rainbow colors (Orange, Green, Purple), and the neutrals (Black, White, Gray, Brown).\n\nWe established it is associated with love/passion, but it's not Red, Pink, Purple, or Orange.\n\nLet's look at other colors associated with passion or warmth that aren't in the standard rainbow list.\n\nIs the color maroon?\n(Remember the player is trying to guess a color, and the correct answer is Maroon. Reply with Yes or No in relation to Maroon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Maroon in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct color, which is: Maroon, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: This is getting tricky. We've eliminated the primary colors (Red, Blue, Yellow), the rainbow colors (Orange, Green, Purple), and the neutrals (Black, White, Gray, Brown).\n\nWe established it is associated with love/passion, but it's not Red, Pink, Purple, or Orange.\n\nLet's look at other colors associated with passion or warmth that aren't in the standard rainbow list.\n\nIs the color maroon?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct color, which is Maroon in this particular game. Reply with <VALID> only if the player has guessed Maroon in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Maroon is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

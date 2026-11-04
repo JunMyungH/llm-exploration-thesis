@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 143,
+  "agent_game_scenario": "vegetable",
+  "env_game_scenario": "Chayote",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable commonly found growing underground (i.e., is it a root vegetable or tuber)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable typically a leafy green (such as lettuce, spinach, or kale)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable typically classified as a fruit in botanical terms (such as tomatoes, cucumbers, or peppers)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable purple in color?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable red in color?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable green in color?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable commonly used to make guacamole?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable primarily used for pickling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable a zucchini?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable a cucumber?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable a bell pepper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable a green bean?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable a squash (including varieties like acorn or butternut squash)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash commonly used in sweet dishes or desserts, such as pumpkin pie?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash an acorn squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash a butternut squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash a spaghetti squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash a winter squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash a summer squash (such as yellow squash or zucchini)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the squash a pumpking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Chayote."
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable commonly found growing underground (i.e., is it a root vegetable or tuber)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable typically a leafy green (such as lettuce, spinach, or kale)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable typically classified as a fruit in botanical terms (such as tomatoes, cucumbers, or peppers)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable purple in color?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable red in color?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable green in color?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable commonly used to make guacamole?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable primarily used for pickling?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable a zucchini?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable a cucumber?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable a bell pepper?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable a green bean?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable a squash (including varieties like acorn or butternut squash)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash commonly used in sweet dishes or desserts, such as pumpkin pie?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash an acorn squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash a butternut squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash a spaghetti squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash a winter squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash a summer squash (such as yellow squash or zucchini)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the squash a pumpking?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

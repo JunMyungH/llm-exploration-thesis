@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 90,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "Dracula",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a work of fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book originally written in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the future?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a fantasy novel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in a medieval-style world?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the book feature magic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a young adult series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the protagonist a wizard or sorcerer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in a modern-day world (contemporary setting)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in an ancient historical period (e.g., Ancient Egypt, Greece, or Rome)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of the High Fantasy genre (e.g., featuring elves, dwarves, or other distinct fantasy races)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a dark fantasy novel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the protagonist a male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the book contain significant horror elements or gore?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of the Grimdark subgenre?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *A Song of Ice and Fire* by George R.R. Martin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *The Name of the Wind* by Patrick Rothfuss?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *Malazan Book of the Fallen* by Steven Erikson?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a vampire?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is Dracula."
+    },
+    {
+      "role": "user",
+      "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book originally written in English?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the future?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a fantasy novel?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in a medieval-style world?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the book feature magic?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a young adult series?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the protagonist a wizard or sorcerer?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in a modern-day world (contemporary setting)?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in an ancient historical period (e.g., Ancient Egypt, Greece, or Rome)?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of the High Fantasy genre (e.g., featuring elves, dwarves, or other distinct fantasy races)?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a dark fantasy novel?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the protagonist a male?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the book contain significant horror elements or gore?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of the Grimdark subgenre?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *A Song of Ice and Fire* by George R.R. Martin?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *The Name of the Wind* by Patrick Rothfuss?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *Malazan Book of the Fallen* by Steven Erikson?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a vampire?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

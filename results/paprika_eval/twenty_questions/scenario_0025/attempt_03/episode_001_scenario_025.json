@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 25,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Cargo Pants",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the item of clothing typically worn on the upper body?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the item of clothing primarily worn on the lower body?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it pants (trousers)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made primarily of denim?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a skirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn around the waist but is not attached to legs, such as a kilt or sarong?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of underwear, such as briefs or boxers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it formal wear, such as suit trousers or dress pants?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it athletic wear, such as sweatpants or joggers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it swimwear, such as swim trunks or board shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of hosiery, such as leggings or tights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an accessory worn on the feet, such as socks or stockings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of formal or ceremonial lower-body garment, such as a kilts or a specific cultural skirt like a dirndl?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of outerwear worn over the lower body, such as rain pants or ski pants?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of garment worn by a specific profession or uniform, such as a jumpsuit (if considered lower body dominant) or specific work pants? \n\nWait, let's refine. Since it's lower body, not pants, shorts, skirt, underwear, athletic, swim, hosiery, socks, formal, cultural, outerwear, or uniform...\n\nIs it a type of legging-style garment that is not tights, such as compression pants or bike shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of garment that covers only part of the leg, such as knee-highs or thigh-highs?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of garment that covers the hips and buttocks but not the legs, such as a loincloth or briefs (if not considered underwear)? \n\nWait, I already asked about underwear. Let's look at what's left. It's lower body, not pants, shorts, skirt, underwear, athletic, swim, hosiery, socks, formal, cultural, outerwear, uniform, compression, or partial leg coverings.\n\nIs it a type of garment that covers the entire lower body but is not attached to legs in the traditional pant sense, such as a jumpsuit or overalls (if we consider"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of garment that covers the crotch area but leaves the legs open, such as a diaper or adult incontinence underwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of garment that covers the feet and ankles, such as footie pajamas or toe socks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Cargo Pants."
+    },
+    {
+      "role": "user",
+      "content": "Is the item of clothing typically worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the item of clothing primarily worn on the lower body?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it pants (trousers)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it made primarily of denim?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a skirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn around the waist but is not attached to legs, such as a kilt or sarong?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of underwear, such as briefs or boxers?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it formal wear, such as suit trousers or dress pants?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it athletic wear, such as sweatpants or joggers?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it swimwear, such as swim trunks or board shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of hosiery, such as leggings or tights?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an accessory worn on the feet, such as socks or stockings?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of formal or ceremonial lower-body garment, such as a kilts or a specific cultural skirt like a dirndl?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of outerwear worn over the lower body, such as rain pants or ski pants?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of garment worn by a specific profession or uniform, such as a jumpsuit (if considered lower body dominant) or specific work pants? \n\nWait, let's refine. Since it's lower body, not pants, shorts, skirt, underwear, athletic, swim, hosiery, socks, formal, cultural, outerwear, or uniform...\n\nIs it a type of legging-style garment that is not tights, such as compression pants or bike shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of garment that covers only part of the leg, such as knee-highs or thigh-highs?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of garment that covers the hips and buttocks but not the legs, such as a loincloth or briefs (if not considered underwear)? \n\nWait, I already asked about underwear. Let's look at what's left. It's lower body, not pants, shorts, skirt, underwear, athletic, swim, hosiery, socks, formal, cultural, outerwear, uniform, compression, or partial leg coverings.\n\nIs it a type of garment that covers the entire lower body but is not attached to legs in the traditional pant sense, such as a jumpsuit or overalls (if we consider\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of garment that covers the crotch area but leaves the legs open, such as a diaper or adult incontinence underwear?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of garment that covers the feet and ankles, such as footie pajamas or toe socks?\n(Remember the player is trying to guess a clothing, and the correct answer is Cargo Pants. Reply with Yes or No in relation to Cargo Pants.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

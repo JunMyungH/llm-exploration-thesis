@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 363,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Temple",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location on the continent of North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location within the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location on the West Coast of the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location on the East Coast of the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the Southern United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Florida?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Texas?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of Houston?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of Dallas?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of Austin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of San Antonio?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of El Paso?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of Fort Worth?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the city of Dallas-Fort Worth metroplex, but not the specific cities of Dallas or Fort Worth? Or perhaps a different major city like San Antonio or Houston?\n\nLet's try a different angle. Is this location a national park?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the western part of Texas?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the eastern part of Texas?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location near the border with Louisiana?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location near the border with Arkansas?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location near the border with Oklahoma?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location near the Gulf of Mexico?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Temple."
+    },
+    {
+      "role": "user",
+      "content": "Is this location on the continent of North America?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location within the United States?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location on the West Coast of the United States?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location on the East Coast of the United States?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the Southern United States?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Florida?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Texas?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of Houston?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of Dallas?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of Austin?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of San Antonio?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of El Paso?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of Fort Worth?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the city of Dallas-Fort Worth metroplex, but not the specific cities of Dallas or Fort Worth? Or perhaps a different major city like San Antonio or Houston?\n\nLet's try a different angle. Is this location a national park?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the western part of Texas?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the eastern part of Texas?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location near the border with Louisiana?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location near the border with Arkansas?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location near the border with Oklahoma?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location near the Gulf of Mexico?\n(Remember the player is trying to guess a location, and the correct answer is Temple. Reply with Yes or No in relation to Temple.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

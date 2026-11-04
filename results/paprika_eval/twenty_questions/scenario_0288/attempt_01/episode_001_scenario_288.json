@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 288,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Boston Tea Party",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this historical event involve a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this historical event involve the signing of a treaty or agreement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this historical event involve a discovery or scientific breakthrough?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this historical event involve a significant political change, such as a revolution or the establishment of a new government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this political change occur in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this political change occur in the Americas?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the independence of a colony from a European power?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the United States gaining independence from Great Britain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the independence of a Spanish colony?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the independence of a French colony?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the independence of a Portuguese colony?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the Haitian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the dissolution of a colonial empire in South America (such as the Spanish or Portuguese empires)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the independence of a Brazilian colony from Portugal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the Latin American wars of independence (such as those led by Simón Bolívar or José de San Martín)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the abolition of slavery?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the establishment of the United States of America as a sovereign nation (e.g., the adoption of the Constitution or the ratification of the Declaration of Independence)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the Cuban Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this event involve the Russian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Boston Tea Party."
+    },
+    {
+      "role": "user",
+      "content": "Does this historical event involve a war?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this historical event involve the signing of a treaty or agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this historical event involve a discovery or scientific breakthrough?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this historical event involve a significant political change, such as a revolution or the establishment of a new government?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does this political change occur in Europe?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this political change occur in the Americas?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the independence of a colony from a European power?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the United States gaining independence from Great Britain?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the independence of a Spanish colony?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the independence of a French colony?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the independence of a Portuguese colony?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the Haitian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the dissolution of a colonial empire in South America (such as the Spanish or Portuguese empires)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the independence of a Brazilian colony from Portugal?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the Latin American wars of independence (such as those led by Simón Bolívar or José de San Martín)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the American Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the abolition of slavery?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the establishment of the United States of America as a sovereign nation (e.g., the adoption of the Constitution or the ratification of the Declaration of Independence)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the Cuban Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does this event involve the Russian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boston Tea Party. Reply with Yes or No in relation to The Boston Tea Party.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

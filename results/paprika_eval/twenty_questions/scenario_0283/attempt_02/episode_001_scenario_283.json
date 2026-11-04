@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 283,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Treaty of Versailles",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to World War I?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the event take place on the Western Front?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the Gallipoli Campaign?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a naval battle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a battle on the Eastern Front?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a battle in the Middle East theater?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a battle in Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the Russian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the October Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the February Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the assassination of Archduke Franz Ferdinand?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the abdication of Tsar Nicholas II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Battle of Tannenberg?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Brusilov Offensive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the Russian Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the signing of the Treaty of Brest-Litovsk?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the assassination of Rasputin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Battle of Verdun?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Treaty of Versailles."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to World War II?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to World War I?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Did the event take place on the Western Front?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the Gallipoli Campaign?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a naval battle?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a battle on the Eastern Front?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a battle in the Middle East theater?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a battle in Africa?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the Russian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the October Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the February Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the assassination of Archduke Franz Ferdinand?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the abdication of Tsar Nicholas II?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Battle of Tannenberg?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Brusilov Offensive?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the Russian Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the signing of the Treaty of Brest-Litovsk?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the assassination of Rasputin?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Battle of Verdun?\n(Remember the player is trying to guess a historical event, and the correct answer is Treaty of Versailles. Reply with Yes or No in relation to Treaty of Versailles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

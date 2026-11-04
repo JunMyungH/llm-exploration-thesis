@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 324,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Concrete",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention mechanical?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to medicine or healthcare?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to agriculture or farming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to cooking or food preparation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to writing or paper products?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to household cleaning?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to entertainment or leisure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to construction or building?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the measurement of angles or levels?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a tool used for lifting or moving heavy objects?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the joining or fastening of materials?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to cutting or shaping materials?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to safety or protection?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for measuring length or distance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for mixing or stirring materials?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the crane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the bulldozer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Concrete."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention mechanical?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to communication?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to medicine or healthcare?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to agriculture or farming?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to writing or paper products?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to household cleaning?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to entertainment or leisure?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to construction or building?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the measurement of angles or levels?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a tool used for lifting or moving heavy objects?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the joining or fastening of materials?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to cutting or shaping materials?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to safety or protection?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for measuring length or distance?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for mixing or stirring materials?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the crane?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the bulldozer?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

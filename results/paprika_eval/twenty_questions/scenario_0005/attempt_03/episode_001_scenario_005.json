@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 5,
+  "agent_game_scenario": "natural phenomenon",
+  "env_game_scenario": "Meteorite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a natural phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon visible to the naked eye?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a celestial event?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the sun?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the moon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the stars?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a meteor shower?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Aurora Borealis (or Aurora Australis)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a solar eclipse?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a lunar eclipse?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to a comet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the tail of a comet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a supernova?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Andromeda Galaxy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a planet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a black hole?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a nebula?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Milky Way?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a constellation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a shooting star (meteor)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Milky Way galaxy (as opposed to just the band of light)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a natural phenomenon, and the correct answer is Meteorite."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon visible to the naked eye?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a celestial event?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the sun?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the moon?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the stars?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a meteor shower?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Aurora Borealis (or Aurora Australis)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a solar eclipse?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a lunar eclipse?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to a comet?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the tail of a comet?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a supernova?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Andromeda Galaxy?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a planet?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a black hole?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a nebula?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Milky Way?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a constellation?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a shooting star (meteor)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Milky Way galaxy (as opposed to just the band of light)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 331,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Cognitive Dissonance",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept an abstract idea rather than a physical object?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to human emotions or feelings?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this emotion generally considered positive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion anger?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion sadness?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion fear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion disgust?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion shame?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion guilt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion jealousy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion hate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion anxiety?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion grief?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion envy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion sorrow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the emotion related to social judgment or self-perception, such as embarrassment?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the feeling specifically embarrassment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the feeling shame?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the feeling humiliation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the feeling pride?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Cognitive Dissonance."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept an abstract idea rather than a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to human emotions or feelings?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this emotion generally considered positive?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion anger?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion sadness?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion fear?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion disgust?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion shame?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion guilt?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion jealousy?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion hate?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion anxiety?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion grief?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion envy?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion sorrow?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the emotion related to social judgment or self-perception, such as embarrassment?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the feeling specifically embarrassment?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the feeling shame?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the feeling humiliation?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the feeling pride?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

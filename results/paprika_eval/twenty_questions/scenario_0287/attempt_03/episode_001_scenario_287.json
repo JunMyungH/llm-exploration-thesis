@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 287,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Prohibition Era",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the discovery or exploration of a new land or route?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of a significant treaty or peace agreement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a political revolution or coup d'état?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the death or assassination of a famous person?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the beginning or end of a major pandemic or plague?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the invention or development of a significant technology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the founding or establishment of a country or nation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the opening of the first modern Olympic Games?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the construction of a famous building or monument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a significant scientific breakthrough or discovery (such as in physics, biology, or space exploration)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a major economic crisis or depression?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a major cultural movement, such as the Renaissance or the Enlightenment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a major religious movement or schism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the establishment of a major international organization, such as the United Nations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a major artistic or literary achievement, such as the publication of a specific influential book or the creation of a famous piece of art?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a significant election or change in government leadership?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of a major declaration of independence or rights (such as the Declaration of Independence or the Declaration of the Rights of Man)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the fall of the Berlin Wall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the moon landing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Prohibition Era."
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the discovery or exploration of a new land or route?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of a significant treaty or peace agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a political revolution or coup d'état?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the death or assassination of a famous person?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the beginning or end of a major pandemic or plague?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the invention or development of a significant technology?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the founding or establishment of a country or nation?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the opening of the first modern Olympic Games?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the construction of a famous building or monument?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a significant scientific breakthrough or discovery (such as in physics, biology, or space exploration)?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a major economic crisis or depression?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a major cultural movement, such as the Renaissance or the Enlightenment?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a major religious movement or schism?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the establishment of a major international organization, such as the United Nations?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a major artistic or literary achievement, such as the publication of a specific influential book or the creation of a famous piece of art?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a significant election or change in government leadership?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of a major declaration of independence or rights (such as the Declaration of Independence or the Declaration of the Rights of Man)?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the fall of the Berlin Wall?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the moon landing?\n(Remember the player is trying to guess a historical event, and the correct answer is Prohibition Era. Reply with Yes or No in relation to Prohibition Era.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

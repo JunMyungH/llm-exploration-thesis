@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 22,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Knee-high Socks",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the upper body?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the lower body?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made of denim?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn as a single piece (like a skirt or shorts) rather than two separate legs (like pants or jeans)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a skirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a kilt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn around the waist and hangs down, but is open at the bottom (like a sarong or a wrap skirt)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of leggings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of tights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of sweatpants?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of trousers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of jeans?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of socks?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, there is a contradiction. Earlier, you said \"Yes\" to being worn on the lower body, but then you said \"No\" when I asked if it was worn as a single piece rather than two separate legs. Socks are typically considered separate items for each foot, but they are often grouped with the lower body. However, you also said \"No\" to leggings, tights, sweatpants, trousers, and jeans.\n\nLet me re-evaluate. You said:\n1. Not upper body.\n2. Yes to lower body.\n3. Yes to being a single piece (like a skirt or"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it footwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an accessory worn around the neck, such as a scarf or a tie?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn on the feet, such as shoes or sandals?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it underwear (such as briefs, boxers, or panties)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Knee-high Socks."
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the lower body?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it made of denim?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn as a single piece (like a skirt or shorts) rather than two separate legs (like pants or jeans)?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a skirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a kilt?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn around the waist and hangs down, but is open at the bottom (like a sarong or a wrap skirt)?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of leggings?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of tights?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of sweatpants?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of trousers?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of jeans?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of socks?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Wait, there is a contradiction. Earlier, you said \"Yes\" to being worn on the lower body, but then you said \"No\" when I asked if it was worn as a single piece rather than two separate legs. Socks are typically considered separate items for each foot, but they are often grouped with the lower body. However, you also said \"No\" to leggings, tights, sweatpants, trousers, and jeans.\n\nLet me re-evaluate. You said:\n1. Not upper body.\n2. Yes to lower body.\n3. Yes to being a single piece (like a skirt or\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it footwear?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an accessory worn around the neck, such as a scarf or a tie?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn on the feet, such as shoes or sandals?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it underwear (such as briefs, boxers, or panties)?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hat?\n(Remember the player is trying to guess a clothing, and the correct answer is Knee-high Socks. Reply with Yes or No in relation to Knee-high Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

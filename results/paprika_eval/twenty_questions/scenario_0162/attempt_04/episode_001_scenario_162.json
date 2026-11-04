@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 162,
+  "agent_game_scenario": "mineral",
+  "env_game_scenario": "Cassiterite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral commonly found in jewelry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral magnetic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral used primarily in construction or building materials?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral used in electronics or semiconductors?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral a semiconductor element, such as silicon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral used in the production of batteries?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral used in the manufacturing of glass or ceramics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral a source of rare earth elements?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral used as a pigment or dye?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral used in the production of solar panels?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of cadmium telluride?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of silicon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of gallium arsenide?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of indium tin oxide?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of silicon dioxide (silica)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of copper indium gallium diselenide (CIGS)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of tellurium?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of selenium?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of perovskite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of lead sulfide (galena)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Cassiterite."
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral commonly found in jewelry?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral magnetic?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral used primarily in construction or building materials?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral used in electronics or semiconductors?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral a semiconductor element, such as silicon?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral used in the production of batteries?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral used in the manufacturing of glass or ceramics?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral a source of rare earth elements?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral used as a pigment or dye?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral used in the production of solar panels?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of cadmium telluride?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of silicon?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of gallium arsenide?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of indium tin oxide?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of silicon dioxide (silica)?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of copper indium gallium diselenide (CIGS)?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of tellurium?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of selenium?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of perovskite?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of lead sulfide (galena)?\n(Remember the player is trying to guess a mineral, and the correct answer is Cassiterite. Reply with Yes or No in relation to Cassiterite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

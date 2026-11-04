@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 158,
+  "agent_game_scenario": "mineral",
+  "env_game_scenario": "Tourmaline",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral a silicate?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral commonly used in the production of glass or ceramics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral a major component of granite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral commonly used in the manufacture of glass?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral commonly found in the Earth's crust?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of aluminum and silicon oxides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of potassium, aluminum, silicon, and oxygen (i.e., is it a feldspar or mica)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of quartz (silicon dioxide)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of calcium, silicon, and oxygen (i.e., is it pyroxene, amphibole, or garnet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of magnesium and iron silicates (i.e., is it olivine, pyroxene, or amphibole)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of sodium, calcium, silicon, and oxygen (i.e., is it a plagioclase feldspar)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of potassium, aluminum, silicon, and oxygen, but is specifically a mica (such as biotite or muscovite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of iron and oxygen (i.e., is it hematite or magnetite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of carbon and oxygen (i.e., is it calcite or aragonite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of copper, hydroxide, and carbonate (i.e., is it malachite or azurite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of silicon, oxygen, and iron/magnesium, but is specifically an amphibole (such as hornblende)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of sulfur and oxygen (i.e., is it barite or celestine)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of calcium and sulfate (i.e., is it gypsum)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral composed primarily of calcium carbonate (i.e., is it calcite or aragonite)?\n\n*(Note: I asked this previously but got a \"No\". Let me re-evaluate my path. I have eliminated most common rock-forming silicates like quartz, feldspars, micas, pyroxenes, amphiboles, and olivines. The mineral is a silicate, found in the crust, but not the common ones listed above.)*\n\nLet's try a different angle.\n\nIs this mineral a zeolite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this mineral a clay mineral (such as kaolinite, montmorillonite, or illite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Tourmaline."
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral a silicate?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral commonly used in the production of glass or ceramics?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral a major component of granite?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral commonly used in the manufacture of glass?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral commonly found in the Earth's crust?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of aluminum and silicon oxides?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of potassium, aluminum, silicon, and oxygen (i.e., is it a feldspar or mica)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of quartz (silicon dioxide)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of calcium, silicon, and oxygen (i.e., is it pyroxene, amphibole, or garnet)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of magnesium and iron silicates (i.e., is it olivine, pyroxene, or amphibole)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of sodium, calcium, silicon, and oxygen (i.e., is it a plagioclase feldspar)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of potassium, aluminum, silicon, and oxygen, but is specifically a mica (such as biotite or muscovite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of iron and oxygen (i.e., is it hematite or magnetite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of carbon and oxygen (i.e., is it calcite or aragonite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of copper, hydroxide, and carbonate (i.e., is it malachite or azurite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of silicon, oxygen, and iron/magnesium, but is specifically an amphibole (such as hornblende)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of sulfur and oxygen (i.e., is it barite or celestine)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of calcium and sulfate (i.e., is it gypsum)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral composed primarily of calcium carbonate (i.e., is it calcite or aragonite)?\n\n*(Note: I asked this previously but got a \"No\". Let me re-evaluate my path. I have eliminated most common rock-forming silicates like quartz, feldspars, micas, pyroxenes, amphiboles, and olivines. The mineral is a silicate, found in the crust, but not the common ones listed above.)*\n\nLet's try a different angle.\n\nIs this mineral a zeolite?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this mineral a clay mineral (such as kaolinite, montmorillonite, or illite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Tourmaline. Reply with Yes or No in relation to Tourmaline.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

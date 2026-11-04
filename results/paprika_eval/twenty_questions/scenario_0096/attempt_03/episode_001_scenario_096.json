@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 96,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "The Adventures of Tom Sawyer",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a work of fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book written in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series part of the Young Adult genre?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series dystopian?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series fantasy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series contemporary romance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series mystery or thriller?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series historical fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the series take place during World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the series take place in ancient history?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the series take place in the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set in England?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set in the American South?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set during the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set during the Reconstruction era following the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set during the early 20th century, specifically the 1920s or 1930s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set during the American Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set in the 18th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series set during the 1950s or 1960s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer."
+    },
+    {
+      "role": "user",
+      "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the series part of the Young Adult genre?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the series dystopian?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series fantasy?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series contemporary romance?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series mystery or thriller?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series historical fiction?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the series take place during World War II?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the series take place in ancient history?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the series take place in the 19th century?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set in England?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set in the American South?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set during the American Civil War?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set during the Reconstruction era following the American Civil War?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set during the early 20th century, specifically the 1920s or 1930s?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set during the American Revolution?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set in the 18th century?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series set during the 1950s or 1960s?\n(Remember the player is trying to guess a book, and the correct answer is The Adventures of Tom Sawyer. Reply with Yes or No in relation to The Adventures of Tom Sawyer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

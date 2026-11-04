@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 286,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Battle of Gettysburg",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war or military conflict?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the war fought within Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the war fought in the Americas?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict the American Revolutionary War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have successfully guessed the topic!\n\nThe historical event is the **American Civil War**."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "My apologies! I must have misunderstood the previous interaction or the specific event you had in mind. Since \"American Civil War\" was marked as incorrect, let's refine the search within the Americas.\n\nWas the conflict fought in North America (specifically excluding the United States' Civil War)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict fought in South America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict fought in the Caribbean?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict part of the American Revolutionary War (even if I guessed the specific name wrong previously, is it that broader event)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the conflict the Mexican-American War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict the War of 1812?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the conflict the Spanish-American War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict fought in Central America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict fought in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict fought in Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the conflict fought in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the conflict fought in Australia/Oceania?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the conflict fought in the Middle East?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Trojan War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Battle of Gettysburg."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war or military conflict?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the war fought within Europe?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the war fought in the Americas?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict the American Revolutionary War?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict the American Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have successfully guessed the topic!\n\nThe historical event is the **American Civil War**.\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "My apologies! I must have misunderstood the previous interaction or the specific event you had in mind. Since \"American Civil War\" was marked as incorrect, let's refine the search within the Americas.\n\nWas the conflict fought in North America (specifically excluding the United States' Civil War)?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict fought in South America?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict fought in the Caribbean?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict part of the American Revolutionary War (even if I guessed the specific name wrong previously, is it that broader event)?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the conflict the Mexican-American War?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict the War of 1812?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the conflict the Spanish-American War?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict fought in Central America?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict fought in Asia?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict fought in Africa?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the conflict fought in Europe?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the conflict fought in Australia/Oceania?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the conflict fought in the Middle East?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Trojan War?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

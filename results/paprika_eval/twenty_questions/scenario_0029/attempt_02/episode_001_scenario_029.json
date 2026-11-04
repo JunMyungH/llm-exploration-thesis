@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 29,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Microwave Oven",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention mechanical in nature (i.e., does it rely on moving parts and physical forces rather than just electricity or software)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily electronic (i.e., does it rely on electrical circuits and components to function)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a consumer device that is typically portable and used for communication or entertainment (such as a smartphone or tablet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the invention involve wireless communication capabilities (such as Wi-Fi, Bluetooth, or cellular networks)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used primarily for medical purposes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a form of lighting technology (such as the incandescent bulb, fluorescent lamp, or LED)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to computing or data processing (such as a computer, hard drive, or microchip)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to sound reproduction or recording (such as the phonograph, radio, or microphone)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a type of power source or energy generation device (such as the battery, generator, or solar panel)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to transportation (such as the automobile, airplane, or train)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to photography or imaging (such as the camera or telescope)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the internet or the World Wide Web (such as the modem, router, or browser)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to video display technology (such as the television, computer monitor, or projector)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to television?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the printing press or mass reproduction of text/images?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the telephone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the light bulb?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the transistor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the airplane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the airplane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Microwave Oven."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention mechanical in nature (i.e., does it rely on moving parts and physical forces rather than just electricity or software)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily electronic (i.e., does it rely on electrical circuits and components to function)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a consumer device that is typically portable and used for communication or entertainment (such as a smartphone or tablet)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the invention involve wireless communication capabilities (such as Wi-Fi, Bluetooth, or cellular networks)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used primarily for medical purposes?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a form of lighting technology (such as the incandescent bulb, fluorescent lamp, or LED)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to computing or data processing (such as a computer, hard drive, or microchip)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to sound reproduction or recording (such as the phonograph, radio, or microphone)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a type of power source or energy generation device (such as the battery, generator, or solar panel)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to transportation (such as the automobile, airplane, or train)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to photography or imaging (such as the camera or telescope)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the internet or the World Wide Web (such as the modem, router, or browser)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to video display technology (such as the television, computer monitor, or projector)?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to television?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the printing press or mass reproduction of text/images?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the telephone?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the light bulb?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the transistor?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the airplane?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the airplane?\n(Remember the player is trying to guess a invention, and the correct answer is Microwave Oven. Reply with Yes or No in relation to Microwave Oven.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 60,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Mount Elbrus",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in a city?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in a forest or wooded area?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location near a body of water (like an ocean, lake, or river)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in a desert or arid region?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the mountains or on a mountain?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this a well-known mountain range (like the Alps, Rockies, or Himalayas) rather than a single, isolated peak?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location outside of North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Alps?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the United Kingdom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Italy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in France?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Pyrenees?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Swiss Alps?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Carpathian Mountains?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Scandinavian Mountains (Scandes)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Balkans (e.g., the Dinaric Alps, Rila, or Pirin)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the Caucasus Mountains?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Georgia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Mount Elbrus."
+    },
+    {
+      "role": "user",
+      "content": "Is the location indoors?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in a city?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in a forest or wooded area?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location near a body of water (like an ocean, lake, or river)?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in a desert or arid region?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the mountains or on a mountain?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this a well-known mountain range (like the Alps, Rockies, or Himalayas) rather than a single, isolated peak?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location outside of North America?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Europe?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Alps?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the United Kingdom?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Italy?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in France?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Pyrenees?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Swiss Alps?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Carpathian Mountains?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Scandinavian Mountains (Scandes)?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Balkans (e.g., the Dinaric Alps, Rila, or Pirin)?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the Caucasus Mountains?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Georgia?\n(Remember the player is trying to guess a location, and the correct answer is Mount Elbrus. Reply with Yes or No in relation to Mount Elbrus.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

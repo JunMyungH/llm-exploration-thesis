@@ -1,0 +1,342 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 308,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Heat Lightning",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a natural occurrence?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to weather or atmospheric conditions?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a form of precipitation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to light or optical effects in the atmosphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon typically visible in the sky during or after rain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon typically visible at night?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon caused by the reflection or refraction of moonlight?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon caused by charged particles from the sun interacting with Earth's magnetic field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon caused by electrical discharges in the atmosphere, such as lightning?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a fireball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as ball lightning?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as St. Elmo's fire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a thunderstorm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a lightning strike or cloud-to-ground lightning?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a tornado?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a sprite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a jet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as a sprite? (Wait, I already asked that. Let me re-evaluate.)\n\nLet's step back. It is a weather/atmospheric phenomenon, related to light/optical effects, visible at night, caused by electrical discharges (lightning), but it is *not* a fireball, ball lightning, St. Elmo's fire, thunderstorm, standard lightning strike, tornado, sprite, or jet.\n\nCould it be **lightning** in general, but specifically **cloud-to-cloud lightning**?\n\nIs this phenomenon commonly known as cloud-to-cloud lightning?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon commonly known as **heat lightning**?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Heat Lightning."
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a natural occurrence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to weather or atmospheric conditions?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a form of precipitation?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to light or optical effects in the atmosphere?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon typically visible in the sky during or after rain?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon typically visible at night?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon caused by the reflection or refraction of moonlight?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon caused by charged particles from the sun interacting with Earth's magnetic field?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon caused by electrical discharges in the atmosphere, such as lightning?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a fireball?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as ball lightning?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as St. Elmo's fire?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a thunderstorm?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a lightning strike or cloud-to-ground lightning?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a tornado?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a sprite?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a jet?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as a sprite? (Wait, I already asked that. Let me re-evaluate.)\n\nLet's step back. It is a weather/atmospheric phenomenon, related to light/optical effects, visible at night, caused by electrical discharges (lightning), but it is *not* a fireball, ball lightning, St. Elmo's fire, thunderstorm, standard lightning strike, tornado, sprite, or jet.\n\nCould it be **lightning** in general, but specifically **cloud-to-cloud lightning**?\n\nIs this phenomenon commonly known as cloud-to-cloud lightning?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon commonly known as **heat lightning**?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Heat Lightning in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct phenomenon, which is: Heat Lightning, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is this phenomenon commonly known as **heat lightning**?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct phenomenon, which is Heat Lightning in this particular game. Reply with <VALID> only if the player has guessed Heat Lightning in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Heat Lightning is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

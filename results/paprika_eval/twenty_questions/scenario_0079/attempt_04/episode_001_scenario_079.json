@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 79,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Che Guevara",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a historical figure who died before 1950?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are they a musician?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a politician or a head of state?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person currently serving as a head of state or government?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Prime Minister?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of a European country?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of a country in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of a country in South America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of a country in Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of a country in North America or the Caribbean?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former President of a country in Oceania?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Vice President?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former member of a royal family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Speaker of the House or a similar legislative leader?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Secretary-General of the United Nations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former member of the British Royal Family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Prime Minister of the United Kingdom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Prime Minister of Canada?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a former Prime Minister of India?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Che Guevara."
+    },
+    {
+      "role": "user",
+      "content": "Is the person a historical figure who died before 1950?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are they a musician?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a politician or a head of state?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person currently serving as a head of state or government?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of the United States?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Prime Minister?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of a European country?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of a country in Asia?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of a country in South America?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of a country in Africa?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of a country in North America or the Caribbean?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former President of a country in Oceania?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Vice President?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former member of a royal family?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Speaker of the House or a similar legislative leader?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Secretary-General of the United Nations?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former member of the British Royal Family?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Prime Minister of the United Kingdom?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Prime Minister of Canada?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a former Prime Minister of India?\n(Remember the player is trying to guess a person, and the correct answer is Che Guevara. Reply with Yes or No in relation to Che Guevara.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

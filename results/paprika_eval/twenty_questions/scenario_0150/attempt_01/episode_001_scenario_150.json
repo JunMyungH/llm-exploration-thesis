@@ -1,0 +1,342 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 150,
+  "agent_game_scenario": "vegetable",
+  "env_game_scenario": "Spirulina",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a root vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fruit botanically speaking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a leafy green?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cruciferous vegetable (like broccoli or cauliflower)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the nightshade family (like tomatoes, peppers, or eggplants)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a legume (like beans or peas)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bulb vegetable (like onions or garlic)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a gourd or squash (like zucchini, cucumber, or pumpkin)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a stem vegetable (like asparagus or celery)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flower bud (like broccoli or artichoke)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it commonly used as a spice or herb (like parsley, cilantro, or basil)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an allium (like leeks, shallots, or chives)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mushroom? (Often grouped with vegetables in culinary contexts, though botanically fungi.)"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a grain or pseudo-grain vegetable (like corn, quinoa, or amaranth)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sea vegetable (like seaweed or kelp)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of kelp?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it nori?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it wakame?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it spirulina?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Spirulina."
+    },
+    {
+      "role": "user",
+      "content": "Is it a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fruit botanically speaking?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a leafy green?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cruciferous vegetable (like broccoli or cauliflower)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the nightshade family (like tomatoes, peppers, or eggplants)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a legume (like beans or peas)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bulb vegetable (like onions or garlic)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a gourd or squash (like zucchini, cucumber, or pumpkin)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a stem vegetable (like asparagus or celery)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flower bud (like broccoli or artichoke)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it commonly used as a spice or herb (like parsley, cilantro, or basil)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an allium (like leeks, shallots, or chives)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mushroom? (Often grouped with vegetables in culinary contexts, though botanically fungi.)\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a grain or pseudo-grain vegetable (like corn, quinoa, or amaranth)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sea vegetable (like seaweed or kelp)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of kelp?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it nori?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it wakame?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it spirulina?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Spirulina in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct vegetable, which is: Spirulina, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it spirulina?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct vegetable, which is Spirulina in this particular game. Reply with <VALID> only if the player has guessed Spirulina in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Spirulina is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

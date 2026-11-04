@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 74,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Helen Keller",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a real-life individual?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person currently alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person famous primarily for their work in politics or leadership?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person famous primarily for their work in the arts, such as music, literature, or acting?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person a musician?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person an actor or actress?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person a writer or poet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Are they primarily known for writing fiction, such as novels or short stories?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person a playwright?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person a poet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person a journalist or essayist?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person English?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person American?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person alive during the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person associated with the abolitionist movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person a journalist for a major newspaper, such as The New York Times or The Washington Post?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Did this person write essays or articles that were published in magazines or newspapers during the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person an abolitionist writer *before* they became primarily known as a journalist or essayist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person born in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this person known for writing political commentary or satirical essays?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Helen Keller."
+    },
+    {
+      "role": "user",
+      "content": "Is this person a real-life individual?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person currently alive?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person famous primarily for their work in politics or leadership?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person famous primarily for their work in the arts, such as music, literature, or acting?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this person a musician?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person an actor or actress?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person a writer or poet?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Are they primarily known for writing fiction, such as novels or short stories?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person a playwright?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person a poet?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person a journalist or essayist?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this person English?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person American?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this person alive during the 19th century?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this person associated with the abolitionist movement?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person a journalist for a major newspaper, such as The New York Times or The Washington Post?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Did this person write essays or articles that were published in magazines or newspapers during the 19th century?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person an abolitionist writer *before* they became primarily known as a journalist or essayist?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this person born in the United States?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this person known for writing political commentary or satirical essays?\n(Remember the player is trying to guess a person, and the correct answer is Helen Keller. Reply with Yes or No in relation to Helen Keller.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

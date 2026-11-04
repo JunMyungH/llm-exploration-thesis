@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 14,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Sopranino Saxophone",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a wind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a brass instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a woodwind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use a reed to produce sound?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it have keys?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the clarinet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the saxophone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the oboe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the bassoon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the flute?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the English horn?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the recorder?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the bagpipes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the accordion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the harmonica?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the bass clarinet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the piccolo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the contrabassoon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "This is getting tricky. We have established it is a woodwind instrument, it uses a reed, and it has keys. We have ruled out the standard single-reed instruments (clarinet, saxophone, bass clarinet) and the standard double-reed instruments (oboe, English horn, bassoon, contrabassoon).\n\nLet's check if it is a single-reed instrument that isn't the clarinet or saxophone.\n\nIs it a bass saxophone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Sopranino Saxophone."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a wind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a brass instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a woodwind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it use a reed to produce sound?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it have keys?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the clarinet?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the saxophone?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the oboe?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the bassoon?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the flute?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the English horn?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the recorder?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the bagpipes?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the accordion?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the harmonica?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the bass clarinet?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the piccolo?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the contrabassoon?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "This is getting tricky. We have established it is a woodwind instrument, it uses a reed, and it has keys. We have ruled out the standard single-reed instruments (clarinet, saxophone, bass clarinet) and the standard double-reed instruments (oboe, English horn, bassoon, contrabassoon).\n\nLet's check if it is a single-reed instrument that isn't the clarinet or saxophone.\n\nIs it a bass saxophone?\n(Remember the player is trying to guess a instrument, and the correct answer is Sopranino Saxophone. Reply with Yes or No in relation to Sopranino Saxophone.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

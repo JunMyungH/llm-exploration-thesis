@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 331,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Cognitive Dissonance",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept non-physical?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to emotions or feelings?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept generally considered a positive emotion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept generally considered a negative emotion?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to fear or anxiety?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to anger?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to sadness?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to disgust?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to shame or guilt?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept more closely associated with guilt?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept defined as a feeling of guilt or responsibility for having done something wrong?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to remorse or regret?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept specifically \"regret\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"remorse\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"shame\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"guilt\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"contrition\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"remorse\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"compunction\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept \"sorrow\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Cognitive Dissonance."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept non-physical?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to emotions or feelings?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept generally considered a positive emotion?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept generally considered a negative emotion?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to fear or anxiety?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to anger?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to sadness?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to disgust?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to shame or guilt?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept more closely associated with guilt?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept defined as a feeling of guilt or responsibility for having done something wrong?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to remorse or regret?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept specifically \"regret\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"remorse\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"shame\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"guilt\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"contrition\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"remorse\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"compunction\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept \"sorrow\"?\n(Remember the player is trying to guess a concept, and the correct answer is Cognitive Dissonance. Reply with Yes or No in relation to Cognitive Dissonance.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

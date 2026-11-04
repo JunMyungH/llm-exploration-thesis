@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 61,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Athens Parthenon",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in North America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a country?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a city?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a natural landmark (such as a mountain, river, or lake)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a man-made structure (such as a building, bridge, or monument)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the United Kingdom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in France?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Italy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Germany?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Spain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in Russia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous tower or spire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous castle or palace?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous bridge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous museum or art gallery?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous stadium or arena?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous airport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous cathedral or church?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous ancient ruin or archaeological site?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Athens Parthenon."
+    },
+    {
+      "role": "user",
+      "content": "Is the location in North America?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Europe?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a country?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a city?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a natural landmark (such as a mountain, river, or lake)?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a man-made structure (such as a building, bridge, or monument)?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the United Kingdom?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in France?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Italy?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Germany?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Spain?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in Russia?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous tower or spire?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous castle or palace?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous bridge?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous museum or art gallery?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous stadium or arena?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous airport?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous cathedral or church?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous ancient ruin or archaeological site?\n(Remember the player is trying to guess a location, and the correct answer is Athens Parthenon. Reply with Yes or No in relation to Athens Parthenon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

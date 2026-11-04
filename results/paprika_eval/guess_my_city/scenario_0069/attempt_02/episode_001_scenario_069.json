@@ -1,0 +1,345 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 69,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Tacna, Peru",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "No, my city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located in South America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, my city is located in South America."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city the capital of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not the capital."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located on the coast?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, it is located on the coast."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located in Brazil?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not in Brazil."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located in Argentina?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not in Argentina."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located in Chile?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not in Chile."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located in Peru?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, it is located in Peru."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city the second-largest city in Peru?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not the second-largest city."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city located on the coast of the Pacific Ocean?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, it is located on the coast of the Pacific Ocean."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city known for its colonial architecture and historic center?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, it is known for its well-preserved colonial architecture and historic center."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Arequipa?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Arequipa."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Trujillo?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Trujillo."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Lima?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Lima."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Chiclayo?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Chiclayo."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Huanchaco?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Huanchaco."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Ilo?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Ilo."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city known for its port and naval history?"
+    },
+    {
+      "role": "user",
+      "content": "Yes, it has a significant port and naval history."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the city Callao?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not Callao."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your city known for its ancient ruins or archaeological sites?"
+    },
+    {
+      "role": "user",
+      "content": "No, it is not primarily known for ancient ruins."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Tacna, Peru"
+    },
+    {
+      "role": "user",
+      "content": "Is your city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, my city is located in the Southern Hemisphere."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located in South America?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, my city is located in South America."
+    },
+    {
+      "role": "user",
+      "content": "Is your city the capital of its country?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not the capital."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located on the coast?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it is located on the coast."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located in Brazil?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not in Brazil."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located in Argentina?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not in Argentina."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located in Chile?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not in Chile."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located in Peru?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it is located in Peru."
+    },
+    {
+      "role": "user",
+      "content": "Is your city the second-largest city in Peru?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not the second-largest city."
+    },
+    {
+      "role": "user",
+      "content": "Is your city located on the coast of the Pacific Ocean?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it is located on the coast of the Pacific Ocean."
+    },
+    {
+      "role": "user",
+      "content": "Is your city known for its colonial architecture and historic center?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it is known for its well-preserved colonial architecture and historic center."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Arequipa?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Arequipa."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Trujillo?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Trujillo."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Lima?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Lima."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Chiclayo?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Chiclayo."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Huanchaco?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Huanchaco."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Ilo?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Ilo."
+    },
+    {
+      "role": "user",
+      "content": "Is your city known for its port and naval history?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, it has a significant port and naval history."
+    },
+    {
+      "role": "user",
+      "content": "Is the city Callao?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not Callao."
+    },
+    {
+      "role": "user",
+      "content": "Is your city known for its ancient ruins or archaeological sites?\n(Remember the player is trying to guess a city, and the correct answer is Tacna, Peru. Reply to the question in relation to Tacna, Peru. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not primarily known for ancient ruins."
+    }
+  ],
+  "judge_conversation": null
+}

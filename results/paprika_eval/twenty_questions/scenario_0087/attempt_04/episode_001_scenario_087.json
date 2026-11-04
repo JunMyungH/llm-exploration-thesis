@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 87,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "Moby-Dick",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a work of fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book written in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the past (e.g., historical fiction) or the present/future (science fiction/fantasy), rather than being a contemporary realistic story?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the setting fantastical (e.g., involving magic, mythical creatures, or non-existent worlds)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the future?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a historical fiction novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book science fiction?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in a specific historical period, but with a focus on realistic events and characters rather than fantasy elements? (Essentially, is it strictly realistic historical fiction?)\n\nWait, you said \"No\" to historical fiction. Let me re-evaluate.\nYou said:\n1. Fiction? Yes.\n2. Series? No.\n3. English? Yes.\n4. Past/Present/Future (not contemporary realistic)? Yes.\n5. Fantastical setting? No.\n6. Set in the future? No.\n7. Historical fiction? No.\n8. Science fiction? No"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the present day, but features elements of suspense, thriller, or mystery that place it outside of \"contemporary realistic\" in the sense of everyday life? \n\n(To clarify: You said the setting is *not* contemporary realistic. Since it's not fantasy, sci-fi, or historical, could it be a thriller/mystery set in the modern world?)"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a dystopian novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a horror novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a romance novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a mystery novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a satire or a dark comedy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a classic novel (published more than 50 years ago)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the American South?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in New England?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is Moby-Dick."
+    },
+    {
+      "role": "user",
+      "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the past (e.g., historical fiction) or the present/future (science fiction/fantasy), rather than being a contemporary realistic story?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the setting fantastical (e.g., involving magic, mythical creatures, or non-existent worlds)?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the future?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a historical fiction novel?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book science fiction?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in a specific historical period, but with a focus on realistic events and characters rather than fantasy elements? (Essentially, is it strictly realistic historical fiction?)\n\nWait, you said \"No\" to historical fiction. Let me re-evaluate.\nYou said:\n1. Fiction? Yes.\n2. Series? No.\n3. English? Yes.\n4. Past/Present/Future (not contemporary realistic)? Yes.\n5. Fantastical setting? No.\n6. Set in the future? No.\n7. Historical fiction? No.\n8. Science fiction? No\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the present day, but features elements of suspense, thriller, or mystery that place it outside of \"contemporary realistic\" in the sense of everyday life? \n\n(To clarify: You said the setting is *not* contemporary realistic. Since it's not fantasy, sci-fi, or historical, could it be a thriller/mystery set in the modern world?)\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a dystopian novel?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a horror novel?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a romance novel?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a mystery novel?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a satire or a dark comedy?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a classic novel (published more than 50 years ago)?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Europe?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the United States?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the American South?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in New England?\n(Remember the player is trying to guess a book, and the correct answer is Moby-Dick. Reply with Yes or No in relation to Moby-Dick.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,246 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 170,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Malmö, Sweden",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 13,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the general location and characteristics of the city.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. Knowing it's in the Northern Hemisphere narrows it down significantly.\n\nHere is my second question:\n\n**Is your home city located on a continent other than Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in the Northern Hemisphere and not in Asia. This leaves North America, Europe, and Northern Africa.\n\nHere is my third question:\n\n**Is your home city located in Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. Now I know the city is in Europe.\n\nHere is my fourth question:\n\n**Is your home city located in Western Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Europe, but not in Western Europe. This suggests it is in Eastern Europe, Northern Europe, Southern Europe, or possibly Central Europe (depending on the classification).\n\nHere is my fifth question:\n\n**Is your home city located in Southern Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Europe, but not in Western Europe and not in Southern Europe. This likely leaves Eastern Europe or Northern Europe.\n\nHere is my sixth question:\n\n**Is your home city located in Eastern Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So far, we have established that the city is in Europe, but it is **not** in Western, Southern, or Eastern Europe. By elimination, this strongly suggests the city is in **Northern Europe** or potentially **Central Europe** (if the player's definition excludes it from the other regions).\n\nHere is my seventh question:\n\n**Is your home city located in Northern Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great! Now I know the city is in Northern Europe. This region typically includes countries like the United Kingdom, Ireland, Iceland, Norway, Sweden, Finland, Denmark, and the Baltic states (Estonia, Latvia, Lithuania). Note: Sometimes the UK is considered separately, but geographically it is often grouped with or near Northern Europe.\n\nHere is my eighth question:\n\n**Is your home city located in the United Kingdom?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Northern Europe, but not in the UK. This leaves countries like Ireland, Iceland, Norway, Sweden, Finland, Denmark, and the Baltic states.\n\nHere is my ninth question:\n\n**Is your home city located in Scandinavia (Norway, Sweden, or Denmark)?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. Now I know the city is in Scandinavia (Norway, Sweden, or Denmark).\n\nHere is my tenth question:\n\n**Is your home city the capital city of its country?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Scandinavia (Norway, Sweden, or Denmark) and is **not** the capital.\n\n*   If it's Norway, the capital is Oslo. Non-capital cities include Bergen, Trondheim, Stavanger.\n*   If it's Sweden, the capital is Stockholm. Non-capital cities include Gothenburg, Malmö, Uppsala.\n*   If it's Denmark, the capital is Copenhagen. Non-capital cities include Aarhus, Odense, Aalborg.\n\nHere is my eleventh question:\n\n**Is your home city located in Sweden?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Sweden, is not Stockholm (the capital), and is in Scandinavia.\n\nMajor non-capital cities in Sweden include Gothenburg (Göteborg), Malmö, Uppsala, Linköping, etc.\n\nHere is my twelfth question:\n\n**Is your home city located on the west coast of Sweden?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Sweden, not the capital (Stockholm), and not on the west coast.\n\nThis likely leaves cities on the east coast (like Södertälje, Norrköping, Kalmar) or in the southern part of the country (like Malmö, Lund, Helsingborg) or the northern part (like Umeå, Luleå). Malmö is a very strong candidate as it's a major city.\n\nHere is my thirteenth question:\n\n**Is your home city Malmö?**"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Malmö, Sweden"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the general location and characteristics of the city.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. Knowing it's in the Northern Hemisphere narrows it down significantly.\n\nHere is my second question:\n\n**Is your home city located on a continent other than Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in the Northern Hemisphere and not in Asia. This leaves North America, Europe, and Northern Africa.\n\nHere is my third question:\n\n**Is your home city located in Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. Now I know the city is in Europe.\n\nHere is my fourth question:\n\n**Is your home city located in Western Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Europe, but not in Western Europe. This suggests it is in Eastern Europe, Northern Europe, Southern Europe, or possibly Central Europe (depending on the classification).\n\nHere is my fifth question:\n\n**Is your home city located in Southern Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Europe, but not in Western Europe and not in Southern Europe. This likely leaves Eastern Europe or Northern Europe.\n\nHere is my sixth question:\n\n**Is your home city located in Eastern Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So far, we have established that the city is in Europe, but it is **not** in Western, Southern, or Eastern Europe. By elimination, this strongly suggests the city is in **Northern Europe** or potentially **Central Europe** (if the player's definition excludes it from the other regions).\n\nHere is my seventh question:\n\n**Is your home city located in Northern Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great! Now I know the city is in Northern Europe. This region typically includes countries like the United Kingdom, Ireland, Iceland, Norway, Sweden, Finland, Denmark, and the Baltic states (Estonia, Latvia, Lithuania). Note: Sometimes the UK is considered separately, but geographically it is often grouped with or near Northern Europe.\n\nHere is my eighth question:\n\n**Is your home city located in the United Kingdom?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Northern Europe, but not in the UK. This leaves countries like Ireland, Iceland, Norway, Sweden, Finland, Denmark, and the Baltic states.\n\nHere is my ninth question:\n\n**Is your home city located in Scandinavia (Norway, Sweden, or Denmark)?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. Now I know the city is in Scandinavia (Norway, Sweden, or Denmark).\n\nHere is my tenth question:\n\n**Is your home city the capital city of its country?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Scandinavia (Norway, Sweden, or Denmark) and is **not** the capital.\n\n*   If it's Norway, the capital is Oslo. Non-capital cities include Bergen, Trondheim, Stavanger.\n*   If it's Sweden, the capital is Stockholm. Non-capital cities include Gothenburg, Malmö, Uppsala.\n*   If it's Denmark, the capital is Copenhagen. Non-capital cities include Aarhus, Odense, Aalborg.\n\nHere is my eleventh question:\n\n**Is your home city located in Sweden?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Sweden, is not Stockholm (the capital), and is in Scandinavia.\n\nMajor non-capital cities in Sweden include Gothenburg (Göteborg), Malmö, Uppsala, Linköping, etc.\n\nHere is my twelfth question:\n\n**Is your home city located on the west coast of Sweden?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Sweden, not the capital (Stockholm), and not on the west coast.\n\nThis likely leaves cities on the east coast (like Södertälje, Norrköping, Kalmar) or in the southern part of the country (like Malmö, Lund, Helsingborg) or the northern part (like Umeå, Luleå). Malmö is a very strong candidate as it's a major city.\n\nHere is my thirteenth question:\n\n**Is your home city Malmö?**\n(Remember the player is trying to guess a city, and the correct answer is Malmö, Sweden. Reply to the question in relation to Malmö, Sweden. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Okay, so the city is in Sweden, not the capital (Stockholm), and not on the west coast.\n\nThis likely leaves cities on the east coast (like Södertälje, Norrköping, Kalmar) or in the southern part of the country (like Malmö, Lund, Helsingborg) or the northern part (like Umeå, Luleå). Malmö is a very strong candidate as it's a major city.\n\nHere is my thirteenth question:\n\n**Is your home city Malmö?**\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Malmö, Sweden in this particular game. Reply with <VALID> only if the player has guessed Malmö, Sweden (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

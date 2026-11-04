@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 286,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Battle of Gettysburg",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the exploration of space?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of a major treaty or peace agreement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the discovery of a new continent or landmass?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a significant scientific discovery or invention?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to a political revolution or the overthrow of a government?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of a major document, such as a constitution or declaration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the rise or fall of a major empire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the Industrial Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the fall of the Berlin Wall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the assassination of a significant political figure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the invention of the printing press?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of the Magna Carta?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the American Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of the Treaty of Versailles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the Renaissance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the discovery of Penicillin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the first moon landing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this historical event related to the signing of the Universal Declaration of Human Rights?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Battle of Gettysburg."
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the exploration of space?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of a major treaty or peace agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the discovery of a new continent or landmass?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the French Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a significant scientific discovery or invention?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to a political revolution or the overthrow of a government?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of a major document, such as a constitution or declaration?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the rise or fall of a major empire?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the Industrial Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the fall of the Berlin Wall?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the assassination of a significant political figure?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the invention of the printing press?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of the Magna Carta?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the American Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of the Treaty of Versailles?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the Renaissance?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the discovery of Penicillin?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the first moon landing?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this historical event related to the signing of the Universal Declaration of Human Rights?\n(Remember the player is trying to guess a historical event, and the correct answer is Battle of Gettysburg. Reply with Yes or No in relation to Battle of Gettysburg.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

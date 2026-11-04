@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 150,
+  "agent_game_scenario": "vegetable",
+  "env_game_scenario": "Spirulina",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a root vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a leafy green vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fruit vegetable (botanically a fruit, like tomatoes, peppers, or eggplants)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cruciferous vegetable (like broccoli, cauliflower, or cabbage)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the squash family (such as zucchini, pumpkin, or butternut squash)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the allium family (such as onions, garlic, or leeks)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the nightshade family (such as potatoes or eggplants)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the legume family (such as green beans, peas, or lentils)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made from corn?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a stem vegetable (such as asparagus)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flower vegetable (such as artichoke or broccoli rabe)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the gourd family (such as cucumbers or melons)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bulb vegetable (such as garlic, shallots, or fennel)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a stem vegetable (such as celery)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mushroom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sea vegetable (such as seaweed or kelp)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it commonly known as nori?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it commonly known as kelp?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it commonly known as seaweed?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it commonly known as wakame?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Spirulina."
+    },
+    {
+      "role": "user",
+      "content": "Is it a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a leafy green vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fruit vegetable (botanically a fruit, like tomatoes, peppers, or eggplants)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cruciferous vegetable (like broccoli, cauliflower, or cabbage)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the squash family (such as zucchini, pumpkin, or butternut squash)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the allium family (such as onions, garlic, or leeks)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the nightshade family (such as potatoes or eggplants)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the legume family (such as green beans, peas, or lentils)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made from corn?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a stem vegetable (such as asparagus)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flower vegetable (such as artichoke or broccoli rabe)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the gourd family (such as cucumbers or melons)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bulb vegetable (such as garlic, shallots, or fennel)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a stem vegetable (such as celery)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mushroom?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sea vegetable (such as seaweed or kelp)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it commonly known as nori?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it commonly known as kelp?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it commonly known as seaweed?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it commonly known as wakame?\n(Remember the player is trying to guess a vegetable, and the correct answer is Spirulina. Reply with Yes or No in relation to Spirulina.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

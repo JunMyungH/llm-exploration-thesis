@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 13,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Bass Clarinet",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument typically classified as a string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a wind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument typically played by blowing into a mouthpiece or reed, rather than just into an open hole?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument made primarily of wood?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a member of the saxophone family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a flute?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a clarinet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have successfully guessed the instrument. The answer is the **Clarinet**."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "That is surprising! Let me re-evaluate.\n\nIt is a woodwind instrument.\nIt is played by blowing into a mouthpiece/reed.\nIt is made primarily of wood.\nIt is NOT a saxophone.\nIt is NOT a flute.\nIt is NOT a clarinet.\n\nIs the instrument a bagpipe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a oboe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a bassoon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a recorder?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a harmonica?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a didgeridoo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a trumpet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a trombone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a French horn?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a tuba?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a pan flute?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a sheng?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Bass Clarinet."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument typically classified as a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a wind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument typically played by blowing into a mouthpiece or reed, rather than just into an open hole?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument made primarily of wood?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a member of the saxophone family?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a flute?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a clarinet?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have successfully guessed the instrument. The answer is the **Clarinet**.\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "That is surprising! Let me re-evaluate.\n\nIt is a woodwind instrument.\nIt is played by blowing into a mouthpiece/reed.\nIt is made primarily of wood.\nIt is NOT a saxophone.\nIt is NOT a flute.\nIt is NOT a clarinet.\n\nIs the instrument a bagpipe?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a oboe?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a bassoon?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a recorder?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a harmonica?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a didgeridoo?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a trumpet?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a trombone?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a French horn?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a tuba?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a pan flute?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a sheng?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Clarinet. Reply with Yes or No in relation to Bass Clarinet.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 337,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Covalent Bond",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept related to biology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to genetics or DNA?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to gene expression (how genes are turned on or off)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to genetic mutations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to genetic engineering or biotechnology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to heredity or inheritance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to evolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the structure or function of genes themselves (such as the double helix, nucleotides, or chromatin)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the double helix structure of DNA?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to nucleotides (the building blocks of DNA)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Are nucleotides composed of a phosphate group, a sugar, and a nitrogenous base?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the specific nitrogenous bases (Adenine, Thymine, Cytosine, Guanine)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the sugar component of the nucleotide, specifically deoxyribose?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the phosphate group component of the nucleotide?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the phosphodiester bond that links nucleotides together?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phosphodiester bond formed between the 3' carbon of one sugar and the 5' carbon of the next sugar?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I am confident that the scientific concept is the **phosphodiester bond**."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "That is unexpected! Since the phosphodiester bond was \"No,\" let's backtrack. The concept is definitely a nucleotide (yes to \"nucleotides\"), but not the bond between them. It is not the bases, not the deoxyribose sugar, and not the phosphate group in isolation.\n\nWait, if it's a nucleotide, and it's not the bond, bases, sugar, or phosphate group individually... could it be the *definition* or *structure* of a nucleotide itself? Or perhaps a specific type of nucleotide?\n\nLet me try a different angle. Is the concept related to"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, let's step back. I know:\n1. It is a biological concept.\n2. It is related to genetics/DNA.\n3. It involves nucleotides.\n4. It is NOT gene expression, mutations, engineering, heredity, or evolution.\n5. It IS related to the structure/function of genes (specifically nucleotides).\n6. It is NOT the double helix.\n7. It IS nucleotides.\n8. Nucleotides are composed of phosphate, sugar, and base (Yes).\n9. It is NOT the specific nitrogenous bases."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Covalent Bond."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept related to biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to genetics or DNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to gene expression (how genes are turned on or off)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to genetic mutations?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to genetic engineering or biotechnology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to heredity or inheritance?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to evolution?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the structure or function of genes themselves (such as the double helix, nucleotides, or chromatin)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the double helix structure of DNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to nucleotides (the building blocks of DNA)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Are nucleotides composed of a phosphate group, a sugar, and a nitrogenous base?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the specific nitrogenous bases (Adenine, Thymine, Cytosine, Guanine)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the sugar component of the nucleotide, specifically deoxyribose?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the phosphate group component of the nucleotide?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the phosphodiester bond that links nucleotides together?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phosphodiester bond formed between the 3' carbon of one sugar and the 5' carbon of the next sugar?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I am confident that the scientific concept is the **phosphodiester bond**.\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "That is unexpected! Since the phosphodiester bond was \"No,\" let's backtrack. The concept is definitely a nucleotide (yes to \"nucleotides\"), but not the bond between them. It is not the bases, not the deoxyribose sugar, and not the phosphate group in isolation.\n\nWait, if it's a nucleotide, and it's not the bond, bases, sugar, or phosphate group individually... could it be the *definition* or *structure* of a nucleotide itself? Or perhaps a specific type of nucleotide?\n\nLet me try a different angle. Is the concept related to\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, let's step back. I know:\n1. It is a biological concept.\n2. It is related to genetics/DNA.\n3. It involves nucleotides.\n4. It is NOT gene expression, mutations, engineering, heredity, or evolution.\n5. It IS related to the structure/function of genes (specifically nucleotides).\n6. It is NOT the double helix.\n7. It IS nucleotides.\n8. Nucleotides are composed of phosphate, sugar, and base (Yes).\n9. It is NOT the specific nitrogenous bases.\n(Remember the player is trying to guess a scientific concept, and the correct answer is Covalent Bond. Reply with Yes or No in relation to Covalent Bond.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

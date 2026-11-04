@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 168,
+  "agent_game_scenario": "mineral",
+  "env_game_scenario": "Uraninite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral commonly found in igneous rocks?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it composed primarily of silicon and oxygen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the most common mineral in the Earth's crust?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a silicate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it composed primarily of calcium and carbonate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it composed primarily of iron and oxygen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it composed primarily of sulfur?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily composed of copper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily composed of quartz (silicon dioxide)?\n\n*Wait, I previously asked if it was composed primarily of silicon and oxygen, and the answer was No. However, \"silicate\" minerals contain silicon and oxygen, but not necessarily as the primary *only* components (they have other elements too). But I asked if it was a silicate and got \"No\". Let me re-evaluate.*\n\nIf it's in igneous rocks, not a silicate, not carbonate, not oxide (iron/oxygen), not sulfide (sulfur), not a native metal (copper).\n\nLet's try a"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of aluminum and oxygen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of magnesium and silicon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of sodium, calcium, and silicate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of potassium, aluminum, silicon, and oxygen (making it a feldspar)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of calcium, magnesium, and silicate (making it an amphibole or pyroxene)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of magnesium, iron, and silicate (making it an olivine)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral primarily composed of iron, magnesium, and silicate (making it pyroxene or amphibole)?\n\n*Wait, I just asked that and the user said No. Let me backtrack.*\n\nSo far:\n1. In igneous rocks? Yes.\n2. Composed of Si and O? No.\n3. Most common in crust? No.\n4. Silicate? No.\n5. Carbonate? No.\n6. Oxide (Fe/O)? No.\n7. Sulfide? No.\n8. Native Copper? No.\n9. Quartz (SiO"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of sulfur and iron (pyrite)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of carbon (such as graphite or diamond)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of calcium, aluminum, iron, magnesium, and silicate (making it a garnet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral composed primarily of calcium, sodium, and silicate (making it a plagioclase feldspar)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Uraninite."
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral commonly found in igneous rocks?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it composed primarily of silicon and oxygen?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the most common mineral in the Earth's crust?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a silicate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it composed primarily of calcium and carbonate?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it composed primarily of iron and oxygen?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it composed primarily of sulfur?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily composed of copper?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily composed of quartz (silicon dioxide)?\n\n*Wait, I previously asked if it was composed primarily of silicon and oxygen, and the answer was No. However, \"silicate\" minerals contain silicon and oxygen, but not necessarily as the primary *only* components (they have other elements too). But I asked if it was a silicate and got \"No\". Let me re-evaluate.*\n\nIf it's in igneous rocks, not a silicate, not carbonate, not oxide (iron/oxygen), not sulfide (sulfur), not a native metal (copper).\n\nLet's try a\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of aluminum and oxygen?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of magnesium and silicon?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of sodium, calcium, and silicate?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of potassium, aluminum, silicon, and oxygen (making it a feldspar)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of calcium, magnesium, and silicate (making it an amphibole or pyroxene)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of magnesium, iron, and silicate (making it an olivine)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral primarily composed of iron, magnesium, and silicate (making it pyroxene or amphibole)?\n\n*Wait, I just asked that and the user said No. Let me backtrack.*\n\nSo far:\n1. In igneous rocks? Yes.\n2. Composed of Si and O? No.\n3. Most common in crust? No.\n4. Silicate? No.\n5. Carbonate? No.\n6. Oxide (Fe/O)? No.\n7. Sulfide? No.\n8. Native Copper? No.\n9. Quartz (SiO\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of sulfur and iron (pyrite)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of carbon (such as graphite or diamond)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of calcium, aluminum, iron, magnesium, and silicate (making it a garnet)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral composed primarily of calcium, sodium, and silicate (making it a plagioclase feldspar)?\n(Remember the player is trying to guess a mineral, and the correct answer is Uraninite. Reply with Yes or No in relation to Uraninite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

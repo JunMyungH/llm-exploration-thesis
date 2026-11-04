@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 305,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Thunder",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon primarily related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a result of the interaction between light and matter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the behavior of fluids or gases?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon observable at the macroscopic scale in everyday life?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon caused by the rotation of the Earth?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a type of wave?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to sound?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon the Doppler Effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon resonance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the refraction or reflection of sound waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon an echo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon the formation of a sonic boom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the interference of sound waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the scattering of sound waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the absorption of sound waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the diffraction of sound waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon the Cherenkov radiation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the movement of air or wind?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a hurricane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a tornado?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Thunder."
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon primarily related to physics?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a result of the interaction between light and matter?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the behavior of fluids or gases?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon observable at the macroscopic scale in everyday life?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon caused by the rotation of the Earth?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a type of wave?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to sound?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon the Doppler Effect?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon resonance?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the refraction or reflection of sound waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon an echo?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon the formation of a sonic boom?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the interference of sound waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the scattering of sound waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the absorption of sound waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the diffraction of sound waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon the Cherenkov radiation?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the movement of air or wind?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a hurricane?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a tornado?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Thunder. Reply with Yes or No in relation to Thunder.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

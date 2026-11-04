@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 175,
+  "agent_game_scenario": "mineral",
+  "env_game_scenario": "Fluorapatite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral commonly found in the Earth's crust?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a silicate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a carbonate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an oxide mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sulfide mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a halide mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a native element mineral?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a phosphate mineral?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phosphate mineral commonly used in fertilizers?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral apatite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral variscite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral turquoise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral vivianite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral monazite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral phosphosiderite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral turquoise? (Wait, I already asked that. Let me re-evaluate.)\n\nYou said it is a phosphate mineral, commonly found in the Earth's crust, used in fertilizers, and it is NOT apatite.\n\nWhat is the most common phosphate mineral used in fertilizers besides apatite? Usually, phosphate rock is primarily composed of apatite. However, if it's not apatite, could it be **Tricalcium Phosphate** or perhaps a specific variety?\n\nLet's try a different angle. Is the mineral **Pyromorphite**?\n\nNo, that's less common"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral wavellite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral turquoise? (I apologize for the repetition, I am checking my list. Let me try a more distinct common phosphate.)\n\nIs the mineral **Monazite**? (I asked this before, let's move on.)\n\nLet's narrow it down by color or hardness. Is the mineral green?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral white?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral **Calcite**?\n\nWait, Calcite is a carbonate, and we established earlier that it is not a carbonate. I need to stick to phosphate minerals.\n\nLet's try: Is the mineral **Whitlockite**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Fluorapatite."
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral commonly found in the Earth's crust?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a silicate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a carbonate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an oxide mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sulfide mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a halide mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a native element mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a phosphate mineral?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phosphate mineral commonly used in fertilizers?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral apatite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral variscite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral turquoise?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral vivianite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral monazite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral phosphosiderite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral turquoise? (Wait, I already asked that. Let me re-evaluate.)\n\nYou said it is a phosphate mineral, commonly found in the Earth's crust, used in fertilizers, and it is NOT apatite.\n\nWhat is the most common phosphate mineral used in fertilizers besides apatite? Usually, phosphate rock is primarily composed of apatite. However, if it's not apatite, could it be **Tricalcium Phosphate** or perhaps a specific variety?\n\nLet's try a different angle. Is the mineral **Pyromorphite**?\n\nNo, that's less common\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral wavellite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral turquoise? (I apologize for the repetition, I am checking my list. Let me try a more distinct common phosphate.)\n\nIs the mineral **Monazite**? (I asked this before, let's move on.)\n\nLet's narrow it down by color or hardness. Is the mineral green?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral white?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral **Calcite**?\n\nWait, Calcite is a carbonate, and we established earlier that it is not a carbonate. I need to stick to phosphate minerals.\n\nLet's try: Is the mineral **Whitlockite**?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

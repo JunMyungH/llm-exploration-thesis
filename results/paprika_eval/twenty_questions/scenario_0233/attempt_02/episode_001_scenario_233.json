@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 233,
+  "agent_game_scenario": "brand",
+  "env_game_scenario": "Facebook",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand associated with technology products?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing smartphones?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing computers or laptops?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing home appliances (such as refrigerators, washing machines, or air conditioners)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing audio equipment (such as headphones or speakers)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing gaming consoles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing software or operating systems?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing electric vehicles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing smartwatches or wearable technology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing cameras or imaging equipment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing networking equipment (such as routers or Wi-Fi devices)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing peripherals, such as keyboards, mice, or gaming accessories?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing televisions or home theater systems?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing automotive parts or vehicles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing fashion or luxury goods?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing outdoor or sporting goods?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing food or beverages?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing toys or hobby items?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing beauty, cosmetics, or personal care products?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing financial services or banking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is Facebook."
+    },
+    {
+      "role": "user",
+      "content": "Is the brand associated with technology products?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing smartphones?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing computers or laptops?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing home appliances (such as refrigerators, washing machines, or air conditioners)?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing audio equipment (such as headphones or speakers)?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing gaming consoles?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing software or operating systems?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing electric vehicles?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing smartwatches or wearable technology?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing cameras or imaging equipment?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing networking equipment (such as routers or Wi-Fi devices)?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing peripherals, such as keyboards, mice, or gaming accessories?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing televisions or home theater systems?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing automotive parts or vehicles?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing fashion or luxury goods?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing outdoor or sporting goods?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing food or beverages?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing toys or hobby items?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing beauty, cosmetics, or personal care products?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing financial services or banking?\n(Remember the player is trying to guess a brand, and the correct answer is Facebook. Reply with Yes or No in relation to Facebook.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

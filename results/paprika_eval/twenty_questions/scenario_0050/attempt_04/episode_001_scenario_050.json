@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 50,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Singapore",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location outdoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location inside a building?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location underground?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location on a boat or ship?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in the air (e.g., an airplane or helicopter)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location inside a vehicle (other than a boat or airplane)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a natural formation (like a cave, mountain, or lake)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a man-made structure that is not a building (e.g., a bridge, tunnel, or dam)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a virtual or digital space (such as a website, video game world, or VR environment)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a specific room or area within a larger structure (like a kitchen, bathroom, or closet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a body of water (such as a river, lake, ocean, or pond)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a public space or institution (such as a park, school, library, or museum)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a piece of furniture or a fixture within a home or office (such as a chair, table, or sink)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a specific geographical region or country?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the country located in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the country located in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the country located in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the country located in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the country located in Southeast Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the country an island nation?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Singapore."
+    },
+    {
+      "role": "user",
+      "content": "Is the location outdoors?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location inside a building?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location underground?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location on a boat or ship?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in the air (e.g., an airplane or helicopter)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location inside a vehicle (other than a boat or airplane)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a natural formation (like a cave, mountain, or lake)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a man-made structure that is not a building (e.g., a bridge, tunnel, or dam)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a virtual or digital space (such as a website, video game world, or VR environment)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a specific room or area within a larger structure (like a kitchen, bathroom, or closet)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a body of water (such as a river, lake, ocean, or pond)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a public space or institution (such as a park, school, library, or museum)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a piece of furniture or a fixture within a home or office (such as a chair, table, or sink)?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a specific geographical region or country?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the country located in Europe?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the country located in Asia?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the country located in East Asia?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the country located in South Asia?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the country located in Southeast Asia?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the country an island nation?\n(Remember the player is trying to guess a location, and the correct answer is Singapore. Reply with Yes or No in relation to Singapore.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

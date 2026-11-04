@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 279,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Cold War",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the discovery of a new land or continent?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the signing of a major treaty or peace agreement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the invention or development of a major technology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to computing or the internet?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the first electronic general-purpose computer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the World Wide Web?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the transistor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the microprocessor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the printing press?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the telephone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the light bulb?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the airplane?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the internal combustion engine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the steam engine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to space exploration, such as the first satellite or the first human in space?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the launch of the first artificial satellite, Sputnik 1?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the first human spaceflight, with Yuri Gagarin orbiting the Earth?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Apollo 11 moon landing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the launch of the first space station, Salyut 1?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Cold War."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the discovery of a new land or continent?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the signing of a major treaty or peace agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the invention or development of a major technology?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to computing or the internet?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the first electronic general-purpose computer?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the World Wide Web?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the transistor?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the microprocessor?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the printing press?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the telephone?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the light bulb?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the airplane?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the internal combustion engine?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the steam engine?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to space exploration, such as the first satellite or the first human in space?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the launch of the first artificial satellite, Sputnik 1?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the first human spaceflight, with Yuri Gagarin orbiting the Earth?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Apollo 11 moon landing?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the launch of the first space station, Salyut 1?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

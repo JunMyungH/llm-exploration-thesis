@@ -1,0 +1,310 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 361,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Higgs Field",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 17,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to wave-particle duality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the uncertainty principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to superposition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Schrödinger equation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to spin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Pauli exclusion principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum tunneling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the photoelectric effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the double-slit experiment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Higgs boson?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have successfully identified the concept.\n\nThe answer is the **Higgs boson**."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, that seems contradictory. My previous question was \"Is the concept related to the Higgs boson?\" and you answered \"Yes.\" Now you are saying \"No.\"\n\nLet me re-evaluate. Perhaps I asked a question that was too specific or misleading. Let's step back.\n\nIs the concept related to the Standard Model of particle physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the mass of elementary particles?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the Higgs field?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Higgs Field."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum entanglement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to wave-particle duality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the uncertainty principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to superposition?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Schrödinger equation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to spin?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Pauli exclusion principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum tunneling?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the photoelectric effect?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the double-slit experiment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Higgs boson?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have successfully identified the concept.\n\nThe answer is the **Higgs boson**.\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, that seems contradictory. My previous question was \"Is the concept related to the Higgs boson?\" and you answered \"Yes.\" Now you are saying \"No.\"\n\nLet me re-evaluate. Perhaps I asked a question that was too specific or misleading. Let's step back.\n\nIs the concept related to the Standard Model of particle physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the mass of elementary particles?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the Higgs field?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Field. Reply with Yes or No in relation to Higgs Field.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Higgs Field in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct scientific concept, which is: Higgs Field, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the concept related to the Higgs field?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct scientific concept, which is Higgs Field in this particular game. Reply with <VALID> only if the player has guessed Higgs Field in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Higgs Field is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

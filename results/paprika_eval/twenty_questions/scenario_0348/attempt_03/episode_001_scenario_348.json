@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 348,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Higgs Boson",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept abstract (such as a theory, law, or principle) rather than a physical object or specific experiment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a physical object, device, or specific experimental setup.\n\nIs it a piece of laboratory equipment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it something that is commonly found in a medical setting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tool used for observing very small things, like a microscope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to astronomy, such as a telescope or satellite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a chemical substance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of safety equipment, such as goggles or a lab coat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tool used for measuring something (like a thermometer, ruler, or scale)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for measuring force or weight, such as a spring scale?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a source of light, such as a laser or an LED?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a container used for holding liquids, such as a beaker or flask?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used to generate or measure electricity, such as a battery or a multimeter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of protective gear worn on the hands, such as gloves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for heating or cooling, such as a Bunsen burner or a refrigerator?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tool used for holding or manipulating small objects, such as tweezers or forceps?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an electronic component, such as a resistor, capacitor, or transistor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piece of furniture or a large structure used in a scientific context, such as a lab bench or a centrifuge (if considered large equipment)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a biological specimen, such as a tissue sample, a cell culture, or a preserved animal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tool used for cutting or slicing, such as a scalpel or scissors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device used for mixing or stirring substances, such as a magnetic stirrer or a vortex mixer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Higgs Boson."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept abstract (such as a theory, law, or principle) rather than a physical object or specific experiment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a physical object, device, or specific experimental setup.\n\nIs it a piece of laboratory equipment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it something that is commonly found in a medical setting?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tool used for observing very small things, like a microscope?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to astronomy, such as a telescope or satellite?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a chemical substance?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of safety equipment, such as goggles or a lab coat?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tool used for measuring something (like a thermometer, ruler, or scale)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for measuring force or weight, such as a spring scale?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a source of light, such as a laser or an LED?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a container used for holding liquids, such as a beaker or flask?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used to generate or measure electricity, such as a battery or a multimeter?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of protective gear worn on the hands, such as gloves?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for heating or cooling, such as a Bunsen burner or a refrigerator?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tool used for holding or manipulating small objects, such as tweezers or forceps?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an electronic component, such as a resistor, capacitor, or transistor?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piece of furniture or a large structure used in a scientific context, such as a lab bench or a centrifuge (if considered large equipment)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a biological specimen, such as a tissue sample, a cell culture, or a preserved animal?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tool used for cutting or slicing, such as a scalpel or scissors?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device used for mixing or stirring substances, such as a magnetic stirrer or a vortex mixer?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Higgs Boson. Reply with Yes or No in relation to Higgs Boson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

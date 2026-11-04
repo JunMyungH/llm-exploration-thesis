@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 276,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Signing of the Magna Carta",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a political election or voting process?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to space exploration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the signing or creation of a major treaty or peace agreement?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty signed in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the treaty signed in the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty signed before 1800?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the American Revolutionary War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Thirty Years' War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Napoleonic Wars?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Thirty Years' War? (Wait, I already asked that. Let me re-evaluate).\n\nOkay, it's a pre-1800 treaty, not related to the American Revolutionary War, French Revolution, Thirty Years' War, or Napoleonic Wars.\n\nIs the treaty related to the War of the Spanish Succession?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Peace of Westphalia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Congress of Vienna?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Treaty of Utrecht?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Treaty of Tordesillas?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Peace of Augsburg?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Treaty of Versailles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the Hundred Years' War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the treaty related to the War of the Roses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta."
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a political election or voting process?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to space exploration?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the signing or creation of a major treaty or peace agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty signed in the 20th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the treaty signed in the 19th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty signed before 1800?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the American Revolutionary War?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the French Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Thirty Years' War?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Napoleonic Wars?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Thirty Years' War? (Wait, I already asked that. Let me re-evaluate).\n\nOkay, it's a pre-1800 treaty, not related to the American Revolutionary War, French Revolution, Thirty Years' War, or Napoleonic Wars.\n\nIs the treaty related to the War of the Spanish Succession?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Peace of Westphalia?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Congress of Vienna?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Treaty of Utrecht?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Treaty of Tordesillas?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Peace of Augsburg?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Treaty of Versailles?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the Hundred Years' War?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the treaty related to the War of the Roses?\n(Remember the player is trying to guess a historical event, and the correct answer is Signing of the Magna Carta. Reply with Yes or No in relation to Signing of the Magna Carta.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

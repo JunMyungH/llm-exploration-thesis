@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 356,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "Isotope",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the scientific concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to classical mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fundamental particle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Heisenberg Uncertainty Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Schrödinger's Cat thought experiment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the concept of wave-particle duality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the concept of quantum entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Pauli Exclusion Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the concept of superposition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the concept of quantum tunneling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fundamental force of nature?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the Standard Model of particle physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to cosmology or astrophysics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to thermodynamics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to electromagnetism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to nuclear physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the concept of half-life?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it nuclear fusion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it nuclear fission?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Isotope."
+    },
+    {
+      "role": "user",
+      "content": "Is the scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to classical mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fundamental particle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Heisenberg Uncertainty Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Schrödinger's Cat thought experiment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the concept of wave-particle duality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the concept of quantum entanglement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Pauli Exclusion Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the concept of superposition?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the concept of quantum tunneling?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fundamental force of nature?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the Standard Model of particle physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to cosmology or astrophysics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to electromagnetism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to nuclear physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the concept of half-life?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it nuclear fusion?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it nuclear fission?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Isotope. Reply with Yes or No in relation to Isotope.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

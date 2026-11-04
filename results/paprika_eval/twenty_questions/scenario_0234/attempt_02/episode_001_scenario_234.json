@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 234,
+  "agent_game_scenario": "brand",
+  "env_game_scenario": "IBM",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily associated with technology or electronics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing smartphones?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand primarily known for manufacturing computers or personal computers?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Apple?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Lenovo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Dell?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand HP (Hewlett-Packard)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand ASUS?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Acer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Samsung?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Microsoft?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Sony?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Huawei?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for its gaming computers or laptops?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Razer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand known for its Chromebooks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand Dell's gaming division, Alienware?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand MSI (Micro-Star International)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand a Chinese technology company?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the brand based in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is IBM."
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily associated with technology or electronics?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing smartphones?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand primarily known for manufacturing computers or personal computers?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Apple?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Lenovo?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Dell?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand HP (Hewlett-Packard)?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand ASUS?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Acer?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Samsung?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Microsoft?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Sony?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Huawei?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for its gaming computers or laptops?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Razer?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand known for its Chromebooks?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand Dell's gaming division, Alienware?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand MSI (Micro-Star International)?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand a Chinese technology company?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the brand based in the United States?\n(Remember the player is trying to guess a brand, and the correct answer is IBM. Reply with Yes or No in relation to IBM.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

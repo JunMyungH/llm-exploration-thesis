@@ -1,0 +1,326 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 324,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Concrete",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 18,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention something that uses electricity to function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a mechanical device that uses manual force or simple machines (like levers, pulleys, or wheels) to perform its task?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to communication or information storage (such as writing, printing, or recording)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to transportation or the movement of people or goods?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a tool used for measuring time?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a weapon or a device designed for warfare?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to agriculture or farming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the generation or manipulation of heat or energy (excluding electricity)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to hygiene or personal care (such as soap, toothbrush, or toilet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a container or vessel used for holding or transporting liquids?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the construction or building of structures?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a power tool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a simple hand tool used for cutting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a device used for lifting or moving heavy materials vertically?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a type of fastener or connecting device (such as a nail, screw, bolt, or rivet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the measurement of physical quantities (such as a ruler, scale, or level)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a type of mortar or mixture used to bind building materials together (like cement or plaster)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention specifically concrete?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Concrete."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention something that uses electricity to function?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a mechanical device that uses manual force or simple machines (like levers, pulleys, or wheels) to perform its task?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to communication or information storage (such as writing, printing, or recording)?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to transportation or the movement of people or goods?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a tool used for measuring time?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a weapon or a device designed for warfare?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to agriculture or farming?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the generation or manipulation of heat or energy (excluding electricity)?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to hygiene or personal care (such as soap, toothbrush, or toilet)?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a container or vessel used for holding or transporting liquids?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the construction or building of structures?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a power tool?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a simple hand tool used for cutting?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a device used for lifting or moving heavy materials vertically?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a type of fastener or connecting device (such as a nail, screw, bolt, or rivet)?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the measurement of physical quantities (such as a ruler, scale, or level)?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a type of mortar or mixture used to bind building materials together (like cement or plaster)?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention specifically concrete?\n(Remember the player is trying to guess a invention, and the correct answer is Concrete. Reply with Yes or No in relation to Concrete.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Concrete in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct invention, which is: Concrete, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the invention specifically concrete?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct invention, which is Concrete in this particular game. Reply with <VALID> only if the player has guessed Concrete in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Concrete is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

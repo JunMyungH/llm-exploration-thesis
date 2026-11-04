@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 253,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Waiter",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a healthcare professional?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in law enforcement or the legal system?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in education or teaching?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in engineering or technology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in the arts, entertainment, or media?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in business, finance, or management?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in manual labor, construction, or the trades?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in the military or armed forces?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in agriculture, farming, or forestry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in transportation or logistics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in science, research, or academia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in public service, government administration, or politics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person involved in sales, retail, or customer service?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person primarily a sales representative or works in retail?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a customer service representative?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a real estate agent?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a telemarketer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a lawyer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a chef or cook?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person a social media influencer or content creator?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Waiter."
+    },
+    {
+      "role": "user",
+      "content": "Is the person a healthcare professional?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in law enforcement or the legal system?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in education or teaching?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in engineering or technology?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in the arts, entertainment, or media?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in business, finance, or management?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in manual labor, construction, or the trades?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in the military or armed forces?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in agriculture, farming, or forestry?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in transportation or logistics?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in science, research, or academia?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in public service, government administration, or politics?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person involved in sales, retail, or customer service?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the person primarily a sales representative or works in retail?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a customer service representative?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a real estate agent?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a telemarketer?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a lawyer?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a chef or cook?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the person a social media influencer or content creator?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 336,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Space-Time Continuum",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept physical or abstract?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept made of matter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to mathematics or logic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it involve numerical values?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a specific type of equation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a fundamental mathematical constant?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a branch of mathematics, such as algebra or geometry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a geometric shape?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to probability or statistics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a set or collection?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a theorem or a proof?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a number or a quantity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to geometry, such as a point, line, angle, or plane?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a two-dimensional shape?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a three-dimensional shape?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a one-dimensional concept, such as a line or a point?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the properties of space, such as dimension or curvature?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the curvature of space-time, such as gravity?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Einstein's Theory of General Relativity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Space-Time Continuum."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept physical or abstract?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept made of matter?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it involve numerical values?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a specific type of equation?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a fundamental mathematical constant?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a branch of mathematics, such as algebra or geometry?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a function?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a geometric shape?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to probability or statistics?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a set or collection?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a theorem or a proof?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a number or a quantity?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to geometry, such as a point, line, angle, or plane?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a two-dimensional shape?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a three-dimensional shape?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a one-dimensional concept, such as a line or a point?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the properties of space, such as dimension or curvature?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the curvature of space-time, such as gravity?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Einstein's Theory of General Relativity?\n(Remember the player is trying to guess a concept, and the correct answer is Space-Time Continuum. Reply with Yes or No in relation to Space-Time Continuum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 258,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Florist",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation a medical professional?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation in the field of technology or engineering?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation in the field of education or teaching?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation in the field of law or legal services?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation in the field of arts, entertainment, or media?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on visual arts, such as painting, sculpture, or design?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of an artist, such as a painter or sculptor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to photography or videography?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to graphic design or illustration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to architecture or interior design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to fashion or textile design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to performing arts, such as acting or dancing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to film or television production (e.g., director, producer, cinematographer)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to writing or editing (e.g., author, journalist, poet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to music (e.g., musician, composer, conductor)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to museums, galleries, or curation (e.g., museum curator, art critic)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to video games or animation (e.g., game designer, animator)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Given the previous answers, the occupation is in arts/entertainment, specifically visual arts, but is not a traditional artist, photographer, graphic designer, architect, fashion designer, performer, filmmaker, writer, musician, curator, or animator.\n\nThis leaves a few specific niches. Let's try to narrow it down.\n\nIs the occupation related to set design or scenic design for theater, film, or television?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to makeup artistry or special effects makeup?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation related to costume design or wardrobe styling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Florist."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation a medical professional?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation in the field of technology or engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation in the field of education or teaching?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation in the field of law or legal services?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation in the field of arts, entertainment, or media?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on visual arts, such as painting, sculpture, or design?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of an artist, such as a painter or sculptor?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to photography or videography?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to graphic design or illustration?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to architecture or interior design?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to fashion or textile design?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to performing arts, such as acting or dancing?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to film or television production (e.g., director, producer, cinematographer)?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to writing or editing (e.g., author, journalist, poet)?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to music (e.g., musician, composer, conductor)?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to museums, galleries, or curation (e.g., museum curator, art critic)?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to video games or animation (e.g., game designer, animator)?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Given the previous answers, the occupation is in arts/entertainment, specifically visual arts, but is not a traditional artist, photographer, graphic designer, architect, fashion designer, performer, filmmaker, writer, musician, curator, or animator.\n\nThis leaves a few specific niches. Let's try to narrow it down.\n\nIs the occupation related to set design or scenic design for theater, film, or television?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to makeup artistry or special effects makeup?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation related to costume design or wardrobe styling?\n(Remember the player is trying to guess a occupation, and the correct answer is Florist. Reply with Yes or No in relation to Florist.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

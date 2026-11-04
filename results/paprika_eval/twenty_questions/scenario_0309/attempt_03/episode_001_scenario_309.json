@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 309,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Riptide",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a natural occurrence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to human technology or engineering?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon primarily related to software or digital systems?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to artificial intelligence or machine learning?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to web development or internet protocols?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the structure or organization of data on the web, such as a scripting language or markup language?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the visual presentation or styling of web pages, such as CSS?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the animation or motion of elements, such as CSS transitions or keyframes?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically about the `@keyframes` rule or CSS animations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the `transform` property in CSS?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically related to 3D transformations (such as rotateX, rotateY, rotateZ)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to 2D transformations (such as translate, scale, or rotate)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically about the `rotate()` function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically about the `scale()` function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically about the `translate()` function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the `skew()` function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the `matrix()` function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the `transform-origin` property?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the `transform-style` property?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the `perspective()` function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Riptide."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a natural occurrence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to human technology or engineering?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon primarily related to software or digital systems?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to artificial intelligence or machine learning?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to web development or internet protocols?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the structure or organization of data on the web, such as a scripting language or markup language?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the visual presentation or styling of web pages, such as CSS?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the animation or motion of elements, such as CSS transitions or keyframes?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically about the `@keyframes` rule or CSS animations?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the `transform` property in CSS?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically related to 3D transformations (such as rotateX, rotateY, rotateZ)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to 2D transformations (such as translate, scale, or rotate)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically about the `rotate()` function?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically about the `scale()` function?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically about the `translate()` function?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the `skew()` function?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the `matrix()` function?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the `transform-origin` property?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the `transform-style` property?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the `perspective()` function?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

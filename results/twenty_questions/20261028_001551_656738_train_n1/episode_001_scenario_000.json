@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "train",
+  "scenario_index": 0,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Corset",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!\n\nIMPORTANT INTERACTION RULE:\n- Output exactly ONE yes-or-no question per turn.\n- Do not answer your own question.\n- Do not simulate the environment or future turns.\n- Do not output multiple questions.\n- Do not use labels such as \"Question:\" or \"Answer:\".\n- Stop immediately after the single question.\n- If making a final guess, phrase it as one yes-or-no question."
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item typically worn on the upper body?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it usually long-sleeved?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a shirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tank top?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a jacket?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it made of knit fabric?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it formal wear?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a suit jacket?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a vest?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tuxedo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a blazer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a formal shirt, such as a dress shirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cape?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a coat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a dress?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a scarf?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tie?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a vest?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pair of trousers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Corset."
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item typically worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it usually long-sleeved?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a shirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tank top?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a jacket?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it made of knit fabric?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it formal wear?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a suit jacket?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a vest?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tuxedo?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a blazer?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a formal shirt, such as a dress shirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cape?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a coat?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a dress?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hat?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a scarf?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tie?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a vest?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pair of trousers?\n(Remember the player is trying to guess a clothing, and the correct answer is Corset. Reply with Yes or No in relation to Corset.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

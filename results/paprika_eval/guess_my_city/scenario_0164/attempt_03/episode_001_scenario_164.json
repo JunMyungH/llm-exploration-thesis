@@ -1,0 +1,230 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 164,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Antwerp, Belgium",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 12,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the location geographically to reduce the search space efficiently.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. Since it is in the Northern Hemisphere, I will try to narrow down the continent.\n\n**Is your home city located in Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in the Northern Hemisphere but not in Asia. This leaves Europe, North America, or potentially parts of Africa (though the majority of Africa is in the Southern Hemisphere, the northern part is in the Northern Hemisphere).\n\n**Is your home city located in Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. We are looking for a city in Europe. To narrow this down further, I'd like to know about its general location within the continent.\n\n**Is your home city located in Western Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "We are narrowing it down to Western Europe. This region includes countries like the United Kingdom, Ireland, France, Belgium, the Netherlands, Luxembourg, and sometimes Germany is included depending on the definition, but let's stick to the core Western European nations for now.\n\n**Is your home city the capital city of its country?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So we are looking for a major, non-capital city in Western Europe.\n\n**Is your home city located in the United Kingdom?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in the UK. This leaves us with other Western European countries such as France, Germany, the Netherlands, Belgium, Luxembourg, and possibly Switzerland or Austria depending on the broadness of \"Western Europe.\"\n\n**Is your home city located in France?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in France. This significantly narrows down the list of likely Western European countries. We are now looking at Germany, the Netherlands, Belgium, Luxembourg, Switzerland, Austria, or potentially others depending on how \"Western Europe\" is defined.\n\n**Is your home city located in Germany?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in France or Germany. We are left with other major Western European nations.\n\n**Is your home city located in the Netherlands?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in the Netherlands. We are narrowing this down further. The remaining likely candidates in a standard definition of Western Europe are Belgium, Luxembourg, Switzerland, and Austria (sometimes considered Central Europe, but often grouped here in casual contexts).\n\n**Is your home city located in Belgium?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great! We know the city is in Belgium. Since it is not the capital (Brussels), it must be one of the other major Belgian cities. The most prominent non-capital cities in Belgium are Antwerp, Ghent, Charleroi, Liège, Bruges, and Namur.\n\n**Is your home city known for its historic port and diamond industry?** (This would point towards Antwerp, but I'm framing it as a characteristic question). \n\nActually, to stick strictly to the rules of asking about characteristics, let me rephrase:\n\n**Is your home city a major port city on a river or the sea"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a major port city in Belgium. The two most prominent port cities in Belgium are Antwerp and Zeebrugge. Antwerp is by far the largest and most famous, often referred to as the diamond capital of the world and a major hub in Europe.\n\n**Is your home city Antwerp?**"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Antwerp, Belgium"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the location geographically to reduce the search space efficiently.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. Since it is in the Northern Hemisphere, I will try to narrow down the continent.\n\n**Is your home city located in Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in the Northern Hemisphere but not in Asia. This leaves Europe, North America, or potentially parts of Africa (though the majority of Africa is in the Southern Hemisphere, the northern part is in the Northern Hemisphere).\n\n**Is your home city located in Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. We are looking for a city in Europe. To narrow this down further, I'd like to know about its general location within the continent.\n\n**Is your home city located in Western Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "We are narrowing it down to Western Europe. This region includes countries like the United Kingdom, Ireland, France, Belgium, the Netherlands, Luxembourg, and sometimes Germany is included depending on the definition, but let's stick to the core Western European nations for now.\n\n**Is your home city the capital city of its country?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So we are looking for a major, non-capital city in Western Europe.\n\n**Is your home city located in the United Kingdom?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in the UK. This leaves us with other Western European countries such as France, Germany, the Netherlands, Belgium, Luxembourg, and possibly Switzerland or Austria depending on the broadness of \"Western Europe.\"\n\n**Is your home city located in France?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in France. This significantly narrows down the list of likely Western European countries. We are now looking at Germany, the Netherlands, Belgium, Luxembourg, Switzerland, Austria, or potentially others depending on how \"Western Europe\" is defined.\n\n**Is your home city located in Germany?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in France or Germany. We are left with other major Western European nations.\n\n**Is your home city located in the Netherlands?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in the Netherlands. We are narrowing this down further. The remaining likely candidates in a standard definition of Western Europe are Belgium, Luxembourg, Switzerland, and Austria (sometimes considered Central Europe, but often grouped here in casual contexts).\n\n**Is your home city located in Belgium?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great! We know the city is in Belgium. Since it is not the capital (Brussels), it must be one of the other major Belgian cities. The most prominent non-capital cities in Belgium are Antwerp, Ghent, Charleroi, Liège, Bruges, and Namur.\n\n**Is your home city known for its historic port and diamond industry?** (This would point towards Antwerp, but I'm framing it as a characteristic question). \n\nActually, to stick strictly to the rules of asking about characteristics, let me rephrase:\n\n**Is your home city a major port city on a river or the sea\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a major port city in Belgium. The two most prominent port cities in Belgium are Antwerp and Zeebrugge. Antwerp is by far the largest and most famous, often referred to as the diamond capital of the world and a major hub in Europe.\n\n**Is your home city Antwerp?**\n(Remember the player is trying to guess a city, and the correct answer is Antwerp, Belgium. Reply to the question in relation to Antwerp, Belgium. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Okay, so it is a major port city in Belgium. The two most prominent port cities in Belgium are Antwerp and Zeebrugge. Antwerp is by far the largest and most famous, often referred to as the diamond capital of the world and a major hub in Europe.\n\n**Is your home city Antwerp?**\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Antwerp, Belgium in this particular game. Reply with <VALID> only if the player has guessed Antwerp, Belgium (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

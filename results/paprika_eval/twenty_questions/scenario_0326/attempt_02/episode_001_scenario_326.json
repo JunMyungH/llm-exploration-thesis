@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 326,
+  "agent_game_scenario": "scientific concept",
+  "env_game_scenario": "String Theory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this scientific concept related to physics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fundamental force of nature?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the study of electromagnetism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to thermodynamics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the study of motion and forces (mechanics)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Heisenberg Uncertainty Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it wave-particle duality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Schrödinger equation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it quantum entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it quantum superposition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fundamental particle, such as a quark or lepton?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Pauli Exclusion Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the concept of spin in quantum mechanics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it specifically **Quantum Spin**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the **Spin-Statistics Theorem**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the concept of **Spin-orbit coupling**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the **Zeeman effect**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the **Pauli Exclusion Principle**? (Wait, I already asked that and got 'No'. Let me re-evaluate.)\n\nWe know it's a quantum mechanics concept.\nWe know it involves \"spin\".\nIt is not Heisenberg Uncertainty, Wave-particle duality, Schrödinger equation, Entanglement, Superposition, a fundamental particle, Pauli Exclusion, Spin-Statistics Theorem, Spin-orbit coupling, or Zeeman effect.\n\nIs it **Quantum Tunneling**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the **Aharonov-Bohm effect**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is String Theory."
+    },
+    {
+      "role": "user",
+      "content": "Is this scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fundamental force of nature?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the study of electromagnetism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the study of motion and forces (mechanics)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Heisenberg Uncertainty Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it wave-particle duality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Schrödinger equation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it quantum entanglement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it quantum superposition?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fundamental particle, such as a quark or lepton?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Pauli Exclusion Principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the concept of spin in quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it specifically **Quantum Spin**?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the **Spin-Statistics Theorem**?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the concept of **Spin-orbit coupling**?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the **Zeeman effect**?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the **Pauli Exclusion Principle**? (Wait, I already asked that and got 'No'. Let me re-evaluate.)\n\nWe know it's a quantum mechanics concept.\nWe know it involves \"spin\".\nIt is not Heisenberg Uncertainty, Wave-particle duality, Schrödinger equation, Entanglement, Superposition, a fundamental particle, Pauli Exclusion, Spin-Statistics Theorem, Spin-orbit coupling, or Zeeman effect.\n\nIs it **Quantum Tunneling**?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the **Aharonov-Bohm effect**?\n(Remember the player is trying to guess a scientific concept, and the correct answer is String Theory. Reply with Yes or No in relation to String Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 275,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Assassination of Archduke Franz Ferdinand",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Vietnam War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Gulf War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the start of the Cold War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Korean War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Cuban Missile Crisis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Bosnian War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the September 11 attacks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the fall of the Berlin Wall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the invasion of Grenada?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Yugoslav Wars (excluding Bosnia)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Six-Day War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Falklands War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Iran-Iraq War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Rwandan Genocide?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Rwandan Genocide?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Persian Gulf War (also known as the Gulf War or Operation Desert Storm)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand."
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event in the 20th century?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to World War II?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Vietnam War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Gulf War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the start of the Cold War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Korean War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Cuban Missile Crisis?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Bosnian War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the September 11 attacks?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the fall of the Berlin Wall?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the invasion of Grenada?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Yugoslav Wars (excluding Bosnia)?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Six-Day War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Falklands War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Iran-Iraq War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Rwandan Genocide?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Rwandan Genocide?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Persian Gulf War (also known as the Gulf War or Operation Desert Storm)?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the American Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of Archduke Franz Ferdinand. Reply with Yes or No in relation to Assassination of Archduke Franz Ferdinand.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

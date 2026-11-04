@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 65,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Zanzibar",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location outdoors in a natural setting (like a forest, mountain, or desert)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in an urban area (like a city or town)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a specific building or structure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a public space, such as a park, square, or street?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a type of transportation vehicle or infrastructure (like a bus, train, airport, or highway)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a commercial establishment, such as a store, restaurant, or mall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a government or civic building, such as a courthouse, city hall, or embassy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location an educational institution, such as a school, university, or library?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a religious building or site, such as a church, mosque, or temple?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a sports venue, such as a stadium, arena, or gym?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a residential area, such as a house, apartment complex, or neighborhood?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a cultural or entertainment venue, such as a museum, theater, cinema, or concert hall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a specific point of interest or landmark, such as a monument, statue, or bridge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a specific type of boundary or border, such as a city limit, state line, or international border?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a recreational facility, such as a golf course, amusement park, or zoo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a service or utility facility, such as a gas station, post office, or fire station?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a place of worship or spiritual center that is not a standard religious building, such as a shrine, monastery, or cemetery?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a public restroom or restroom facility?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a specific type of transportation hub or station, such as a train station, subway station, or bus terminal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Zanzibar."
+    },
+    {
+      "role": "user",
+      "content": "Is the location indoors?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location outdoors in a natural setting (like a forest, mountain, or desert)?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in an urban area (like a city or town)?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a specific building or structure?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a public space, such as a park, square, or street?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a type of transportation vehicle or infrastructure (like a bus, train, airport, or highway)?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a commercial establishment, such as a store, restaurant, or mall?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a government or civic building, such as a courthouse, city hall, or embassy?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location an educational institution, such as a school, university, or library?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a religious building or site, such as a church, mosque, or temple?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a sports venue, such as a stadium, arena, or gym?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a residential area, such as a house, apartment complex, or neighborhood?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a cultural or entertainment venue, such as a museum, theater, cinema, or concert hall?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a specific point of interest or landmark, such as a monument, statue, or bridge?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a specific type of boundary or border, such as a city limit, state line, or international border?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a recreational facility, such as a golf course, amusement park, or zoo?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a service or utility facility, such as a gas station, post office, or fire station?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a place of worship or spiritual center that is not a standard religious building, such as a shrine, monastery, or cemetery?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a public restroom or restroom facility?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a specific type of transportation hub or station, such as a train station, subway station, or bus terminal?\n(Remember the player is trying to guess a location, and the correct answer is Zanzibar. Reply with Yes or No in relation to Zanzibar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

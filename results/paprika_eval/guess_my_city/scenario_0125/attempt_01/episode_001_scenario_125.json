@@ -1,0 +1,345 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 125,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Kerki, Turkmenistan",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Southeast Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in West Asia (the Middle East)?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is puzzling. If it is in Asia and in the Northern Hemisphere, but not in East, South, Southeast, or West Asia, it likely falls into **Central Asia**.\n\nIs your home city located in Central Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Kazakhstan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Uzbekistan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Kyrgyzstan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Tajikistan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Turkmenistan?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of Turkmenistan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, let me double-check my geography. Turkmenistan has five provinces (velayats). The capital is Ashgabat. The other major cities are Turkmenabat, Daşoguz, Mary, and Balkanabat.\n\nIs your home city Turkmenabat?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city Daşoguz?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city Mary?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city Balkanabat?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located near the Caspian Sea?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located near the Amu Darya river?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Kerki, Turkmenistan"
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Asia?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in East Asia?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in South Asia?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Southeast Asia?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in West Asia (the Middle East)?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is puzzling. If it is in Asia and in the Northern Hemisphere, but not in East, South, Southeast, or West Asia, it likely falls into **Central Asia**.\n\nIs your home city located in Central Asia?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of its country?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Kazakhstan?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Uzbekistan?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Kyrgyzstan?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Tajikistan?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Turkmenistan?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of Turkmenistan?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Wait, let me double-check my geography. Turkmenistan has five provinces (velayats). The capital is Ashgabat. The other major cities are Turkmenabat, Daşoguz, Mary, and Balkanabat.\n\nIs your home city Turkmenabat?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city Daşoguz?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city Mary?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city Balkanabat?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located near the Caspian Sea?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located near the Amu Darya river?\n(Remember the player is trying to guess a city, and the correct answer is Kerki, Turkmenistan. Reply to the question in relation to Kerki, Turkmenistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    }
+  ],
+  "judge_conversation": null
+}

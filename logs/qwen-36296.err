@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/cli.py", line 552, in <module>
+    main()
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/cli.py", line 394, in main
+    result = runner.run(
+             ^^^^^^^^^^^
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/runner.py", line 254, in run
+    agent_response = self.agent.generate(
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/backend.py", line 57, in generate
+    raise RuntimeError(
+RuntimeError: Model 'Qwen/Qwen3.6-35B-A3B' returned empty content. Finish reason: 'length'

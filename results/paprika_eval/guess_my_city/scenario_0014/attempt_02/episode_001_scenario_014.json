@@ -1,0 +1,246 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 14,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Monterrey, Mexico",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 13,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play 'Guess My City.' I will start by narrowing down the general location and characteristics.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. Now I will narrow down the continent.\n\n**Is your home city located in Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's in the Northern Hemisphere but not in Europe. This leaves North America, Asia, Africa (northern part), or Oceania (though most of Oceania is Southern Hemisphere, some northern islands exist, but unlikely for a major city context). Let's look at the Americas and Asia.\n\n**Is your home city located in North America?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. Now I am focusing on North America. I need to distinguish between the major regions (USA, Canada, Mexico, etc.) and further sub-regions.\n\n**Is your home city located in the United States?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in North America, but not in the United States. This likely means it is in Canada or Mexico (or possibly Central America/Caribbean, though \"North America\" geographically includes those, casual play often splits them). Let's determine the country.\n\n**Is your home city located in Canada?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in North America, but not in the US or Canada. This leaves Mexico and the countries of Central America and the Caribbean. Let's narrow down the region further.\n\n**Is your home city located in Mexico?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect. Now I know the city is in Mexico. Mexico has many distinct cities with unique characteristics. I need to narrow down the location within Mexico.\n\n**Is your home city located on the Pacific Coast or the Gulf of Mexico/Caribbean Coast?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Interesting. So the city is in Mexico, but it is not on the Pacific Coast, nor is it on the Gulf of Mexico or the Caribbean Coast. This suggests it is an inland city, likely located in the central highlands of Mexico.\n\n**Is your home city the capital of Mexico?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Mexico, inland (not coastal), and it is not the capital, Mexico City. This narrows it down significantly to major inland cities like Guadalajara, Monterrey, Puebla, or León.\n\nMonterrey is in the north, while Guadalajara is in the west (but inland, in the state of Jalisco). Puebla is in the south-central part.\n\n**Is your home city located in the northern part of Mexico?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Northern Mexico, inland, and not the capital. The major inland city in Northern Mexico is Monterrey. There are other cities like Saltillo or Torreón, but Monterrey is by far the most prominent and likely candidate.\n\nLet me confirm if there are other strong candidates. Is it possible it's a border city? The previous question was about coasts, and I asked if it was on the Pacific or Gulf/Caribbean coast. It said no. Border cities with the US (like Ciudad Juárez or Nuevo Laredo) are inland but distinct. However, Monterrey is the largest"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The city is in Northern Mexico.\n\nLet's distinguish between the major contenders in Northern Mexico: Monterrey, Ciudad Juárez, and possibly Saltillo or Torreón. Monterrey is a major metropolitan hub, while Ciudad Juárez is a major border city known for maquiladoras and its location directly opposite El Paso, Texas.\n\n**Is your home city a major border city located directly on the United States-Mexico border?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Northern Mexico, inland, and not a major border city like Ciudad Juárez. This strongly points to Monterrey, which is the economic powerhouse of Northern Mexico and a major inland metropolis. Other possibilities could be Saltillo or Aguascalientes, but Monterrey is by far the most prominent.\n\nLet's check for a key landmark or characteristic of Monterrey to be sure. Monterrey is known for its mountainous landscape and the Cerro de la Silla.\n\n**Is your home city known for the landmark \"Cerro de la Silla\" (Horse Saddle Mountain) located within the"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "That confirms it. The presence of Cerro de la Silla is a definitive characteristic of Monterrey.\n\nMy guess is: **Is the city Monterrey, Mexico?**"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Monterrey, Mexico"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play 'Guess My City.' I will start by narrowing down the general location and characteristics.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. Now I will narrow down the continent.\n\n**Is your home city located in Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's in the Northern Hemisphere but not in Europe. This leaves North America, Asia, Africa (northern part), or Oceania (though most of Oceania is Southern Hemisphere, some northern islands exist, but unlikely for a major city context). Let's look at the Americas and Asia.\n\n**Is your home city located in North America?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. Now I am focusing on North America. I need to distinguish between the major regions (USA, Canada, Mexico, etc.) and further sub-regions.\n\n**Is your home city located in the United States?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in North America, but not in the United States. This likely means it is in Canada or Mexico (or possibly Central America/Caribbean, though \"North America\" geographically includes those, casual play often splits them). Let's determine the country.\n\n**Is your home city located in Canada?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in North America, but not in the US or Canada. This leaves Mexico and the countries of Central America and the Caribbean. Let's narrow down the region further.\n\n**Is your home city located in Mexico?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Perfect. Now I know the city is in Mexico. Mexico has many distinct cities with unique characteristics. I need to narrow down the location within Mexico.\n\n**Is your home city located on the Pacific Coast or the Gulf of Mexico/Caribbean Coast?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Interesting. So the city is in Mexico, but it is not on the Pacific Coast, nor is it on the Gulf of Mexico or the Caribbean Coast. This suggests it is an inland city, likely located in the central highlands of Mexico.\n\n**Is your home city the capital of Mexico?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Mexico, inland (not coastal), and it is not the capital, Mexico City. This narrows it down significantly to major inland cities like Guadalajara, Monterrey, Puebla, or León.\n\nMonterrey is in the north, while Guadalajara is in the west (but inland, in the state of Jalisco). Puebla is in the south-central part.\n\n**Is your home city located in the northern part of Mexico?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Northern Mexico, inland, and not the capital. The major inland city in Northern Mexico is Monterrey. There are other cities like Saltillo or Torreón, but Monterrey is by far the most prominent and likely candidate.\n\nLet me confirm if there are other strong candidates. Is it possible it's a border city? The previous question was about coasts, and I asked if it was on the Pacific or Gulf/Caribbean coast. It said no. Border cities with the US (like Ciudad Juárez or Nuevo Laredo) are inland but distinct. However, Monterrey is the largest\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The city is in Northern Mexico.\n\nLet's distinguish between the major contenders in Northern Mexico: Monterrey, Ciudad Juárez, and possibly Saltillo or Torreón. Monterrey is a major metropolitan hub, while Ciudad Juárez is a major border city known for maquiladoras and its location directly opposite El Paso, Texas.\n\n**Is your home city a major border city located directly on the United States-Mexico border?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Northern Mexico, inland, and not a major border city like Ciudad Juárez. This strongly points to Monterrey, which is the economic powerhouse of Northern Mexico and a major inland metropolis. Other possibilities could be Saltillo or Aguascalientes, but Monterrey is by far the most prominent.\n\nLet's check for a key landmark or characteristic of Monterrey to be sure. Monterrey is known for its mountainous landscape and the Cerro de la Silla.\n\n**Is your home city known for the landmark \"Cerro de la Silla\" (Horse Saddle Mountain) located within the\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "That confirms it. The presence of Cerro de la Silla is a definitive characteristic of Monterrey.\n\nMy guess is: **Is the city Monterrey, Mexico?**\n(Remember the player is trying to guess a city, and the correct answer is Monterrey, Mexico. Reply to the question in relation to Monterrey, Mexico. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: That confirms it. The presence of Cerro de la Silla is a definitive characteristic of Monterrey.\n\nMy guess is: **Is the city Monterrey, Mexico?**\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Monterrey, Mexico in this particular game. Reply with <VALID> only if the player has guessed Monterrey, Mexico (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

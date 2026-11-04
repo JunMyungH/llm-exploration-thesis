@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 317,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "GPS",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for entertainment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for processing or storing data?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for medical purposes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for lighting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for calculating or performing mathematical operations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for cooling or refrigeration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for heating?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for timekeeping?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for capturing or displaying images?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for measuring physical quantities (such as length, weight, or temperature)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for generating or manipulating power (such as electricity)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device that is primarily used for cooking or food preparation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device primarily used for cleaning or vacuuming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device primarily used for security or surveillance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device primarily used for music or audio playback/recording?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device primarily used for printing or scanning documents?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a device primarily used for navigation or direction finding?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is GPS."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for entertainment?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for processing or storing data?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for medical purposes?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for lighting?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for calculating or performing mathematical operations?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for cooling or refrigeration?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for heating?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for timekeeping?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for capturing or displaying images?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for measuring physical quantities (such as length, weight, or temperature)?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for generating or manipulating power (such as electricity)?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device that is primarily used for cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device primarily used for cleaning or vacuuming?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device primarily used for security or surveillance?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device primarily used for music or audio playback/recording?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device primarily used for printing or scanning documents?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a device primarily used for navigation or direction finding?\n(Remember the player is trying to guess a invention, and the correct answer is GPS. Reply with Yes or No in relation to GPS.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

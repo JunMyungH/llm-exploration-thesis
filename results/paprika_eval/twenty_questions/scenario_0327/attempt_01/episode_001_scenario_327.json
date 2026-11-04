@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 327,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "DNA Double Helix",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept abstract?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a living organism?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a man-made object?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a natural phenomenon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a place or location?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a form of energy or force?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a specific time period or date?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a type of animal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a type of plant or fungus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a geometric shape or mathematical object?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a chemical element or compound?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a part of the human body?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sense organ?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a part of the head?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a part of the torso?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a part of the limbs (arms or legs)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an internal organ?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it part of the hand or foot?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it part of the back or spine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it part of the neck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is DNA Double Helix."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept abstract?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a living organism?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a man-made object?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a natural phenomenon?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a place or location?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a form of energy or force?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a specific time period or date?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a type of animal?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a type of plant or fungus?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a geometric shape or mathematical object?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a chemical element or compound?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a part of the human body?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sense organ?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a part of the head?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a part of the torso?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a part of the limbs (arms or legs)?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an internal organ?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it part of the hand or foot?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it part of the back or spine?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it part of the neck?\n(Remember the player is trying to guess a concept, and the correct answer is DNA Double Helix. Reply with Yes or No in relation to DNA Double Helix.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

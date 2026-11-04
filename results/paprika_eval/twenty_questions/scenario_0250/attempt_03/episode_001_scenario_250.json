@@ -1,0 +1,230 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 250,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Aerospace Engineer",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 12,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation in the medical or healthcare field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily involved in teaching or education?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation in the field of law or legal services?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation in the field of engineering or technology?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily focused on software development or computer science?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily focused on civil or structural engineering?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily focused on mechanical engineering?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily focused on electrical or electronics engineering?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily focused on chemical engineering?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily focused on aerospace or aeronautical engineering?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation primarily involved in the design and construction of aircraft?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this occupation specifically an aerospace engineer who focuses on spacecraft or satellites?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Aerospace Engineer."
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation in the medical or healthcare field?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily involved in teaching or education?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation in the field of law or legal services?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation in the field of engineering or technology?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily focused on software development or computer science?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily focused on civil or structural engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily focused on mechanical engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily focused on electrical or electronics engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily focused on chemical engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily focused on aerospace or aeronautical engineering?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation primarily involved in the design and construction of aircraft?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this occupation specifically an aerospace engineer who focuses on spacecraft or satellites?\n(Remember the player is trying to guess a occupation, and the correct answer is Aerospace Engineer. Reply with Yes or No in relation to Aerospace Engineer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Aerospace Engineer in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct occupation, which is: Aerospace Engineer, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is this occupation specifically an aerospace engineer who focuses on spacecraft or satellites?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct occupation, which is Aerospace Engineer in this particular game. Reply with <VALID> only if the player has guessed Aerospace Engineer in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Aerospace Engineer is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

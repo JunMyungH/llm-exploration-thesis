@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 133,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Gaelic Football",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on a field (grass, turf, or dirt)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the primary objective of the sport to score goals by kicking a ball?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport known as Soccer (or Association Football)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a rectangular ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a round ball?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with 11 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are there 9 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are there 7 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are there 6 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are there 5 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are there 4 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Are there 3 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with 2 players per side?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with 1 player per side (solo)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, let's step back. I've asked about player counts per side from 11 down to 1, and the answer was \"No\" to all of them. This implies the number of players is likely not a fixed small integer, or perhaps it's a team sport with a different standard count (like 10, or a variable number), or maybe my assumption about \"players per side\" being the defining feature is too narrow.\n\nLet's look at other fields.\n\nIs the sport played with a net?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the net divided into two equal halves by a net?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a racquet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a stick?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a bat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Gaelic Football."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played indoors?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on a field (grass, turf, or dirt)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the primary objective of the sport to score goals by kicking a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport known as Soccer (or Association Football)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a rectangular ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a round ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with 11 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are there 9 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are there 7 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are there 6 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are there 5 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are there 4 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Are there 3 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with 2 players per side?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with 1 player per side (solo)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, let's step back. I've asked about player counts per side from 11 down to 1, and the answer was \"No\" to all of them. This implies the number of players is likely not a fixed small integer, or perhaps it's a team sport with a different standard count (like 10, or a variable number), or maybe my assumption about \"players per side\" being the defining feature is too narrow.\n\nLet's look at other fields.\n\nIs the sport played with a net?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the net divided into two equal halves by a net?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a racquet?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a stick?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a bat?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

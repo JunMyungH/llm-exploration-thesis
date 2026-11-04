@@ -1,0 +1,198 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 90,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Can Tho, Vietnam",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 10,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start with broad questions to narrow down the location geographically and then move to specific cultural or landmark-based questions.\n\nHere is my first question:\n\n**1. Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. Knowing it's in the Northern Hemisphere gives us a huge area to work with. I'll try to narrow down the continent next.\n\n**2. Is your home city located in Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's not in Europe and it's in the Northern Hemisphere. That leaves North America, Asia, parts of Africa, and Oceania (though most of Oceania is Southern Hemisphere, some islands are Northern). Let's try to isolate the continent.\n\n**3. Is your home city located in Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we are looking at a city in Asia. Asia is a massive continent with diverse climates and cultures. I'll try to narrow down the region within Asia.\n\n**4. Is your home city located in East Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is in Asia, but not in East Asia (which typically includes China, Japan, Korea, Mongolia, and sometimes Taiwan). This leaves South Asia, Southeast Asia, Central Asia, or West Asia (the Middle East).\n\n**5. Is your home city located in Southeast Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, we are narrowing it down to Southeast Asia. This region includes countries like Thailand, Vietnam, Indonesia, Philippines, Malaysia, Singapore, Cambodia, Laos, Myanmar, and Brunei.\n\n**6. Is your home city located in an island nation?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Southeast Asia, but not in an island nation. This rules out Indonesia, the Philippines, Singapore, and Brunei.\n\nThis leaves us with mainland Southeast Asian countries: Thailand, Vietnam, Malaysia (partially), Cambodia, Laos, and Myanmar. Note: While Malaysia has a mainland part, it is often considered an archipelagic nation due to its dual structure, but let's see if the next question helps clarify or if we need to distinguish between the mainland countries more directly.\n\n**7. Is your home city the capital city of its country?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we are looking for a non-capital city in mainland Southeast Asia (Thailand, Vietnam, Cambodia, Laos, or Myanmar).\n\nLet's look at the geography/climate to narrow it further.\n\n**8. Is your home city located near the coast?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a non-capital city in mainland Southeast Asia (Thailand, Vietnam, Cambodia, Laos, or Myanmar) that is not near the coast.\n\nThis significantly narrows it down:\n- In **Vietnam**, most major non-capital cities with significant populations are coastal or near the coast (e.g., Da Nang, Nha Trang, Hai Phong). Inland major cities are fewer (e.g., Hue is near the coast, Hoi An is coastal).\n- In **Thailand**, major inland non-capitals include Chiang Mai (north), Nakhon Ratchasima (northeast), etc"
+    },
+    {
+      "role": "user",
+      "content": "Actually, my city is located in the Mekong Delta region, which is defined by its extensive network of rivers and waterways, despite not being on the open sea coast."
+    },
+    {
+      "role": "assistant",
+      "content": "That is a very helpful clarification! The Mekong Delta is primarily located in **Vietnam**.\n\nSo, we are looking for a major city in the Mekong Delta region of Vietnam, which is **not** the capital (Hanoi) and is **not** directly on the open ocean coast (though it is on a river network).\n\nThe most prominent and largest city in the Mekong Delta is **Can Tho**. It is often referred to as the \"capital\" of the Delta due to its size and economic importance, even though it's not the national capital.\n\n**9. Is your home city Can Tho, Vietnam"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Can Tho, Vietnam"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start with broad questions to narrow down the location geographically and then move to specific cultural or landmark-based questions.\n\nHere is my first question:\n\n**1. Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. Knowing it's in the Northern Hemisphere gives us a huge area to work with. I'll try to narrow down the continent next.\n\n**2. Is your home city located in Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's not in Europe and it's in the Northern Hemisphere. That leaves North America, Asia, parts of Africa, and Oceania (though most of Oceania is Southern Hemisphere, some islands are Northern). Let's try to isolate the continent.\n\n**3. Is your home city located in Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we are looking at a city in Asia. Asia is a massive continent with diverse climates and cultures. I'll try to narrow down the region within Asia.\n\n**4. Is your home city located in East Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is in Asia, but not in East Asia (which typically includes China, Japan, Korea, Mongolia, and sometimes Taiwan). This leaves South Asia, Southeast Asia, Central Asia, or West Asia (the Middle East).\n\n**5. Is your home city located in Southeast Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, we are narrowing it down to Southeast Asia. This region includes countries like Thailand, Vietnam, Indonesia, Philippines, Malaysia, Singapore, Cambodia, Laos, Myanmar, and Brunei.\n\n**6. Is your home city located in an island nation?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Southeast Asia, but not in an island nation. This rules out Indonesia, the Philippines, Singapore, and Brunei.\n\nThis leaves us with mainland Southeast Asian countries: Thailand, Vietnam, Malaysia (partially), Cambodia, Laos, and Myanmar. Note: While Malaysia has a mainland part, it is often considered an archipelagic nation due to its dual structure, but let's see if the next question helps clarify or if we need to distinguish between the mainland countries more directly.\n\n**7. Is your home city the capital city of its country?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we are looking for a non-capital city in mainland Southeast Asia (Thailand, Vietnam, Cambodia, Laos, or Myanmar).\n\nLet's look at the geography/climate to narrow it further.\n\n**8. Is your home city located near the coast?**\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a non-capital city in mainland Southeast Asia (Thailand, Vietnam, Cambodia, Laos, or Myanmar) that is not near the coast.\n\nThis significantly narrows it down:\n- In **Vietnam**, most major non-capital cities with significant populations are coastal or near the coast (e.g., Da Nang, Nha Trang, Hai Phong). Inland major cities are fewer (e.g., Hue is near the coast, Hoi An is coastal).\n- In **Thailand**, major inland non-capitals include Chiang Mai (north), Nakhon Ratchasima (northeast), etc\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Actually, my city is located in the Mekong Delta region, which is defined by its extensive network of rivers and waterways, despite not being on the open sea coast."
+    },
+    {
+      "role": "user",
+      "content": "That is a very helpful clarification! The Mekong Delta is primarily located in **Vietnam**.\n\nSo, we are looking for a major city in the Mekong Delta region of Vietnam, which is **not** the capital (Hanoi) and is **not** directly on the open ocean coast (though it is on a river network).\n\nThe most prominent and largest city in the Mekong Delta is **Can Tho**. It is often referred to as the \"capital\" of the Delta due to its size and economic importance, even though it's not the national capital.\n\n**9. Is your home city Can Tho, Vietnam\n(Remember the player is trying to guess a city, and the correct answer is Can Tho, Vietnam. Reply to the question in relation to Can Tho, Vietnam. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: That is a very helpful clarification! The Mekong Delta is primarily located in **Vietnam**.\n\nSo, we are looking for a major city in the Mekong Delta region of Vietnam, which is **not** the capital (Hanoi) and is **not** directly on the open ocean coast (though it is on a river network).\n\nThe most prominent and largest city in the Mekong Delta is **Can Tho**. It is often referred to as the \"capital\" of the Delta due to its size and economic importance, even though it's not the national capital.\n\n**9. Is your home city Can Tho, Vietnam\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Can Tho, Vietnam in this particular game. Reply with <VALID> only if the player has guessed Can Tho, Vietnam (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

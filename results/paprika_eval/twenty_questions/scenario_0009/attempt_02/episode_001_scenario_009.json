@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 9,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Battery",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Does this invention require electricity to function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for measuring time?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for lighting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for cooking or food preparation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for writing or drawing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for construction or building?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for security or defense?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for entertainment or leisure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for cleaning or hygiene?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for sewing or textiles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for harvesting or farming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for transportation of goods or materials (e.g., wheels, pulleys, levers)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for storage or containment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for musical performance or sound production?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for measuring or scientific experimentation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for entertainment involving games or puzzles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for personal grooming or beauty?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for navigation or orientation (e.g., compass, astrolabe)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Battery."
+    },
+    {
+      "role": "user",
+      "content": "Does this invention require electricity to function?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for measuring time?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for lighting?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for writing or drawing?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for construction or building?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for security or defense?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for entertainment or leisure?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for cleaning or hygiene?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for sewing or textiles?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for harvesting or farming?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for transportation of goods or materials (e.g., wheels, pulleys, levers)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for storage or containment?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for musical performance or sound production?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for measuring or scientific experimentation?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for entertainment involving games or puzzles?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for personal grooming or beauty?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for navigation or orientation (e.g., compass, astrolabe)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

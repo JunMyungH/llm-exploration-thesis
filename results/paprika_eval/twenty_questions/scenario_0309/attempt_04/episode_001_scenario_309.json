@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 309,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Riptide",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon natural?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to technology or computing?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of computer virus or malware?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to artificial intelligence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a software bug or error?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a hardware failure or issue?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a networking issue, such as latency or packet loss?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to cybersecurity, such as a hack or data breach?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a concept in quantum mechanics or quantum computing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a specific algorithm or data structure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to user interface or user experience design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the internet or web technologies?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to blockchain or cryptocurrency?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to data compression or file formats?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to cloud computing or virtualization?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to cybersecurity, specifically in the context of social engineering or phishing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to robotics or automation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to virtual reality or augmented reality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a concept or phenomenon related to computer graphics or rendering?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to human-computer interaction, such as typing errors or user input issues?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Riptide."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon natural?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to technology or computing?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of computer virus or malware?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to artificial intelligence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a software bug or error?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a hardware failure or issue?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a networking issue, such as latency or packet loss?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to cybersecurity, such as a hack or data breach?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a concept in quantum mechanics or quantum computing?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a specific algorithm or data structure?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to user interface or user experience design?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the internet or web technologies?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to blockchain or cryptocurrency?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to data compression or file formats?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to cloud computing or virtualization?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to cybersecurity, specifically in the context of social engineering or phishing?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to robotics or automation?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to virtual reality or augmented reality?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a concept or phenomenon related to computer graphics or rendering?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to human-computer interaction, such as typing errors or user input issues?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Riptide. Reply with Yes or No in relation to Riptide.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

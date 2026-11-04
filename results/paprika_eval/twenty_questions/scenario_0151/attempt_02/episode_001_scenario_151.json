@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 151,
+  "agent_game_scenario": "vegetable",
+  "env_game_scenario": "Bean Sprouts",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable a root vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the vegetable part of the nightshade family (like tomatoes, potatoes, eggplants, or peppers)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cruciferous vegetable (such as broccoli, cauliflower, cabbage, or kale)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fruit botanically (like tomatoes, peppers, eggplants, or cucumbers)?\n\n*(Note: I am distinguishing this from the previous \"nightshade\" question because while all nightshades are plants, many common \"vegetables\" are botanically fruits. Since it's not a nightshade, if it is a botanical fruit, it must be from a different family, such as the gourd/cucumber family or the bean/pea family.)*"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a leafy green vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bulb vegetable (like onions, garlic, or leeks)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a stem vegetable (such as asparagus, celery, or rhubarb)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flower vegetable (such as broccoli, cauliflower, or artichoke)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pod vegetable (such as green beans, peas, or edamame)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mushroom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a squash or gourd (such as zucchini, butternut squash, or acorn squash)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tomato?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an herb (such as basil, parsley, or cilantro)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a corn?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a carrot?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a potato?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a lettuce?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cucumber?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a radish?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pepper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Bean Sprouts."
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the vegetable part of the nightshade family (like tomatoes, potatoes, eggplants, or peppers)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cruciferous vegetable (such as broccoli, cauliflower, cabbage, or kale)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fruit botanically (like tomatoes, peppers, eggplants, or cucumbers)?\n\n*(Note: I am distinguishing this from the previous \"nightshade\" question because while all nightshades are plants, many common \"vegetables\" are botanically fruits. Since it's not a nightshade, if it is a botanical fruit, it must be from a different family, such as the gourd/cucumber family or the bean/pea family.)*\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a leafy green vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bulb vegetable (like onions, garlic, or leeks)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a stem vegetable (such as asparagus, celery, or rhubarb)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flower vegetable (such as broccoli, cauliflower, or artichoke)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pod vegetable (such as green beans, peas, or edamame)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mushroom?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a squash or gourd (such as zucchini, butternut squash, or acorn squash)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tomato?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an herb (such as basil, parsley, or cilantro)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a corn?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a carrot?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a potato?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a lettuce?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cucumber?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a radish?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pepper?\n(Remember the player is trying to guess a vegetable, and the correct answer is Bean Sprouts. Reply with Yes or No in relation to Bean Sprouts.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

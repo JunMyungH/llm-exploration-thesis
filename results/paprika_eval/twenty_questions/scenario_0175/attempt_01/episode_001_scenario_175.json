@@ -1,0 +1,230 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 175,
+  "agent_game_scenario": "mineral",
+  "env_game_scenario": "Fluorapatite",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 12,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral commonly found in human teeth and bones?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral the primary component of tooth enamel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Hydroxyapatite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Calcium?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Fluorite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Apatite?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Great! I guessed it correctly. The mineral is Apatite. Thanks for playing!"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, I made an error in my previous turn. You answered \"Yes\" to \"Is the mineral Apatite?\", but then immediately followed up with \"No\".\n\nLet's re-evaluate based on the correct flow:\n1. Is it found in teeth/bones? **Yes**\n2. Is it the primary component of tooth enamel? **Yes**\n3. Is it Hydroxyapatite? **No**\n4. Is it Calcium? **No**\n5. Is it Fluorite? **No**\n6. Is it Apatite? **Yes**\n\nIf the answer to #"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. Let's backtrack slightly.\n\n1. Found in teeth/bones? **Yes**\n2. Primary component of tooth enamel? **Yes**\n3. Hydroxyapatite? **No**\n4. Calcium? **No**\n5. Fluorite? **No**\n6. Apatite? **No**\n\nSince Hydroxyapatite is a form of Apatite, and it's not Apatite, it must be a different mineral that is also a major component of enamel.\n\nIs the mineral Carbonate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Calcium Phosphate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Calcite?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the mineral Fluorapatite?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Fluorapatite."
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral commonly found in human teeth and bones?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral the primary component of tooth enamel?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Hydroxyapatite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Calcium?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Fluorite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Apatite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Great! I guessed it correctly. The mineral is Apatite. Thanks for playing!\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, I made an error in my previous turn. You answered \"Yes\" to \"Is the mineral Apatite?\", but then immediately followed up with \"No\".\n\nLet's re-evaluate based on the correct flow:\n1. Is it found in teeth/bones? **Yes**\n2. Is it the primary component of tooth enamel? **Yes**\n3. Is it Hydroxyapatite? **No**\n4. Is it Calcium? **No**\n5. Is it Fluorite? **No**\n6. Is it Apatite? **Yes**\n\nIf the answer to #\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Got it. Let's backtrack slightly.\n\n1. Found in teeth/bones? **Yes**\n2. Primary component of tooth enamel? **Yes**\n3. Hydroxyapatite? **No**\n4. Calcium? **No**\n5. Fluorite? **No**\n6. Apatite? **No**\n\nSince Hydroxyapatite is a form of Apatite, and it's not Apatite, it must be a different mineral that is also a major component of enamel.\n\nIs the mineral Carbonate?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Calcium Phosphate?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Calcite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the mineral Fluorapatite?\n(Remember the player is trying to guess a mineral, and the correct answer is Fluorapatite. Reply with Yes or No in relation to Fluorapatite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Fluorapatite in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct mineral, which is: Fluorapatite, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the mineral Fluorapatite?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct mineral, which is Fluorapatite in this particular game. Reply with <VALID> only if the player has guessed Fluorapatite in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Fluorapatite is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

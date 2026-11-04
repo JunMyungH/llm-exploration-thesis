@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 285,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Gandhi's Salt March",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event that occurred before the year 1800?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to World War I or World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Cold War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the fall of the Berlin Wall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Cuban Missile Crisis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Vietnam War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the September 11 attacks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the end of the Soviet Union?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Arab Spring?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Moon Landing (Apollo 11)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the discovery of the New World (such as Columbus's voyage)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Russian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the signing of the Declaration of Independence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the invention or introduction of the Internet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the assassination of Archduke Franz Ferdinand?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the fall of the Roman Empire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Chinese Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "I have asked 16 questions and received \"No\" to almost all major historical events, conflicts, and figures from the last two centuries and earlier. The event must be something significant but perhaps less commonly guessed in this specific sequence, or related to a specific non-conflict milestone.\n\nLet's try to narrow down the domain. Is the historical event related to the space race (but not specifically the Moon Landing)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Gandhi's Salt March."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event that occurred before the year 1800?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to World War I or World War II?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Cold War?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the American Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the fall of the Berlin Wall?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Cuban Missile Crisis?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Vietnam War?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the September 11 attacks?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the end of the Soviet Union?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Arab Spring?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Moon Landing (Apollo 11)?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the discovery of the New World (such as Columbus's voyage)?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the French Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Russian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the signing of the Declaration of Independence?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the invention or introduction of the Internet?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the assassination of Archduke Franz Ferdinand?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the fall of the Roman Empire?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Chinese Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "I have asked 16 questions and received \"No\" to almost all major historical events, conflicts, and figures from the last two centuries and earlier. The event must be something significant but perhaps less commonly guessed in this specific sequence, or related to a specific non-conflict milestone.\n\nLet's try to narrow down the domain. Is the historical event related to the space race (but not specifically the Moon Landing)?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

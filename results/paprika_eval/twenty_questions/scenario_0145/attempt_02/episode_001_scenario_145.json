@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 145,
+  "agent_game_scenario": "color",
+  "env_game_scenario": "Mint",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a color. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color a primary color?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color considered a warm color (such as red, orange, or yellow)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color considered a cool color (such as blue, green, or purple)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color green?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Green!"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, I need to re-evaluate based on the previous answers.\n\n1.  Is it a primary color? -> No (So it's not Red, Blue, or Yellow).\n2.  Is it a warm color? -> No (So it's not Red, Orange, Yellow, etc.).\n3.  Is it a cool color? -> Yes (So it is Blue, Green, Purple, Cyan, Magenta, etc., but we know it's not a primary color).\n4.  I guessed Green, and the answer was No.\n\nSo, the color is cool, not a primary color"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color blue?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color purple?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color teal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color cyan?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color black?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color white?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color gray?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color pink?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color orange?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color yellow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color brown?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color beige?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color silver?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color gold?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a color, and the correct answer is Mint."
+    },
+    {
+      "role": "user",
+      "content": "Is the color a primary color?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color considered a warm color (such as red, orange, or yellow)?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color considered a cool color (such as blue, green, or purple)?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the color green?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Green!\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, I need to re-evaluate based on the previous answers.\n\n1.  Is it a primary color? -> No (So it's not Red, Blue, or Yellow).\n2.  Is it a warm color? -> No (So it's not Red, Orange, Yellow, etc.).\n3.  Is it a cool color? -> Yes (So it is Blue, Green, Purple, Cyan, Magenta, etc., but we know it's not a primary color).\n4.  I guessed Green, and the answer was No.\n\nSo, the color is cool, not a primary color\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color blue?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color purple?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color teal?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color cyan?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color black?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color white?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color gray?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color pink?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color orange?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color yellow?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color brown?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color beige?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color silver?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color gold?\n(Remember the player is trying to guess a color, and the correct answer is Mint. Reply with Yes or No in relation to Mint.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

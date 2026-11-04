@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 133,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Gaelic Football",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played primarily on a court?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played primarily on a field?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a round ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with an oval-shaped ball?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport known as Rugby?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a puck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with an American football (prolate spheroid)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a shuttlecock?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a disc?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a stick and a ball (like in Lacrosse or Field Hockey)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a stick and a puck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a bat and a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on grass?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport Cricket?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport Soccer (Association Football)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport Golf?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport Polo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a net and a racquet (like Tennis, but on a field)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with horses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Gaelic Football."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played primarily on a court?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played primarily on a field?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a round ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with an oval-shaped ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport known as Rugby?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a puck?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with an American football (prolate spheroid)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a shuttlecock?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a disc?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a stick and a ball (like in Lacrosse or Field Hockey)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a stick and a puck?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a bat and a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on grass?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport Cricket?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport Soccer (Association Football)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport Golf?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport Polo?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a net and a racquet (like Tennis, but on a field)?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with horses?\n(Remember the player is trying to guess a sport, and the correct answer is Gaelic Football. Reply with Yes or No in relation to Gaelic Football.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

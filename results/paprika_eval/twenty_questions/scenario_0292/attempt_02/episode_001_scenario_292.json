@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 292,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Space Shuttle Challenger Disaster",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the event take place in the 19th century or earlier?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the event take place in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the event take place in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the event take place in North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to politics or government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the American Civil Rights Movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Vietnam War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the assassination of President John F. Kennedy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event related to the Cold War?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Cuban Missile Crisis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Berlin Wall being built?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Watergate scandal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Apollo 11 moon landing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Question 11: Was the event the signing of the Camp David Accords?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Question 12: Was the event the Vietnam War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Question 13: Was the event the Watergate scandal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Question 14: Was the event the Chernobyl disaster?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Question 15: Was the event the founding of the United Nations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Question 16: Was the event related to the American Civil Rights Movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster."
+    },
+    {
+      "role": "user",
+      "content": "Did the event take place in the 19th century or earlier?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Did the event take place in the 20th century?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Did the event take place in Europe?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Did the event take place in North America?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to politics or government?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the American Civil Rights Movement?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Vietnam War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the assassination of President John F. Kennedy?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to World War II?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event related to the Cold War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Cuban Missile Crisis?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Berlin Wall being built?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Watergate scandal?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Apollo 11 moon landing?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Question 11: Was the event the signing of the Camp David Accords?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Question 12: Was the event the Vietnam War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Question 13: Was the event the Watergate scandal?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Question 14: Was the event the Chernobyl disaster?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Question 15: Was the event the founding of the United Nations?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Question 16: Was the event related to the American Civil Rights Movement?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

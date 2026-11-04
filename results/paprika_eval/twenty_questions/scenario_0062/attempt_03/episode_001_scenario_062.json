@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 62,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Central Park",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a city?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a national park?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a body of water (such as a lake, river, or ocean)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a mountain or a peak?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a historical site or landmark (such as a monument, museum, or government building)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location in Washington, D.C.?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a statue?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a bridge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a famous building (such as a house, castle, or cathedral)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location an amusement park or theme park?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a military base?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location associated with a Native American tribe or culture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location associated with a specific historical event, such as a battlefield or a site of a treaty?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a famous university or college campus?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a famous cave or cavern system?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a national historic landmark that is primarily known for being a house or residence of a famous person?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a cemetery or burial ground?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this location a state capital?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Central Park."
+    },
+    {
+      "role": "user",
+      "content": "Is this location in North America?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in the United States?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a city?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a national park?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a body of water (such as a lake, river, or ocean)?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a mountain or a peak?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a historical site or landmark (such as a monument, museum, or government building)?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this location in Washington, D.C.?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a statue?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a bridge?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a famous building (such as a house, castle, or cathedral)?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location an amusement park or theme park?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a military base?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location associated with a Native American tribe or culture?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location associated with a specific historical event, such as a battlefield or a site of a treaty?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a famous university or college campus?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a famous cave or cavern system?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a national historic landmark that is primarily known for being a house or residence of a famous person?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a cemetery or burial ground?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this location a state capital?\n(Remember the player is trying to guess a location, and the correct answer is Central Park. Reply with Yes or No in relation to Central Park.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

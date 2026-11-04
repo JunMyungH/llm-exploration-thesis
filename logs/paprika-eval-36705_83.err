@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/cli.py", line 552, in <module>
+    main()
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/cli.py", line 394, in main
+    result = runner.run(
+             ^^^^^^^^^^^
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/runner.py", line 292, in run
+    ) = self._generate_environment_response(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/runner.py", line 113, in _generate_environment_response
+    raw = self.environment.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jh92/llm-exploration-thesis/src/llm_exploration/backend.py", line 49, in generate
+    response = self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jh92/micromamba/envs/llm-exploration/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jh92/micromamba/envs/llm-exploration/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/jh92/micromamba/envs/llm-exploration/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jh92/micromamba/envs/llm-exploration/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 4096 tokens. However, your prompt contains at least 4097 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=4097)", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}

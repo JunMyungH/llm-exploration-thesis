@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 269,
+  "agent_game_scenario": "tv show",
+  "env_game_scenario": "The Defenders",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tv show. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show live-action?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show currently airing as a new series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show an American production?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the show feature supernatural or paranormal elements (such as ghosts, magic, aliens, etc.)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a sitcom (situation comedy)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a crime procedural (e.g., police, forensics, legal drama)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a drama centered around medical professionals (e.g., doctors, nurses, hospitals)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a comedy-drama (dramedy)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a science fiction series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a reality television series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show an animated series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a miniseries or limited series?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries based on a true story or real events?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries based on a book or novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries a thriller or mystery?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the miniseries have exactly 6 episodes?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries set in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries titled \"The Night Of\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries titled \"Mare of Easttown\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the miniseries titled \"Big Little Lies\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tv show, and the correct answer is The Defenders."
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show live-action?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show currently airing as a new series?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show an American production?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the show feature supernatural or paranormal elements (such as ghosts, magic, aliens, etc.)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a sitcom (situation comedy)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a crime procedural (e.g., police, forensics, legal drama)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a drama centered around medical professionals (e.g., doctors, nurses, hospitals)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a comedy-drama (dramedy)?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a science fiction series?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a reality television series?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show an animated series?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a miniseries or limited series?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries based on a true story or real events?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries based on a book or novel?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries a thriller or mystery?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the miniseries have exactly 6 episodes?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries set in the 20th century?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries titled \"The Night Of\"?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries titled \"Mare of Easttown\"?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the miniseries titled \"Big Little Lies\"?\n(Remember the player is trying to guess a tv show, and the correct answer is The Defenders. Reply with Yes or No in relation to The Defenders.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

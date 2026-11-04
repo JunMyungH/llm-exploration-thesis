@@ -1,0 +1,230 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 277,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Assassination of John F. Kennedy",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 12,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the discovery of a new continent or a significant era of exploration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the establishment of a government, constitution, or significant political reform?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a major scientific discovery or invention?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the discovery or invention of something that significantly changed daily life or communication (e.g., the printing press, the light bulb, the internet)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a significant religious movement, schism, or the founding of a major religion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a major cultural movement, artistic revolution, or the birth of a specific art form?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a major natural disaster or environmental phenomenon (e.g., a volcanic eruption, a plague, a famine)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the Olympic Games or a major international sporting event?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a significant assassination or political murder?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the assassination of a head of state or a major political figure?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the assassination of John F. Kennedy?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the discovery of a new continent or a significant era of exploration?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the establishment of a government, constitution, or significant political reform?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a major scientific discovery or invention?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the discovery or invention of something that significantly changed daily life or communication (e.g., the printing press, the light bulb, the internet)?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a significant religious movement, schism, or the founding of a major religion?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a major cultural movement, artistic revolution, or the birth of a specific art form?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a major natural disaster or environmental phenomenon (e.g., a volcanic eruption, a plague, a famine)?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the Olympic Games or a major international sporting event?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a significant assassination or political murder?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the assassination of a head of state or a major political figure?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the assassination of John F. Kennedy?\n(Remember the player is trying to guess a historical event, and the correct answer is Assassination of John F. Kennedy. Reply with Yes or No in relation to Assassination of John F. Kennedy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Assassination of John F. Kennedy in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct historical event, which is: Assassination of John F. Kennedy, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Was the assassination of John F. Kennedy?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct historical event, which is Assassination of John F. Kennedy in this particular game. Reply with <VALID> only if the player has guessed Assassination of John F. Kennedy in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Assassination of John F. Kennedy is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

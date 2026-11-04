@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 143,
+  "agent_game_scenario": "vegetable",
+  "env_game_scenario": "Chayote",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a root vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a leafy vegetable?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fruit vegetable (botanically a fruit, commonly used as a vegetable, like tomatoes, cucumbers, or peppers)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the nightshade family (Solanaceae), such as tomatoes, peppers, or eggplants?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of squash (including zucchini, pumpkins, or butternut squash)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a winter squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it zucchini?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pumpkin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a butternut squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it spaghetti squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it acorn squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cucumber?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bell pepper?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a summer squash, such as yellow squash or crookneck squash?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it yellow squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it crookneck squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pattypan squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a marrow squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a delicata squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a scallopini squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Chayote."
+    },
+    {
+      "role": "user",
+      "content": "Is it a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a leafy vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fruit vegetable (botanically a fruit, commonly used as a vegetable, like tomatoes, cucumbers, or peppers)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the nightshade family (Solanaceae), such as tomatoes, peppers, or eggplants?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of squash (including zucchini, pumpkins, or butternut squash)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a winter squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it zucchini?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pumpkin?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a butternut squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it spaghetti squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it acorn squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cucumber?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bell pepper?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a summer squash, such as yellow squash or crookneck squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it yellow squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it crookneck squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pattypan squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a marrow squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a delicata squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a scallopini squash?\n(Remember the player is trying to guess a vegetable, and the correct answer is Chayote. Reply with Yes or No in relation to Chayote.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

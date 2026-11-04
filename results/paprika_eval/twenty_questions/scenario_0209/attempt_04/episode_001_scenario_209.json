@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 209,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Hurdy-Gurdy",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it use a bow to produce sound?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a plucked string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a percussion string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a keyboard instrument that produces sound via strings (like a piano)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a wind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an electronic instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a brass instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a woodwind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, I need to correct my path. I asked if it was a string instrument, and you said \"Yes\". Then I asked if it used a bow, and you said \"No\". Then plucked, \"No\". Then percussion string (like a hammered dulcimer or piano action, though piano is usually keyboard), \"No\". Then I incorrectly guessed wind/brass/woodwind/electronic which were all \"No\".\n\nLet me re-evaluate. If it is a string instrument, but not bowed, not plucked, and not struck/keyboard... how is it played?\n\nIs it a string"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a guitar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a harp?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a banjo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a violin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cello?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a double bass?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a ukulele?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mandolin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sitar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it use a bow to produce sound?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a plucked string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a percussion string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a keyboard instrument that produces sound via strings (like a piano)?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a wind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an electronic instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a brass instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a woodwind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, I need to correct my path. I asked if it was a string instrument, and you said \"Yes\". Then I asked if it used a bow, and you said \"No\". Then plucked, \"No\". Then percussion string (like a hammered dulcimer or piano action, though piano is usually keyboard), \"No\". Then I incorrectly guessed wind/brass/woodwind/electronic which were all \"No\".\n\nLet me re-evaluate. If it is a string instrument, but not bowed, not plucked, and not struck/keyboard... how is it played?\n\nIs it a string\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a guitar?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a harp?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a banjo?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a violin?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cello?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a double bass?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a ukulele?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mandolin?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sitar?\n(Remember the player is trying to guess a instrument, and the correct answer is Hurdy-Gurdy. Reply with Yes or No in relation to Hurdy-Gurdy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

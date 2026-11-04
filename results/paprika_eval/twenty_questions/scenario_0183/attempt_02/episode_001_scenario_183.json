@@ -1,0 +1,358 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 183,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Skateboarding",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a team sport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an individual combat sport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it primarily an endurance sport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a water sport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an equestrian sport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a shooting sport?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a racing sport (e.g., car, horse, or bicycle racing)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport involving throwing an object, such as a discus, javelin, or shot put?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport involving hitting an object with a racket or paddle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport involving climbing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport involving a horse, such as polo or show jumping? (I know you said no to equestrian, but I want to be sure about the specific nature of the sport, or perhaps I misunderstood \"equestrian\" vs just having a horse. Wait, the previous answer was \"No\" to equestrian, so likely no horse at all. Let me pivot.)\n\nIs the sport played on a track or field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves skiing or snowboarding?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves gymnastics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves archery?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves fencing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves rowing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves martial arts or grappling (like Judo or Wrestling)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves surfing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a sport that involves skateboarding?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Skateboarding."
+    },
+    {
+      "role": "user",
+      "content": "Is it a team sport?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an individual combat sport?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it primarily an endurance sport?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a water sport?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an equestrian sport?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a shooting sport?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a racing sport (e.g., car, horse, or bicycle racing)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport involving throwing an object, such as a discus, javelin, or shot put?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport involving hitting an object with a racket or paddle?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport involving climbing?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport involving a horse, such as polo or show jumping? (I know you said no to equestrian, but I want to be sure about the specific nature of the sport, or perhaps I misunderstood \"equestrian\" vs just having a horse. Wait, the previous answer was \"No\" to equestrian, so likely no horse at all. Let me pivot.)\n\nIs the sport played on a track or field?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves skiing or snowboarding?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves gymnastics?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves archery?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves fencing?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves rowing?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves martial arts or grappling (like Judo or Wrestling)?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves surfing?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a sport that involves skateboarding?\n(Remember the player is trying to guess a sport, and the correct answer is Skateboarding. Reply with Yes or No in relation to Skateboarding.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Skateboarding in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct sport, which is: Skateboarding, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it a sport that involves skateboarding?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct sport, which is Skateboarding in this particular game. Reply with <VALID> only if the player has guessed Skateboarding in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Skateboarding is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

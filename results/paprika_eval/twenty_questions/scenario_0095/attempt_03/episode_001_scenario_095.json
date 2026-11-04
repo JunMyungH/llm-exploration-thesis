@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 95,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "Charlie and the Chocolate Factory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book written in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a work of fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a novel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the past?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a fantasy novel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *The Lord of the Rings*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *Harry Potter*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *A Song of Ice and Fire*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *The Wheel of Time*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *The Stormlight Archive*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *The Chronicles of Narnia*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *Percy Jackson & the Olympians*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the series titled *The Hunger Games*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author J.K. Rowling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author J.R.R. Tolkien?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author George R.R. Martin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author Patrick Rothfuss?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author Brandon Sanderson?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author Neil Gaiman?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory."
+    },
+    {
+      "role": "user",
+      "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a novel?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the past?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a fantasy novel?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *The Lord of the Rings*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *Harry Potter*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *A Song of Ice and Fire*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *The Wheel of Time*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *The Stormlight Archive*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *The Chronicles of Narnia*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *Percy Jackson & the Olympians*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the series titled *The Hunger Games*?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author J.K. Rowling?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author J.R.R. Tolkien?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author George R.R. Martin?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author Patrick Rothfuss?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author Brandon Sanderson?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author Neil Gaiman?\n(Remember the player is trying to guess a book, and the correct answer is Charlie and the Chocolate Factory. Reply with Yes or No in relation to Charlie and the Chocolate Factory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

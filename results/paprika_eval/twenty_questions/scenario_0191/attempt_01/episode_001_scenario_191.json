@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 191,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Cheerleading",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport played primarily indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport based on running?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport played on water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport played on snow or ice?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport played on horseback?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving combat or fighting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving shooting an arrow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving cycling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving swimming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving rowing or paddling a boat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving throwing an object, such as a discus, javelin, or shot put?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving skiing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving racing animals other than horses (such as dogs or camels)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving climbing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving a racket or paddle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving driving a vehicle or riding a bike?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving surfing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving throwing or catching a frisbee?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this sport involving wrestling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Cheerleading."
+    },
+    {
+      "role": "user",
+      "content": "Is this sport played primarily indoors?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport based on running?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport played on water?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport played on snow or ice?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport played on horseback?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving combat or fighting?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving shooting an arrow?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving cycling?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving swimming?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving rowing or paddling a boat?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving throwing an object, such as a discus, javelin, or shot put?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving skiing?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving racing animals other than horses (such as dogs or camels)?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving climbing?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving a racket or paddle?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving driving a vehicle or riding a bike?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving surfing?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving throwing or catching a frisbee?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this sport involving wrestling?\n(Remember the player is trying to guess a sport, and the correct answer is Cheerleading. Reply with Yes or No in relation to Cheerleading.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

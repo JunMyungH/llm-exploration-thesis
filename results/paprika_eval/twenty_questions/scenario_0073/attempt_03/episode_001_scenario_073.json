@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 73,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Joan of Arc",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the person alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Did they pass away before the year 1900?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a scientist or inventor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a monarch or royal figure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a musician or composer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a writer or poet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person an actor or actress?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a politician or political leader?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person an artist or painter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person a military leader or general?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person from Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person involved in the Napoleonic Wars?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person British?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person French?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person involved in the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person Napoleon Bonaparte?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person involved in the Hundred Days?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person involved in the Franco-Prussian War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person involved in the Crimean War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the person involved in the French Revolutionary Wars (prior to the Napoleonic era)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Joan of Arc."
+    },
+    {
+      "role": "user",
+      "content": "Is the person alive?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Did they pass away before the year 1900?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a scientist or inventor?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a monarch or royal figure?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a musician or composer?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a writer or poet?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person an actor or actress?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a politician or political leader?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person an artist or painter?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person a military leader or general?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the person from Europe?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the person involved in the Napoleonic Wars?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person British?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person French?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the person involved in the French Revolution?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person Napoleon Bonaparte?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person involved in the Hundred Days?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person involved in the Franco-Prussian War?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person involved in the Crimean War?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the person involved in the French Revolutionary Wars (prior to the Napoleonic era)?\n(Remember the player is trying to guess a person, and the correct answer is Joan of Arc. Reply with Yes or No in relation to Joan of Arc.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

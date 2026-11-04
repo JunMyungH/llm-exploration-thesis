@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 5,
+  "agent_game_scenario": "natural phenomenon",
+  "env_game_scenario": "Meteorite",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a natural phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon visible in the sky?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it caused by the refraction, reflection, or dispersion of light?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a form of precipitation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to wind or air movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to electricity or electrical discharge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to earthquakes or tectonic activity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the ocean or water bodies?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to volcanic activity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to gravity or celestial mechanics (such as tides or eclipses)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an eclipse?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the tides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the aurora (such as the Northern or Southern Lights)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the formation of rainbows?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the Coriolis effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phases of the moon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon of gravity itself (or its effects, like falling)?\n\nWait, I should refine that. Let's narrow down celestial mechanics. Is it related to the rotation of a celestial body (like Earth's rotation causing day and night)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the orbit of a celestial body (such as an orbit itself, or phenomena like transits)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon of gravity itself?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon of precession (such as the precession of the equinoxes)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the gravitational pull of the moon on the Earth's crust (such as earth tides or crustal deformation)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a natural phenomenon, and the correct answer is Meteorite."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon visible in the sky?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it caused by the refraction, reflection, or dispersion of light?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a form of precipitation?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to wind or air movement?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to electricity or electrical discharge?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to earthquakes or tectonic activity?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the ocean or water bodies?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to volcanic activity?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to gravity or celestial mechanics (such as tides or eclipses)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it an eclipse?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the tides?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the aurora (such as the Northern or Southern Lights)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the formation of rainbows?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the Coriolis effect?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phases of the moon?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon of gravity itself (or its effects, like falling)?\n\nWait, I should refine that. Let's narrow down celestial mechanics. Is it related to the rotation of a celestial body (like Earth's rotation causing day and night)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the orbit of a celestial body (such as an orbit itself, or phenomena like transits)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon of gravity itself?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon of precession (such as the precession of the equinoxes)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the gravitational pull of the moon on the Earth's crust (such as earth tides or crustal deformation)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

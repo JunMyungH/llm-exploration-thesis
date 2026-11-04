@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 186,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Triathlon",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on grass?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on a court with a hard surface (like concrete, wood, or clay)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on ice or snow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played in the air (e.g., aviation sports)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on dirt or sand?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played in a swimming pool or body of water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on a track?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played with a racket or paddle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played with a stick?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on swimming or diving?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on running or athletics (like track and field)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on martial arts or combat (like boxing, wrestling, or judo)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on cycling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on horse riding or equestrian events?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on rowing or canoeing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on weightlifting or strength training?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily focused on shooting or archery?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Triathlon."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played indoors?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on grass?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on water?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on a court with a hard surface (like concrete, wood, or clay)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on ice or snow?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played in the air (e.g., aviation sports)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on dirt or sand?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played in a swimming pool or body of water?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on a track?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played with a racket or paddle?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played with a stick?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on swimming or diving?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on running or athletics (like track and field)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on martial arts or combat (like boxing, wrestling, or judo)?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on cycling?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on horse riding or equestrian events?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on rowing or canoeing?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on weightlifting or strength training?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily focused on shooting or archery?\n(Remember the player is trying to guess a sport, and the correct answer is Triathlon. Reply with Yes or No in relation to Triathlon.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

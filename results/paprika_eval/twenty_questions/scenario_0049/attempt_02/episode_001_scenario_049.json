@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 49,
+  "agent_game_scenario": "location",
+  "env_game_scenario": "Los Angeles",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a location. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location indoors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location in a city?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a public park?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a street or road?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a famous landmark or monument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a building (such as a school, office, or shop)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a bridge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a statue or sculpture?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a stadium or arena?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a beach?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a bridge? (Wait, I already asked that. Let me try a different angle.)\n\nIs the location a type of transportation hub (like an airport or train station)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a place of worship (such as a church, mosque, or temple)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a market or bazaar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a government building (such as a city hall or courthouse)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a park or garden? (Wait, I asked about public park earlier and got 'No'. Let me try something else.)\n\nIs the location a specific type of outdoor venue, like a playground or sports field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a library?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a zoo or aquarium?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a cemetery or graveyard?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a gas station?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the location a parking lot?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a location, and the correct answer is Los Angeles."
+    },
+    {
+      "role": "user",
+      "content": "Is the location indoors?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location in a city?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a public park?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a street or road?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a famous landmark or monument?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a building (such as a school, office, or shop)?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a bridge?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a statue or sculpture?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a stadium or arena?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a beach?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a bridge? (Wait, I already asked that. Let me try a different angle.)\n\nIs the location a type of transportation hub (like an airport or train station)?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a place of worship (such as a church, mosque, or temple)?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a market or bazaar?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a government building (such as a city hall or courthouse)?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a park or garden? (Wait, I asked about public park earlier and got 'No'. Let me try something else.)\n\nIs the location a specific type of outdoor venue, like a playground or sports field?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a library?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a zoo or aquarium?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a cemetery or graveyard?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a gas station?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the location a parking lot?\n(Remember the player is trying to guess a location, and the correct answer is Los Angeles. Reply with Yes or No in relation to Los Angeles.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

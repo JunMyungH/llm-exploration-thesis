@@ -1,0 +1,310 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 168,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Innsbruck, Austria",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 17,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the geographical location to reduce the search space efficiently.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. Now I will try to narrow down the continent.\n\n**Is your home city located in Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is in the Northern Hemisphere, but not in Asia. This leaves Europe, North America, or Northern Africa.\n\n**Is your home city located in North America?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we are looking for a city in the Northern Hemisphere that is not in Asia and not in North America. This leaves us with Europe and potentially Northern Africa (though \"Northern Hemisphere\" excludes most of Africa, which is mostly in the Northern Hemisphere, but often categorized separately in these games. Let's assume Europe for now, or ask specifically).\n\nLet's refine the region.\n\n**Is your home city located in Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. We have narrowed it down to Europe. Now I need to determine the general region within Europe to further reduce the possibilities.\n\n**Is your home city located in Western Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Europe, but not in Western Europe. This likely places it in Eastern Europe, Central Europe, or possibly Northern Europe.\n\n**Is your home city located in Eastern Europe?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is in Europe, not in Asia, North America, Western Europe, or Eastern Europe. This leaves Northern Europe and Central Europe as the primary candidates. Northern Europe includes countries like Sweden, Norway, Finland, Denmark, and Iceland. Central Europe includes countries like Germany, Poland, Czech Republic, Austria, Hungary, etc.\n\nLet's check if it's in the Nordic region, which is part of Northern Europe.\n\n**Is your home city located in a Nordic country (Sweden, Norway, Finland, Denmark, or Iceland)?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Europe, but not in Western, Eastern, or Northern Europe (specifically the Nordic countries). This strongly suggests it is in **Central Europe**.\n\nLet's narrow down the country.\n\n**Is your home city located in Germany?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is in Central Europe, but not in Germany. The other major countries in Central Europe include Poland, Czech Republic, Austria, Hungary, Switzerland, and possibly others depending on the definition.\n\nLet's check for a landlocked country that is well-known for its history and culture.\n\n**Is your home city located in Poland?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Central Europe, but not in Germany or Poland. This leaves countries like the Czech Republic, Austria, Hungary, Switzerland, Slovakia, Slovenia, etc.\n\nLet's try to narrow it down by checking if it is a capital city, as capitals are often the \"home cities\" in these games, or if it's a major economic hub.\n\n**Is your home city the capital of its country?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a major city in Central Europe (excluding Germany, Poland, and Nordic countries), but it is **not** the capital city.\n\nThis suggests cities like Munich, Hamburg, or Berlin (if we consider Berlin a capital, but it is one, so excluded), Prague (capital, excluded), Vienna (capital, excluded), Budapest (capital, excluded).\n\nWait, if it's not the capital, and it's in Central Europe, common non-capital major cities include:\n- Germany: Munich, Hamburg, Cologne, Frankfurt (but we ruled out Germany)\n- Czech Republic: Brno (Prague"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So the city is **not** the capital of its country.\n\nSince we have ruled out Germany, Poland, and Nordic countries, and the city is in Central Europe, let's look at other major Central European nations.\n\n**Is your home city located in Austria?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great! So the city is in Austria. Since it is not the capital (Vienna), we are looking for another major city in Austria. The most prominent non-capital cities in Austria are Graz, Linz, Salzburg, and Innsbruck.\n\nLet's distinguish them by geography.\n\n**Is your home city located in the eastern part of Austria?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Austria, not the capital (Vienna), and not in the eastern part of the country. This leaves us with the western and central regions.\n\nThe major cities in these areas are:\n- **Salzburg** (West/Central, famous for Mozart and Sound of Music)\n- **Innsbruck** (West, famous for Alps and skiing)\n- **Graz** is in the Southeast (so likely excluded by \"not eastern\")\n- **Linz** is in the North/Northwest\n\nLet's check if it is known for being in the Alps, which would"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The city is in Austria, not the capital (Vienna), not in the eastern part, and it is associated with the Alps.\n\nThis strongly points to **Salzburg** or **Innsbruck**.\n\nLet's distinguish between them. Salzburg is known as the birthplace of Mozart and for the \"Sound of Music,\" while Innsbruck is known as the capital of the Alps and for hosting the Winter Olympics multiple times.\n\n**Is your home city famous for being the birthplace of Wolfgang Amadeus Mozart?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is in Austria, not Vienna, not in the east, associated with the Alps, but not famous for Mozart.\n\nThis leaves **Innsbruck** as the most likely candidate. Innsbruck is the capital of the Tyrol region, famous for its alpine setting, historic old town, and being a major hub for the Winter Olympics.\n\nLet's confirm this with a specific landmark or event.\n\n**Is your home city known for hosting the Winter Olympics?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the clues gathered:\n1.  Northern Hemisphere\n2.  Europe\n3.  Central Europe\n4.  Austria\n5.  Not the capital (Vienna)\n6.  Not in the eastern part\n7.  Associated with the Alps\n8.  Not famous for Mozart (rules out Salzburg)\n9.  Hosted the Winter Olympics\n\nThe city that fits all these criteria is **Innsbruck**, which hosted the Winter Olympics in 1964 and 1976.\n\nMy guess is: **Is the city Innsbruck, Austria?**"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Innsbruck, Austria"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the geographical location to reduce the search space efficiently.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. Now I will try to narrow down the continent.\n\n**Is your home city located in Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is in the Northern Hemisphere, but not in Asia. This leaves Europe, North America, or Northern Africa.\n\n**Is your home city located in North America?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we are looking for a city in the Northern Hemisphere that is not in Asia and not in North America. This leaves us with Europe and potentially Northern Africa (though \"Northern Hemisphere\" excludes most of Africa, which is mostly in the Northern Hemisphere, but often categorized separately in these games. Let's assume Europe for now, or ask specifically).\n\nLet's refine the region.\n\n**Is your home city located in Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. We have narrowed it down to Europe. Now I need to determine the general region within Europe to further reduce the possibilities.\n\n**Is your home city located in Western Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Europe, but not in Western Europe. This likely places it in Eastern Europe, Central Europe, or possibly Northern Europe.\n\n**Is your home city located in Eastern Europe?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is in Europe, not in Asia, North America, Western Europe, or Eastern Europe. This leaves Northern Europe and Central Europe as the primary candidates. Northern Europe includes countries like Sweden, Norway, Finland, Denmark, and Iceland. Central Europe includes countries like Germany, Poland, Czech Republic, Austria, Hungary, etc.\n\nLet's check if it's in the Nordic region, which is part of Northern Europe.\n\n**Is your home city located in a Nordic country (Sweden, Norway, Finland, Denmark, or Iceland)?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Europe, but not in Western, Eastern, or Northern Europe (specifically the Nordic countries). This strongly suggests it is in **Central Europe**.\n\nLet's narrow down the country.\n\n**Is your home city located in Germany?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is in Central Europe, but not in Germany. The other major countries in Central Europe include Poland, Czech Republic, Austria, Hungary, Switzerland, and possibly others depending on the definition.\n\nLet's check for a landlocked country that is well-known for its history and culture.\n\n**Is your home city located in Poland?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Central Europe, but not in Germany or Poland. This leaves countries like the Czech Republic, Austria, Hungary, Switzerland, Slovakia, Slovenia, etc.\n\nLet's try to narrow it down by checking if it is a capital city, as capitals are often the \"home cities\" in these games, or if it's a major economic hub.\n\n**Is your home city the capital of its country?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a major city in Central Europe (excluding Germany, Poland, and Nordic countries), but it is **not** the capital city.\n\nThis suggests cities like Munich, Hamburg, or Berlin (if we consider Berlin a capital, but it is one, so excluded), Prague (capital, excluded), Vienna (capital, excluded), Budapest (capital, excluded).\n\nWait, if it's not the capital, and it's in Central Europe, common non-capital major cities include:\n- Germany: Munich, Hamburg, Cologne, Frankfurt (but we ruled out Germany)\n- Czech Republic: Brno (Prague\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So the city is **not** the capital of its country.\n\nSince we have ruled out Germany, Poland, and Nordic countries, and the city is in Central Europe, let's look at other major Central European nations.\n\n**Is your home city located in Austria?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great! So the city is in Austria. Since it is not the capital (Vienna), we are looking for another major city in Austria. The most prominent non-capital cities in Austria are Graz, Linz, Salzburg, and Innsbruck.\n\nLet's distinguish them by geography.\n\n**Is your home city located in the eastern part of Austria?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Austria, not the capital (Vienna), and not in the eastern part of the country. This leaves us with the western and central regions.\n\nThe major cities in these areas are:\n- **Salzburg** (West/Central, famous for Mozart and Sound of Music)\n- **Innsbruck** (West, famous for Alps and skiing)\n- **Graz** is in the Southeast (so likely excluded by \"not eastern\")\n- **Linz** is in the North/Northwest\n\nLet's check if it is known for being in the Alps, which would\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The city is in Austria, not the capital (Vienna), not in the eastern part, and it is associated with the Alps.\n\nThis strongly points to **Salzburg** or **Innsbruck**.\n\nLet's distinguish between them. Salzburg is known as the birthplace of Mozart and for the \"Sound of Music,\" while Innsbruck is known as the capital of the Alps and for hosting the Winter Olympics multiple times.\n\n**Is your home city famous for being the birthplace of Wolfgang Amadeus Mozart?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is in Austria, not Vienna, not in the east, associated with the Alps, but not famous for Mozart.\n\nThis leaves **Innsbruck** as the most likely candidate. Innsbruck is the capital of the Tyrol region, famous for its alpine setting, historic old town, and being a major hub for the Winter Olympics.\n\nLet's confirm this with a specific landmark or event.\n\n**Is your home city known for hosting the Winter Olympics?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Based on the clues gathered:\n1.  Northern Hemisphere\n2.  Europe\n3.  Central Europe\n4.  Austria\n5.  Not the capital (Vienna)\n6.  Not in the eastern part\n7.  Associated with the Alps\n8.  Not famous for Mozart (rules out Salzburg)\n9.  Hosted the Winter Olympics\n\nThe city that fits all these criteria is **Innsbruck**, which hosted the Winter Olympics in 1964 and 1976.\n\nMy guess is: **Is the city Innsbruck, Austria?**\n(Remember the player is trying to guess a city, and the correct answer is Innsbruck, Austria. Reply to the question in relation to Innsbruck, Austria. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Based on the clues gathered:\n1.  Northern Hemisphere\n2.  Europe\n3.  Central Europe\n4.  Austria\n5.  Not the capital (Vienna)\n6.  Not in the eastern part\n7.  Associated with the Alps\n8.  Not famous for Mozart (rules out Salzburg)\n9.  Hosted the Winter Olympics\n\nThe city that fits all these criteria is **Innsbruck**, which hosted the Winter Olympics in 1964 and 1976.\n\nMy guess is: **Is the city Innsbruck, Austria?**\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Innsbruck, Austria in this particular game. Reply with <VALID> only if the player has guessed Innsbruck, Austria (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

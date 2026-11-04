@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 325,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Carbon Fiber",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention something that operates using electricity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for measurement or navigation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for lighting or generating heat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for entertainment or leisure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a tool used for construction or manual labor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for cooking or food preparation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for writing or recording information?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for cleaning or sanitation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for sewing or textile work?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for security or defense?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for entertainment, such as games or toys?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to space exploration or astronomy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to water management, such as pumps or irrigation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to measuring time, such as a clock or hourglass?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the processing or storage of data?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to the generation or transmission of power, such as a water wheel or windmill?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to agriculture, such as a plow or harvesting tool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a simple mechanical device that uses levers, pulleys, or gears?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Carbon Fiber."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention something that operates using electricity?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for measurement or navigation?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for lighting or generating heat?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for entertainment or leisure?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a tool used for construction or manual labor?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for writing or recording information?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for cleaning or sanitation?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for sewing or textile work?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for security or defense?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for entertainment, such as games or toys?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to space exploration or astronomy?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to water management, such as pumps or irrigation?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to measuring time, such as a clock or hourglass?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the processing or storage of data?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to the generation or transmission of power, such as a water wheel or windmill?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to agriculture, such as a plow or harvesting tool?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a simple mechanical device that uses levers, pulleys, or gears?\n(Remember the player is trying to guess a invention, and the correct answer is Carbon Fiber. Reply with Yes or No in relation to Carbon Fiber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

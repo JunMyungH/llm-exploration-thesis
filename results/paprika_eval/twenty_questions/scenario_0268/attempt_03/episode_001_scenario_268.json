@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 268,
+  "agent_game_scenario": "tv show",
+  "env_game_scenario": "Daredevil",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tv show. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show set in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a comedy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a drama?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show set in a medical or hospital environment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the main character a law enforcement officer (e.g., police officer, detective, FBI agent)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a crime procedural (e.g., detectives solving specific cases in each episode)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in a fantasy or supernatural world (e.g., involving magic, vampires, zombies)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in a historical period?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in the present day or recent past?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show primarily focused on the workplace or professional lives of its characters?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show a thriller or mystery series (e.g., focused on a specific ongoing mystery or crime rather than procedural episodes)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in a small town?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show set in a major metropolitan city?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show centered around a specific group of friends or a family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show centered around a single protagonist or a small team of investigators?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the protagonist a private investigator?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the protagonist a journalist or reporter?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the protagonist a lawyer?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show titled \"Suits\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tv show, and the correct answer is Daredevil."
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show animated?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show set in the United States?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a comedy?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a drama?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show set in a medical or hospital environment?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the main character a law enforcement officer (e.g., police officer, detective, FBI agent)?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a crime procedural (e.g., detectives solving specific cases in each episode)?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in a fantasy or supernatural world (e.g., involving magic, vampires, zombies)?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in a historical period?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in the present day or recent past?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show primarily focused on the workplace or professional lives of its characters?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show a thriller or mystery series (e.g., focused on a specific ongoing mystery or crime rather than procedural episodes)?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in a small town?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show set in a major metropolitan city?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show centered around a specific group of friends or a family?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show centered around a single protagonist or a small team of investigators?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the protagonist a private investigator?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the protagonist a journalist or reporter?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the protagonist a lawyer?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show titled \"Suits\"?\n(Remember the player is trying to guess a tv show, and the correct answer is Daredevil. Reply with Yes or No in relation to Daredevil.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

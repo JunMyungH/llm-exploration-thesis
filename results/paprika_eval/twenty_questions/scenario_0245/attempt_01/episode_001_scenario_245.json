@@ -1,0 +1,278 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 245,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Architect",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 15,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily related to the field of medicine or healthcare?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily related to the field of law or justice?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily related to the field of education or teaching?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily related to technology or computer science?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily related to the arts or creative industries?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve performing music, such as playing an instrument or singing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve visual arts, such as painting, sculpture, or photography?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve writing, such as being an author, journalist, or poet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve performing in theater, film, or television, such as being an actor or director?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve design, such as fashion design, graphic design, or interior design?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on graphic design or digital media?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on fashion design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on interior design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on industrial or product design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on architecture?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Architect."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily related to the field of medicine or healthcare?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily related to the field of law or justice?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily related to the field of education or teaching?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily related to technology or computer science?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily related to the arts or creative industries?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve performing music, such as playing an instrument or singing?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve visual arts, such as painting, sculpture, or photography?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve writing, such as being an author, journalist, or poet?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve performing in theater, film, or television, such as being an actor or director?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve design, such as fashion design, graphic design, or interior design?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on graphic design or digital media?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on fashion design?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on interior design?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on industrial or product design?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on architecture?\n(Remember the player is trying to guess a occupation, and the correct answer is Architect. Reply with Yes or No in relation to Architect.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Architect in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct occupation, which is: Architect, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the occupation primarily focused on architecture?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct occupation, which is Architect in this particular game. Reply with <VALID> only if the player has guessed Architect in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Architect is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

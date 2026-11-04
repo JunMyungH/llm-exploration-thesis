@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 312,
+  "agent_game_scenario": "weather",
+  "env_game_scenario": "Mistral Wind",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a weather. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this weather phenomenon associated with precipitation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this weather phenomenon characterized by a significant drop in temperature?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon typically associated with wind or storms?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon typically caused by a cold front?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is \"Blizzard\" your guess?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Cold Wave\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Cold Snap\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Polar Vortex\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Hailstorm\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Derecho\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Chinook wind\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Sirocco\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Heat Wave\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Wind Chill\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Cold Front\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Cold Storm\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Cold Wind\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Blizzard\"? (Wait, I already guessed that. Let me re-evaluate.)\n\nPrevious answers:\n1. Precipitation? No\n2. Drop in temperature? Yes\n3. Wind/Storms? Yes\n4. Caused by cold front? Yes\n5. Not Blizzard, Cold Wave, Cold Snap, Polar Vortex, Hailstorm, Derecho, Chinook, Sirocco, Heat Wave, Wind Chill, Cold Front, Cold Storm, Cold Wind.\n\nLet's look at phenomena that are cold, windy/stormy, but not precipitation-heavy (or"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as a \"Ice Storm\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a weather, and the correct answer is Mistral Wind."
+    },
+    {
+      "role": "user",
+      "content": "Is this weather phenomenon associated with precipitation?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this weather phenomenon characterized by a significant drop in temperature?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon typically associated with wind or storms?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon typically caused by a cold front?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is \"Blizzard\" your guess?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Cold Wave\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Cold Snap\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Polar Vortex\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Hailstorm\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Derecho\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Chinook wind\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Sirocco\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Heat Wave\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Wind Chill\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Cold Front\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Cold Storm\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Cold Wind\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "No\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Blizzard\"? (Wait, I already guessed that. Let me re-evaluate.)\n\nPrevious answers:\n1. Precipitation? No\n2. Drop in temperature? Yes\n3. Wind/Storms? Yes\n4. Caused by cold front? Yes\n5. Not Blizzard, Cold Wave, Cold Snap, Polar Vortex, Hailstorm, Derecho, Chinook, Sirocco, Heat Wave, Wind Chill, Cold Front, Cold Storm, Cold Wind.\n\nLet's look at phenomena that are cold, windy/stormy, but not precipitation-heavy (or\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as a \"Ice Storm\"?\n(Remember the player is trying to guess a weather, and the correct answer is Mistral Wind. Reply with Yes or No in relation to Mistral Wind.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

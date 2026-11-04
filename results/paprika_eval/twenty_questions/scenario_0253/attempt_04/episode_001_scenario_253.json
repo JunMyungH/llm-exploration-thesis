@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 253,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Waiter",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation typically associated with the field of medicine or healthcare?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on working with technology, computers, or software?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on education, teaching, or academia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on the arts, entertainment, or media?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on law, justice, or public safety (e.g., police, lawyer, judge)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on science, engineering, or construction?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on business, finance, or management?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on agriculture, farming, or working with animals?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on transportation or logistics (e.g., driver, pilot, trucker)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on manual labor, trades, or skilled craftsmanship (e.g., plumber, electrician, carpenter)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on public service, social work, or non-profit organizations?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on sales, retail, or customer service?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily based in a retail store setting (e.g., cashier, sales associate)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling services or high-value items directly to clients, often involving travel or remote communication (e.g., real estate agent, insurance broker, door-to-door sales)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling goods online or through digital platforms (e.g., affiliate marketer, e-commerce seller)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling insurance, financial products, or other complex contracts (e.g., insurance agent, financial advisor)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling advertising space or media slots (e.g., advertising sales representative)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling real estate or property?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling cars or vehicles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on selling cosmetics, fragrances, or beauty products?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Waiter."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation typically associated with the field of medicine or healthcare?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on working with technology, computers, or software?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on education, teaching, or academia?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on the arts, entertainment, or media?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on law, justice, or public safety (e.g., police, lawyer, judge)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on science, engineering, or construction?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on business, finance, or management?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on agriculture, farming, or working with animals?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on transportation or logistics (e.g., driver, pilot, trucker)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on manual labor, trades, or skilled craftsmanship (e.g., plumber, electrician, carpenter)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on public service, social work, or non-profit organizations?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on sales, retail, or customer service?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily based in a retail store setting (e.g., cashier, sales associate)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling services or high-value items directly to clients, often involving travel or remote communication (e.g., real estate agent, insurance broker, door-to-door sales)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling goods online or through digital platforms (e.g., affiliate marketer, e-commerce seller)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling insurance, financial products, or other complex contracts (e.g., insurance agent, financial advisor)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling advertising space or media slots (e.g., advertising sales representative)?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling real estate or property?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling cars or vehicles?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on selling cosmetics, fragrances, or beauty products?\n(Remember the player is trying to guess a occupation, and the correct answer is Waiter. Reply with Yes or No in relation to Waiter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

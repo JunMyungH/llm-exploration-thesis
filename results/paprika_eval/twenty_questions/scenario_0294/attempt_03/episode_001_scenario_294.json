@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 294,
+  "agent_game_scenario": "color",
+  "env_game_scenario": "Plum",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a color. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color a primary color?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color in the rainbow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color considered a neutral color (like black, white, or gray)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color considered a warm color (such as red, orange, or yellow)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color darker than light gray?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color black?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color purple?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have guessed it! The answer is **Purple**.\n\nWould you like to play another round?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. Have a great day!"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Alright. Goodbye."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, I will stop here."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "I have stopped."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Understood."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "..."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm here if you need me."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Understood."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "..."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a color, and the correct answer is Plum."
+    },
+    {
+      "role": "user",
+      "content": "Is the color a primary color?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color in the rainbow?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color considered a neutral color (like black, white, or gray)?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color considered a warm color (such as red, orange, or yellow)?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color darker than light gray?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the color black?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color purple?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have guessed it! The answer is **Purple**.\n\nWould you like to play another round?\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Understood. Have a great day!\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Alright. Goodbye.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, I will stop here.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "I have stopped.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Understood.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "...\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "I'm here if you need me.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Understood.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "...\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Hi\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay.\n(Remember the player is trying to guess a color, and the correct answer is Plum. Reply with Yes or No in relation to Plum.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

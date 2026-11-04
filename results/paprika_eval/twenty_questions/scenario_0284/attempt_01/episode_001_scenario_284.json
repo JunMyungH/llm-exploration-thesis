@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 284,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Boxer Rebellion",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in North America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 1940s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 1950s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 1960s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 1970s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 1980s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 1990s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war fought in the 21st century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Vietnam War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Korean War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Second Sino-Japanese War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Gulf War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the First Indochina War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Soviet–Afghan War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Japanese invasion of Manchuria?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this war the Second Sino-Japanese War? (Wait, I already asked that. Let me re-evaluate.)\n\nOkay, it's a war in Asia, in the 20th century, but not in the 40s, 50s, 60s, 70s, 80s, or 90s, and not in the 21st century.\nThis leaves the **1910s**, **1920s**, or **1930s**.\nThe major wars in Asia during these decades were:\n- Russo"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Boxer Rebellion."
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in Europe?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in North America?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in Asia?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 20th century?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 1940s?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 1950s?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 1960s?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 1970s?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 1980s?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 1990s?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war fought in the 21st century?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Vietnam War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Korean War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Second Sino-Japanese War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Gulf War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the First Indochina War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Soviet–Afghan War?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Japanese invasion of Manchuria?\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this war the Second Sino-Japanese War? (Wait, I already asked that. Let me re-evaluate.)\n\nOkay, it's a war in Asia, in the 20th century, but not in the 40s, 50s, 60s, 70s, 80s, or 90s, and not in the 21st century.\nThis leaves the **1910s**, **1920s**, or **1930s**.\nThe major wars in Asia during these decades were:\n- Russo\n(Remember the player is trying to guess a historical event, and the correct answer is The Boxer Rebellion. Reply with Yes or No in relation to The Boxer Rebellion.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,342 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 29,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Panaji, India",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 19,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the general location and characteristics of the city.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. Let's narrow down the continent.\n\n**Is your home city located in Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Asia. Let's try to narrow down the region.\n\n**Is your home city located in East Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. If it's not in East Asia, it could be in South, Southeast, Central, or West Asia. Let's look at the climate and geography.\n\n**Is your home city located in Southeast Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's in Asia, but not East or Southeast Asia. This leaves South Asia, Central Asia, or West Asia (the Middle East).\n\n**Is your home city located in South Asia?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Got it. The city is in South Asia. This region includes countries like India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, and the Maldives.\n\n**Is your home city located in India?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Excellent. We are now looking for a city in India. India has many major metropolitan areas. Let's try to narrow it down by region within the country.\n\n**Is your home city located in Northern India?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Southern, Western, or Central India. Let's look at the geography to narrow it down further.\n\n**Is your home city located on the coast?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is in Southern or Western India and is located on the coast. Major coastal cities in these regions include Mumbai, Goa (Panaji), Kochi, Thiruvananthapuram, Chennai, and Visakhapatnam.\n\n**Is your home city located in the state of Maharashtra?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Maharashtra. So it's likely in Kerala, Karnataka, Tamil Nadu, or possibly Goa or Andhra Pradesh. Let's look at the specific region within the south.\n\n**Is your home city located in the state of Kerala?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's not in Kerala or Maharashtra. The remaining major coastal options are Karnataka, Tamil Nadu, Goa, or Andhra Pradesh.\n\n**Is your home city the capital of a state?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "So the city is a state capital in Southern India, located on the coast, and not in Kerala or Maharashtra.\n\nThe remaining likely candidates are:\n*   **Thiruvananthapuram** (Capital of Kerala) - *Ruled out because we asked if it was in Kerala and the answer was No.*\n*   **Bengaluru** (Capital of Karnataka) - *Inland, not coastal.*\n*   **Chennai** (Capital of Tamil Nadu) - *Coastal.*\n*   **Hyderabad** (Capital of Telangana) - *Inland.*\n*"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, I need to correct my previous deduction. You said \"No\" to Kerala, so Thiruvananthapuram is out. You said \"Yes\" to it being a state capital.\n\nLet's re-evaluate the coastal state capitals in Southern/Western India (excluding Kerala and Maharashtra):\n1.  **Chennai** (Tamil Nadu)\n2.  **Bengaluru** (Karnataka) - *Inland, so this is out.*\n3.  **Hyderabad** (Telangana) - *Inland, so this is out.*\n4.  **"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "My apologies for the confusion in the previous turn. Let's reset the logic based on the confirmed facts:\n\n1.  **Country:** India\n2.  **Region:** South Asia (specifically Southern India, as it's not Northern, Eastern, or Western India in the general geographic sense often used, but we established it is coastal).\n3.  **Location:** Coastal.\n4.  **Status:** It is a State Capital.\n5.  **Exclusions:** Not in Maharashtra, Not in Kerala.\n\nThe major coastal state capitals in India that fit these criteria are:\n*   **Chennai"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the clues so far:\n1.  It is in India.\n2.  It is in Southern India.\n3.  It is located on the coast.\n4.  It is a state capital.\n5.  It is **not** in Kerala (so not Thiruvananthapuram).\n6.  It is **not** in Maharashtra (so not Mumbai, which is also inland-ish but technically coastal, and definitely not the capital of Maharashtra anyway, which is Mumbai, but we ruled out the state).\n\nThe primary remaining candidate for a coastal state capital in Southern India is"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the deductions:\n1.  **Country:** India\n2.  **Region:** Southern India\n3.  **Geography:** Coastal\n4.  **Status:** State Capital\n5.  **Exclusions:** Not Kerala, Not Maharashtra\n\nThe most likely candidate remaining is **Chennai**, the capital of Tamil Nadu. It is a major coastal city in South India.\n\nMy guess is: **Is the city Chennai, India?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's not Chennai. Let's re-evaluate the coastal state capitals in Southern India that are not in Kerala or Maharashtra.\n\nThe remaining possibilities are:\n1.  **Bengaluru** (Karnataka) - *Inland, so this is out.*\n2.  **Hyderabad** (Telangana) - *Inland, so this is out.*\n3.  **Thiruvananthapuram** (Kerala) - *Ruled out because the city is not in Kerala.*\n4.  **Chennai** (Tamil Nadu) - *R"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Let's step back and look at the other regions in India that are coastal and have capitals.\n\nWe ruled out:\n*   Maharashtra (Mumbai is not the capital, Pune is inland. The capital is Mumbai, but we ruled out the state).\n*   Kerala (Thiruvananthapuram is coastal, but we ruled out the state).\n*   Tamil Nadu (Chennai is coastal, but we guessed it and it was wrong).\n\nWhat about **Goa**?\n*   Goa is in Western India.\n*   Its capital is **Panaji** (or Panjim).\n*"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the previous answer \"Yes\" to \"Is your home city the capital of a state?\", and knowing it is in India, coastal, and not Chennai/Kerala/Maharashtra, the most likely remaining candidate is **Panaji** (also known as Panjim), the capital of the state of Goa.\n\nMy guess is: **Is the city Panaji, India?**"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Panaji, India"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will start by narrowing down the general location and characteristics of the city.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. Let's narrow down the continent.\n\n**Is your home city located in Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Asia. Let's try to narrow down the region.\n\n**Is your home city located in East Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. If it's not in East Asia, it could be in South, Southeast, Central, or West Asia. Let's look at the climate and geography.\n\n**Is your home city located in Southeast Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's in Asia, but not East or Southeast Asia. This leaves South Asia, Central Asia, or West Asia (the Middle East).\n\n**Is your home city located in South Asia?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Got it. The city is in South Asia. This region includes countries like India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, and the Maldives.\n\n**Is your home city located in India?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Excellent. We are now looking for a city in India. India has many major metropolitan areas. Let's try to narrow it down by region within the country.\n\n**Is your home city located in Northern India?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Southern, Western, or Central India. Let's look at the geography to narrow it down further.\n\n**Is your home city located on the coast?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is in Southern or Western India and is located on the coast. Major coastal cities in these regions include Mumbai, Goa (Panaji), Kochi, Thiruvananthapuram, Chennai, and Visakhapatnam.\n\n**Is your home city located in the state of Maharashtra?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Maharashtra. So it's likely in Kerala, Karnataka, Tamil Nadu, or possibly Goa or Andhra Pradesh. Let's look at the specific region within the south.\n\n**Is your home city located in the state of Kerala?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's not in Kerala or Maharashtra. The remaining major coastal options are Karnataka, Tamil Nadu, Goa, or Andhra Pradesh.\n\n**Is your home city the capital of a state?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "So the city is a state capital in Southern India, located on the coast, and not in Kerala or Maharashtra.\n\nThe remaining likely candidates are:\n*   **Thiruvananthapuram** (Capital of Kerala) - *Ruled out because we asked if it was in Kerala and the answer was No.*\n*   **Bengaluru** (Capital of Karnataka) - *Inland, not coastal.*\n*   **Chennai** (Capital of Tamil Nadu) - *Coastal.*\n*   **Hyderabad** (Capital of Telangana) - *Inland.*\n*\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Wait, I need to correct my previous deduction. You said \"No\" to Kerala, so Thiruvananthapuram is out. You said \"Yes\" to it being a state capital.\n\nLet's re-evaluate the coastal state capitals in Southern/Western India (excluding Kerala and Maharashtra):\n1.  **Chennai** (Tamil Nadu)\n2.  **Bengaluru** (Karnataka) - *Inland, so this is out.*\n3.  **Hyderabad** (Telangana) - *Inland, so this is out.*\n4.  **\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "My apologies for the confusion in the previous turn. Let's reset the logic based on the confirmed facts:\n\n1.  **Country:** India\n2.  **Region:** South Asia (specifically Southern India, as it's not Northern, Eastern, or Western India in the general geographic sense often used, but we established it is coastal).\n3.  **Location:** Coastal.\n4.  **Status:** It is a State Capital.\n5.  **Exclusions:** Not in Maharashtra, Not in Kerala.\n\nThe major coastal state capitals in India that fit these criteria are:\n*   **Chennai\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Based on the clues so far:\n1.  It is in India.\n2.  It is in Southern India.\n3.  It is located on the coast.\n4.  It is a state capital.\n5.  It is **not** in Kerala (so not Thiruvananthapuram).\n6.  It is **not** in Maharashtra (so not Mumbai, which is also inland-ish but technically coastal, and definitely not the capital of Maharashtra anyway, which is Mumbai, but we ruled out the state).\n\nThe primary remaining candidate for a coastal state capital in Southern India is\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Based on the deductions:\n1.  **Country:** India\n2.  **Region:** Southern India\n3.  **Geography:** Coastal\n4.  **Status:** State Capital\n5.  **Exclusions:** Not Kerala, Not Maharashtra\n\nThe most likely candidate remaining is **Chennai**, the capital of Tamil Nadu. It is a major coastal city in South India.\n\nMy guess is: **Is the city Chennai, India?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's not Chennai. Let's re-evaluate the coastal state capitals in Southern India that are not in Kerala or Maharashtra.\n\nThe remaining possibilities are:\n1.  **Bengaluru** (Karnataka) - *Inland, so this is out.*\n2.  **Hyderabad** (Telangana) - *Inland, so this is out.*\n3.  **Thiruvananthapuram** (Kerala) - *Ruled out because the city is not in Kerala.*\n4.  **Chennai** (Tamil Nadu) - *R\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Let's step back and look at the other regions in India that are coastal and have capitals.\n\nWe ruled out:\n*   Maharashtra (Mumbai is not the capital, Pune is inland. The capital is Mumbai, but we ruled out the state).\n*   Kerala (Thiruvananthapuram is coastal, but we ruled out the state).\n*   Tamil Nadu (Chennai is coastal, but we guessed it and it was wrong).\n\nWhat about **Goa**?\n*   Goa is in Western India.\n*   Its capital is **Panaji** (or Panjim).\n*\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Based on the previous answer \"Yes\" to \"Is your home city the capital of a state?\", and knowing it is in India, coastal, and not Chennai/Kerala/Maharashtra, the most likely remaining candidate is **Panaji** (also known as Panjim), the capital of the state of Goa.\n\nMy guess is: **Is the city Panaji, India?**\n(Remember the player is trying to guess a city, and the correct answer is Panaji, India. Reply to the question in relation to Panaji, India. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Based on the previous answer \"Yes\" to \"Is your home city the capital of a state?\", and knowing it is in India, coastal, and not Chennai/Kerala/Maharashtra, the most likely remaining candidate is **Panaji** (also known as Panjim), the capital of the state of Goa.\n\nMy guess is: **Is the city Panaji, India?**\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Panaji, India in this particular game. Reply with <VALID> only if the player has guessed Panaji, India (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

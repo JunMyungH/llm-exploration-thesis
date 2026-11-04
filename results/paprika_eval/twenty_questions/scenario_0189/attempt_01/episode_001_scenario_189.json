@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 189,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Floorball",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on a field?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played in a pool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport primarily played on a court?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a racket?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport a team sport?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport basketball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport volleyball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a puck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport handball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport water polo?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport netball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a shuttlecock?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a bat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport basketball played on a smaller court? (Wait, I already asked if it was basketball and it was no). Let me re-evaluate.\n\nSports played on a court:\n- Basketball (No)\n- Volleyball (No)\n- Handball (No)\n- Netball (No)\n- Table Tennis (No - played with a paddle/racket essentially, but I asked if it was played with a racket, and user said No. Table tennis uses a paddle. Is a paddle a racket? Usually yes. So No is likely correct for Table Tennis too).\n- Badminton (No"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport basketball played on a smaller court? (Wait, I already asked if it was basketball and it was no). Let me re-evaluate.\n\nSports played on a court:\n- Basketball (No)\n- Volleyball (No)\n- Handball (No)\n- Netball (No)\n- Table Tennis (No - played with a paddle/racket essentially, but I asked if it was played with a racket, and user said No. Table tennis uses a paddle. Is a paddle a racket? Usually yes. So No is likely correct for Table Tennis too).\n- Badminton (No"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a ball that is larger than a tennis ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport squash?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a ball that is smaller than a tennis ball?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a ball that bounces?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Floorball."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on a field?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played in a pool?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport primarily played on a court?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a racket?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport a team sport?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport basketball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport volleyball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a puck?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport handball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport water polo?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport netball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a shuttlecock?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a bat?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport basketball played on a smaller court? (Wait, I already asked if it was basketball and it was no). Let me re-evaluate.\n\nSports played on a court:\n- Basketball (No)\n- Volleyball (No)\n- Handball (No)\n- Netball (No)\n- Table Tennis (No - played with a paddle/racket essentially, but I asked if it was played with a racket, and user said No. Table tennis uses a paddle. Is a paddle a racket? Usually yes. So No is likely correct for Table Tennis too).\n- Badminton (No\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport basketball played on a smaller court? (Wait, I already asked if it was basketball and it was no). Let me re-evaluate.\n\nSports played on a court:\n- Basketball (No)\n- Volleyball (No)\n- Handball (No)\n- Netball (No)\n- Table Tennis (No - played with a paddle/racket essentially, but I asked if it was played with a racket, and user said No. Table tennis uses a paddle. Is a paddle a racket? Usually yes. So No is likely correct for Table Tennis too).\n- Badminton (No\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a ball that is larger than a tennis ball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport squash?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a ball that is smaller than a tennis ball?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a ball that bounces?\n(Remember the player is trying to guess a sport, and the correct answer is Floorball. Reply with Yes or No in relation to Floorball.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

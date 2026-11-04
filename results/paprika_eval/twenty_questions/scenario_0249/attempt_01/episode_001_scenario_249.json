@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 249,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Painter",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation a medical professional?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation in the field of education?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation in the field of law or law enforcement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on creating or building physical objects (such as engineering, construction, or craftsmanship)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve working with computers or software (such as software development, IT support, or data analysis)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve working primarily with metal or machinery (such as a mechanic, welder, or machinist)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve working primarily with wood or furniture (such as a carpenter or cabinetmaker)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve designing or building structures like buildings, bridges, or roads (such as a civil engineer or architect)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve creating or manipulating visual media, such as graphics, illustrations, or design layouts (such as a graphic designer or industrial designer)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically that of a graphic designer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of an architect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of an industrial designer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of a fashion designer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of an interior designer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of a UX/UI designer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of an animator?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of a photographer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of a sculptor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of a cartoonist or comic book artist?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation that of an illustrator?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Painter."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation a medical professional?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation in the field of education?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation in the field of law or law enforcement?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on creating or building physical objects (such as engineering, construction, or craftsmanship)?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve working with computers or software (such as software development, IT support, or data analysis)?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve working primarily with metal or machinery (such as a mechanic, welder, or machinist)?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve working primarily with wood or furniture (such as a carpenter or cabinetmaker)?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve designing or building structures like buildings, bridges, or roads (such as a civil engineer or architect)?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve creating or manipulating visual media, such as graphics, illustrations, or design layouts (such as a graphic designer or industrial designer)?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically that of a graphic designer?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of an architect?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of an industrial designer?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of a fashion designer?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of an interior designer?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of a UX/UI designer?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of an animator?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of a photographer?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of a sculptor?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of a cartoonist or comic book artist?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation that of an illustrator?\n(Remember the player is trying to guess a occupation, and the correct answer is Painter. Reply with Yes or No in relation to Painter.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

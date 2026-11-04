@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 290,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Enlightenment",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to space exploration?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the discovery of a new scientific principle or technology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to a political revolution or change in government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the political revolution or change in government related to the American Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the political revolution or change in government related to the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Did the revolution take place in the 18th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Storming of the Bastille?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the establishment of the French First Republic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Reign of Terror?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the execution of King Louis XVI?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Reign of Terror?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Tennis Court Oath?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Declaration of the Rights of Man and of the Citizen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Flight to Varennes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Woman's March on Versailles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Coup of 18 Brumaire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the Tennis Court Oath?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the execution of the Duke of Orléans?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was the event the storming of the Tuileries Palace?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Enlightenment."
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to space exploration?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the discovery of a new scientific principle or technology?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to a political revolution or change in government?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the political revolution or change in government related to the American Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the political revolution or change in government related to the French Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Did the revolution take place in the 18th century?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Storming of the Bastille?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the establishment of the French First Republic?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Reign of Terror?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the execution of King Louis XVI?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Reign of Terror?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Tennis Court Oath?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Declaration of the Rights of Man and of the Citizen?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Flight to Varennes?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Woman's March on Versailles?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Coup of 18 Brumaire?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the Tennis Court Oath?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the execution of the Duke of Orléans?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was the event the storming of the Tuileries Palace?\n(Remember the player is trying to guess a historical event, and the correct answer is The Enlightenment. Reply with Yes or No in relation to The Enlightenment.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

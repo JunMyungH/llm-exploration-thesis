@@ -1,0 +1,35 @@
+Checking Ninja...
+/home/jh92/micromamba/envs/vllm-server/bin/ninja
+1.13.2
+====================================
+Job ID: 36296
+Node: cloud-206
+====================================
+GPU 0: NVIDIA A100 80GB PCIe (UUID: GPU-6b74378d-d133-0906-a6d4-e754bd67d5f9)
+GPU 1: NVIDIA A100 80GB PCIe (UUID: GPU-4cc7b360-c3cf-74e5-12d5-02a0b7f395e1)
+Starting vLLM...
+Waiting for API server...
+vLLM API is ready.
+====================================
+Experiment B: PAPRIKA Original
+Agent Thinking: ON
+Environment Thinking: OFF
+Judge Thinking: OFF
+====================================
+Testing Qwen response...
+{"id":"chatcmpl-8937958c6e01f1fe","object":"chat.completion","created":1793145621,"model":"Qwen/Qwen3.6-35B-A3B","choices":[{"index":0,"message":{"role":"assistant","content":null,"refusal":null,"annotations":null,"audio":null,"function_call":null,"reasoning":"Here's a thinking process:\n\n1.  **Analyze User Input:**\n   - **Request:** \"Say hello in one sentence.\"\n   - **Constraints:** Must be exactly one sentence. Must say hello.\n\n2.  **Identify Key Requirements:**\n   - Greeting: \"Hello\""},"logprobs":null,"finish_reason":"length","stop_reason":null,"token_ids":null,"routed_experts":null}],"service_tier":null,"system_fingerprint":"vllm-0.32.0-tp2-09f2fabb","usage":{"prompt_tokens":16,"total_tokens":80,"completion_tokens":64,"prompt_tokens_details":null,"completion_tokens_details":{"reasoning_tokens":64}},"prompt_logprobs":null,"prompt_token_ids":null,"prompt_text":null,"kv_transfer_params":null,"ec_transfer_params":null,"metrics":null}
+Starting Twenty Questions...
+Starting Experiment B...
+
+============================================================
+Game: twenty_questions
+Split: train
+Episodes: 1
+Mode: successive scenarios
+Output: results/twenty_questions/qwen36_thinking_on_36296
+============================================================
+Prompt mode: paprika
+
+[1/1] Scenario 0
+Category: clothing
+Hidden target: Corset

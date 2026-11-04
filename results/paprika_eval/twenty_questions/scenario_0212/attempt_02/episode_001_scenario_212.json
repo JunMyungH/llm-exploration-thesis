@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 212,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Steel Drums",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a member of the string family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the brass family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a member of the woodwind family?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a percussion instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pitched percussion instrument (meaning it produces specific musical notes, like a xylophone or timpani)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a keyboard instrument that is struck by hammers, such as a piano?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a mallet percussion instrument, such as a marimba, vibraphone, or xylophone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the instrument consist of a set of tuned metal bars that are struck with mallets?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a large drum that is tuned to specific pitches, such as a timpani?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cymbal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bell?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a glockenspiel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tambourine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a xylophone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a chime?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a musical saw?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a harp?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a celesta?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piano?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Steel Drums."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a member of the string family?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the brass family?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a member of the woodwind family?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a percussion instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pitched percussion instrument (meaning it produces specific musical notes, like a xylophone or timpani)?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a keyboard instrument that is struck by hammers, such as a piano?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a mallet percussion instrument, such as a marimba, vibraphone, or xylophone?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the instrument consist of a set of tuned metal bars that are struck with mallets?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a large drum that is tuned to specific pitches, such as a timpani?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cymbal?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bell?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a glockenspiel?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a triangle?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tambourine?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a xylophone?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a chime?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a musical saw?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a harp?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a celesta?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piano?\n(Remember the player is trying to guess a instrument, and the correct answer is Steel Drums. Reply with Yes or No in relation to Steel Drums.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

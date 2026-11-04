@@ -1,0 +1,358 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 114,
+  "agent_game_scenario": "movie",
+  "env_game_scenario": "Guardians of the Galaxy",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a live-action film released after the year 2000?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie a science fiction or fantasy film?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie set in space or involves space travel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of a major franchise (e.g., Star Wars, Marvel, DC)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Star Wars franchise?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Marvel Cinematic Universe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Thor?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Iron Man (Tony Stark)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Captain America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Black Widow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Thor? (Wait, I already asked that. Let me re-evaluate.)\n\nIs the movie primarily focused on the character Doctor Strange?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Black Panther?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie primarily focused on the character Black Panther? (Wait, I already asked that. Let me re-evaluate.)\n\nIs the movie primarily focused on the character Doctor Strange? (Wait, I already asked that. Let me re-evaluate.)\n\nIs the movie primarily focused on the character Spider-Man?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the first phase of the Marvel Cinematic Universe (released between 2008 and 2012)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie part of the Infinity Saga (Phase 1 through Phase 3)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie released after 2012?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie released after 2015?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie released after 2013?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the movie *Guardians of the Galaxy*?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Guardians of the Galaxy."
+    },
+    {
+      "role": "user",
+      "content": "Is the movie animated?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a live-action film released after the year 2000?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie a science fiction or fantasy film?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie set in space or involves space travel?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of a major franchise (e.g., Star Wars, Marvel, DC)?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Star Wars franchise?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Marvel Cinematic Universe?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Thor?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Iron Man (Tony Stark)?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Captain America?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Black Widow?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Thor? (Wait, I already asked that. Let me re-evaluate.)\n\nIs the movie primarily focused on the character Doctor Strange?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Black Panther?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie primarily focused on the character Black Panther? (Wait, I already asked that. Let me re-evaluate.)\n\nIs the movie primarily focused on the character Doctor Strange? (Wait, I already asked that. Let me re-evaluate.)\n\nIs the movie primarily focused on the character Spider-Man?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the first phase of the Marvel Cinematic Universe (released between 2008 and 2012)?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie part of the Infinity Saga (Phase 1 through Phase 3)?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie released after 2012?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie released after 2015?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie released after 2013?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the movie *Guardians of the Galaxy*?\n(Remember the player is trying to guess a movie, and the correct answer is Guardians of the Galaxy. Reply with Yes or No in relation to Guardians of the Galaxy.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Guardians of the Galaxy in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct movie, which is: Guardians of the Galaxy, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the movie *Guardians of the Galaxy*?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct movie, which is Guardians of the Galaxy in this particular game. Reply with <VALID> only if the player has guessed Guardians of the Galaxy in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Guardians of the Galaxy is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

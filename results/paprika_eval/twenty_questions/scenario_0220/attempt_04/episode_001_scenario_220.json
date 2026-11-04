@@ -1,0 +1,358 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 220,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Bathrobe",
+  "goal_reached": true,
+  "judge_label": false,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item typically worn on the feet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item typically worn on the head?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item typically worn on the upper body (covering the torso)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item usually long-sleeved?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item made of knitted fabric (like wool or cotton)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a sweater?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a jacket?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a hoodie?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a coat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a shirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a dress?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a blouse?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a vest?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item typically worn as outerwear in cold weather?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a jacket?\nWait, I already asked that. Let me re-evaluate.\n\nIt is:\n- Worn on the upper body.\n- Long-sleeved.\n- Made of knitted fabric.\n- Not a sweater, jacket, hoodie, coat, shirt, dress, blouse, or vest.\n- Not typically worn as outerwear in cold weather.\n\nKnitted fabric, upper body, long sleeves, not sweaters/jackets/coats. Could it be a cardigan? Or perhaps something more specific like a pullover (which is often synonymous with sweater, but maybe distinct"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a cardigan?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a turtleneck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a poncho?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item a robe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Great! I guessed it correctly. The clothing item is a **robe**.\n\nThanks for playing 20 Questions!"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Bathrobe."
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item typically worn on the feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item typically worn on the head?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item typically worn on the upper body (covering the torso)?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item usually long-sleeved?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item made of knitted fabric (like wool or cotton)?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a sweater?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a jacket?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a hoodie?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a coat?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a shirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a dress?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a blouse?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a vest?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item typically worn as outerwear in cold weather?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a jacket?\nWait, I already asked that. Let me re-evaluate.\n\nIt is:\n- Worn on the upper body.\n- Long-sleeved.\n- Made of knitted fabric.\n- Not a sweater, jacket, hoodie, coat, shirt, dress, blouse, or vest.\n- Not typically worn as outerwear in cold weather.\n\nKnitted fabric, upper body, long sleeves, not sweaters/jackets/coats. Could it be a cardigan? Or perhaps something more specific like a pullover (which is often synonymous with sweater, but maybe distinct\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a cardigan?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a turtleneck?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a poncho?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item a robe?\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Great! I guessed it correctly. The clothing item is a **robe**.\n\nThanks for playing 20 Questions!\n(Remember the player is trying to guess a clothing, and the correct answer is Bathrobe. Reply with Yes or No in relation to Bathrobe.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Bathrobe in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct clothing, which is: Bathrobe, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Great! I guessed it correctly. The clothing item is a **robe**.\n\nThanks for playing 20 Questions!\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct clothing, which is Bathrobe in this particular game. Reply with <VALID> only if the player has guessed Bathrobe in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Bathrobe is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<NOTVALID>"
+    }
+  ]
+}

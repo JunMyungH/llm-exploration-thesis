@@ -1,0 +1,310 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 180,
+  "agent_game_scenario": "sport",
+  "env_game_scenario": "Weightlifting",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 17,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a sport. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played indoors?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on a court?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on water?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on ice?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on a track?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played in a pool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played with a ball?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on a mat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played in a ring?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport played on a table?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport a form of martial arts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport related to gymnastics or dance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport a racing sport (e.g., cars, bicycles, horses)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport an Olympic sport?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport an individual sport (as opposed to a team sport)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport focused on strength and power (e.g., weightlifting, shot put)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the sport weightlifting?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a sport, and the correct answer is Weightlifting."
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played indoors?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on a court?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on water?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on ice?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on a track?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played in a pool?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played with a ball?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on a mat?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played in a ring?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport played on a table?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport a form of martial arts?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport related to gymnastics or dance?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport a racing sport (e.g., cars, bicycles, horses)?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport an Olympic sport?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport an individual sport (as opposed to a team sport)?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport focused on strength and power (e.g., weightlifting, shot put)?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the sport weightlifting?\n(Remember the player is trying to guess a sport, and the correct answer is Weightlifting. Reply with Yes or No in relation to Weightlifting.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Weightlifting in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct sport, which is: Weightlifting, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the sport weightlifting?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct sport, which is Weightlifting in this particular game. Reply with <VALID> only if the player has guessed Weightlifting in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Weightlifting is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

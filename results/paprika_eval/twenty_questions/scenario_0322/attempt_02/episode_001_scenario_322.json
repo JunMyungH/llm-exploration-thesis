@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 322,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Contact Lenses",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention primarily used for transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for storing or preserving food?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to writing or reading?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to measuring or timing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for cleaning or hygiene?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for lighting or fire?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to construction or building?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to entertainment or games?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for sewing or textiles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to agriculture or farming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to tools or hardware?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to cooking or food preparation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to music?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention related to medicine or healthcare?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention a diagnostic tool?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for surgery or surgical procedures?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for treating or curing diseases?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this invention used for protecting health or preventing disease?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Contact Lenses."
+    },
+    {
+      "role": "user",
+      "content": "Is this invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention primarily used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for storing or preserving food?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to writing or reading?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to measuring or timing?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for cleaning or hygiene?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for lighting or fire?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to construction or building?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to entertainment or games?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for sewing or textiles?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to agriculture or farming?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to tools or hardware?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to music?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention related to medicine or healthcare?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention a diagnostic tool?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for surgery or surgical procedures?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for treating or curing diseases?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this invention used for protecting health or preventing disease?\n(Remember the player is trying to guess a invention, and the correct answer is Contact Lenses. Reply with Yes or No in relation to Contact Lenses.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

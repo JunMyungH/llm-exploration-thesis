@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 299,
+  "agent_game_scenario": "shape",
+  "env_game_scenario": "Oval",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a polygon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a circle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a sphere?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape an ellipse?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a 2-dimensional ellipse?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape horizontally elongated?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this shape commonly associated with a planet's orbit?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape specifically an elliptical orbit?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have successfully identified the shape as an elliptical orbit.\n\nMy final guess is: **Elliptical Orbit**"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "That's interesting! Since it is a 2D ellipse, horizontally elongated, and associated with a planet's orbit, but it is *not* an elliptical orbit, let me re-evaluate.\n\nPerhaps the \"association\" is the key. What is the most common visual representation of a planet's path that is an ellipse? Or is it a specific object often depicted as an ellipse in that context?\n\nLet's try a different angle. Is this shape a specific geometric figure used in astronomy or physics, but distinct from the orbit itself?\n\nOr maybe... is the shape a **planet** itself (which is a"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, let's backtrack. It is a 2D ellipse, horizontally elongated, associated with a planet's orbit, but it is not the orbit itself and not a planet.\n\nCould it be the **Sun**? (Often depicted at one focus of the elliptical orbit).\n\nLet's ask: Is the shape the central body around which the planet orbits?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape the planet itself?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape an **asteroid**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **comet**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **moon**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **galaxy**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **ring** (like Saturn's rings)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **heart**? (Often drawn as an ellipse or two lobes, but sometimes loosely associated with orbits in abstract art? No, that's a stretch. Let's stick to the orbit clue.)\n\nLet's go back to the properties:\n1. It is a 2D ellipse.\n2. It is horizontally elongated.\n3. It is associated with a planet's orbit.\n4. It is NOT the orbit itself.\n5. It is NOT the planet, sun, moon, asteroid, comet, or galaxy.\n\nWhat else is an ellipse and associated with orbits?\n\nIs the"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **planet**? (Wait, I already asked that and got No. Let me try a different object often depicted in orbital diagrams.)\n\nIs the shape a **dwarf planet**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a **meteor**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Oval."
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a sphere?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape an ellipse?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a 2-dimensional ellipse?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape horizontally elongated?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this shape commonly associated with a planet's orbit?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape specifically an elliptical orbit?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have successfully identified the shape as an elliptical orbit.\n\nMy final guess is: **Elliptical Orbit**\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "That's interesting! Since it is a 2D ellipse, horizontally elongated, and associated with a planet's orbit, but it is *not* an elliptical orbit, let me re-evaluate.\n\nPerhaps the \"association\" is the key. What is the most common visual representation of a planet's path that is an ellipse? Or is it a specific object often depicted as an ellipse in that context?\n\nLet's try a different angle. Is this shape a specific geometric figure used in astronomy or physics, but distinct from the orbit itself?\n\nOr maybe... is the shape a **planet** itself (which is a\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, let's backtrack. It is a 2D ellipse, horizontally elongated, associated with a planet's orbit, but it is not the orbit itself and not a planet.\n\nCould it be the **Sun**? (Often depicted at one focus of the elliptical orbit).\n\nLet's ask: Is the shape the central body around which the planet orbits?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape the planet itself?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape an **asteroid**?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **comet**?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **moon**?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **galaxy**?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **ring** (like Saturn's rings)?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **heart**? (Often drawn as an ellipse or two lobes, but sometimes loosely associated with orbits in abstract art? No, that's a stretch. Let's stick to the orbit clue.)\n\nLet's go back to the properties:\n1. It is a 2D ellipse.\n2. It is horizontally elongated.\n3. It is associated with a planet's orbit.\n4. It is NOT the orbit itself.\n5. It is NOT the planet, sun, moon, asteroid, comet, or galaxy.\n\nWhat else is an ellipse and associated with orbits?\n\nIs the\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **planet**? (Wait, I already asked that and got No. Let me try a different object often depicted in orbital diagrams.)\n\nIs the shape a **dwarf planet**?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a **meteor**?\n(Remember the player is trying to guess a shape, and the correct answer is Oval. Reply with Yes or No in relation to Oval.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

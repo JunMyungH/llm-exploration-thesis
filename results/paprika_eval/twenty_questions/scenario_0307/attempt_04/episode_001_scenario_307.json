@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 307,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Firestorm",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon a natural occurrence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon created by humans?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to technology or computing?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to artificial intelligence or machine learning?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to Large Language Models (LLMs)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to the \"Hallucination\" effect, where an AI generates false or misleading information?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon related to \"Overfitting,\" where a model performs well on training data but poorly on new data?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon known as \"The Curse of Dimensionality\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Alignment Problem\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Black Box Problem\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Cold Start Problem\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Bias-Variance Tradeoff\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Turing Test\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Lottery Ticket Hypothesis\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Exploding Gradient Problem\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Imitation Game\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Singularity\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Echo Chamber\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Filter Bubble\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon \"The Synergy Effect\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Firestorm."
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon a natural occurrence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon created by humans?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to technology or computing?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to artificial intelligence or machine learning?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to Large Language Models (LLMs)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to the \"Hallucination\" effect, where an AI generates false or misleading information?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon related to \"Overfitting,\" where a model performs well on training data but poorly on new data?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon known as \"The Curse of Dimensionality\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Alignment Problem\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Black Box Problem\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Cold Start Problem\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Bias-Variance Tradeoff\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Turing Test\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Lottery Ticket Hypothesis\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Exploding Gradient Problem\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Imitation Game\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Singularity\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Echo Chamber\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Filter Bubble\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon \"The Synergy Effect\"?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Firestorm. Reply with Yes or No in relation to Firestorm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

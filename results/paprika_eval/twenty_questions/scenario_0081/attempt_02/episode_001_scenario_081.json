@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 81,
+  "agent_game_scenario": "person",
+  "env_game_scenario": "Alexander Hamilton",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person alive?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person primarily known for their contributions to science or politics?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Albert Einstein?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Albert Einstein?\n**No**\n\nOkay, so he wasn't Einstein. Let's narrow down the \"science or politics\" category.\n\nIs this person primarily known for their work in science?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a politician from the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a politician from the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a politician from the ancient world (e.g., Roman, Greek, Egyptian)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a politician from before the 19th century (e.g., 18th century or earlier)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a president of the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person a monarch (king or queen)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person primarily known for leading a revolution or being a revolutionary leader?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person George Washington?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Napoleon Bonaparte?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Simón Bolívar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person from the Americas?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person Simón Bolívar?\n**No**\n\nOkay, so it's not Bolívar. We know:\n- Male\n- Deceased\n- Politician/Leader\n- 18th century or earlier (so died before ~1800)\n- Not a US President\n- Not a Monarch\n- Revolutionary leader\n- From the Americas\n\nWait, if he died before 1800, he can't be Simón Bolívar (who died in 1830). My previous guess of Bolívar was wrong on the timeline too, though you answered \"No\""
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person from South America?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person from North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this person from the Caribbean?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Alexander Hamilton."
+    },
+    {
+      "role": "user",
+      "content": "Is this person male?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person alive?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person primarily known for their contributions to science or politics?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Albert Einstein?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Albert Einstein?\n**No**\n\nOkay, so he wasn't Einstein. Let's narrow down the \"science or politics\" category.\n\nIs this person primarily known for their work in science?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a politician from the 20th century?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a politician from the 19th century?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a politician from the ancient world (e.g., Roman, Greek, Egyptian)?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a politician from before the 19th century (e.g., 18th century or earlier)?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a president of the United States?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person a monarch (king or queen)?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person primarily known for leading a revolution or being a revolutionary leader?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person George Washington?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Napoleon Bonaparte?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Simón Bolívar?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person from the Americas?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person Simón Bolívar?\n**No**\n\nOkay, so it's not Bolívar. We know:\n- Male\n- Deceased\n- Politician/Leader\n- 18th century or earlier (so died before ~1800)\n- Not a US President\n- Not a Monarch\n- Revolutionary leader\n- From the Americas\n\nWait, if he died before 1800, he can't be Simón Bolívar (who died in 1830). My previous guess of Bolívar was wrong on the timeline too, though you answered \"No\"\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person from South America?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this person from North America?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this person from the Caribbean?\n(Remember the player is trying to guess a person, and the correct answer is Alexander Hamilton. Reply with Yes or No in relation to Alexander Hamilton.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

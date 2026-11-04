@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 273,
+  "agent_game_scenario": "tv show",
+  "env_game_scenario": "America's Got Talent",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a tv show. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show currently airing?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show animated?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a comedy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a drama?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the TV show a reality show?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the reality show a competition involving talent or performance (such as singing or dancing)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show primarily focused on singing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on dancing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on cooking?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on singing or dancing judges/mentors rather than the contestants themselves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on a specific sport or athletic competition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on building or crafting?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on survival or wilderness skills?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on dating or relationships?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on business, entrepreneurship, or investing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on fashion or design?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on home renovation or real estate?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on mystery solving or detective work?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on driving or racing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the show focused on magic or illusions?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a tv show, and the correct answer is America's Got Talent."
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show currently airing?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show animated?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a comedy?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a drama?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the TV show a reality show?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the reality show a competition involving talent or performance (such as singing or dancing)?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the show primarily focused on singing?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on dancing?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on cooking?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on singing or dancing judges/mentors rather than the contestants themselves?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on a specific sport or athletic competition?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on building or crafting?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on survival or wilderness skills?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on dating or relationships?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on business, entrepreneurship, or investing?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on fashion or design?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on home renovation or real estate?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on mystery solving or detective work?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on driving or racing?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the show focused on magic or illusions?\n(Remember the player is trying to guess a tv show, and the correct answer is America's Got Talent. Reply with Yes or No in relation to America's Got Talent.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

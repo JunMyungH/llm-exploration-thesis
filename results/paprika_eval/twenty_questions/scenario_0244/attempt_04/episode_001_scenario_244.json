@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 244,
+  "agent_game_scenario": "brand",
+  "env_game_scenario": "Harley-Davidson",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for technology products?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand known for clothing or apparel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily focused on athletic wear or sportswear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand known for luxury fashion items?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for casual everyday wear, such as jeans and t-shirts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for footwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for children's clothing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for lingerie or sleepwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for formal wear or suits?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for swimwear or beachwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for accessories, such as bags, belts, or jewelry?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for bags, such as handbags or backpacks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for jewelry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for watches?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for sunglasses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for scarves or hats?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for belts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for eyewear other than sunglasses, such as prescription glasses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for jewelry accessories like earrings, necklaces, or bracelets?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this brand primarily known for ties or neckwear?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is Harley-Davidson."
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for technology products?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand known for clothing or apparel?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily focused on athletic wear or sportswear?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand known for luxury fashion items?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for casual everyday wear, such as jeans and t-shirts?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for footwear?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for children's clothing?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for lingerie or sleepwear?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for formal wear or suits?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for swimwear or beachwear?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for accessories, such as bags, belts, or jewelry?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for bags, such as handbags or backpacks?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for jewelry?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for watches?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for sunglasses?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for scarves or hats?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for belts?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for eyewear other than sunglasses, such as prescription glasses?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for jewelry accessories like earrings, necklaces, or bracelets?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this brand primarily known for ties or neckwear?\n(Remember the player is trying to guess a brand, and the correct answer is Harley-Davidson. Reply with Yes or No in relation to Harley-Davidson.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

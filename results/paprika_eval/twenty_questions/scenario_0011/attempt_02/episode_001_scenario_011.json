@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 11,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Glass Harp",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a wind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a percussion instrument?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it have keys?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a drum?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it produce sound by shaking or rattling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it produce sound by striking it with mallets?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it produce sound by striking it with drumsticks?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it produce sound by striking it with the hands?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it produce sound by scraping a stick across a textured surface?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it produce sound by rubbing a bow across strings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does it have a metal body that is struck?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a xylophone?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a marimba?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a piano?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a guitar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a triangle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a cymbal?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a tambourine?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a bell?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Glass Harp."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a wind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a percussion instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does it have keys?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a drum?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it produce sound by shaking or rattling?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it produce sound by striking it with mallets?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it produce sound by striking it with drumsticks?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it produce sound by striking it with the hands?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it produce sound by scraping a stick across a textured surface?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it produce sound by rubbing a bow across strings?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does it have a metal body that is struck?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a xylophone?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a marimba?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a piano?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a guitar?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a triangle?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a cymbal?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a tambourine?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a bell?\n(Remember the player is trying to guess a instrument, and the correct answer is Glass Harp. Reply with Yes or No in relation to Glass Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 314,
+  "agent_game_scenario": "weather",
+  "env_game_scenario": "Pollen Storm",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a weather. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the weather phenomenon associated with water falling from the sky (precipitation)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the weather phenomenon primarily associated with moving air (wind)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the wind speed high enough to be classified as a storm (e.g., hurricane, tornado, or gale)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a tornado?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a hurricane (or typhoon/cyclone)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a blizzard?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a dust storm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a monsoon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a thunderstorm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a microburst?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a tornado warning or a specific type of wind event like a squall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a heatwave?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a cold wave?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a fog?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a sandstorm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a whirlwind?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a hurricane? (I know I asked this earlier, but I want to ensure I didn't miss the nuance. If no, is it a typhoon or cyclone?) -> *Wait, I already asked if it was a hurricane/typhoon/cyclone.*\n\nLet's re-evaluate.\n1. Not precipitation (No rain/snow/hail).\n2. Is moving air (Yes).\n3. High wind speed/Storm (Yes).\n4. Not Tornado.\n5. Not Hurricane/Typhoon/Cyclone.\n6. Not Blizzard.\n7. Not Dust"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a heatwave?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a cold wave?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon a heat dome?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a weather, and the correct answer is Pollen Storm."
+    },
+    {
+      "role": "user",
+      "content": "Is the weather phenomenon associated with water falling from the sky (precipitation)?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the weather phenomenon primarily associated with moving air (wind)?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the wind speed high enough to be classified as a storm (e.g., hurricane, tornado, or gale)?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a tornado?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a hurricane (or typhoon/cyclone)?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a blizzard?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a dust storm?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a monsoon?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a thunderstorm?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a microburst?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a tornado warning or a specific type of wind event like a squall?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a heatwave?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a cold wave?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a fog?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a sandstorm?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a whirlwind?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a hurricane? (I know I asked this earlier, but I want to ensure I didn't miss the nuance. If no, is it a typhoon or cyclone?) -> *Wait, I already asked if it was a hurricane/typhoon/cyclone.*\n\nLet's re-evaluate.\n1. Not precipitation (No rain/snow/hail).\n2. Is moving air (Yes).\n3. High wind speed/Storm (Yes).\n4. Not Tornado.\n5. Not Hurricane/Typhoon/Cyclone.\n6. Not Blizzard.\n7. Not Dust\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a heatwave?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a cold wave?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon a heat dome?\n(Remember the player is trying to guess a weather, and the correct answer is Pollen Storm. Reply with Yes or No in relation to Pollen Storm.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

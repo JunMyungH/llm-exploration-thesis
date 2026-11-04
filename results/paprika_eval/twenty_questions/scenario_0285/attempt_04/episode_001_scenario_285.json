@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 285,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "Gandhi's Salt March",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a political revolution or the establishment of a new government?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the French Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the American Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Russian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the English Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Haitian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Glorious Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the October Revolution (also known as the Bolshevik Revolution)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the May Fourth Movement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the fall of the Berlin Wall?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the American Civil War?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Haitian Revolution? (I previously asked this, but let me re-evaluate the scope. Since it's not a war, not the French/American/Russian/English/Haitian/US Civil Wars, and not the Berlin Wall, let's look at other major revolutions.)\n\nIs the event the Mexican Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Iranian Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the end of apartheid in South Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Cuban Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Velvet Revolution?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Arab Spring?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the American Revolution (specifically, did it happen in the 18th century)? *Wait, I already asked if it was the American Revolution and the answer was No.*\n\nLet's backtrack. It's a political revolution/new government, but not a war. It's not French, American, Russian, English Civil War, Haitian, Glorious, October, May Fourth, Berlin Wall, Civil War, Mexican, Iranian, Apartheid end, Cuban, Velvet, or Arab Spring.\n\nCould it be the **Russian Revolution** but perhaps my previous assumption was wrong? No, I asked that.\n\nLet"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event the Glorious Revolution? *I already asked this.*\n\nLet's try a different angle. Is the revolution related to the independence of a country from a colonial power?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is Gandhi's Salt March."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a political revolution or the establishment of a new government?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the French Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the American Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Russian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the English Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Haitian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Glorious Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the October Revolution (also known as the Bolshevik Revolution)?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the May Fourth Movement?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the fall of the Berlin Wall?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the American Civil War?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Haitian Revolution? (I previously asked this, but let me re-evaluate the scope. Since it's not a war, not the French/American/Russian/English/Haitian/US Civil Wars, and not the Berlin Wall, let's look at other major revolutions.)\n\nIs the event the Mexican Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Iranian Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the end of apartheid in South Africa?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Cuban Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Velvet Revolution?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Arab Spring?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the American Revolution (specifically, did it happen in the 18th century)? *Wait, I already asked if it was the American Revolution and the answer was No.*\n\nLet's backtrack. It's a political revolution/new government, but not a war. It's not French, American, Russian, English Civil War, Haitian, Glorious, October, May Fourth, Berlin Wall, Civil War, Mexican, Iranian, Apartheid end, Cuban, Velvet, or Arab Spring.\n\nCould it be the **Russian Revolution** but perhaps my previous assumption was wrong? No, I asked that.\n\nLet\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event the Glorious Revolution? *I already asked this.*\n\nLet's try a different angle. Is the revolution related to the independence of a country from a colonial power?\n(Remember the player is trying to guess a historical event, and the correct answer is Gandhi's Salt March. Reply with Yes or No in relation to Gandhi's Salt March.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 255,
+  "agent_game_scenario": "occupation",
+  "env_game_scenario": "Mobile App Developer",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a occupation. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on helping people with their physical or mental health?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on creating, building, or repairing physical objects or infrastructure?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on managing finances, business operations, or commercial transactions?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on education, training, or academic research?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on the creation of art, music, writing, or other forms of entertainment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on law, public safety, or military service?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on information technology, computer science, or data analysis?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on hardware (such as computers, servers, or networking equipment) rather than software development?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation primarily focused on software development or programming?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve designing and building mobile applications (such as for iOS or Android)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically focused on developing applications for the Apple iOS platform using Swift?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically focused on developing applications for the Android platform using Java or Kotlin?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve using cross-platform frameworks like React Native or Flutter?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation primarily involve using JavaScript (specifically React Native)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation primarily involve using Dart (specifically Flutter)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve using other cross-platform frameworks, such as Xamarin or Ionic?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically focused on using Microsoft's .NET framework (Xamarin or MAUI)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the occupation involve using web technologies (HTML, CSS, JavaScript) to build the app (specifically Ionic or similar hybrid frameworks)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically known as a \"Hybrid Mobile Developer\" or \"Ionic Developer\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the occupation specifically known as a \"Mobile Web Developer\"?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a occupation, and the correct answer is Mobile App Developer."
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on helping people with their physical or mental health?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on creating, building, or repairing physical objects or infrastructure?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on managing finances, business operations, or commercial transactions?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on education, training, or academic research?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on the creation of art, music, writing, or other forms of entertainment?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on law, public safety, or military service?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on information technology, computer science, or data analysis?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on hardware (such as computers, servers, or networking equipment) rather than software development?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation primarily focused on software development or programming?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve designing and building mobile applications (such as for iOS or Android)?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically focused on developing applications for the Apple iOS platform using Swift?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically focused on developing applications for the Android platform using Java or Kotlin?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve using cross-platform frameworks like React Native or Flutter?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation primarily involve using JavaScript (specifically React Native)?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation primarily involve using Dart (specifically Flutter)?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve using other cross-platform frameworks, such as Xamarin or Ionic?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically focused on using Microsoft's .NET framework (Xamarin or MAUI)?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the occupation involve using web technologies (HTML, CSS, JavaScript) to build the app (specifically Ionic or similar hybrid frameworks)?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically known as a \"Hybrid Mobile Developer\" or \"Ionic Developer\"?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the occupation specifically known as a \"Mobile Web Developer\"?\n(Remember the player is trying to guess a occupation, and the correct answer is Mobile App Developer. Reply with Yes or No in relation to Mobile App Developer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

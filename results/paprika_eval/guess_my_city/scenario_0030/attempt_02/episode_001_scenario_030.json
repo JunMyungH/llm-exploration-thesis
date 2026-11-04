@@ -1,0 +1,345 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 30,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Rawalpindi, Pakistan",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play 'Guess My City.' I will start by narrowing down the general location and characteristics of the city.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 2:** Is your home city located in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 3:** Is your home city located in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 4:** Is your home city located in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 5:** Is your home city located in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 6:** Is your home city the capital city of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 7:** Is your home city located in India?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 8:** Is your home city located in Pakistan?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 9:** Is your home city the capital of Pakistan? (Note: I ask this to confirm it is *not* Islamabad, as we established it's not the national capital, but I want to be precise about provincial capitals or major hubs).\n\n*Correction/Refinement based on Q6:* Since Q6 established it is **not** the national capital, I will assume the answer to \"Is it the capital of Pakistan?\" is No. Let's move to size/population.\n\n**Question 9:** Is your home city one of the largest cities in Pakistan by population (e.g., Karachi, Lahore,"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 10:** Is your home city Karachi?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 11:** Is your home city Lahore?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 12:** Is your home city the capital of the province of Punjab?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 13:** Is your home city located in the province of Sindh?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 14:** Is your home city located in the province of Khyber Pakhtunkhwa?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 15:** Is your home city located in the province of Balochistan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 16:** Is your home city located in the Islamabad Capital Territory?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 17:** Is your home city Islamabad?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is tricky. We know:\n1. It is in Pakistan.\n2. It is a major city (top by population).\n3. It is **not** the national capital (Islamabad).\n4. It is **not** Karachi (Sindh).\n5. It is **not** Lahore (Punjab).\n6. It is **not** in Khyber Pakhtunkhwa (Peshawar, etc.).\n7. It is **not** in Balochistan (Quetta, etc.).\n8. It is **not** Islamabad.\n\nThe only other major"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 17:** Is your home city Islamabad?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is a contradiction in my previous logic. If the city is in the Islamabad Capital Territory, and it is not Islamabad, and it is a major city, there are no other major cities in that territory.\n\nLet me re-evaluate the province question.\nQ6: Not national capital.\nQ7: Not India.\nQ8: Pakistan.\nQ10: Not Karachi.\nQ11: Not Lahore.\nQ12: Not capital of Punjab (Lahore is, so this implies it's not Lahore, which we already knew, but maybe it's not a provincial capital at all?)."
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Rawalpindi, Pakistan"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play 'Guess My City.' I will start by narrowing down the general location and characteristics of the city.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 2:** Is your home city located in Europe?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 3:** Is your home city located in Asia?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 4:** Is your home city located in East Asia?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 5:** Is your home city located in South Asia?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 6:** Is your home city the capital city of its country?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 7:** Is your home city located in India?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 8:** Is your home city located in Pakistan?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 9:** Is your home city the capital of Pakistan? (Note: I ask this to confirm it is *not* Islamabad, as we established it's not the national capital, but I want to be precise about provincial capitals or major hubs).\n\n*Correction/Refinement based on Q6:* Since Q6 established it is **not** the national capital, I will assume the answer to \"Is it the capital of Pakistan?\" is No. Let's move to size/population.\n\n**Question 9:** Is your home city one of the largest cities in Pakistan by population (e.g., Karachi, Lahore,\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 10:** Is your home city Karachi?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 11:** Is your home city Lahore?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 12:** Is your home city the capital of the province of Punjab?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 13:** Is your home city located in the province of Sindh?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 14:** Is your home city located in the province of Khyber Pakhtunkhwa?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 15:** Is your home city located in the province of Balochistan?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "**Question 16:** Is your home city located in the Islamabad Capital Territory?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 17:** Is your home city Islamabad?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is tricky. We know:\n1. It is in Pakistan.\n2. It is a major city (top by population).\n3. It is **not** the national capital (Islamabad).\n4. It is **not** Karachi (Sindh).\n5. It is **not** Lahore (Punjab).\n6. It is **not** in Khyber Pakhtunkhwa (Peshawar, etc.).\n7. It is **not** in Balochistan (Quetta, etc.).\n8. It is **not** Islamabad.\n\nThe only other major\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 17:** Is your home city Islamabad?\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is a contradiction in my previous logic. If the city is in the Islamabad Capital Territory, and it is not Islamabad, and it is a major city, there are no other major cities in that territory.\n\nLet me re-evaluate the province question.\nQ6: Not national capital.\nQ7: Not India.\nQ8: Pakistan.\nQ10: Not Karachi.\nQ11: Not Lahore.\nQ12: Not capital of Punjab (Lahore is, so this implies it's not Lahore, which we already knew, but maybe it's not a provincial capital at all?).\n(Remember the player is trying to guess a city, and the correct answer is Rawalpindi, Pakistan. Reply to the question in relation to Rawalpindi, Pakistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    }
+  ],
+  "judge_conversation": null
+}

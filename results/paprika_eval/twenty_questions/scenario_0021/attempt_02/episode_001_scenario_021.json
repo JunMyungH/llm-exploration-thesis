@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 21,
+  "agent_game_scenario": "clothing",
+  "env_game_scenario": "Ankle Socks",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the upper body?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the clothing item worn on the lower body?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it pants or trousers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a skirt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it underwear or shorts?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of footwear, such as shoes or boots?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a dress?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of hat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it worn on the feet, such as socks or stockings?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it socks?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I have guessed it! The answer is socks."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it stockings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it shoes?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it boots?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it sandals?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it slippers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of shoe accessory, such as insoles or toe separators?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it mittens or gloves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a scarf?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a belt?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Ankle Socks."
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the clothing item worn on the lower body?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it pants or trousers?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a skirt?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it underwear or shorts?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of footwear, such as shoes or boots?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a dress?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of hat?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it worn on the feet, such as socks or stockings?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it socks?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I have guessed it! The answer is socks.\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it stockings?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it shoes?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it boots?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it sandals?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it slippers?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of shoe accessory, such as insoles or toe separators?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it mittens or gloves?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a scarf?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a belt?\n(Remember the player is trying to guess a clothing, and the correct answer is Ankle Socks. Reply with Yes or No in relation to Ankle Socks.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

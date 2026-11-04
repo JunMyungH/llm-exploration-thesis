@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 302,
+  "agent_game_scenario": "shape",
+  "env_game_scenario": "Semi-circle",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a polygon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have straight edges?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly four sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly three sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly five sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly six sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly seven sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have more than seven sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly eight sides?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly two sides?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a lune?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a digon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, a digon is technically a two-sided polygon in spherical geometry, but in standard Euclidean geometry, it's degenerate. However, you said \"No\" to digon.\n\nLet's backtrack.\n1. Is it a polygon? No.\n2. Does it have straight edges? Yes.\n3. Exactly 4 sides? No.\n3. Exactly 3 sides? No.\n...\n2. Exactly 2 sides? Yes.\n\nIf it has straight edges and exactly two sides, but isn't a standard polygon, it might be a **lens** (which is usually curved)"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have any curved edges?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape composed of two straight lines and two curved lines?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly one curved edge?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a circle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the shape a sector?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have two straight edges and one curved edge?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Does the shape have exactly one straight edge and one curved edge?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Semi-circle."
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have straight edges?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly four sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly three sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly five sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly six sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly seven sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have more than seven sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly eight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly two sides?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a lune?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a digon?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, a digon is technically a two-sided polygon in spherical geometry, but in standard Euclidean geometry, it's degenerate. However, you said \"No\" to digon.\n\nLet's backtrack.\n1. Is it a polygon? No.\n2. Does it have straight edges? Yes.\n3. Exactly 4 sides? No.\n3. Exactly 3 sides? No.\n...\n2. Exactly 2 sides? Yes.\n\nIf it has straight edges and exactly two sides, but isn't a standard polygon, it might be a **lens** (which is usually curved)\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have any curved edges?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape composed of two straight lines and two curved lines?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly one curved edge?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the shape a sector?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have two straight edges and one curved edge?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Does the shape have exactly one straight edge and one curved edge?\n(Remember the player is trying to guess a shape, and the correct answer is Semi-circle. Reply with Yes or No in relation to Semi-circle.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}

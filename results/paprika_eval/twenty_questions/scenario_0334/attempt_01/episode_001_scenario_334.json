@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 334,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Membrane Theory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept concrete (i.e., can it be perceived by the senses, such as seen, touched, or heard)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to physics or the natural sciences (e.g., energy, force, gravity)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a fundamental force of nature?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to thermodynamics (e.g., heat, temperature, entropy)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum mechanics (e.g., wave-particle duality, uncertainty principle)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the behavior of particles at the subatomic level, specifically involving probability or superposition?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the Heisenberg Uncertainty Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept wave-particle duality?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept quantum entanglement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept quantum tunneling?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to quantum computing (e.g., qubits, superposition in computation)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept quantum decoherence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept quantization (the idea that physical properties like energy come in discrete packets)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the Pauli Exclusion Principle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept wave function collapse?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Schrödinger's Cat?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept wave function?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the photoelectric effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the Compton effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept the double-slit experiment?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Membrane Theory."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept concrete (i.e., can it be perceived by the senses, such as seen, touched, or heard)?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to physics or the natural sciences (e.g., energy, force, gravity)?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a fundamental force of nature?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to thermodynamics (e.g., heat, temperature, entropy)?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum mechanics (e.g., wave-particle duality, uncertainty principle)?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the behavior of particles at the subatomic level, specifically involving probability or superposition?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the Heisenberg Uncertainty Principle?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept wave-particle duality?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept quantum entanglement?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept quantum tunneling?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to quantum computing (e.g., qubits, superposition in computation)?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept quantum decoherence?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept quantization (the idea that physical properties like energy come in discrete packets)?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the Pauli Exclusion Principle?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept wave function collapse?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Schrödinger's Cat?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept wave function?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the photoelectric effect?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the Compton effect?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept the double-slit experiment?\n(Remember the player is trying to guess a concept, and the correct answer is Membrane Theory. Reply with Yes or No in relation to Membrane Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

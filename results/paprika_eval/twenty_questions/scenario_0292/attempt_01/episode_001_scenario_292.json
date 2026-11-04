@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 292,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Space Shuttle Challenger Disaster",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to a war or armed conflict?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to a political change, such as a revolution, election, or treaty?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this event related to a scientific discovery or technological invention?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the first successful human landing on the Moon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the development of the Internet or computer technology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the discovery of penicillin by Alexander Fleming?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of the structure of DNA?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of the structure of the atom or nuclear physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the invention of the telephone by Alexander Graham Bell?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of electricity or the invention of the light bulb?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the first human flight on a powered airplane by the Wright brothers?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the discovery of penicillin, but specifically referring to the moment it was first identified as a medicine? (Wait, I already asked if it was penicillin and you said no. Let me pivot.)\n\nWas this event the discovery of the structure of DNA by Watson and Crick? (I asked this, you said no. Let me pivot again.)\n\nWas this event related to the discovery of a new planet or celestial body?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of a new element or particle in physics (e.g., the Higgs boson, radium)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the development of the first general-purpose electronic computer (such as the ENIAC)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of penicillin? (Wait, I already asked this. Let me try a different major medical breakthrough.)\n\nWas this event the development of the polio vaccine by Jonas Salk?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the invention of the printing press by Johannes Gutenberg?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of gravity or the publication of Isaac Newton's laws of motion?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the development of the World Wide Web by Tim Berners-Lee?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event the Apollo 13 mission?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Was this event related to the discovery of the circulation of blood by William Harvey?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster."
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to a war or armed conflict?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to a political change, such as a revolution, election, or treaty?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is this event related to a scientific discovery or technological invention?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the first successful human landing on the Moon?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the development of the Internet or computer technology?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the discovery of penicillin by Alexander Fleming?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of the structure of DNA?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of the structure of the atom or nuclear physics?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the invention of the telephone by Alexander Graham Bell?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of electricity or the invention of the light bulb?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the first human flight on a powered airplane by the Wright brothers?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the discovery of penicillin, but specifically referring to the moment it was first identified as a medicine? (Wait, I already asked if it was penicillin and you said no. Let me pivot.)\n\nWas this event the discovery of the structure of DNA by Watson and Crick? (I asked this, you said no. Let me pivot again.)\n\nWas this event related to the discovery of a new planet or celestial body?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of a new element or particle in physics (e.g., the Higgs boson, radium)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the development of the first general-purpose electronic computer (such as the ENIAC)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of penicillin? (Wait, I already asked this. Let me try a different major medical breakthrough.)\n\nWas this event the development of the polio vaccine by Jonas Salk?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the invention of the printing press by Johannes Gutenberg?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of gravity or the publication of Isaac Newton's laws of motion?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the development of the World Wide Web by Tim Berners-Lee?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event the Apollo 13 mission?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Was this event related to the discovery of the circulation of blood by William Harvey?\n(Remember the player is trying to guess a historical event, and the correct answer is The Space Shuttle Challenger Disaster. Reply with Yes or No in relation to The Space Shuttle Challenger Disaster.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 33,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Computer",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention something that interacts with light or vision?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used to capture or record images?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used to emit or project light?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention primarily used for illumination (lighting up a space)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used in a display or screen?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a type of display technology itself (such as LCD, OLED, or LED)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a component that helps control or filter the light for a display, such as a polarizer or a backlight unit?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for projecting images onto a screen or surface, such as a projector?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used to enhance visual clarity, such as glasses, contact lenses, or magnifying glasses?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a laser?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the light bulb?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a lens?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a mirror?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to fiber optics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a camera?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a telescope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the periscope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a microscope?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention the flashlight?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a clock or a timekeeping device that uses light?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Computer."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention something that interacts with light or vision?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used to capture or record images?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used to emit or project light?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention primarily used for illumination (lighting up a space)?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used in a display or screen?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a type of display technology itself (such as LCD, OLED, or LED)?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a component that helps control or filter the light for a display, such as a polarizer or a backlight unit?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for projecting images onto a screen or surface, such as a projector?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used to enhance visual clarity, such as glasses, contact lenses, or magnifying glasses?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a laser?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the light bulb?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a lens?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a mirror?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to fiber optics?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a camera?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a telescope?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the periscope?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a microscope?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention the flashlight?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a clock or a timekeeping device that uses light?\n(Remember the player is trying to guess a invention, and the correct answer is Computer. Reply with Yes or No in relation to Computer.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

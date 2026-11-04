@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 310,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Rip Current",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to weather or atmospheric conditions?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to physics or mechanics (such as motion, forces, or energy)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to gravity or the curvature of spacetime?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to electromagnetism (such as light, electricity, or magnetism)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to quantum mechanics or subatomic particles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to thermodynamics or heat transfer?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to fluids or fluid dynamics (such as turbulence, flow, or pressure)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the behavior of waves in fluids (such as interference, diffraction, or standing waves)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically related to sound waves (acoustics)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to light waves or electromagnetic waves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to water waves (such as tsunamis, tides, or ripples)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon specifically related to the formation or breaking of ocean waves (such as rogue waves or wave breaking)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the reflection of waves from a surface (such as an echo or mirror image in water)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to refraction (the bending of waves as they pass from one medium to another)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to diffraction (the bending of waves around obstacles or through openings)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to interference (the combination of two or more waves resulting in a new wave pattern)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to resonance (the amplification of waves when a system is driven at its natural frequency)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to standing waves (waves that appear to stay in one place, such as those in a vibrating string or air column)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to wave propagation through a medium involving the transmission of energy without the net movement of the medium itself (such as a simple traveling wave)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the Doppler effect (the change in frequency of a wave in relation to an observer who is moving relative to the wave source)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Rip Current."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to weather or atmospheric conditions?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to physics or mechanics (such as motion, forces, or energy)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to gravity or the curvature of spacetime?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to electromagnetism (such as light, electricity, or magnetism)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to quantum mechanics or subatomic particles?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to thermodynamics or heat transfer?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to fluids or fluid dynamics (such as turbulence, flow, or pressure)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the behavior of waves in fluids (such as interference, diffraction, or standing waves)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically related to sound waves (acoustics)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to light waves or electromagnetic waves?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to water waves (such as tsunamis, tides, or ripples)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon specifically related to the formation or breaking of ocean waves (such as rogue waves or wave breaking)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the reflection of waves from a surface (such as an echo or mirror image in water)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to refraction (the bending of waves as they pass from one medium to another)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to diffraction (the bending of waves around obstacles or through openings)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to interference (the combination of two or more waves resulting in a new wave pattern)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to resonance (the amplification of waves when a system is driven at its natural frequency)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to standing waves (waves that appear to stay in one place, such as those in a vibrating string or air column)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to wave propagation through a medium involving the transmission of energy without the net movement of the medium itself (such as a simple traveling wave)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the Doppler effect (the change in frequency of a wave in relation to an observer who is moving relative to the wave source)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Rip Current. Reply with Yes or No in relation to Rip Current.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

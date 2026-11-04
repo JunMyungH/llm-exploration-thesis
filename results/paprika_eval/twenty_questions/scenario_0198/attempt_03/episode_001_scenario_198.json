@@ -1,0 +1,246 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 198,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Bass Guitar",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 13,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument part of an orchestra's string section?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument part of an orchestra's woodwind section?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument part of an orchestra's brass section?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument part of an orchestra's percussion section?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument primarily used to produce sound by vibrating strings?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument typically played by plucking the strings with fingers or a plectrum?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument typically held against the body while being played?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument commonly associated with flamenco music?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument commonly associated with folk or country music?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument typically strummed rather than plucked individually?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument fretted?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument the standard six-string acoustic guitar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument a bass guitar?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Bass Guitar."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument part of an orchestra's string section?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument part of an orchestra's woodwind section?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument part of an orchestra's brass section?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument part of an orchestra's percussion section?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument primarily used to produce sound by vibrating strings?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument typically played by plucking the strings with fingers or a plectrum?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument typically held against the body while being played?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument commonly associated with flamenco music?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument commonly associated with folk or country music?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument typically strummed rather than plucked individually?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument fretted?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument the standard six-string acoustic guitar?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument a bass guitar?\n(Remember the player is trying to guess a instrument, and the correct answer is Bass Guitar. Reply with Yes or No in relation to Bass Guitar.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Bass Guitar in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct instrument, which is: Bass Guitar, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is the instrument a bass guitar?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct instrument, which is Bass Guitar in this particular game. Reply with <VALID> only if the player has guessed Bass Guitar in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Bass Guitar is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 279,
+  "agent_game_scenario": "historical event",
+  "env_game_scenario": "The Cold War",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a historical event. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a war?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the discovery of a new continent or landmass?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a political revolution or the overthrow of a government?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the signing of a major treaty or peace agreement?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the construction of a major monument or building?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the discovery of a scientific breakthrough or a major scientific theory?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to the invention of a major technology or invention?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a significant artistic movement, literary work, or cultural phenomenon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a natural disaster?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event related to a space exploration mission or the launch of a satellite?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the first human landing on the Moon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the event related to the launch of the first artificial satellite, Sputnik?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "The historical event is the launch of Sputnik 1."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, you answered \"Yes\" to the question \"Is the event related to the launch of the first artificial satellite, Sputnik?\" but then said \"No\" to my final guess.\n\nLet me re-evaluate. If it is related to the launch of the first artificial satellite, but isn't the launch of Sputnik 1 itself, could it be the launch of **Sputnik 2** (which carried the dog Laika)?\n\nOr perhaps the question \"Is the event related to the launch of the first artificial satellite, Sputnik?\" was interpreted broadly. Let me try to narrow it down.\n\nIs the historical event specifically"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event the launch of the first human into space (Yuri Gagarin's flight)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event the launch of the first American astronaut into space (Alan Shepard's flight)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event the launch of the first woman into space (Valentina Tereshkova's flight)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event the launch of the first space station, Salyut 1?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event the launch of the first Mars rover, Sojourner?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the historical event the launch of the Apollo 13 mission?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a historical event, and the correct answer is The Cold War."
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a war?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the discovery of a new continent or landmass?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a political revolution or the overthrow of a government?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the signing of a major treaty or peace agreement?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the construction of a major monument or building?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the discovery of a scientific breakthrough or a major scientific theory?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to the invention of a major technology or invention?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a significant artistic movement, literary work, or cultural phenomenon?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a natural disaster?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event related to a space exploration mission or the launch of a satellite?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the first human landing on the Moon?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the event related to the launch of the first artificial satellite, Sputnik?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "The historical event is the launch of Sputnik 1.\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, you answered \"Yes\" to the question \"Is the event related to the launch of the first artificial satellite, Sputnik?\" but then said \"No\" to my final guess.\n\nLet me re-evaluate. If it is related to the launch of the first artificial satellite, but isn't the launch of Sputnik 1 itself, could it be the launch of **Sputnik 2** (which carried the dog Laika)?\n\nOr perhaps the question \"Is the event related to the launch of the first artificial satellite, Sputnik?\" was interpreted broadly. Let me try to narrow it down.\n\nIs the historical event specifically\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event the launch of the first human into space (Yuri Gagarin's flight)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event the launch of the first American astronaut into space (Alan Shepard's flight)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event the launch of the first woman into space (Valentina Tereshkova's flight)?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event the launch of the first space station, Salyut 1?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event the launch of the first Mars rover, Sojourner?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the historical event the launch of the Apollo 13 mission?\n(Remember the player is trying to guess a historical event, and the correct answer is The Cold War. Reply with Yes or No in relation to The Cold War.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

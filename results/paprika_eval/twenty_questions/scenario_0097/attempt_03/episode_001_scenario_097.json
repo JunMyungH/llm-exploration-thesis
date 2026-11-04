@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 97,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "A Farewell to Arms",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a work of fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a fantasy novel?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the past?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a historical romance?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the story set during World War II?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the story set in the 20th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the United States?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the United Kingdom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in France?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Germany?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Russia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Italy?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set during World War I?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book titled *The English Patient*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the 1930s?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book titled *A Room with a View*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book titled *The Last Days of Pompeii*? (Wait, that's 19th century. Let me adjust.)\n\nIs the book titled *Call Me By Your Name*?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is A Farewell to Arms."
+    },
+    {
+      "role": "user",
+      "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a fantasy novel?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the past?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a historical romance?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the story set during World War II?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the story set in the 20th century?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the United States?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Europe?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the United Kingdom?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in France?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Germany?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Russia?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Italy?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set during World War I?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book titled *The English Patient*?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the 1930s?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book titled *A Room with a View*?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book titled *The Last Days of Pompeii*? (Wait, that's 19th century. Let me adjust.)\n\nIs the book titled *Call Me By Your Name*?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the 19th century?\n(Remember the player is trying to guess a book, and the correct answer is A Farewell to Arms. Reply with Yes or No in relation to A Farewell to Arms.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

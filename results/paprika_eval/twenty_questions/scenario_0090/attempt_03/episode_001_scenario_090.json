@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 90,
+  "agent_game_scenario": "book",
+  "env_game_scenario": "Dracula",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book fiction?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book written in English?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book a fantasy novel?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book part of a series?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in a modern or contemporary time period?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in a historical period?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in medieval Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in ancient times (e.g., Ancient Rome, Greece, Egypt)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in a world other than our own?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author male?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Africa?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in North America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book set in the 19th century?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *The Adventures of Huckleberry Finn* by Mark Twain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *Moby-Dick* by Herman Melville?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *The Scarlet Letter* by Nathaniel Hawthorne?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *The Adventures of Tom Sawyer* by Mark Twain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the author Mark Twain?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the book *Mansfield Park* by Jane Austen?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is Dracula."
+    },
+    {
+      "role": "user",
+      "content": "Is the book fiction?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book a fantasy novel?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in a modern or contemporary time period?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in a historical period?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in medieval Europe?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in ancient times (e.g., Ancient Rome, Greece, Egypt)?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in a world other than our own?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author male?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Africa?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in Asia?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in North America?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book set in the 19th century?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *The Adventures of Huckleberry Finn* by Mark Twain?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *Moby-Dick* by Herman Melville?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *The Scarlet Letter* by Nathaniel Hawthorne?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *The Adventures of Tom Sawyer* by Mark Twain?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the author Mark Twain?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the book *Mansfield Park* by Jane Austen?\n(Remember the player is trying to guess a book, and the correct answer is Dracula. Reply with Yes or No in relation to Dracula.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

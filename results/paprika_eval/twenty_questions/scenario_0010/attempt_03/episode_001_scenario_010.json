@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 10,
+  "agent_game_scenario": "instrument",
+  "env_game_scenario": "Jew's Harp",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the instrument musical?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a string instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a wind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a percussion instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an electronic instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a keyboard instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a vocal instrument (i.e., played with the human voice)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a brass instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a woodwind instrument?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a plucked string instrument (like a guitar or harp)?\n\n*(Note: You previously said \"No\" to \"string instrument,\" but sometimes distinctions are made between bowed and plucked strings in these games. However, since you explicitly denied the general category of \"string instrument,\" this is a risky guess. Let's look at the remaining major families. If it's not string, wind, percussion, electronic, or keyboard, and not vocal/brass/woodwind... could it be something else?)*\n\nWait, let's re-evaluate.\n1. Musical? Yes\n2. String? No"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a free-reed instrument (like an accordion or harmonica)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a percussion instrument that uses skin or membranes (like a drum)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a wind instrument that uses a reed (like a clarinet or saxophone)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a string instrument that is played with a bow (like a violin or cello)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a brass instrument that you play by buzzing your lips into a mouthpiece (like a trumpet or tuba)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pipe organ?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a guitar?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the piano?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a harp?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a flute?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Jew's Harp."
+    },
+    {
+      "role": "user",
+      "content": "Is the instrument musical?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a wind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a percussion instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it an electronic instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a keyboard instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a vocal instrument (i.e., played with the human voice)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a brass instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a woodwind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a plucked string instrument (like a guitar or harp)?\n\n*(Note: You previously said \"No\" to \"string instrument,\" but sometimes distinctions are made between bowed and plucked strings in these games. However, since you explicitly denied the general category of \"string instrument,\" this is a risky guess. Let's look at the remaining major families. If it's not string, wind, percussion, electronic, or keyboard, and not vocal/brass/woodwind... could it be something else?)*\n\nWait, let's re-evaluate.\n1. Musical? Yes\n2. String? No\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a free-reed instrument (like an accordion or harmonica)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a percussion instrument that uses skin or membranes (like a drum)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a wind instrument that uses a reed (like a clarinet or saxophone)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a string instrument that is played with a bow (like a violin or cello)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a brass instrument that you play by buzzing your lips into a mouthpiece (like a trumpet or tuba)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pipe organ?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a guitar?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the piano?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a harp?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a flute?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

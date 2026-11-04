@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 308,
+  "agent_game_scenario": "phenomenon",
+  "env_game_scenario": "Heat Lightning",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a phenomenon. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon primarily related to physics or natural sciences?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it an electromagnetic phenomenon?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it related to the interaction of light and matter?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is this phenomenon the splitting of light into its constituent colors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the bending of light as it passes from one medium to another?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where light is scattered in many directions by small particles?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where light waves interfere with each other to create patterns of constructive and destructive interference?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where light waves bend around obstacles or spread out after passing through narrow openings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where light is reflected off a surface?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it the phenomenon where light changes speed and direction when passing from one transparent medium to another, such as from air to water? (Wait, I asked about bending/refraction earlier, let me check the history. Ah, I asked \"bending of light as it passes from one medium to another\" which is refraction. The answer was No.)\n\nLet's pivot to emission or absorption.\n\nIs the phenomenon related to the emission of light by a substance that has not been heated? (i.e., luminescence vs incandescence)"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the Doppler effect (the change in frequency or wavelength of a wave in relation to an observer who is moving relative to the wave source)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to polarization?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the photoelectric effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to fluorescence or phosphorescence?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the greenhouse effect?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the aurora borealis or aurora australis?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to total internal reflection?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to Cherenkov radiation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to the creation of a sonic boom?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the phenomenon related to gravity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a phenomenon, and the correct answer is Heat Lightning."
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon primarily related to physics or natural sciences?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it an electromagnetic phenomenon?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it related to the interaction of light and matter?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is this phenomenon the splitting of light into its constituent colors?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the bending of light as it passes from one medium to another?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where light is scattered in many directions by small particles?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where light waves interfere with each other to create patterns of constructive and destructive interference?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where light waves bend around obstacles or spread out after passing through narrow openings?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where light is reflected off a surface?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it the phenomenon where light changes speed and direction when passing from one transparent medium to another, such as from air to water? (Wait, I asked about bending/refraction earlier, let me check the history. Ah, I asked \"bending of light as it passes from one medium to another\" which is refraction. The answer was No.)\n\nLet's pivot to emission or absorption.\n\nIs the phenomenon related to the emission of light by a substance that has not been heated? (i.e., luminescence vs incandescence)\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the Doppler effect (the change in frequency or wavelength of a wave in relation to an observer who is moving relative to the wave source)?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to polarization?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the photoelectric effect?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to fluorescence or phosphorescence?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the greenhouse effect?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the aurora borealis or aurora australis?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to total internal reflection?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to Cherenkov radiation?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to the creation of a sonic boom?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the phenomenon related to gravity?\n(Remember the player is trying to guess a phenomenon, and the correct answer is Heat Lightning. Reply with Yes or No in relation to Heat Lightning.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

@@ -1,0 +1,230 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 282,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Fountain Pen",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 12,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention electronic?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention mechanical?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a simple machine (like a lever, pulley, or wheel and axle)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a complex machine that uses gears and levers, such as a clock or a watch?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a type of transportation vehicle?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it used for writing or drawing?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a writing instrument that uses ink?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a pen?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I guessed it! The invention is a **pen**."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Ah, interesting! If it's not a pen, but it is a mechanical, non-electronic writing instrument that uses ink, it is likely a **fountain pen** or a **dip pen**.\n\nLet me narrow it down: Does it have an internal reservoir or mechanism to hold and deliver ink continuously while writing (like a fountain pen), or does it require you to dip it into an external inkwell (like a dip pen)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on your previous \"Yes\" answer to \"Is it a pen?\" and the current clarification that it is a writing instrument using ink, I need to distinguish between the specific type.\n\nSince you confirmed it has an internal reservoir or mechanism to hold and deliver ink continuously (which fits the definition of a fountain pen or a ballpoint pen, but ballpoints are often considered distinct from \"pens\" in strict trivia contexts depending on the era, though usually yes), let's clarify the delivery mechanism.\n\nIs the ink delivered by a rolling ball at the tip?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a fountain pen?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Fountain Pen."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention mechanical?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a simple machine (like a lever, pulley, or wheel and axle)?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a complex machine that uses gears and levers, such as a clock or a watch?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a type of transportation vehicle?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it used for writing or drawing?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a writing instrument that uses ink?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a pen?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "I guessed it! The invention is a **pen**.\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Ah, interesting! If it's not a pen, but it is a mechanical, non-electronic writing instrument that uses ink, it is likely a **fountain pen** or a **dip pen**.\n\nLet me narrow it down: Does it have an internal reservoir or mechanism to hold and deliver ink continuously while writing (like a fountain pen), or does it require you to dip it into an external inkwell (like a dip pen)?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Based on your previous \"Yes\" answer to \"Is it a pen?\" and the current clarification that it is a writing instrument using ink, I need to distinguish between the specific type.\n\nSince you confirmed it has an internal reservoir or mechanism to hold and deliver ink continuously (which fits the definition of a fountain pen or a ballpoint pen, but ballpoints are often considered distinct from \"pens\" in strict trivia contexts depending on the era, though usually yes), let's clarify the delivery mechanism.\n\nIs the ink delivered by a rolling ball at the tip?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a fountain pen?\n(Remember the player is trying to guess a invention, and the correct answer is Fountain Pen. Reply with Yes or No in relation to Fountain Pen.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached."
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Fountain Pen in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct invention, which is: Fountain Pen, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: Is it a fountain pen?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct invention, which is Fountain Pen in this particular game. Reply with <VALID> only if the player has guessed Fountain Pen in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Fountain Pen is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 159,
+  "agent_game_scenario": "color",
+  "env_game_scenario": "Amber",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a color. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color one of the primary colors?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not Red, Blue, or Yellow. Is the color associated with the sky or the ocean?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color typically associated with nature, such as the color of grass or leaves?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color a shade of gray, black, or white?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color considered a warm color (like orange, red, or pink)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color orange?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color pink?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color red?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color brown?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the color purple?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Wait, I need to re-evaluate. I previously asked if it was a warm color, and you said \"Yes.\" Then I asked if it was Orange, Pink, Red, Brown, or Purple. You said \"No\" to all of those.\n\nLet's look at the remaining warm colors. Common warm colors include Red, Orange, Yellow, Pink, Brown, and sometimes Purple (though often considered cool, it can be warm depending on the shade).\n\nSince Red, Orange, Pink, and Brown are out, and Purple is out... what about **Yellow**?\n\nIs the color Yellow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, let's step back. I've ruled out primary colors (Red, Blue, Yellow), nature colors (Green), neutrals (Black, White, Gray), and most warm colors (Orange, Pink, Brown, Purple).\n\nYou confirmed it is a **warm color**, yet it is not Red, Orange, Yellow, Pink, Brown, or Purple.\n\nThis is tricky. Are there other colors considered warm?\n- **Maroon**?\n- **Coral**?\n- **Crimson**?\n- **Beige** or **Tan**?\n- **Gold**?\n\nLet's try a broader category first"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, that eliminates Maroon, Coral, Crimson, Beige, Tan, and Gold.\n\nLet's reconsider the \"Warm Color\" classification. Sometimes colors like **Vermilion** or **Scarlet** are distinct from standard Red. Or perhaps **Magenta**?\n\nHowever, before guessing specific shades, let's check if it is a color often associated with **fire** or **heat** (excluding standard Red/Orange/Yellow).\n\nIs the color **Vermilion**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Vermilion.\n\nLet's try a different angle. Since it is warm but not Red, Orange, Yellow, Pink, Brown, Purple, Maroon, Coral, Crimson, Beige, Tan, Gold, or Vermilion...\n\nIs the color **Salmon**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Salmon.\n\nLet's try another common warm color that isn't on the previous list. How about **Auburn**?\n\nIs the color Auburn?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Auburn.\n\nLet's look at other warm shades. Is the color **Carmine**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Carmine.\n\nLet's try a very specific, common warm color that is distinct from standard reds and oranges. Is the color **Scarlet**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Scarlet.\n\nI have eliminated:\n- Primary colors (Red, Blue, Yellow)\n- Nature colors (Green)\n- Neutrals (Black, White, Gray)\n- Warm colors: Orange, Pink, Brown, Purple, Yellow, Maroon, Coral, Crimson, Beige, Tan, Gold, Vermilion, Salmon, Auburn, Carmine, Scarlet.\n\nThis leaves very few options for a \"warm color.\"\n- **Magenta**? (Often grouped with purple/pink, but sometimes distinct).\n- **Rust**? (Often grouped with brown/orange, but distinct)."
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Magenta or Rust.\n\nI have tried many specific shades and common warm colors, and they were all \"No.\" Let's look at the remaining possibilities for a \"warm\" color that isn't Red, Orange, Yellow, Pink, Brown, Purple, Beige, Gold, or any of the specific shades I just guessed.\n\nIs the color **Apricot**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, not Apricot.\n\nI am running low on standard warm color names. Let's consider if the \"warm\" classification was based on a specific context or if I missed a very common one.\n\nIs the color **Terracotta**?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a color, and the correct answer is Amber."
+    },
+    {
+      "role": "user",
+      "content": "Is the color one of the primary colors?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not Red, Blue, or Yellow. Is the color associated with the sky or the ocean?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color typically associated with nature, such as the color of grass or leaves?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color a shade of gray, black, or white?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color considered a warm color (like orange, red, or pink)?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the color orange?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color pink?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color red?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color brown?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the color purple?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Wait, I need to re-evaluate. I previously asked if it was a warm color, and you said \"Yes.\" Then I asked if it was Orange, Pink, Red, Brown, or Purple. You said \"No\" to all of those.\n\nLet's look at the remaining warm colors. Common warm colors include Red, Orange, Yellow, Pink, Brown, and sometimes Purple (though often considered cool, it can be warm depending on the shade).\n\nSince Red, Orange, Pink, and Brown are out, and Purple is out... what about **Yellow**?\n\nIs the color Yellow?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, let's step back. I've ruled out primary colors (Red, Blue, Yellow), nature colors (Green), neutrals (Black, White, Gray), and most warm colors (Orange, Pink, Brown, Purple).\n\nYou confirmed it is a **warm color**, yet it is not Red, Orange, Yellow, Pink, Brown, or Purple.\n\nThis is tricky. Are there other colors considered warm?\n- **Maroon**?\n- **Coral**?\n- **Crimson**?\n- **Beige** or **Tan**?\n- **Gold**?\n\nLet's try a broader category first\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, that eliminates Maroon, Coral, Crimson, Beige, Tan, and Gold.\n\nLet's reconsider the \"Warm Color\" classification. Sometimes colors like **Vermilion** or **Scarlet** are distinct from standard Red. Or perhaps **Magenta**?\n\nHowever, before guessing specific shades, let's check if it is a color often associated with **fire** or **heat** (excluding standard Red/Orange/Yellow).\n\nIs the color **Vermilion**?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Vermilion.\n\nLet's try a different angle. Since it is warm but not Red, Orange, Yellow, Pink, Brown, Purple, Maroon, Coral, Crimson, Beige, Tan, Gold, or Vermilion...\n\nIs the color **Salmon**?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Salmon.\n\nLet's try another common warm color that isn't on the previous list. How about **Auburn**?\n\nIs the color Auburn?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Auburn.\n\nLet's look at other warm shades. Is the color **Carmine**?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Carmine.\n\nLet's try a very specific, common warm color that is distinct from standard reds and oranges. Is the color **Scarlet**?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Scarlet.\n\nI have eliminated:\n- Primary colors (Red, Blue, Yellow)\n- Nature colors (Green)\n- Neutrals (Black, White, Gray)\n- Warm colors: Orange, Pink, Brown, Purple, Yellow, Maroon, Coral, Crimson, Beige, Tan, Gold, Vermilion, Salmon, Auburn, Carmine, Scarlet.\n\nThis leaves very few options for a \"warm color.\"\n- **Magenta**? (Often grouped with purple/pink, but sometimes distinct).\n- **Rust**? (Often grouped with brown/orange, but distinct).\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Magenta or Rust.\n\nI have tried many specific shades and common warm colors, and they were all \"No.\" Let's look at the remaining possibilities for a \"warm\" color that isn't Red, Orange, Yellow, Pink, Brown, Purple, Beige, Gold, or any of the specific shades I just guessed.\n\nIs the color **Apricot**?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Okay, not Apricot.\n\nI am running low on standard warm color names. Let's consider if the \"warm\" classification was based on a specific context or if I missed a very common one.\n\nIs the color **Terracotta**?\n(Remember the player is trying to guess a color, and the correct answer is Amber. Reply with Yes or No in relation to Amber.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

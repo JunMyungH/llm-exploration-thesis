@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 318,
+  "agent_game_scenario": "invention",
+  "env_game_scenario": "Atomic Bomb",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a machine that processes or displays information?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for transportation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for communication?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for lighting or generating electricity?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention used for cooling or heating air?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to sanitation or plumbing?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to medical procedures or healthcare?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a tool used for cutting or shaping materials?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a device for capturing or recording images?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention related to cooking or food preparation?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a device used for cleaning?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a form of entertainment or leisure device?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a device used for measuring physical quantities or time?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the invention a type of weapon or tool used for defense?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a projectile weapon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a firearm?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a melee weapon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a ranged weapon that uses mechanical force, such as a bow or crossbow?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a chemical weapon?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is it a siege weapon, such as a catapult or trebuchet?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Atomic Bomb."
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a machine that processes or displays information?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for lighting or generating electricity?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention used for cooling or heating air?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to sanitation or plumbing?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to medical procedures or healthcare?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a tool used for cutting or shaping materials?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a device for capturing or recording images?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention related to cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a device used for cleaning?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a form of entertainment or leisure device?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a device used for measuring physical quantities or time?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the invention a type of weapon or tool used for defense?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is it a projectile weapon?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a firearm?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a melee weapon?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a ranged weapon that uses mechanical force, such as a bow or crossbow?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a chemical weapon?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is it a siege weapon, such as a catapult or trebuchet?\n(Remember the player is trying to guess a invention, and the correct answer is Atomic Bomb. Reply with Yes or No in relation to Atomic Bomb.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    }
+  ],
+  "judge_conversation": null
+}

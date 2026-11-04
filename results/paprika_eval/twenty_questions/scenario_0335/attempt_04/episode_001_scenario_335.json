@@ -1,0 +1,345 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "scenario_index": 335,
+  "agent_game_scenario": "concept",
+  "env_game_scenario": "Information Theory",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept tangible (i.e., can it be physically touched)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept abstract, such as an idea, emotion, or quality?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to human emotions or feelings?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to logic, mathematics, or science?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept a branch of science?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Physics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Chemistry?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Biology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Mathematics?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Astronomy?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept Geology?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of life and living organisms, specifically excluding biology? (e.g., Ecology, Genetics, etc.) OR is it a fundamental branch like Physics, Chemistry, or Biology? Wait, I already asked those.\n\nLet's pivot. Is the concept related to Earth or space? (e.g., Geology, Astronomy, Meteorology) -> I asked Geology and Astronomy.\n\nLet's try a different angle. Is the concept related to the study of matter and energy? (Physics) - No.\nIs it related to the composition of substances? (Chemistry) - No.\nIs it"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of the Earth's physical structure and substance (e.g., Geology, Seismology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of the atmosphere and weather (e.g., Meteorology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of living organisms other than the broad category of Biology (e.g., Botany, Zoology, Microbiology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of the universe, stars, and celestial bodies (e.g., Astronomy, Cosmology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of the universe and its origins, specifically excluding Astronomy (e.g., Cosmology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of human behavior and the mind (e.g., Psychology, Sociology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of society, culture, and human interaction (e.g., Sociology, Anthropology)?"
+    },
+    {
+      "role": "user",
+      "content": "No"
+    },
+    {
+      "role": "assistant",
+      "content": "Is the concept related to the study of computers, information, or algorithms (e.g., Computer Science, Information Theory)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Information Theory."
+    },
+    {
+      "role": "user",
+      "content": "Is the concept tangible (i.e., can it be physically touched)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept abstract, such as an idea, emotion, or quality?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to human emotions or feelings?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to logic, mathematics, or science?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept a branch of science?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Physics?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Chemistry?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Biology?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Mathematics?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Astronomy?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept Geology?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of life and living organisms, specifically excluding biology? (e.g., Ecology, Genetics, etc.) OR is it a fundamental branch like Physics, Chemistry, or Biology? Wait, I already asked those.\n\nLet's pivot. Is the concept related to Earth or space? (e.g., Geology, Astronomy, Meteorology) -> I asked Geology and Astronomy.\n\nLet's try a different angle. Is the concept related to the study of matter and energy? (Physics) - No.\nIs it related to the composition of substances? (Chemistry) - No.\nIs it\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of the Earth's physical structure and substance (e.g., Geology, Seismology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of the atmosphere and weather (e.g., Meteorology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of living organisms other than the broad category of Biology (e.g., Botany, Zoology, Microbiology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of the universe, stars, and celestial bodies (e.g., Astronomy, Cosmology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of the universe and its origins, specifically excluding Astronomy (e.g., Cosmology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of human behavior and the mind (e.g., Psychology, Sociology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of society, culture, and human interaction (e.g., Sociology, Anthropology)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No"
+    },
+    {
+      "role": "user",
+      "content": "Is the concept related to the study of computers, information, or algorithms (e.g., Computer Science, Information Theory)?\n(Remember the player is trying to guess a concept, and the correct answer is Information Theory. Reply with Yes or No in relation to Information Theory.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes"
+    }
+  ],
+  "judge_conversation": null
+}
