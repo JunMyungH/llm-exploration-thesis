@@ -1,0 +1,345 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 149,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Wuzhou, China",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Southeast Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in West Asia (the Middle East)?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city located in Central Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is interesting. We have narrowed it down to Asia, Northern Hemisphere, not a capital, and not in East, Southeast, South, West (Middle East), or Central Asia.\n\nThis leaves a few possibilities that might not fit neatly into those standard geopolitical buckets, or perhaps I should reconsider the \"Asia\" definition. However, assuming standard geographic regions, let's look at the remaining options.\n\nIs your home city located in Russia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is a tricky elimination round. Let's step back and check the major regions again. We know it is:\n1. Northern Hemisphere\n2. Asia\n3. Not a capital\n4. Not East Asia\n5. Not Southeast Asia\n6. Not South Asia\n7. Not West Asia (Middle East)\n8. Not Central Asia\n9. Not Russia\n\nThis leaves very few standard definitions for \"Asia\" that haven't been ruled out, or perhaps the city is in a transcontinental country where the city itself is in Europe, but the player considers it Asian, or I missed a specific sub-region."
+    },
+    {
+      "role": "user",
+      "content": "My city is located in Southern China."
+    },
+    {
+      "role": "assistant",
+      "content": "That clarifies things significantly. Since it is in Southern China, I can narrow down the major cities in that region.\n\nIs your home city the capital of Guangdong Province?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. So it is in Southern China, but not Guangzhou.\n\nIs your home city the capital of Yunnan Province?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of Fujian Province?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of Guangxi Zhuang Autonomous Region?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of Hainan Province?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of Zhejiang Province?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city the capital of Sichuan Province?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city Shenzhen?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city Xiamen?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Is your home city Chongqing?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Wuzhou, China"
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Asia?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of its country?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in East Asia?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Southeast Asia?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in South Asia?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in West Asia (the Middle East)?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city located in Central Asia?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is interesting. We have narrowed it down to Asia, Northern Hemisphere, not a capital, and not in East, Southeast, South, West (Middle East), or Central Asia.\n\nThis leaves a few possibilities that might not fit neatly into those standard geopolitical buckets, or perhaps I should reconsider the \"Asia\" definition. However, assuming standard geographic regions, let's look at the remaining options.\n\nIs your home city located in Russia?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is a tricky elimination round. Let's step back and check the major regions again. We know it is:\n1. Northern Hemisphere\n2. Asia\n3. Not a capital\n4. Not East Asia\n5. Not Southeast Asia\n6. Not South Asia\n7. Not West Asia (Middle East)\n8. Not Central Asia\n9. Not Russia\n\nThis leaves very few standard definitions for \"Asia\" that haven't been ruled out, or perhaps the city is in a transcontinental country where the city itself is in Europe, but the player considers it Asian, or I missed a specific sub-region.\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "My city is located in Southern China."
+    },
+    {
+      "role": "user",
+      "content": "That clarifies things significantly. Since it is in Southern China, I can narrow down the major cities in that region.\n\nIs your home city the capital of Guangdong Province?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. So it is in Southern China, but not Guangzhou.\n\nIs your home city the capital of Yunnan Province?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of Fujian Province?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of Guangxi Zhuang Autonomous Region?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of Hainan Province?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of Zhejiang Province?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city the capital of Sichuan Province?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city Shenzhen?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city Xiamen?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Is your home city Chongqing?\n(Remember the player is trying to guess a city, and the correct answer is Wuzhou, China. Reply to the question in relation to Wuzhou, China. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    }
+  ],
+  "judge_conversation": null
+}

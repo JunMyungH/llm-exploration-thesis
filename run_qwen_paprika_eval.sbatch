@@ -76,7 +76,7 @@ nvidia-smi -L
     --port "$PORT" \
     --tensor-parallel-size 2 \
     --dtype bfloat16 \
-    --max-model-len 4096 \
+    --max-model-len 8192 \
     --gpu-memory-utilization 0.85 \
     --language-model-only \
     --default-chat-template-kwargs '{"enable_thinking": false}' \

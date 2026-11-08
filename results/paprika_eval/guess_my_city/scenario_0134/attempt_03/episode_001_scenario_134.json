@@ -1,0 +1,345 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 134,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Yovon, Tajikistan",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I'm ready to play \"Guess My City.\" I will start by narrowing down the geographic location to reduce the large search space quickly.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. That cuts the world in half. Now I want to narrow it down by continent.\n\n**Question 2:** Is your home city located in Europe?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's in the Northern Hemisphere but not in Europe. That leaves Asia, North America, and parts of Africa (the northern part).\n\n**Question 3:** Is your home city located in Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we are looking at a city in Asia. This is a huge continent, so I need to narrow it down further.\n\n**Question 4:** Is your home city located in East Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's in Asia but not East Asia. That leaves South Asia, Southeast Asia, West Asia (Middle East), and Central Asia.\n\n**Question 5:** Is your home city located in Southeast Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's in Asia, Northern Hemisphere, not Europe, not East Asia, and not Southeast Asia. This leaves South Asia, West Asia (Middle East), and Central Asia.\n\n**Question 6:** Is your home city located in South Asia?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we have eliminated Europe, East Asia, Southeast Asia, and South Asia. The remaining major regions in Asia (Northern Hemisphere) are West Asia (often referred to as the Middle East) and Central Asia.\n\n**Question 7:** Is your home city located in West Asia (the Middle East)?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we have eliminated Europe, East Asia, Southeast Asia, South Asia, and West Asia. The only major region left in Asia in the Northern Hemisphere is Central Asia.\n\n**Question 8:** Is your home city located in Central Asia?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so we are looking for a city in Central Asia. The countries in this region are Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan. The capital cities are Almaty/Astana, Bishkek, Dushanbe, Ashgabat, and Tashkent, respectively.\n\n**Question 9:** Is your home city the capital of its country?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is a major city in Central Asia, but not the capital. This significantly narrows it down to other large urban centers in Kazakhstan, Uzbekistan, or potentially others.\n\n**Question 10:** Is your home city located in Kazakhstan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in Kazakhstan. The remaining Central Asian countries are Uzbekistan, Kyrgyzstan, Tajikistan, and Turkmenistan.\n\n**Question 11:** Is your home city located in Uzbekistan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in Kazakhstan or Uzbekistan. The remaining Central Asian countries are Kyrgyzstan, Tajikistan, and Turkmenistan.\n\n**Question 12:** Is your home city located in Kyrgyzstan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in Kazakhstan, Uzbekistan, or Kyrgyzstan. The remaining Central Asian countries are Tajikistan and Turkmenistan.\n\n**Question 13:** Is your home city located in Tajikistan?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in Tajikistan. The major cities in Tajikistan include Dushanbe (the capital, which we already ruled out), Khujand, Bokhtar, and Istaravshan.\n\n**Question 14:** Is your home city Khujand?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Tajikistan, but not the capital (Dushanbe) and not Khujand. The next largest city in Tajikistan is Bokhtar (formerly known as Kurgan-Tyube).\n\n**Question 15:** Is your home city Bokhtar?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Tajikistan, but not Dushanbe, Khujand, or Bokhtar. The next most prominent city in Tajikistan is Istaravshan (formerly known as Ura-Tyube).\n\n**Question 16:** Is your home city Istaravshan?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Tajikistan, but not Dushanbe, Khujand, Bokhtar, or Istaravshan. This is quite specific. Are there any other major cities in Tajikistan?\n\nLet me double-check my knowledge base. The major cities are Dushanbe, Khujand, Bokhtar, and Istaravshan. I have asked about all of them.\n\nWait, did I make a mistake? Let me re-evaluate.\n1. Northern Hemisphere: Yes\n2. Not Europe: Yes\n3. Asia: Yes\n4. Not East Asia: Yes"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is a surprising result. I have deduced that the city is in Tajikistan, but it is not the capital (Dushanbe), nor is it Khujand, Bokhtar, or Istaravshan. These are the four largest and most prominent cities in Tajikistan.\n\nIt is possible that the city is a smaller but notable town, or perhaps my geographic classification of \"Central Asia\" was slightly off in the context of the player's knowledge, or there is a nuance I missed (e.g., a city on the border with Afghanistan that is culturally distinct).\n\nHowever, since I have exhausted"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is a very tricky situation. I have logically deduced that the city is in Tajikistan, but it is not Dushanbe, Khujand, Bokhtar, or Istaravshan.\n\nLet me re-evaluate my previous path.\n1. Northern Hemisphere: Yes.\n2. Not Europe: Yes.\n3. Asia: Yes.\n4. Not East Asia: Yes.\n5. Not Southeast Asia: Yes.\n6. Not South Asia: Yes.\n7. Not West Asia: Yes.\n8. Central Asia: Yes.\n9. Not Capital: Yes."
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is a critical turning point. I have been convinced by your \"No\" answers that the city is in Tajikistan, but you have denied it being the four most prominent non-capital cities. This suggests one of two things:\n1. My classification of the region is wrong (perhaps it's not Central Asia in the strict political sense, but geographically/culturally fits there, or my \"Central Asia\" definition was too narrow).\n2. Or, more likely, I made a logical error in the previous steps regarding the region elimination.\n\nLet's step back. I know:\n- Northern Hemisphere\n- Asia"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Yovon, Tajikistan"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I'm ready to play \"Guess My City.\" I will start by narrowing down the geographic location to reduce the large search space quickly.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. That cuts the world in half. Now I want to narrow it down by continent.\n\n**Question 2:** Is your home city located in Europe?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's in the Northern Hemisphere but not in Europe. That leaves Asia, North America, and parts of Africa (the northern part).\n\n**Question 3:** Is your home city located in Asia?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we are looking at a city in Asia. This is a huge continent, so I need to narrow it down further.\n\n**Question 4:** Is your home city located in East Asia?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's in Asia but not East Asia. That leaves South Asia, Southeast Asia, West Asia (Middle East), and Central Asia.\n\n**Question 5:** Is your home city located in Southeast Asia?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's in Asia, Northern Hemisphere, not Europe, not East Asia, and not Southeast Asia. This leaves South Asia, West Asia (Middle East), and Central Asia.\n\n**Question 6:** Is your home city located in South Asia?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we have eliminated Europe, East Asia, Southeast Asia, and South Asia. The remaining major regions in Asia (Northern Hemisphere) are West Asia (often referred to as the Middle East) and Central Asia.\n\n**Question 7:** Is your home city located in West Asia (the Middle East)?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we have eliminated Europe, East Asia, Southeast Asia, South Asia, and West Asia. The only major region left in Asia in the Northern Hemisphere is Central Asia.\n\n**Question 8:** Is your home city located in Central Asia?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so we are looking for a city in Central Asia. The countries in this region are Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan. The capital cities are Almaty/Astana, Bishkek, Dushanbe, Ashgabat, and Tashkent, respectively.\n\n**Question 9:** Is your home city the capital of its country?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is a major city in Central Asia, but not the capital. This significantly narrows it down to other large urban centers in Kazakhstan, Uzbekistan, or potentially others.\n\n**Question 10:** Is your home city located in Kazakhstan?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in Kazakhstan. The remaining Central Asian countries are Uzbekistan, Kyrgyzstan, Tajikistan, and Turkmenistan.\n\n**Question 11:** Is your home city located in Uzbekistan?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in Kazakhstan or Uzbekistan. The remaining Central Asian countries are Kyrgyzstan, Tajikistan, and Turkmenistan.\n\n**Question 12:** Is your home city located in Kyrgyzstan?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in Kazakhstan, Uzbekistan, or Kyrgyzstan. The remaining Central Asian countries are Tajikistan and Turkmenistan.\n\n**Question 13:** Is your home city located in Tajikistan?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in Tajikistan. The major cities in Tajikistan include Dushanbe (the capital, which we already ruled out), Khujand, Bokhtar, and Istaravshan.\n\n**Question 14:** Is your home city Khujand?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Tajikistan, but not the capital (Dushanbe) and not Khujand. The next largest city in Tajikistan is Bokhtar (formerly known as Kurgan-Tyube).\n\n**Question 15:** Is your home city Bokhtar?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Tajikistan, but not Dushanbe, Khujand, or Bokhtar. The next most prominent city in Tajikistan is Istaravshan (formerly known as Ura-Tyube).\n\n**Question 16:** Is your home city Istaravshan?\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Tajikistan, but not Dushanbe, Khujand, Bokhtar, or Istaravshan. This is quite specific. Are there any other major cities in Tajikistan?\n\nLet me double-check my knowledge base. The major cities are Dushanbe, Khujand, Bokhtar, and Istaravshan. I have asked about all of them.\n\nWait, did I make a mistake? Let me re-evaluate.\n1. Northern Hemisphere: Yes\n2. Not Europe: Yes\n3. Asia: Yes\n4. Not East Asia: Yes\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is a surprising result. I have deduced that the city is in Tajikistan, but it is not the capital (Dushanbe), nor is it Khujand, Bokhtar, or Istaravshan. These are the four largest and most prominent cities in Tajikistan.\n\nIt is possible that the city is a smaller but notable town, or perhaps my geographic classification of \"Central Asia\" was slightly off in the context of the player's knowledge, or there is a nuance I missed (e.g., a city on the border with Afghanistan that is culturally distinct).\n\nHowever, since I have exhausted\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is a very tricky situation. I have logically deduced that the city is in Tajikistan, but it is not Dushanbe, Khujand, Bokhtar, or Istaravshan.\n\nLet me re-evaluate my previous path.\n1. Northern Hemisphere: Yes.\n2. Not Europe: Yes.\n3. Asia: Yes.\n4. Not East Asia: Yes.\n5. Not Southeast Asia: Yes.\n6. Not South Asia: Yes.\n7. Not West Asia: Yes.\n8. Central Asia: Yes.\n9. Not Capital: Yes.\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is a critical turning point. I have been convinced by your \"No\" answers that the city is in Tajikistan, but you have denied it being the four most prominent non-capital cities. This suggests one of two things:\n1. My classification of the region is wrong (perhaps it's not Central Asia in the strict political sense, but geographically/culturally fits there, or my \"Central Asia\" definition was too narrow).\n2. Or, more likely, I made a logical error in the previous steps regarding the region elimination.\n\nLet's step back. I know:\n- Northern Hemisphere\n- Asia\n(Remember the player is trying to guess a city, and the correct answer is Yovon, Tajikistan. Reply to the question in relation to Yovon, Tajikistan. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    }
+  ],
+  "judge_conversation": null
+}

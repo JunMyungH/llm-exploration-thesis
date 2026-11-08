@@ -1,0 +1,345 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 98,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "New Amsterdam, Guyana",
+  "goal_reached": false,
+  "judge_label": true,
+  "success": false,
+  "num_turns": 20,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will use your answers to narrow down the possibilities strategically.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The city is in the Southern Hemisphere.\n\n**Is your home city located on a continent other than Australia?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is in the Southern Hemisphere and not in Australia. This leaves South America, Africa, and potentially parts of Asia/Oceania that cross the equator (though \"Southern Hemisphere\" usually implies the main landmasses like South America and Africa in this context).\n\n**Is your home city located in South America?**"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "We have narrowed it down to South America.\n\n**Is your home city the capital of its country?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's a major city in South America, but not the capital.\n\n**Is your home city located in Brazil?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, it is a major city in South America, not the capital, and not in Brazil. This leaves countries like Argentina, Chile, Colombia, Peru, Uruguay, Paraguay, Bolivia, Ecuador, and Venezuela.\n\n**Is your home city located in Argentina?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Still in South America, not the capital, not in Brazil, and not in Argentina.\n\n**Is your home city located in Colombia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it's a major city in South America, not the capital, not in Brazil, Argentina, or Colombia.\n\n**Is your home city located in Chile?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Remaining possibilities: Peru, Ecuador, Uruguay, Paraguay, Bolivia, Venezuela.\n\n**Is your home city located in Peru?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in Peru. The remaining major South American countries to check are Ecuador, Uruguay, Paraguay, Bolivia, and Venezuela.\n\n**Is your home city located in Venezuela?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, it is not in Venezuela. The remaining major countries are Ecuador, Uruguay, Paraguay, and Bolivia.\n\n**Is your home city located in Ecuador?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is not in Ecuador. The remaining major countries are Uruguay, Paraguay, and Bolivia.\n\n**Is your home city located in Uruguay?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, it is not in Uruguay. The remaining major countries are Paraguay and Bolivia.\n\n**Is your home city located in Bolivia?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is very interesting. We have eliminated all the major South American countries (Brazil, Argentina, Colombia, Chile, Peru, Venezuela, Ecuador, Uruguay, Bolivia) and we know it is not the capital.\n\nThe only significant South American country left is **Paraguay**, but I already asked if it was in Paraguay? Wait, let me re-check my previous steps.\n\n1. Not Brazil.\n2. Not Argentina.\n3. Not Colombia.\n4. Not Chile.\n5. Not Peru.\n6. Not Venezuela.\n7. Not Ecuador.\n8. Not Uruguay.\n9. Not Bolivia"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is a tricky situation. We have eliminated all major South American countries (Brazil, Argentina, Colombia, Chile, Peru, Venezuela, Ecuador, Uruguay, Bolivia, and Paraguay) and we know the city is not the capital.\n\nLet's step back. Is it possible the city is in a smaller South American territory or I missed a country? Or perhaps my assumption about \"major cities\" excluded the only possibility?\n\nLet's check the remaining options:\n- **Guyana, Suriname, French Guiana**: These are in South America but might not be considered \"major\" in the same way, or I might have skipped"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so the city is in **Paraguay**.\n\nSince it is not the capital (which is Asunción), it must be the second-largest city, which is also the economic hub of the country.\n\n**Is the city Ciudad del Este?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Paraguay, but it is not Asunción (the capital) and it is not Ciudad del Este.\n\nThe next most prominent city in Paraguay is **Encarnación**, known for its colonial architecture and location on the Paraná River.\n\n**Is the city Encarnación?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Paraguay, not Asunción, not Ciudad del Este, and not Encarnación.\n\nThe next largest city in Paraguay by population is **San Lorenzo**.\n\n**Is the city San Lorenzo?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, so it is in Paraguay, but it is not Asunción, Ciudad del Este, Encarnación, or San Lorenzo.\n\nThe next significant city in Paraguay is **Luque**, which is part of the Greater Asunción metropolitan area.\n\n**Is the city Luque?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "This is becoming quite difficult, as I have exhausted the most likely candidates in Paraguay (Asunción, Ciudad del Este, Encarnación, San Lorenzo, Luque).\n\nLet's reconsider the geography. Is it possible the city is known for a specific landmark or industry rather than just its size?\n\n**Is your home city known for being a major free trade zone or having a significant border with another country?**"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city New Amsterdam, Guyana"
+    },
+    {
+      "role": "user",
+      "content": "Understood! I am ready to play \"Guess My City.\" I will use your answers to narrow down the possibilities strategically.\n\nHere is my first question:\n\n**Is your home city located in the Northern Hemisphere?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The city is in the Southern Hemisphere.\n\n**Is your home city located on a continent other than Australia?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is in the Southern Hemisphere and not in Australia. This leaves South America, Africa, and potentially parts of Asia/Oceania that cross the equator (though \"Southern Hemisphere\" usually implies the main landmasses like South America and Africa in this context).\n\n**Is your home city located in South America?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "We have narrowed it down to South America.\n\n**Is your home city the capital of its country?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's a major city in South America, but not the capital.\n\n**Is your home city located in Brazil?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, it is a major city in South America, not the capital, and not in Brazil. This leaves countries like Argentina, Chile, Colombia, Peru, Uruguay, Paraguay, Bolivia, Ecuador, and Venezuela.\n\n**Is your home city located in Argentina?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Still in South America, not the capital, not in Brazil, and not in Argentina.\n\n**Is your home city located in Colombia?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it's a major city in South America, not the capital, not in Brazil, Argentina, or Colombia.\n\n**Is your home city located in Chile?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Remaining possibilities: Peru, Ecuador, Uruguay, Paraguay, Bolivia, Venezuela.\n\n**Is your home city located in Peru?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in Peru. The remaining major South American countries to check are Ecuador, Uruguay, Paraguay, Bolivia, and Venezuela.\n\n**Is your home city located in Venezuela?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, it is not in Venezuela. The remaining major countries are Ecuador, Uruguay, Paraguay, and Bolivia.\n\n**Is your home city located in Ecuador?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is not in Ecuador. The remaining major countries are Uruguay, Paraguay, and Bolivia.\n\n**Is your home city located in Uruguay?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, it is not in Uruguay. The remaining major countries are Paraguay and Bolivia.\n\n**Is your home city located in Bolivia?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is very interesting. We have eliminated all the major South American countries (Brazil, Argentina, Colombia, Chile, Peru, Venezuela, Ecuador, Uruguay, Bolivia) and we know it is not the capital.\n\nThe only significant South American country left is **Paraguay**, but I already asked if it was in Paraguay? Wait, let me re-check my previous steps.\n\n1. Not Brazil.\n2. Not Argentina.\n3. Not Colombia.\n4. Not Chile.\n5. Not Peru.\n6. Not Venezuela.\n7. Not Ecuador.\n8. Not Uruguay.\n9. Not Bolivia\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is a tricky situation. We have eliminated all major South American countries (Brazil, Argentina, Colombia, Chile, Peru, Venezuela, Ecuador, Uruguay, Bolivia, and Paraguay) and we know the city is not the capital.\n\nLet's step back. Is it possible the city is in a smaller South American territory or I missed a country? Or perhaps my assumption about \"major cities\" excluded the only possibility?\n\nLet's check the remaining options:\n- **Guyana, Suriname, French Guiana**: These are in South America but might not be considered \"major\" in the same way, or I might have skipped\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so the city is in **Paraguay**.\n\nSince it is not the capital (which is Asunción), it must be the second-largest city, which is also the economic hub of the country.\n\n**Is the city Ciudad del Este?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Paraguay, but it is not Asunción (the capital) and it is not Ciudad del Este.\n\nThe next most prominent city in Paraguay is **Encarnación**, known for its colonial architecture and location on the Paraná River.\n\n**Is the city Encarnación?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Paraguay, not Asunción, not Ciudad del Este, and not Encarnación.\n\nThe next largest city in Paraguay by population is **San Lorenzo**.\n\n**Is the city San Lorenzo?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Okay, so it is in Paraguay, but it is not Asunción, Ciudad del Este, Encarnación, or San Lorenzo.\n\nThe next significant city in Paraguay is **Luque**, which is part of the Greater Asunción metropolitan area.\n\n**Is the city Luque?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "This is becoming quite difficult, as I have exhausted the most likely candidates in Paraguay (Asunción, Ciudad del Este, Encarnación, San Lorenzo, Luque).\n\nLet's reconsider the geography. Is it possible the city is known for a specific landmark or industry rather than just its size?\n\n**Is your home city known for being a major free trade zone or having a significant border with another country?**\n(Remember the player is trying to guess a city, and the correct answer is New Amsterdam, Guyana. Reply to the question in relation to New Amsterdam, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    }
+  ],
+  "judge_conversation": null
+}

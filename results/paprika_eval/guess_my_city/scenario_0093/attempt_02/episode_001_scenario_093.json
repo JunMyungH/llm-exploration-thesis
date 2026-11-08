@@ -1,0 +1,310 @@
+{
+  "game": "guess_my_city",
+  "split": "eval",
+  "scenario_index": 93,
+  "agent_game_scenario": "city",
+  "env_game_scenario": "Georgetown, Guyana",
+  "goal_reached": true,
+  "judge_label": true,
+  "success": true,
+  "num_turns": 17,
+  "max_turns": 20,
+  "conversation": [
+    {
+      "role": "user",
+      "content": "You are playing a game called 'Guess My City.' Your task is to guess the home city of the other player within 20 questions.\n\nYou must follow these rules:\n\n1. You may ask open-ended questions about the city's characteristics, such as geography, culture, landmarks, cuisine, climate, or other unique traits.\n\n2. Do not ask directly for the name of the city or country.\n\n3. Use the answers from the other player to strategically decide the next question, your goal is to arrive at the correct city with as few questions as possible. \n\n4. After gathering enough information, you can attempt to guess the city, but each guess counts as one of your 20 questions.\n\nExample questions: 'What is your favorite cuisine from your home city?', 'Is your home city located near the coastline?', 'What kind of landmarks is your city known for?' Your goal is to identify the city through deduction, pattern recognition, and strategic questioning.\n\n4. When you are confident, make a guess, by mentioning the name of the city and the country it is in, for example, 'Is the city Jakarta, Indonesia?'\n\nThe game starts now, and start asking your questions."
+    },
+    {
+      "role": "assistant",
+      "content": "To begin, I need to narrow down the geography significantly.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The city is in the Southern Hemisphere.\n\n**Question 2:** Is your home city located on a continent other than Australia or Oceania?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is in the Southern Hemisphere and is neither in Australia/Oceania nor Africa, Asia, or Europe. This leaves South America and possibly parts of Antarctica (though cities are unlikely there).\n\n**Question 3:** Is your home city located in South America?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Great. We are looking for a city in South America.\n\n**Question 4:** Is your home city the capital city of its country?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 5:** Is your home city located on the Pacific coast of South America?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So the city is a capital city in South America, but it is not on the Pacific coast. This eliminates cities like Lima, Santiago, and Quito. The remaining possibilities are largely on the Atlantic coast or inland.\n\n**Question 6:** Is your home city located on the Atlantic coast?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 7:** Is your home city located in a country where Portuguese is the official language?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is a capital city in South America, on the Atlantic coast, and the country does not speak Portuguese. This eliminates Brazil (Rio de Janeiro is not a capital, Brasilia is inland). This leaves us with Spanish-speaking countries: Venezuela, Colombia, Guyana (English), Suriname (Dutch), French Guiana (French), Uruguay, and Argentina. Note: While Guyana, Suriname, and French Guiana are on the Atlantic coast, their capitals (Georgetown, Paramaribo, Cayenne) are often considered part of the Caribbean/Northern South America region, but let's stick to the"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 8:** Is your home city located in Argentina?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is a capital in South America, on the Atlantic coast, not in a Portuguese-speaking country, and not in Argentina. This leaves us with:\n*   **Uruguay:** Montevideo\n*   **Venezuela:** Caracas (technically near the coast, but inland in a valley)\n*   **Colombia:** Bogotá (inland)\n*   **Guyana:** Georgetown\n*   **Suriname:** Paramaribo\n*   **French Guiana:** Cayenne (an overseas department of France)\n\nLet's check the coastline definition again. Caracas is not on the coast"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. The city is on the Atlantic coast.\n\n**Question 9:** Is your home city located in Uruguay?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is a capital in South America, on the Atlantic coast, not Portuguese-speaking, not Argentina, and not Uruguay.\n\nThis leaves us with a very small list:\n1.  **Buenos Aires, Argentina** (Ruled out)\n2.  **Montevideo, Uruguay** (Ruled out)\n3.  **Caracas, Venezuela** (Technically not *on* the coast, but very close. However, the user said \"Yes\" to Atlantic Coast, so likely not this one unless they are being loose with definitions. But usually, Caracas is considered inland.)"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "This is getting tricky. Let's re-evaluate the \"Atlantic Coast\" constraint combined with \"Capital\" and \"South America.\"\n\nThe major capitals on the Atlantic coast of South America are:\n1.  **Buenos Aires, Argentina** (Ruled out)\n2.  **Montevideo, Uruguay** (Ruled out)\n3.  **Caracas, Venezuela** (Often considered Caribbean/Atlantic coast region, though the city center is in a valley. But let's assume \"Yes\" covers this.)\n4.  **Georgetown, Guyana**\n5.  **Paramar"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "**Question 10:** Is your home city located in Venezuela?"
+    },
+    {
+      "role": "user",
+      "content": "No."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is a capital in South America, on the Atlantic coast, not Portuguese-speaking, not Argentina, not Uruguay, and not Venezuela.\n\nThis leaves us with:\n1.  **Georgetown, Guyana**\n2.  **Paramaribo, Suriname**\n3.  **Cayenne, French Guiana** (Overseas department of France)\n\nLet's distinguish between these based on language/colonial history.\n\n**Question 11:** Is the official language of the country where your city is located a Germanic language (English or Dutch)?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is in a country where the official language is either English or Dutch. This leaves us with:\n1.  **Georgetown, Guyana** (English)\n2.  **Paramaribo, Suriname** (Dutch)\n\n**Question 12:** Is your home city located in a country where English is the official language?"
+    },
+    {
+      "role": "user",
+      "content": "Yes."
+    },
+    {
+      "role": "assistant",
+      "content": "So, the city is the capital of Guyana, and the official language is English. The capital of Guyana is Georgetown.\n\n**Question 13:** Is the city Georgetown, Guyana?"
+    },
+    {
+      "role": "user",
+      "content": "Goal reached"
+    }
+  ],
+  "env_conversation": [
+    {
+      "role": "system",
+      "content": "You are the environment in a game called 'Guess My City.' You will be given a specific home city (e.g., London, United Kingdom) and you have to respond to the player's questions to help them guess this city.\n\n Follow these rules:\n\n1. Answer the agent player's questions honestly and correctly (i.e., the answers need to be true given the home city given to you at the start of the game), but do not mention the name of your city or its country explicitly. However, you can verify the player's guess about a particular city/country. For example, if the player asks, 'What is your home country?' You should not respond to this question. However, if they ask 'Is your home country United Kingdom?' You should reply with the correct answer based on the home city given to you.\n\n2. Your answers should provide useful clues about your city's geography, culture, landmarks, cuisine, climate, or other unique characteristics.\n\n3. Be as informative as possible to guide the agent player within the rules. Example answers: If the agent asks about cuisine, you could say: 'My city is famous for its seafood dishes and has a vibrant food market scene.' If the agent asks about geography, you might say: 'My city is located near a major river and has a historic port.'\n\n4. You should respond with 'Goal reached' if the player has successfully guessed your home city. Ignore minor variations in the spelling of the city, but only if these variations are common.\n\nRemember, you are here to help the agent guess your city through clues, but you must not reveal the city's name or its country directly UNDER ANY CIRCUMSTANCES. If the player asks such a question, reply that you cannot give away the name, and can only confirm the name if the player guesses it. \n\nThe game starts now, and the player is trying to guess the city Georgetown, Guyana"
+    },
+    {
+      "role": "user",
+      "content": "To begin, I need to narrow down the geography significantly.\n\n**Question 1:** Is your home city located in the Northern Hemisphere?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The city is in the Southern Hemisphere.\n\n**Question 2:** Is your home city located on a continent other than Australia or Oceania?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is in the Southern Hemisphere and is neither in Australia/Oceania nor Africa, Asia, or Europe. This leaves South America and possibly parts of Antarctica (though cities are unlikely there).\n\n**Question 3:** Is your home city located in South America?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Great. We are looking for a city in South America.\n\n**Question 4:** Is your home city the capital city of its country?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 5:** Is your home city located on the Pacific coast of South America?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So the city is a capital city in South America, but it is not on the Pacific coast. This eliminates cities like Lima, Santiago, and Quito. The remaining possibilities are largely on the Atlantic coast or inland.\n\n**Question 6:** Is your home city located on the Atlantic coast?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 7:** Is your home city located in a country where Portuguese is the official language?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is a capital city in South America, on the Atlantic coast, and the country does not speak Portuguese. This eliminates Brazil (Rio de Janeiro is not a capital, Brasilia is inland). This leaves us with Spanish-speaking countries: Venezuela, Colombia, Guyana (English), Suriname (Dutch), French Guiana (French), Uruguay, and Argentina. Note: While Guyana, Suriname, and French Guiana are on the Atlantic coast, their capitals (Georgetown, Paramaribo, Cayenne) are often considered part of the Caribbean/Northern South America region, but let's stick to the\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 8:** Is your home city located in Argentina?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is a capital in South America, on the Atlantic coast, not in a Portuguese-speaking country, and not in Argentina. This leaves us with:\n*   **Uruguay:** Montevideo\n*   **Venezuela:** Caracas (technically near the coast, but inland in a valley)\n*   **Colombia:** Bogotá (inland)\n*   **Guyana:** Georgetown\n*   **Suriname:** Paramaribo\n*   **French Guiana:** Cayenne (an overseas department of France)\n\nLet's check the coastline definition again. Caracas is not on the coast\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "Understood. The city is on the Atlantic coast.\n\n**Question 9:** Is your home city located in Uruguay?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is a capital in South America, on the Atlantic coast, not Portuguese-speaking, not Argentina, and not Uruguay.\n\nThis leaves us with a very small list:\n1.  **Buenos Aires, Argentina** (Ruled out)\n2.  **Montevideo, Uruguay** (Ruled out)\n3.  **Caracas, Venezuela** (Technically not *on* the coast, but very close. However, the user said \"Yes\" to Atlantic Coast, so likely not this one unless they are being loose with definitions. But usually, Caracas is considered inland.)\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "This is getting tricky. Let's re-evaluate the \"Atlantic Coast\" constraint combined with \"Capital\" and \"South America.\"\n\nThe major capitals on the Atlantic coast of South America are:\n1.  **Buenos Aires, Argentina** (Ruled out)\n2.  **Montevideo, Uruguay** (Ruled out)\n3.  **Caracas, Venezuela** (Often considered Caribbean/Atlantic coast region, though the city center is in a valley. But let's assume \"Yes\" covers this.)\n4.  **Georgetown, Guyana**\n5.  **Paramar\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "**Question 10:** Is your home city located in Venezuela?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is a capital in South America, on the Atlantic coast, not Portuguese-speaking, not Argentina, not Uruguay, and not Venezuela.\n\nThis leaves us with:\n1.  **Georgetown, Guyana**\n2.  **Paramaribo, Suriname**\n3.  **Cayenne, French Guiana** (Overseas department of France)\n\nLet's distinguish between these based on language/colonial history.\n\n**Question 11:** Is the official language of the country where your city is located a Germanic language (English or Dutch)?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is in a country where the official language is either English or Dutch. This leaves us with:\n1.  **Georgetown, Guyana** (English)\n2.  **Paramaribo, Suriname** (Dutch)\n\n**Question 12:** Is your home city located in a country where English is the official language?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "So, the city is the capital of Guyana, and the official language is English. The capital of Guyana is Georgetown.\n\n**Question 13:** Is the city Georgetown, Guyana?\n(Remember the player is trying to guess a city, and the correct answer is Georgetown, Guyana. Reply to the question in relation to Georgetown, Guyana. Please try to be concise and keep it short. If the player asks you to reveal the name of city or country directly instead of guessing the name, reply that you cannot give away the name, and can only confirm the name if the player guesses it.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Goal reached"
+    }
+  ],
+  "judge_conversation": [
+    {
+      "role": "system",
+      "content": "You are the judge in a game called 'Guess My City'. Your role is to verify if the player has won the game by correctly guessing the city chosen by the environment (env) player.\n\nTo determine this, follow these rules:\n\n1. Check the agent player's question to ensure they have not directly asked the environment for the name of the city or country. Any question explicitly requesting the city's name, such as 'What is the name of your city?' or 'What country is your city in?' violates the rules.\n\n2. Verify that the player has explicitly mentioned the correct name of the city in their guess. Ignore minor variations in the spelling of the city (for example, Kiev and Kyiv refer to the same city). If these two conditions are met, the player wins the game. Otherwise, the agent has not won.\n\n3.Your role is purely evaluative, ensuring adherence to the rules and confirming or denying the win based on the criteria above.\n\n4. Reply <VALID> if the player has successfully guessed the city, and followed the specified rules. Otherwise, reply <NOTVALID>"
+    },
+    {
+      "role": "user",
+      "content": "The conversation begins here: \n\nAgent: So, the city is the capital of Guyana, and the official language is English. The capital of Guyana is Georgetown.\n\n**Question 13:** Is the city Georgetown, Guyana?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct city, which is Georgetown, Guyana in this particular game. Reply with <VALID> only if the player has guessed Georgetown, Guyana (or other variations in name, if both names refer to the same city) in their response, otherwise reply with <NOTVALID>. Ignore variations in the name of the city if the city is known by both names (for example, Kyiv and Kiev). Note that guessing a particular characteristics of this city is not enough, the player needs to successfully guess the correct city by name in their response in order for you to reply with <VALID>.\n\nAnswer:"
+    },
+    {
+      "role": "assistant",
+      "content": "<VALID>"
+    }
+  ]
+}
