@@ -132,8 +132,8 @@ def mentions_phrase(text: str, phrase: str) -> bool:
 
 
 def explicitly_guessed(game: str, target: str, question: str) -> bool:
-    # Conservative guard against a false positive from a weak environment.
-    if question.count("?") != 1 or not question.strip().endswith("?"):
+    question = question.strip()
+    if question.count("?") != 1 or not question.endswith("?") or "\n" in question:
         return False
     if game == "guess_my_city":
         parts = [part.strip() for part in target.rsplit(",", 1)]
@@ -143,17 +143,43 @@ def explicitly_guessed(game: str, target: str, question: str) -> bool:
         aliases = [city.split("(")[0].strip()]
         if "(" in city and ")" in city:
             aliases.append(city.split("(", 1)[1].split(")", 1)[0].strip())
-        return any(mentions_phrase(question, alias) for alias in aliases) and mentions_phrase(question, country)
+
+        normalized_question = normalize(question)
+        prefixes = (
+            "is your home city ",
+            "is your city ",
+            "is the city ",
+            "is the city named ",
+            "is the city called ",
+            "is it ",
+            "could it be ",
+            "could the city be ",
+            "could your home city be ",
+            "might it be ",
+            "do you live in ",
+            "are you from "
+        )
+
+        for alias in aliases:
+            city_name = normalize(alias)
+            full_name = normalize(f"{alias}, {country}")
+            for prefix in prefixes:
+                if normalized_question in [prefix + city_name, prefix + full_name]: return True
+        return False
+    
     return mentions_phrase(question, target)
 
 
 def city_name_leaked(target: str, question: str, answer: str) -> bool:
-    if normalize(answer) == "goal reached":
+    if "goal reached" in normalize(answer):
         return False
     city, country = (part.strip() for part in target.rsplit(",", 1))
-    primary_city = city.split("(", 1)[0].strip()
-    # Flags both city and country; a guess-confirmation answer should still avoid naming either.
-    return mentions_phrase(answer, primary_city) or mentions_phrase(answer, country)
+    city = city.split("(", 1)[0].strip()
+
+    city_leaked = (mentions_phrase(answer, city) and not mentions_phrase(question, city))
+    country_leaked = (mentions_phrase(answer, country) and not mentions_phrase(question, country))
+
+    return city_leaked or country_leaked
 
 
 class EpisodeFeedback:
@@ -382,6 +408,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument("--use-judge", action="store_true", help="Use a trustworthy model for judging")
+    parser.add_argument("--prompt-mode", choices=("paprika", "extended"), default="paprika")
     return parser.parse_args()
 
 
@@ -390,11 +417,11 @@ def main() -> None:
     args = parse_args()
     if min(args.train_size, args.val_size, args.max_metric_calls, args.max_turns) <= 0:
         raise ValueError("All sizes, metric calls, and turns must be positive")
-    config = load_game_config(args.game)
+    config = load_game_config(args.game, prompt_mode=args.prompt_mode)
     if args.max_turns > config.max_turns:
         raise ValueError("Cannot exceed the game's maximum turns")
     if args.max_turns != config.max_turns:
-        config = PaprikaGameConfig(config.name, {**config.data, "max_turns": args.max_turns})
+        config = PaprikaGameConfig(config.name, {**config.data, "max_turns": args.max_turns}, prompt_mode=config.prompt_mode)
     scenarios = config.scenarios("train")
     if args.train_size + args.val_size > len(scenarios):
         raise ValueError("Not enough training scenarios to create disjoint splits")
@@ -451,6 +478,7 @@ def main() -> None:
         "environment_model": environment.model,
         "judge_used": args.use_judge,
         "note": "Development run; no final PAPRIKA eval split was used.",
+        "prompt_mode": args.prompt_mode,
     }
     (output_dir / "run_config.json").write_text(json.dumps(settings, indent=2), encoding="utf-8")
 
