@@ -1,0 +1,375 @@
+{
+  "run_id": "b9aa3108993640588080cbcd74313547",
+  "timestamp_utc": "2026-11-17T20:23:22.634561+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1181,
+  "category": "movie",
+  "target": "La La Land",
+  "prompt_mode": "paprika",
+  "candidate_hash": "87a43d53a314",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Crucial Strategy**: Do not merely rewrite or restate fixed game rules. Focus on improving question-selection strategy, maximizing information gain, and rigorously using previous answers to exclude hypotheses. \n- **Error Prevention**: Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis. If a broad category (e.g., 'physics') yields a 'Yes', but specific sub-categories (e.g., 'light', 'sound', 'electricity', 'gravity') all yield 'No', do not ask redundant questions within that dead-end branch. Instead, pivot to a different major category or refine the remaining possibilities logically.\n\nThe game starts now. You are trying to guess a [TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1181,
+    "agent_game_scenario": "movie",
+    "env_game_scenario": "La La Land",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie animated?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in black and white?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in English?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a live-action film?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a comedy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a romantic comedy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in the 21st century?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in the United States?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in New York City?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in Los Angeles?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in the present day (2000s or later)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie based on a true story?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie based on a book?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a remake?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a romantic comedy released between 2010 and 2020?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie \"Crazy, Stupid, Love\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie \"The Proposal\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie \"27 Dresses\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie \"The Ugly Truth\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie \"The Heat\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is La La Land."
+      },
+      {
+        "role": "user",
+        "content": "Is the movie animated?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in black and white?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in English?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a live-action film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a comedy?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a romantic comedy?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in the 21st century?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in the United States?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in New York City?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in Los Angeles?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in the present day (2000s or later)?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie based on a true story?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie based on a book?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a remake?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a romantic comedy released between 2010 and 2020?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie \"Crazy, Stupid, Love\"?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie \"The Proposal\"?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie \"27 Dresses\"?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie \"The Ugly Truth\"?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie \"The Heat\"?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the movie set in New York City? -> No\n10. Is the movie set in Los Angeles? -> Yes\n11. Is the movie set in the present day (2000s or later)? -> Yes\n12. Is the movie based on a true story? -> No\n13. Is the movie based on a book? -> No\n14. Is the movie a remake? -> No\n15. Is the movie a romantic comedy released between 2010 and 2020? -> Yes\n16. Is the movie \"Crazy, Stupid, Love\"? -> No\n17. Is the movie \"The Proposal\"? -> No\n18. Is the movie \"27 Dresses\"? -> No\n19. Is the movie \"The Ugly Truth\"? -> No\n20. Is the movie \"The Heat\"? -> No"
+}

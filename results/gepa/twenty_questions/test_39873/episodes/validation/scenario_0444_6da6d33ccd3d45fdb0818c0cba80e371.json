@@ -1,0 +1,375 @@
+{
+  "run_id": "6da6d33ccd3d45fdb0818c0cba80e371",
+  "timestamp_utc": "2026-11-17T20:30:31.672630+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 444,
+  "category": "person",
+  "target": "Elon Musk",
+  "prompt_mode": "paprika",
+  "candidate_hash": "61daf89b4891",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. You may make a direct guess if you are confident, but typically you should ask diagnostic questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - **Avoid Linear Narrowing Traps:** If you are narrowing down a category by asking sequential specific examples or sub-types (e.g., \"Is it organic chemistry?\" -> No, \"Is it inorganic?\" -> Yes, \"Is it metals?\" -> Yes...), stop listing specific examples if you have already asked 3+ specific sub-questions within that branch without identifying the target. Instead, ask a question about the *properties*, *applications*, or *historical context* of that category to distinguish between the remaining candidates.\n   - **Hypothesis Elimination:** If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - **Confident Guessing:** If you have narrowed it down to a small number of candidates (e.g., 1-2) or have strong evidence pointing to one, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence. Do not waste questions on redundant sub-classifications if the answer is likely to be the same.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions, are actively eliminating possibilities, and are avoiding linear, low-information-gain sub-classifications.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 444,
+    "agent_game_scenario": "person",
+    "env_game_scenario": "Elon Musk",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a real historical figure?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person male?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a politician or head of state?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a scientist or inventor?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for work in physics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for work in biology or medicine?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for work in chemistry?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for work in engineering or computer science?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in computer science rather than engineering?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in electrical engineering or telecommunications?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to wireless communication or radio technology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to mechanical engineering or transportation technology?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to automotive technology or internal combustion engines?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to aviation or aerospace technology?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to powered flight (airplanes)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to helicopters or rotorcraft technology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for contributions to space exploration or rocketry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known for contributions to liquid-fueled rocketry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Wernher von Braun?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Robert Goddard?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Elon Musk."
+      },
+      {
+        "role": "user",
+        "content": "Is the person a real historical figure?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person male?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a politician or head of state?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a scientist or inventor?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for work in physics?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for work in biology or medicine?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for work in chemistry?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for work in engineering or computer science?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in computer science rather than engineering?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in electrical engineering or telecommunications?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to wireless communication or radio technology?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to mechanical engineering or transportation technology?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to automotive technology or internal combustion engines?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to aviation or aerospace technology?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to powered flight (airplanes)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to helicopters or rotorcraft technology?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for contributions to space exploration or rocketry?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known for contributions to liquid-fueled rocketry?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Wernher von Braun?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Robert Goddard?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the person primarily known for their work in computer science rather than engineering? -> No\n10. Is the person primarily known for their work in electrical engineering or telecommunications? -> Yes\n11. Is the person primarily known for contributions to wireless communication or radio technology? -> No\n12. Is the person primarily known for contributions to mechanical engineering or transportation technology? -> Yes\n13. Is the person primarily known for contributions to automotive technology or internal combustion engines? -> No\n14. Is the person primarily known for contributions to aviation or aerospace technology? -> Yes\n15. Is the person primarily known for contributions to powered flight (airplanes)? -> No\n16. Is the person primarily known for contributions to helicopters or rotorcraft technology? -> No\n17. Is the person primarily known for contributions to space exploration or rocketry? -> Yes\n18. Is the person known for contributions to liquid-fueled rocketry? -> Yes\n19. Is the person Wernher von Braun? -> No\n20. Is the person Robert Goddard? -> No"
+}

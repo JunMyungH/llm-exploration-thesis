@@ -1,0 +1,327 @@
+{
+  "run_id": "582d33407b6149c5bcb822f9439c4c42",
+  "timestamp_utc": "2026-11-17T20:22:29.730110+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 386,
+  "category": "clothing",
+  "target": "Cardigan",
+  "prompt_mode": "paprika",
+  "candidate_hash": "067930060a98",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **CRITICAL**: You must track all previous questions and their answers to avoid repeating questions or asking about hypotheses that have already been ruled out. Do not cycle through minor variations of unproductive hypotheses.\n- Focus on information gain: Ask questions that split the remaining possible candidates as evenly as possible, or target specific distinguishing features of the remaining candidates.\n- Maintain a mental list of excluded attributes and included attributes to guide your next question.\n\nThe game starts now. You are trying to guess a [TARGET_CATEGORY]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 386,
+    "agent_game_scenario": "clothing",
+    "env_game_scenario": "Cardigan",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 17,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn on the upper body?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn on the lower body (e.g., pants, skirt)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn on the feet?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn on the head?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn on the arms or hands (e.g., sleeves, gloves)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn around the neck or shoulders (e.g., scarf, shawl, stole)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn on the torso (e.g., shirt, jacket, vest)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn by men?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn as an outer layer (e.g., jacket, coat, blazer)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically made of leather?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically made of denim?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically made of wool?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically a jacket or coat?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically a sweater or pullover?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically knitted?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically worn by women?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the item of clothing typically a cardigan?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Cardigan."
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn on the lower body (e.g., pants, skirt)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn on the feet?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn on the head?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn on the arms or hands (e.g., sleeves, gloves)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn around the neck or shoulders (e.g., scarf, shawl, stole)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn on the torso (e.g., shirt, jacket, vest)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn by men?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn as an outer layer (e.g., jacket, coat, blazer)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically made of leather?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically made of denim?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically made of wool?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically a jacket or coat?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically a sweater or pullover?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically knitted?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically worn by women?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the item of clothing typically a cardigan?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8300000000000001,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 17,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 17/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8300\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n6. Is the item of clothing typically worn around the neck or shoulders (e.g., scarf, shawl, stole)? -> No\n7. Is the item of clothing typically worn on the torso (e.g., shirt, jacket, vest)? -> Yes\n8. Is the item of clothing typically worn by men? -> Yes\n9. Is the item of clothing typically worn as an outer layer (e.g., jacket, coat, blazer)? -> Yes\n10. Is the item of clothing typically made of leather? -> No\n11. Is the item of clothing typically made of denim? -> No\n12. Is the item of clothing typically made of wool? -> Yes\n13. Is the item of clothing typically a jacket or coat? -> No\n14. Is the item of clothing typically a sweater or pullover? -> Yes\n15. Is the item of clothing typically knitted? -> Yes\n16. Is the item of clothing typically worn by women? -> Yes\n17. Is the item of clothing typically a cardigan? -> Goal reached."
+}

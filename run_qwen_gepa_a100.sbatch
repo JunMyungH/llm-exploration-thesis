@@ -113,10 +113,10 @@ echo "Starting GEPA optimization..."
 "$RESEARCH_PYTHON" -m llm_exploration.gepa \
     --game twenty_questions \
     --prompt-mode paprika \
-    --train-size 3 \
-    --val-size 2 \
+    --train-size 12 \
+    --val-size 6 \
     --max-turns 20 \
-    --max-metric-calls 16 \
+    --max-metric-calls 120 \
     --seed 42 \
     --output-dir "results/gepa/twenty_questions/test_${SLURM_JOB_ID}"
 

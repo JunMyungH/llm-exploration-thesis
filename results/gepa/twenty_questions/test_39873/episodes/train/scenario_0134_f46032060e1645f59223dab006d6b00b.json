@@ -1,0 +1,375 @@
+{
+  "run_id": "f46032060e1645f59223dab006d6b00b",
+  "timestamp_utc": "2026-11-17T20:26:10.307740+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 134,
+  "category": "scientific concept",
+  "target": "Cryogenics",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a5b2d7cde836",
+  "candidate_instructions": "You are playing a game of 20 Questions to guess a specific scientific concept. Your goal is to identify the concept in as few yes-or-no questions as possible.\n\n**Current State Analysis:**\n1.  **Review History:** Analyze the entire conversation history provided. Identify all 'Yes' answers (confirmed attributes) and 'No' answers (excluded attributes).\n2.  **Hypothesis Tracking:** Maintain a mental list of candidate concepts that fit all 'Yes' criteria and do not contradict any 'No' criteria. \n3.  **Avoid Redundancy:** Do not ask questions that have already been asked or ask minor variations of previous 'No' answers. Do not ask questions that are logically implied by previous answers unless narrowing down a specific subset.\n4.  **Information Gain:** Prioritize questions that split the remaining hypothesis space roughly in half (maximizing information gain). If the hypothesis space is very small (e.g., 1-3 candidates), you may make a direct guess.\n\n**Strategy for Scientific Concepts:**\n-   Start broad (e.g., Physics, Chemistry, Biology) and narrow down to sub-fields, then specific phenomena, laws, or entities.\n-   If you have narrowed it down to a specific law or principle (e.g., related to Thermodynamics, Entropy, Heat Engines, Carnot Cycle), ensure you are distinguishing between the *process* (Carnot Cycle) and the *metric/theorem* (Carnot Efficiency/Thermore). \n-   If previous questions about specific named entities (e.g., 'Carnot efficiency', 'Lorentz transformation') have returned 'No', look for closely related but distinct concepts (e.g., 'Maxwell-Boltzmann distribution', 'Spacetime interval', 'Planck's constant').\n\n**Output Format:**\nProduce exactly one yes-or-no question based on the above analysis. Do not include explanations or reasoning in the output, just the question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 134,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Cryogenics",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the laws governing heat engines or the efficiency of energy conversion?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Carnot cycle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Carnot efficiency?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Second Law of Thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Kelvin-Planck statement?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Clausius statement?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Clausius inequality?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Carnot theorem?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the concept of entropy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of exergy (or available energy)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Gouy-Stodola theorem?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or irreversibility in the context of the Second Law of Thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or exergy in the context of open systems (control volumes)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or exergy in the context of closed systems (control masses)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or exergy in the context of chemical reactions or chemical equilibrium?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or exergy in the context of flow processes (flow exergy)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or exergy in the context of non-reacting mixtures or phase changes?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of availability or exergy in the context of non-equilibrium thermodynamics or finite-time thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Cryogenics."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the laws governing heat engines or the efficiency of energy conversion?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Carnot cycle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Carnot efficiency?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Second Law of Thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Kelvin-Planck statement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Clausius statement?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Clausius inequality?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Carnot theorem?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the concept of entropy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of exergy (or available energy)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Gouy-Stodola theorem?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or irreversibility in the context of the Second Law of Thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or exergy in the context of open systems (control volumes)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or exergy in the context of closed systems (control masses)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or exergy in the context of chemical reactions or chemical equilibrium?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or exergy in the context of flow processes (flow exergy)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or exergy in the context of non-reacting mixtures or phase changes?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of availability or exergy in the context of non-equilibrium thermodynamics or finite-time thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept the Clausius inequality? -> No\n10. Is the concept the Carnot theorem? -> No\n11. Is the concept the concept of entropy? -> No\n12. Is the concept related to the concept of exergy (or available energy)? -> Yes\n13. Is the concept related to the Gouy-Stodola theorem? -> No\n14. Is the concept related to the concept of availability or irreversibility in the context of the Second Law of Thermodynamics? -> No\n15. Is the concept related to the concept of availability or exergy in the context of open systems (control volumes)? -> No\n16. Is the concept related to the concept of availability or exergy in the context of closed systems (control masses)? -> No\n17. Is the concept related to the concept of availability or exergy in the context of chemical reactions or chemical equilibrium? -> No\n18. Is the concept related to the concept of availability or exergy in the context of flow processes (flow exergy)? -> No\n19. Is the concept related to the concept of availability or exergy in the context of non-reacting mixtures or phase changes? -> No\n20. Is the concept related to the concept of availability or exergy in the context of non-equilibrium thermodynamics or finite-time thermodynamics? -> No"
+}

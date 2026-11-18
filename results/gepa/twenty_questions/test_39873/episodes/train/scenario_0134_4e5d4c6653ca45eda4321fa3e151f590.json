@@ -1,0 +1,375 @@
+{
+  "run_id": "4e5d4c6653ca45eda4321fa3e151f590",
+  "timestamp_utc": "2026-11-17T20:21:29.653528+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 134,
+  "category": "scientific concept",
+  "target": "Cryogenics",
+  "prompt_mode": "paprika",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 134,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Cryogenics",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to classical mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to electromagnetism?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to heat transfer?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to conduction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to convection?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to radiation?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the laws of thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to entropy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Second Law of Thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the statistical interpretation of entropy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Boltzmann equation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of a heat engine?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Carnot cycle?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the efficiency of the Carnot cycle?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the maximum theoretical efficiency of a heat engine operating between two temperatures?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Carnot efficiency?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Carnot theorem?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Cryogenics."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to classical mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to electromagnetism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to heat transfer?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to conduction?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to convection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to radiation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the laws of thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to entropy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Second Law of Thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the statistical interpretation of entropy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Boltzmann equation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of a heat engine?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Carnot cycle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the efficiency of the Carnot cycle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the maximum theoretical efficiency of a heat engine operating between two temperatures?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Carnot efficiency?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Carnot theorem?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to radiation? -> Yes\n10. Is the concept related to the laws of thermodynamics? -> Yes\n11. Is the concept related to entropy? -> Yes\n12. Is the concept related to the Second Law of Thermodynamics? -> Yes\n13. Is the concept related to the statistical interpretation of entropy? -> No\n14. Is the concept related to the Boltzmann equation? -> No\n15. Is the concept related to the concept of a heat engine? -> Yes\n16. Is the concept related to the Carnot cycle? -> Yes\n17. Is the concept related to the efficiency of the Carnot cycle? -> Yes\n18. Is the concept related to the maximum theoretical efficiency of a heat engine operating between two temperatures? -> Yes\n19. Is the concept the Carnot efficiency? -> No\n20. Is the concept the Carnot theorem? -> No"
+}

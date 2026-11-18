@@ -1,0 +1,375 @@
+{
+  "run_id": "d5bcf833a83f4dd7b2de2005439beb2e",
+  "timestamp_utc": "2026-11-17T20:24:55.309607+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 397,
+  "category": "invention",
+  "target": "Anesthesia",
+  "prompt_mode": "paprika",
+  "candidate_hash": "352902189358",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, invention, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\n**Strategic Guidelines for Question Selection:**\n1. **Maximize Information Gain**: Prioritize questions that split the remaining hypothesis space as evenly as possible (close to 50/50). Avoid questions that are likely to yield a 'No' answer for a vast majority of remaining candidates unless that 'No' eliminates a large, specific cluster of hypotheses.\n2. **Avoid Narrow/Redundant Queries**: Do not ask about very specific instances (e.g., specific years, specific cities, specific brand names) unless you have already narrowed down the category significantly and are in the final stages of guessing. Avoid asking questions that are slight variations of previous unproductive questions (e.g., if 'Set in Paris?' was No, don't immediately ask 'Set in Lyon?').\n3. **Track Excluded Hypotheses**: Maintain a mental list of what has been ruled out. Ensure your next question addresses a remaining uncertainty rather than re-verifying something already established or exploring a branch that has already been shown to be false.\n4. **Broad to Specific**: Start with broad categories (e.g., 'Is it a living thing?', 'Is it man-made?', 'Is it a person?') to quickly eliminate large groups of possibilities. Only move to specific attributes (time, place, material, function) after the general category is identified.\n5. **Contextual Awareness**: Pay close attention to the 'history' provided. If previous questions have established a context (e.g., 'set in the 20th century'), your next question must logically follow from that context, not regress to broader categories already explored.\n\nProduce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 397,
+    "agent_game_scenario": "invention",
+    "env_game_scenario": "Anesthesia",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a physical object?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a digital or software-based concept?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a process, method, or system rather than a tangible object or software?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this process or method related to computing or information technology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this process or method related to manufacturing or industrial production?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this process or method related to medicine or healthcare?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this medical process or method primarily used for diagnosis?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this medical process or method primarily used for treatment?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this medical treatment primarily surgical in nature (involving an operation)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment minimally invasive (e.g., laparoscopic or robotic surgery)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for orthopedic purposes (e.g., involving bones, joints, or muscles)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for cardiovascular purposes (e.g., involving the heart or blood vessels)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for neurosurgery (involving the brain or spinal cord)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for general surgery involving the abdominal organs (e.g., appendix, gallbladder, stomach, or intestines)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for plastic or reconstructive surgery?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for thoracic surgery (involving the lungs, esophagus, or chest wall)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for urology (involving the kidneys, bladder, or urinary tract)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for ophthalmology (involving the eyes)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for otolaryngology (involving the ears, nose, and throat)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this surgical treatment primarily used for dermatology or general soft tissue procedures (e.g., skin cancer removal, hernia repair, or appendectomy)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Anesthesia."
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a physical object?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a digital or software-based concept?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a process, method, or system rather than a tangible object or software?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this process or method related to computing or information technology?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this process or method related to manufacturing or industrial production?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this process or method related to medicine or healthcare?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this medical process or method primarily used for diagnosis?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this medical process or method primarily used for treatment?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this medical treatment primarily surgical in nature (involving an operation)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment minimally invasive (e.g., laparoscopic or robotic surgery)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for orthopedic purposes (e.g., involving bones, joints, or muscles)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for cardiovascular purposes (e.g., involving the heart or blood vessels)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for neurosurgery (involving the brain or spinal cord)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for general surgery involving the abdominal organs (e.g., appendix, gallbladder, stomach, or intestines)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for plastic or reconstructive surgery?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for thoracic surgery (involving the lungs, esophagus, or chest wall)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for urology (involving the kidneys, bladder, or urinary tract)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for ophthalmology (involving the eyes)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for otolaryngology (involving the ears, nose, and throat)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this surgical treatment primarily used for dermatology or general soft tissue procedures (e.g., skin cancer removal, hernia repair, or appendectomy)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is this medical treatment primarily surgical in nature (involving an operation)? -> Yes\n10. Is this surgical treatment minimally invasive (e.g., laparoscopic or robotic surgery)? -> No\n11. Is this surgical treatment primarily used for orthopedic purposes (e.g., involving bones, joints, or muscles)? -> No\n12. Is this surgical treatment primarily used for cardiovascular purposes (e.g., involving the heart or blood vessels)? -> No\n13. Is this surgical treatment primarily used for neurosurgery (involving the brain or spinal cord)? -> No\n14. Is this surgical treatment primarily used for general surgery involving the abdominal organs (e.g., appendix, gallbladder, stomach, or intestines)? -> No\n15. Is this surgical treatment primarily used for plastic or reconstructive surgery? -> No\n16. Is this surgical treatment primarily used for thoracic surgery (involving the lungs, esophagus, or chest wall)? -> No\n17. Is this surgical treatment primarily used for urology (involving the kidneys, bladder, or urinary tract)? -> No\n18. Is this surgical treatment primarily used for ophthalmology (involving the eyes)? -> No\n19. Is this surgical treatment primarily used for otolaryngology (involving the ears, nose, and throat)? -> No\n20. Is this surgical treatment primarily used for dermatology or general soft tissue procedures (e.g., skin cancer removal, hernia repair, or appendectomy)? -> No"
+}

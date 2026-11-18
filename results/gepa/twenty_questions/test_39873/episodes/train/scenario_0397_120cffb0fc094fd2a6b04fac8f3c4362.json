@@ -1,0 +1,380 @@
+{
+  "run_id": "120cffb0fc094fd2a6b04fac8f3c4362",
+  "timestamp_utc": "2026-11-17T20:24:26.955101+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 397,
+  "category": "invention",
+  "target": "Anesthesia",
+  "prompt_mode": "paprika",
+  "candidate_hash": "61e0ab7a4e87",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Core Principles:**\n1. **Question Format:** Ask only yes-or-no questions. Do not ask multiple questions at once.\n2. **Information Gain (Binary Search):** Prioritize questions that split the remaining possibility space as evenly as possible. Avoid asking questions that are too specific too early, and avoid asking questions that are too broad if the space is already narrowed.\n3. **Hypothesis Tracking & Elimination:**\n   - Actively track which categories and specific items have been ruled out by 'No' answers.\n   - Do not ask questions about categories or items already eliminated unless you are testing a specific edge case or boundary.\n   - Avoid cycling through minor variations of the same unproductive line of questioning (e.g., if you ask about 'mental health', 'physical rehab', and 'infectious diseases' and all are 'No', do not immediately ask about 'chronic diseases' without a broader pivot).\n4. **Context Awareness:** Use the full conversation history. If previous answers ruled out broad categories (e.g., 'digital' but not 'physical'), narrow down to specific sub-fields or related concepts based on affirmative answers.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers. If you have narrowed it down significantly (e.g., to a small set of likely candidates), make a direct guess.\n   - If you are unsure between a few specific items, ask a question that distinguishes between them rather than guessing randomly.\n\n**Strategic Guidelines for Specific Domains:**\n- **If the target is a Vegetable/Plant:** Distinguish between root, leafy, fruit-bearing, herb/spice. If it is an herb, distinguish between common culinary uses (salad garnish vs. cooked flavoring) and specific plants (basil, cilantro, parsley, mint, dill, oregano).\n- **If the target is an Invention/Concept:** Distinguish between physical objects, digital/software, processes/methods, and systems. If it is a process, distinguish between scientific, medical, engineering, etc. If medical, distinguish between diagnostics, treatments, and specific disease types (infectious, chronic, autoimmune, neurological). If it is a treatment, distinguish between physical therapies (heat/cold, electrical stimulation) and pharmacological/other methods.\n\n**Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 397,
+    "agent_game_scenario": "invention",
+    "env_game_scenario": "Anesthesia",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a physical object?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a digital or software-based concept?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a process or method?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a scientific or medical process?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a diagnostic process or method?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a treatment or therapeutic method?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a pharmacological treatment (i.e., involving drugs or medication)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a specific drug or medication rather than a general class of drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antibiotics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antiviral drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of analgesics (pain relievers)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of anti-inflammatory drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antidepressants?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antipsychotic drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antihypertensive drugs (used to treat high blood pressure)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antidiabetic drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of anticonvulsant drugs (used to treat seizures)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of antipsychotic drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of statins (used to lower cholesterol)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a class of immunosuppressant drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Anesthesia."
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a physical object?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a digital or software-based concept?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a process or method?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a scientific or medical process?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a diagnostic process or method?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a treatment or therapeutic method?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a pharmacological treatment (i.e., involving drugs or medication)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a specific drug or medication rather than a general class of drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antibiotics?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antiviral drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of analgesics (pain relievers)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of anti-inflammatory drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antidepressants?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antipsychotic drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antihypertensive drugs (used to treat high blood pressure)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antidiabetic drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of anticonvulsant drugs (used to treat seizures)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of antipsychotic drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of statins (used to lower cholesterol)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a class of immunosuppressant drugs?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.19,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.95,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 1,
+    "repeated_pairs": [
+      {
+        "current_turn": 18,
+        "original_turn": 14
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 1\nEnvironment leakage: False\nTraining reward: 0.1900\n\nRepeated questions:\n- Turn 18 repeated turn 14, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the invention a class of antibiotics? -> No\n10. Is the invention a class of antiviral drugs? -> No\n11. Is the invention a class of analgesics (pain relievers)? -> No\n12. Is the invention a class of anti-inflammatory drugs? -> No\n13. Is the invention a class of antidepressants? -> No\n14. Is the invention a class of antipsychotic drugs? -> No\n15. Is the invention a class of antihypertensive drugs (used to treat high blood pressure)? -> No\n16. Is the invention a class of antidiabetic drugs? -> No\n17. Is the invention a class of anticonvulsant drugs (used to treat seizures)? -> No\n18. Is the invention a class of antipsychotic drugs? -> No\n19. Is the invention a class of statins (used to lower cholesterol)? -> No\n20. Is the invention a class of immunosuppressant drugs? -> No"
+}

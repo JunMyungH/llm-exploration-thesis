@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEPA Candidate Tree</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fa; display: flex; flex-direction: column; }
+  #header { background: #fff; border-bottom: 1px solid #dee2e6; padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+  #header h1 { font-size: 18px; font-weight: 600; color: #212529; }
+  .legend { display: flex; gap: 14px; font-size: 13px; color: #495057; }
+  .legend-item { display: flex; align-items: center; gap: 4px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #adb5bd; }
+  #graph-container { flex: 1 1 auto; width: 100%; overflow: auto; padding: 20px; text-align: center; }
+  #graph-container svg { width: 100%; height: 100%; }
+  #tooltip {
+    display: none; position: fixed; background: #fff; border: 1px solid #dee2e6;
+    border-radius: 8px; padding: 14px 16px; max-width: 560px; max-height: 70vh; overflow-y: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 1000; font-size: 13px; line-height: 1.5;
+  }
+  #tooltip .tt-header { font-weight: 700; font-size: 15px; margin-bottom: 6px; color: #212529; }
+  #tooltip .tt-meta { color: #6c757d; margin-bottom: 4px; }
+  #tooltip .tt-hint { color: #adb5bd; font-size: 11px; font-style: italic; margin-bottom: 10px; }
+  #tooltip .tt-comp-name { font-weight: 600; color: #495057; margin-top: 10px; border-bottom: 1px solid #e9ecef; padding-bottom: 2px; }
+  #tooltip .tt-comp-text {
+    white-space: pre-wrap; word-break: break-word; background: #f8f9fa;
+    border: 1px solid #e9ecef; border-radius: 4px; padding: 8px 10px; margin-top: 4px;
+    font-family: "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px;
+    max-height: 200px; overflow-y: auto;
+  }
+  .role-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 6px; }
+  .role-best { background: #00e5ff33; color: #006064; }
+  .role-pareto { background: #ff980033; color: #e65100; }
+  .role-seed { background: #e0e0e0; color: #424242; }
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>GEPA Candidate Tree</h1>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:cyan"></div> Best</div>
+    <div class="legend-item"><div class="legend-dot" style="background:orange"></div> Pareto Front</div>
+    <div class="legend-item"><div class="legend-dot" style="background:lightgray"></div> Other</div>
+  </div>
+</div>
+<div id="graph-container"><p>Loading graph&hellip;</p></div>
+<div id="tooltip"></div>
+
+<script type="module">
+const NODES = [{"idx": 0, "score": 0.4217, "parents": "seed", "role": "Seed", "components": {"ask": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply."}},
+{"idx": 1, "score": 0.5483, "parents": "0", "role": "Best", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **Strategy:** Maximize information gain. Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.\n3. **Context Awareness:** Use the conversation history to track excluded hypotheses. If previous answers ruled out broad categories (e.g., 'physics' but not 'quantum' or 'classical'), narrow down to specific sub-fields or related concepts (e.g., electromagnetism, thermodynamics) based on affirmative answers in those areas.\n4. **Progression:** Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?). Refine based on answers. If you have narrowed it down significantly, make a direct guess.\n5. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question."}},
+{"idx": 2, "score": 0.54, "parents": "1", "role": "Pareto Front", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - If you are down to a small number of candidates, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions and are actively eliminating possibilities rather than cycling through them."}},
+{"idx": 3, "score": 0.5228, "parents": "2", "role": "Pareto Front", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **State Tracking & Hypothesis Management:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - **Explicitly Track Excluded Hypotheses:** If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again. Do not cycle through similar but distinct variations of excluded concepts (e.g., if \"Carnot efficiency formula\" is rejected, do not immediately ask about \"Carnot theorem\" or \"Exergy\" unless they are fundamentally different categories, not just synonyms or close variants).\n   - **Avoid \"Cycling\" Strategy:** If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples. Do not proceed to the next most likely example in that same narrow category. Instead, step back to ask a question about the *category* or *properties* to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - If you are down to a small number of candidates, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions and are actively eliminating possibilities rather than cycling through them. If you have exhausted the likely candidates in a specific branch (multiple 'No's to specific examples in a sub-category), broaden your scope to a different sub-category or a higher-level property."}},
+{"idx": 4, "score": 0.5367, "parents": "1", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. Do not ask multiple questions in one turn.\n2. **Strategy - Information Gain:** Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.\n3. **Strategy - Hypothesis Tracking:** \n   - Actively track excluded hypotheses based on 'No' answers. \n   - If you have narrowed the target down to a small set of specific items (e.g., specific herbs, specific clothing types), you must guess them directly rather than asking more descriptive yes/no questions about them, unless the description helps distinguish between the remaining candidates.\n   - Avoid cycling through minor variations of the same unproductive hypothesis (e.g., listing individual items one by one after ruling out their common categories) without a broader strategic pivot.\n4. **Context Awareness:** Use the conversation history to track excluded hypotheses. If previous answers ruled out broad categories (e.g., 'physics' but not 'quantum' or 'classical'), narrow down to specific sub-fields or related concepts (e.g., electromagnetism, thermodynamics) based on affirmative answers in those areas.\n5. **Progression:** \n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color? Is it a person?).\n   - Refine based on answers. \n   - If you have narrowed it down significantly (e.g., to a specific class like 'fresh herbs' or 'cardigans'), switch to direct guessing of specific candidates within that class, or ask questions that distinguish between the top few candidates.\n   - If you have reached the 20th question, make your best possible guess based on the remaining information.\n6. **Output:** Produce exactly one question or guess at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question or guess. Ensure you are not wasting turns on low-information queries when the target is likely identifiable."}},
+{"idx": 5, "score": 0.43, "parents": "2", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. You may make a direct guess if you are confident, but typically you should ask diagnostic questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - **Avoid Linear Narrowing Traps:** If you are narrowing down a category by asking sequential specific examples or sub-types (e.g., \"Is it organic chemistry?\" -> No, \"Is it inorganic?\" -> Yes, \"Is it metals?\" -> Yes...), stop listing specific examples if you have already asked 3+ specific sub-questions within that branch without identifying the target. Instead, ask a question about the *properties*, *applications*, or *historical context* of that category to distinguish between the remaining candidates.\n   - **Hypothesis Elimination:** If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - **Confident Guessing:** If you have narrowed it down to a small number of candidates (e.g., 1-2) or have strong evidence pointing to one, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence. Do not waste questions on redundant sub-classifications if the answer is likely to be the same.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions, are actively eliminating possibilities, and are avoiding linear, low-information-gain sub-classifications."}},
+{"idx": 6, "score": 0.4283, "parents": "1", "role": "Pareto Front", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **Strategy:** Maximize information gain. Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.\n3. **Context Awareness & Hypothesis Tracking:**\n   - **Crucial:** Maintain a mental list of excluded hypotheses and confirmed attributes based on the conversation history.\n   - **Avoid Redundancy:** Do not ask questions that have already been answered (e.g., if 'Is it related to quantum mechanics?' was answered 'Yes', do not ask it again). Do not ask questions that are subsets of already answered negative questions (e.g., if 'Is it related to quantum entanglement?' is 'No', do not ask 'Is it related to quantum spin?' if spin is often grouped with entanglement in your mental model, or better yet, ensure you are exploring *distinct* branches of the knowledge tree). \n   - **Avoid Cycling:** If a category of questions yields 'No' answers repeatedly (e.g., multiple specific types of cardigans or quantum phenomena), stop asking about that specific sub-branch and pivot to a different attribute or a broader category that hasn't been fully explored.\n   - **Narrowing Down:** Once you have established broad categories (e.g., 'Abstract', 'Physics', 'Quantum'), drill down into specific, mutually exclusive concepts. If you have narrowed it down significantly (e.g., 'A specific type of cardigan, button-down, long-sleeved, cotton, preppy style'), make a direct guess or ask a question that confirms the final identity rather than asking more stylistic questions.\n4. **Progression:** Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?). Refine based on answers. \n5. **Guessing:** If you have narrowed it down to a single likely candidate, you may make a direct guess (e.g., \"Is the answer [Specific Concept]?\") instead of asking another question, provided you are confident. However, the primary output should be a question unless you are making a final guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). \n\nAnalyze the history to determine the most informative next question, ensuring you do not repeat previous questions or explore exhausted sub-branches."}}];
+const DOT = `digraph G {
+    rankdir=TB;
+    node [style=filled, shape=circle, fontsize=14, width=0.6, height=0.6];
+    0 [label="0\\n(0.42)", fillcolor=lightgray, tooltip=" "];
+    1 [label="1\\n(0.55)", fillcolor=cyan, tooltip=" "];
+    2 [label="2\\n(0.54)", fillcolor=orange, tooltip=" "];
+    3 [label="3\\n(0.52)", fillcolor=orange, tooltip=" "];
+    4 [label="4\\n(0.54)", fillcolor=lightgray, tooltip=" "];
+    5 [label="5\\n(0.43)", fillcolor=lightgray, tooltip=" "];
+    6 [label="6\\n(0.43)", fillcolor=orange, tooltip=" "];
+    0 -> 1;
+    1 -> 2;
+    2 -> 3;
+    1 -> 4;
+    2 -> 5;
+    1 -> 6;
+}`;
+
+const nodeMap = {};
+NODES.forEach(n => { nodeMap[n.idx] = n; });
+
+let pinnedIdx = null;   // non-null when tooltip is click-pinned (scrollable)
+let hoverIdx = null;    // non-null when hovering over a node
+
+function renderTooltip(idx) {
+  const n = nodeMap[idx];
+  if (!n) return "";
+  let roleBadge = "";
+  if (n.role === "Best") roleBadge = '<span class="role-badge role-best">BEST</span>';
+  else if (n.role === "Pareto Front") roleBadge = '<span class="role-badge role-pareto">PARETO</span>';
+  else if (n.role === "Seed") roleBadge = '<span class="role-badge role-seed">SEED</span>';
+
+  let comps = "";
+  for (const [name, text] of Object.entries(n.components)) {
+    const escaped = text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    comps += '<div class="tt-comp-name">' + name + '</div><div class="tt-comp-text">' + escaped + '</div>';
+  }
+
+  return '<div class="tt-header">Candidate ' + n.idx + roleBadge + '</div>' +
+    '<div class="tt-meta">Score: <strong>' + n.score + '</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Parent(s): ' + n.parents +
+    '</div><div class="tt-hint">' + (pinnedIdx === idx ? 'Click node again to dismiss' : 'Click to pin &amp; scroll') + '</div>' +
+    comps;
+}
+
+function positionTooltip(x, y) {
+  const tt = document.getElementById("tooltip");
+  let tx = x + 16, ty = y + 16;
+  const r = tt.getBoundingClientRect();
+  if (tx + r.width > window.innerWidth - 8) tx = x - r.width - 16;
+  if (ty + r.height > window.innerHeight - 8) ty = y - r.height - 16;
+  if (tx < 8) tx = 8;
+  if (ty < 8) ty = 8;
+  tt.style.left = tx + "px";
+  tt.style.top = ty + "px";
+}
+
+function showTooltip(idx, x, y) {
+  const tt = document.getElementById("tooltip");
+  tt.innerHTML = renderTooltip(idx);
+  tt.style.display = "block";
+  positionTooltip(x, y);
+}
+
+function hideTooltip() {
+  pinnedIdx = null;
+  hoverIdx = null;
+  document.getElementById("tooltip").style.display = "none";
+}
+
+// Click outside tooltip and outside nodes dismisses pinned tooltip
+document.addEventListener("mousedown", function(e) {
+  const tt = document.getElementById("tooltip");
+  if (pinnedIdx !== null && tt.style.display === "block"
+      && !tt.contains(e.target) && !e.target.closest(".node")) {
+    hideTooltip();
+  }
+});
+
+async function render() {
+  const { instance } = await import("https://cdn.jsdelivr.net/npm/@viz-js/viz@3.11.0/lib/viz-standalone.mjs");
+  const viz = await instance();
+  const svg = viz.renderSVGElement(DOT);
+  const container = document.getElementById("graph-container");
+  container.innerHTML = "";
+  container.appendChild(svg);
+
+  // Attach hover listeners and strip native <title> tooltips to avoid double tooltips
+  svg.querySelectorAll(".node").forEach(node => {
+    const title = node.querySelector("title");
+    if (!title) return;
+    const idx = parseInt(title.textContent, 10);
+    if (isNaN(idx)) return;
+    title.remove();  // remove native SVG tooltip
+    node.style.cursor = "pointer";
+    // Hover: show tooltip following the mouse (non-interactive)
+    node.addEventListener("mouseenter", e => {
+      if (pinnedIdx !== null) return;  // don't override a pinned tooltip
+      hoverIdx = idx;
+      showTooltip(idx, e.clientX, e.clientY);
+    });
+    node.addEventListener("mousemove", e => {
+      if (pinnedIdx !== null || hoverIdx !== idx) return;
+      positionTooltip(e.clientX, e.clientY);
+    });
+    node.addEventListener("mouseleave", () => {
+      if (pinnedIdx !== null) return;
+      hoverIdx = null;
+      document.getElementById("tooltip").style.display = "none";
+    });
+    // Click: pin the tooltip so user can scroll it
+    node.addEventListener("click", e => {
+      e.stopPropagation();
+      if (pinnedIdx === idx) { hideTooltip(); return; }
+      pinnedIdx = idx;
+      showTooltip(idx, e.clientX, e.clientY);
+    });
+  });
+  // Also strip <title> from edges and the graph itself
+  svg.querySelectorAll(".edge title").forEach(t => t.remove());
+  const graphTitle = svg.querySelector(":scope > title");
+  if (graphTitle) graphTitle.remove();
+}
+
+render().catch(err => {
+  document.getElementById("graph-container").innerHTML =
+    "<p style='color:red'>Failed to render graph: " + err.message + "</p>" +
+    "<pre>" + DOT.replace(/</g,"&lt;") + "</pre>";
+});
+</script>
+</body>
+</html>

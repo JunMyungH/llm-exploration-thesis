@@ -1,0 +1,375 @@
+{
+  "run_id": "c97c7b1d88ab4e85a893a0b585696010",
+  "timestamp_utc": "2026-11-17T20:23:14.290041+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1117,
+  "category": "concept",
+  "target": "Radioactivity",
+  "prompt_mode": "paprika",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1117,
+    "agent_game_scenario": "concept",
+    "env_game_scenario": "Radioactivity",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept a living thing?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept a physical object?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept an abstract idea or emotion?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept a place or location?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept a person or character?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept a fictional entity or character?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept a natural phenomenon or event?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to weather or atmospheric conditions?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to geological processes or earth movements?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to astronomy or celestial bodies?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to biology or life sciences (e.g., diseases, biological processes, or phenomena)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics or energy phenomena (e.g., light, sound, gravity, electricity)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to light or optics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to sound or acoustics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to electricity or magnetism?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to gravity or motion?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to nuclear physics or radioactivity?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to nuclear fission or fusion?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to nuclear fusion specifically (such as in stars or hydrogen bombs)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to nuclear fission specifically (such as in nuclear power plants or atomic bombs)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Radioactivity."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept a living thing?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept a physical object?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept an abstract idea or emotion?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept a place or location?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept a person or character?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept a fictional entity or character?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept a natural phenomenon or event?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to weather or atmospheric conditions?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to geological processes or earth movements?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to astronomy or celestial bodies?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to biology or life sciences (e.g., diseases, biological processes, or phenomena)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics or energy phenomena (e.g., light, sound, gravity, electricity)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to light or optics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to sound or acoustics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to electricity or magnetism?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to gravity or motion?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to nuclear physics or radioactivity?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to nuclear fission or fusion?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to nuclear fusion specifically (such as in stars or hydrogen bombs)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to nuclear fission specifically (such as in nuclear power plants or atomic bombs)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to geological processes or earth movements? -> No\n10. Is the concept related to astronomy or celestial bodies? -> No\n11. Is the concept related to biology or life sciences (e.g., diseases, biological processes, or phenomena)? -> No\n12. Is the concept related to physics or energy phenomena (e.g., light, sound, gravity, electricity)? -> Yes\n13. Is the concept related to light or optics? -> No\n14. Is the concept related to sound or acoustics? -> No\n15. Is the concept related to electricity or magnetism? -> No\n16. Is the concept related to gravity or motion? -> No\n17. Is the concept related to nuclear physics or radioactivity? -> Yes\n18. Is the concept related to nuclear fission or fusion? -> Yes\n19. Is the concept related to nuclear fusion specifically (such as in stars or hydrogen bombs)? -> No\n20. Is the concept related to nuclear fission specifically (such as in nuclear power plants or atomic bombs)? -> No"
+}

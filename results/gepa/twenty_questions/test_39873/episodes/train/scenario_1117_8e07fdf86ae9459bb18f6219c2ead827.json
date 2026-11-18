@@ -1,0 +1,384 @@
+{
+  "run_id": "8e07fdf86ae9459bb18f6219c2ead827",
+  "timestamp_utc": "2026-11-17T20:31:54.182253+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1117,
+  "category": "concept",
+  "target": "Radioactivity",
+  "prompt_mode": "paprika",
+  "candidate_hash": "c91e479381c3",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **Strategy:** Maximize information gain. Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.\n3. **Context Awareness & Hypothesis Tracking:**\n   - **Crucial:** Maintain a mental list of excluded hypotheses and confirmed attributes based on the conversation history.\n   - **Avoid Redundancy:** Do not ask questions that have already been answered (e.g., if 'Is it related to quantum mechanics?' was answered 'Yes', do not ask it again). Do not ask questions that are subsets of already answered negative questions (e.g., if 'Is it related to quantum entanglement?' is 'No', do not ask 'Is it related to quantum spin?' if spin is often grouped with entanglement in your mental model, or better yet, ensure you are exploring *distinct* branches of the knowledge tree). \n   - **Avoid Cycling:** If a category of questions yields 'No' answers repeatedly (e.g., multiple specific types of cardigans or quantum phenomena), stop asking about that specific sub-branch and pivot to a different attribute or a broader category that hasn't been fully explored.\n   - **Narrowing Down:** Once you have established broad categories (e.g., 'Abstract', 'Physics', 'Quantum'), drill down into specific, mutually exclusive concepts. If you have narrowed it down significantly (e.g., 'A specific type of cardigan, button-down, long-sleeved, cotton, preppy style'), make a direct guess or ask a question that confirms the final identity rather than asking more stylistic questions.\n4. **Progression:** Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?). Refine based on answers. \n5. **Guessing:** If you have narrowed it down to a single likely candidate, you may make a direct guess (e.g., \"Is the answer [Specific Concept]?\") instead of asking another question, provided you are confident. However, the primary output should be a question unless you are making a final guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). \n\nAnalyze the history to determine the most informative next question, ensuring you do not repeat previous questions or explore exhausted sub-branches.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1117,
+    "agent_game_scenario": "concept",
+    "env_game_scenario": "Radioactivity",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept abstract?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics or science?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum entanglement?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum superposition?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum tunneling?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum spin?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum computing?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum field theory?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum mechanics in the context of wave-particle duality?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the uncertainty principle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Pauli exclusion principle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the photoelectric effect?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the quantization of energy (e.g., photons or quanta)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the emission or absorption of light by atoms (e.g., atomic spectra)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the black-body radiation problem?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the photoelectric effect and the concept of photons?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Radioactivity."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept abstract?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics or science?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum entanglement?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum superposition?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum tunneling?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum spin?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum computing?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum field theory?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum mechanics in the context of wave-particle duality?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the uncertainty principle?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Pauli exclusion principle?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the photoelectric effect?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the quantization of energy (e.g., photons or quanta)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the emission or absorption of light by atoms (e.g., atomic spectra)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the black-body radiation problem?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the photoelectric effect and the concept of photons?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.18000000000000002,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.9,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 2,
+    "repeated_pairs": [
+      {
+        "current_turn": 19,
+        "original_turn": 17
+      },
+      {
+        "current_turn": 20,
+        "original_turn": 17
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 2\nEnvironment leakage: False\nTraining reward: 0.1800\n\nRepeated questions:\n- Turn 19 repeated turn 17, already answered 'No'.\n- Turn 20 repeated turn 17, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to quantum field theory? -> No\n10. Is the concept related to quantum mechanics in the context of wave-particle duality? -> No\n11. Is the concept related to the uncertainty principle? -> No\n12. Is the concept related to the Pauli exclusion principle? -> No\n13. Is the concept related to the photoelectric effect? -> No\n14. Is the concept related to the quantization of energy (e.g., photons or quanta)? -> Yes\n15. Is the concept related to the emission or absorption of light by atoms (e.g., atomic spectra)? -> No\n16. Is the concept related to the black-body radiation problem? -> No\n17. Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck? -> No\n18. Is the concept related to the photoelectric effect and the concept of photons? -> No\n19. Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck? -> No\n20. Is the concept related to the specific hypothesis that energy is emitted or absorbed in discrete packets (quanta), as proposed by Max Planck? -> No"
+}

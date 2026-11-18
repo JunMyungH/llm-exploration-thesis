@@ -1,0 +1,375 @@
+{
+  "run_id": "886ff5b244e941358b3443116ac50ed5",
+  "timestamp_utc": "2026-11-17T20:31:30.395119+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 397,
+  "category": "invention",
+  "target": "Anesthesia",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b0e373586ee0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, invention, or color) by asking up to 20 yes-or-no questions.\n\n**Core Strategy: Binary Search and Hypothesis Tracking**\n1. **Maximize Information Gain:** Prioritize questions that split the remaining possibility space as evenly as possible (50/50 split). Avoid asking questions that are too specific too early or that have a very low probability of being 'Yes'.\n2. **Explicit Hypothesis Management:** Maintain a mental list of excluded categories and confirmed attributes. Do not re-ask similar questions if the answer remains the same or if the category has already been ruled out. If a broad category (e.g., 'Physics') is ruled out, do not ask about its sub-fields (e.g., 'Quantum Mechanics') unless you have strong reason to believe the target falls outside the initial broad exclusion logic (which is contradictory). Instead, branch to a new, disjoint broad category.\n3. **Avoid Cycling:** Do not cycle through minor variations of the same unproductive hypothesis. If a specific domain (e.g., 'Medical Diagnostics') yields no matches, move to a different major domain (e.g., 'Engineering Processes', 'Cultural Concepts', 'Abstract Math').\n\n**Question Format & Progression:**\n1. **Format:** Ask exactly one yes-or-no question per turn.\n2. **Start Broad:** Begin with high-level categorization (e.g., Physical vs. Abstract, Natural vs. Artificial, Living vs. Non-living, Primary vs. Secondary attributes).\n3. **Narrow Down:** Based on answers, refine the scope. If you have narrowed it down significantly (e.g., to a specific color family or a specific type of invention), make a direct guess if confident, or ask a final distinguishing question.\n4. **Context Awareness:** Use the conversation history to track excluded hypotheses. If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers in those areas. For example, if 'Chemistry' is ruled out but 'Physics' is not, explore 'Physics' sub-fields, but if 'Physics' is also ruled out, switch to 'Biology' or 'Social Sciences'.\n\n**Current State:**\n- **Game Rules:** Provided in input.\n- **History:** Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\n**Output:**\nProduce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding. Analyze the history to determine the most informative next question, ensuring you are not repeating excluded paths.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 397,
+    "agent_game_scenario": "invention",
+    "env_game_scenario": "Anesthesia",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for communication?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for transportation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for computing or data processing?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for entertainment or leisure?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for energy production or conversion?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for manufacturing or construction?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for medical or health-related purposes?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for diagnostic purposes (e.g., imaging, testing, monitoring)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for therapeutic or treatment purposes (e.g., surgery, drug delivery, physical therapy)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a device or machine (as opposed to a pharmaceutical drug or chemical compound)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a method or process (such as a surgical technique or therapy protocol) rather than a physical tool or instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a biological substance or product (such as a vaccine, serum, or enzyme preparation) rather than a physical device, method, or chemical drug?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for pain management or anesthesia?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for local anesthesia (numbing a specific area of the body) rather than general anesthesia (rendering the patient unconscious)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for general anesthesia (rendering the patient unconscious)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for pain relief (analgesia) rather than for inducing unconsciousness or numbness?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for palliative care or end-of-life symptom management (such as sedation for terminal agitation)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for anesthesia in veterinary medicine?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for anesthesia in dentistry?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for anesthesia in ophthalmology (eye surgery)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Anesthesia."
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for computing or data processing?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for entertainment or leisure?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for energy production or conversion?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for manufacturing or construction?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for medical or health-related purposes?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for diagnostic purposes (e.g., imaging, testing, monitoring)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for therapeutic or treatment purposes (e.g., surgery, drug delivery, physical therapy)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a device or machine (as opposed to a pharmaceutical drug or chemical compound)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a method or process (such as a surgical technique or therapy protocol) rather than a physical tool or instrument?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a biological substance or product (such as a vaccine, serum, or enzyme preparation) rather than a physical device, method, or chemical drug?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for pain management or anesthesia?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for local anesthesia (numbing a specific area of the body) rather than general anesthesia (rendering the patient unconscious)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for general anesthesia (rendering the patient unconscious)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for pain relief (analgesia) rather than for inducing unconsciousness or numbness?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for palliative care or end-of-life symptom management (such as sedation for terminal agitation)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for anesthesia in veterinary medicine?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for anesthesia in dentistry?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for anesthesia in ophthalmology (eye surgery)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: True\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the invention primarily used for therapeutic or treatment purposes (e.g., surgery, drug delivery, physical therapy)? -> Yes\n10. Is the invention a device or machine (as opposed to a pharmaceutical drug or chemical compound)? -> No\n11. Is the invention a method or process (such as a surgical technique or therapy protocol) rather than a physical tool or instrument? -> No\n12. Is the invention a biological substance or product (such as a vaccine, serum, or enzyme preparation) rather than a physical device, method, or chemical drug? -> No\n13. Is the invention primarily used for pain management or anesthesia? -> Yes\n14. Is the invention primarily used for local anesthesia (numbing a specific area of the body) rather than general anesthesia (rendering the patient unconscious)? -> No\n15. Is the invention primarily used for general anesthesia (rendering the patient unconscious)? -> No\n16. Is the invention primarily used for pain relief (analgesia) rather than for inducing unconsciousness or numbness? -> No\n17. Is the invention primarily used for palliative care or end-of-life symptom management (such as sedation for terminal agitation)? -> No\n18. Is the invention primarily used for anesthesia in veterinary medicine? -> No\n19. Is the invention primarily used for anesthesia in dentistry? -> No\n20. Is the invention primarily used for anesthesia in ophthalmology (eye surgery)? -> No"
+}

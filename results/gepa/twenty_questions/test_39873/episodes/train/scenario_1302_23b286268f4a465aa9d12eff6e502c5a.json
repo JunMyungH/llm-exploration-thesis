@@ -1,0 +1,279 @@
+{
+  "run_id": "23b286268f4a465aa9d12eff6e502c5a",
+  "timestamp_utc": "2026-11-17T20:25:04.223441+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1302,
+  "category": "vegetable",
+  "target": "Oregano",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b6973f63eab0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **Strategy:** Maximize information gain. Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.\n3. **Context Awareness:** Use the conversation history to track excluded hypotheses. If previous answers ruled out broad categories (e.g., 'physics' but not 'quantum' or 'classical'), narrow down to specific sub-fields or related concepts (e.g., electromagnetism, thermodynamics) based on affirmative answers in those areas.\n4. **Progression:** Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?). Refine based on answers. If you have narrowed it down significantly, make a direct guess.\n5. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1302,
+    "agent_game_scenario": "vegetable",
+    "env_game_scenario": "Oregano",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 14,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a root vegetable?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a leafy green?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly eaten raw in salads?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly cooked (e.g., steamed, boiled, or sautéed) as a side dish?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly used in soups or stews?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly used as a garnish or in salads (e.g., lettuce, spinach, kale, arugula)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly used as a herb or spice for flavoring?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly used as a fresh herb in cooking (e.g., basil, cilantro, parsley, mint)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable basil?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable cilantro?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable parsley?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable mint?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable dill?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable oregano?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Oregano."
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a leafy green?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly eaten raw in salads?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly cooked (e.g., steamed, boiled, or sautéed) as a side dish?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly used in soups or stews?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly used as a garnish or in salads (e.g., lettuce, spinach, kale, arugula)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly used as a herb or spice for flavoring?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly used as a fresh herb in cooking (e.g., basil, cilantro, parsley, mint)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable basil?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable cilantro?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable parsley?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable mint?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable dill?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable oregano?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8600000000000001,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 14,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 14/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8600\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n3. Is the vegetable commonly eaten raw in salads? -> No\n4. Is the vegetable commonly cooked (e.g., steamed, boiled, or sautéed) as a side dish? -> No\n5. Is the vegetable commonly used in soups or stews? -> No\n6. Is the vegetable commonly used as a garnish or in salads (e.g., lettuce, spinach, kale, arugula)? -> No\n7. Is the vegetable commonly used as a herb or spice for flavoring? -> Yes\n8. Is the vegetable commonly used as a fresh herb in cooking (e.g., basil, cilantro, parsley, mint)? -> Yes\n9. Is the vegetable basil? -> No\n10. Is the vegetable cilantro? -> No\n11. Is the vegetable parsley? -> No\n12. Is the vegetable mint? -> No\n13. Is the vegetable dill? -> No\n14. Is the vegetable oregano? -> Goal reached."
+}

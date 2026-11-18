@@ -1,0 +1,380 @@
+{
+  "run_id": "aa34e1def9ac4bc584fe366b15252350",
+  "timestamp_utc": "2026-11-17T20:30:47.948754+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1113,
+  "category": "book",
+  "target": "All Quiet on the Western Front",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b1baef25b395",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - If you are down to a small number of candidates, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions and are actively eliminating possibilities rather than cycling through them.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1113,
+    "agent_game_scenario": "book",
+    "env_game_scenario": "All Quiet on the Western Front",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book written in English?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a novel?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of fantasy or science fiction?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of historical fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 20th century or later?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 20th century?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the United States?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Europe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the United Kingdom?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in France?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Paris?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 1940s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 1930s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 1920s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 1910s?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 1910s specifically during World War I?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in France during the period of World War I (1914-1918)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Paris?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in a rural area or countryside rather than a major city?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is All Quiet on the Western Front."
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of fantasy or science fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of historical fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 20th century or later?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 20th century?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the United States?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Europe?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the United Kingdom?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in France?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Paris?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 1940s?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 1930s?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 1920s?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 1910s?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 1910s specifically during World War I?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in France during the period of World War I (1914-1918)?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Paris?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in a rural area or countryside rather than a major city?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.19,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.95,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 1,
+    "repeated_pairs": [
+      {
+        "current_turn": 19,
+        "original_turn": 12
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 1\nEnvironment leakage: False\nTraining reward: 0.1900\n\nRepeated questions:\n- Turn 19 repeated turn 12, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the book set in Europe? -> Yes\n10. Is the book set in the United Kingdom? -> No\n11. Is the book set in France? -> Yes\n12. Is the book set in Paris? -> No\n13. Is the book set in the 1940s? -> No\n14. Is the book set in the 1930s? -> No\n15. Is the book set in the 1920s? -> No\n16. Is the book set in the 1910s? -> Yes\n17. Is the book set in the 1910s specifically during World War I? -> Yes\n18. Is the book set in France during the period of World War I (1914-1918)? -> Yes\n19. Is the book set in Paris? -> No\n20. Is the book set in a rural area or countryside rather than a major city? -> Yes"
+}

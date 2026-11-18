@@ -1,0 +1,350 @@
+{
+  "run_id": "e1349b917add48a9b3e503d63f01359d",
+  "timestamp_utc": "2026-11-17T20:24:20.560887+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1302,
+  "category": "vegetable",
+  "target": "Oregano",
+  "prompt_mode": "paprika",
+  "candidate_hash": "61e0ab7a4e87",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Core Principles:**\n1. **Question Format:** Ask only yes-or-no questions. Do not ask multiple questions at once.\n2. **Information Gain (Binary Search):** Prioritize questions that split the remaining possibility space as evenly as possible. Avoid asking questions that are too specific too early, and avoid asking questions that are too broad if the space is already narrowed.\n3. **Hypothesis Tracking & Elimination:**\n   - Actively track which categories and specific items have been ruled out by 'No' answers.\n   - Do not ask questions about categories or items already eliminated unless you are testing a specific edge case or boundary.\n   - Avoid cycling through minor variations of the same unproductive line of questioning (e.g., if you ask about 'mental health', 'physical rehab', and 'infectious diseases' and all are 'No', do not immediately ask about 'chronic diseases' without a broader pivot).\n4. **Context Awareness:** Use the full conversation history. If previous answers ruled out broad categories (e.g., 'digital' but not 'physical'), narrow down to specific sub-fields or related concepts based on affirmative answers.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers. If you have narrowed it down significantly (e.g., to a small set of likely candidates), make a direct guess.\n   - If you are unsure between a few specific items, ask a question that distinguishes between them rather than guessing randomly.\n\n**Strategic Guidelines for Specific Domains:**\n- **If the target is a Vegetable/Plant:** Distinguish between root, leafy, fruit-bearing, herb/spice. If it is an herb, distinguish between common culinary uses (salad garnish vs. cooked flavoring) and specific plants (basil, cilantro, parsley, mint, dill, oregano).\n- **If the target is an Invention/Concept:** Distinguish between physical objects, digital/software, processes/methods, and systems. If it is a process, distinguish between scientific, medical, engineering, etc. If medical, distinguish between diagnostics, treatments, and specific disease types (infectious, chronic, autoimmune, neurological). If it is a treatment, distinguish between physical therapies (heat/cold, electrical stimulation) and pharmacological/other methods.\n\n**Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1302,
+    "agent_game_scenario": "vegetable",
+    "env_game_scenario": "Oregano",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 18,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a root vegetable?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a leafy green?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable spinach?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable lettuce?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable kale?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable cabbage?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable Swiss chard?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable arugula?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable parsley?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable basil?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable collard greens?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable spinach's close relative, such as chard or beet greens, or is it a distinct type like mustard greens, turnip greens, or collard greens (which were already ruled out)? Let's try: Is the vegetable a type of brassica (cruciferous vegetable) other than cabbage, kale, or broccoli?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a type of herb commonly used as a garnish or flavoring, such as cilantro, mint, or dill?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable cilantro?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable mint?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable dill?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable parsley?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable oregano?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Oregano."
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a leafy green?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable spinach?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable lettuce?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable kale?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable cabbage?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable Swiss chard?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable arugula?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable parsley?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable basil?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable collard greens?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable spinach's close relative, such as chard or beet greens, or is it a distinct type like mustard greens, turnip greens, or collard greens (which were already ruled out)? Let's try: Is the vegetable a type of brassica (cruciferous vegetable) other than cabbage, kale, or broccoli?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a type of herb commonly used as a garnish or flavoring, such as cilantro, mint, or dill?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable cilantro?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable mint?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable dill?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable parsley?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable oregano?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8145987654320987,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 18,
+    "max_turns": 20,
+    "valid_ratio": 0.9444444444444444,
+    "unique_ratio": 0.9444444444444444,
+    "invalid_count": 1,
+    "invalid_turns": [
+      12
+    ],
+    "repeat_count": 1,
+    "repeated_pairs": [
+      {
+        "current_turn": 17,
+        "original_turn": 9
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 18/20\nInvalid question turns: [12]\nExact repeated questions: 1\nEnvironment leakage: False\nTraining reward: 0.8146\n\nRepeated questions:\n- Turn 17 repeated turn 9, already answered 'No'.\n\nEach turn must contain exactly one properly formatted question.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n7. Is the vegetable Swiss chard? -> No\n8. Is the vegetable arugula? -> No\n9. Is the vegetable parsley? -> No\n10. Is the vegetable basil? -> No\n11. Is the vegetable collard greens? -> No\n12. Is the vegetable spinach's close relative, such as chard or beet greens, or is it a distinct type like mustard greens, turnip greens, or collard greens (which were already ruled out)? Let's try: Is the vegetable a type of brassica (cruciferous vegetable) other than cabbage, kale, or broccoli? -> No\n13. Is the vegetable a type of herb commonly used as a garnish or flavoring, such as cilantro, mint, or dill? -> Yes\n14. Is the vegetable cilantro? -> No\n15. Is the vegetable mint? -> No\n16. Is the vegetable dill? -> No\n17. Is the vegetable parsley? -> No\n18. Is the vegetable oregano? -> Goal reached."
+}

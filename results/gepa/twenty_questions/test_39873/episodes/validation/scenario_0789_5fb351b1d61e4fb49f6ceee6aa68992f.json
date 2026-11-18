@@ -1,0 +1,384 @@
+{
+  "run_id": "5fb351b1d61e4fb49f6ceee6aa68992f",
+  "timestamp_utc": "2026-11-17T20:27:09.425414+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 789,
+  "category": "Pokémon",
+  "target": "Raichu",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b1baef25b395",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - If you are down to a small number of candidates, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions and are actively eliminating possibilities rather than cycling through them.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a Pokémon. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 789,
+    "agent_game_scenario": "Pokémon",
+    "env_game_scenario": "Raichu",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a Pokémon. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a creature of the Fire type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a creature of the Water type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a creature of the Grass type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a creature of the Electric type?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a creature of the Electric type?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Steel type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Psychic type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Flying type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Ghost type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Dragon type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Fighting type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Bug type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Rock type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Poison type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Normal type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Dark type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Fairy type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Ground type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Ice type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon primarily a Ghost type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a Pokémon, and the correct answer is Raichu."
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a creature of the Fire type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a creature of the Water type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a creature of the Grass type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a creature of the Electric type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a creature of the Electric type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Steel type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Psychic type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Flying type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Ghost type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Dragon type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Fighting type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Bug type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Rock type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Poison type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Normal type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Dark type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Fairy type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Ground type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Ice type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon primarily a Ghost type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.18000000000000002,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.9,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 2,
+    "repeated_pairs": [
+      {
+        "current_turn": 5,
+        "original_turn": 4
+      },
+      {
+        "current_turn": 20,
+        "original_turn": 9
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 2\nEnvironment leakage: False\nTraining reward: 0.1800\n\nRepeated questions:\n- Turn 5 repeated turn 4, already answered 'Yes'.\n- Turn 20 repeated turn 9, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the Pokémon primarily a Ghost type? -> No\n10. Is the Pokémon primarily a Dragon type? -> No\n11. Is the Pokémon primarily a Fighting type? -> No\n12. Is the Pokémon primarily a Bug type? -> No\n13. Is the Pokémon primarily a Rock type? -> No\n14. Is the Pokémon primarily a Poison type? -> No\n15. Is the Pokémon primarily a Normal type? -> No\n16. Is the Pokémon primarily a Dark type? -> No\n17. Is the Pokémon primarily a Fairy type? -> No\n18. Is the Pokémon primarily a Ground type? -> No\n19. Is the Pokémon primarily a Ice type? -> No\n20. Is the Pokémon primarily a Ghost type? -> No"
+}

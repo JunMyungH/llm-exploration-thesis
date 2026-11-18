@@ -1,0 +1,231 @@
+{
+  "run_id": "97f65f35242c4c418f49b295fe6eb475",
+  "timestamp_utc": "2026-11-17T20:30:07.584404+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 597,
+  "category": "movie",
+  "target": "Citizen Kane",
+  "prompt_mode": "paprika",
+  "candidate_hash": "61daf89b4891",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. You may make a direct guess if you are confident, but typically you should ask diagnostic questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - **Avoid Linear Narrowing Traps:** If you are narrowing down a category by asking sequential specific examples or sub-types (e.g., \"Is it organic chemistry?\" -> No, \"Is it inorganic?\" -> Yes, \"Is it metals?\" -> Yes...), stop listing specific examples if you have already asked 3+ specific sub-questions within that branch without identifying the target. Instead, ask a question about the *properties*, *applications*, or *historical context* of that category to distinguish between the remaining candidates.\n   - **Hypothesis Elimination:** If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - **Confident Guessing:** If you have narrowed it down to a small number of candidates (e.g., 1-2) or have strong evidence pointing to one, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence. Do not waste questions on redundant sub-classifications if the answer is likely to be the same.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions, are actively eliminating possibilities, and are avoiding linear, low-information-gain sub-classifications.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 597,
+    "agent_game_scenario": "movie",
+    "env_game_scenario": "Citizen Kane",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 11,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in color?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from before 1960?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in black and white?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie an American production?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a drama?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a comedy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a horror film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a western?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a film noir?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Orson Welles?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie titled \"Citizen Kane\"?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Citizen Kane."
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in color?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from before 1960?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in black and white?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie an American production?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a drama?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a comedy?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a horror film?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a western?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a film noir?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Orson Welles?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie titled \"Citizen Kane\"?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.89,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 11,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 11/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8900\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n1. Is the movie in color? -> No\n2. Is the movie from before 1960? -> Yes\n3. Is the movie in black and white? -> Yes\n4. Is the movie an American production? -> Yes\n5. Is the movie a drama? -> Yes\n6. Is the movie a comedy? -> No\n7. Is the movie a horror film? -> No\n8. Is the movie a western? -> No\n9. Is the movie a film noir? -> Yes\n10. Is the movie directed by Orson Welles? -> Yes\n11. Is the movie titled \"Citizen Kane\"? -> Goal reached."
+}

@@ -1,13 +1,15 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import random
 import re
 import unicodedata
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
+from uuid import uuid4
 
 import dspy
 from dotenv import load_dotenv
@@ -56,6 +58,8 @@ class GepaEpisode(dspy.Module):
         environment,
         judge,
         use_judge: bool,
+        episode_dir: Path,
+        val_indices: list[int]
     ) -> None:
         super().__init__()
         self.ask = dspy.Predict(AskQuestion)
@@ -70,6 +74,8 @@ class GepaEpisode(dspy.Module):
         )
 
         self.use_judge = use_judge
+        self.episode_dir = episode_dir
+        self.val_indices = set(val_indices)
 
     def forward(self, scenario_index: int) -> dspy.Prediction:
         index = int(scenario_index)
@@ -112,12 +118,54 @@ class GepaEpisode(dspy.Module):
             if judge is not None:
                 judge.client.close()
 
+        phase = ("validation" if index in self.val_indices else "train")
+
+        instructions = self.ask.signature.instructions
+
+        candidate_hash = hashlib.sha256(instructions.encode("utf-8")).hexdigest()[:12]
+
+        run_id = uuid4().hex
+        record_dir = self.episode_dir / phase
+
+        record_dir.mkdir(parents=True, exist_ok=True)
+
+        record_path = (record_dir / f"scenario_{index:04d}_{run_id}.json")
+
+        episode_record = {
+            "run_id": run_id,
+            "timestamp_utc": datetime.now(
+                timezone.utc
+            ).isoformat(),
+
+            "phase": phase,
+            "game": self.game_config.name,
+            "scenario_index": index,
+            "category": scenario.agent,
+            "target": scenario.env,
+
+            "prompt_mode": self.game_config.prompt_mode,
+            "candidate_hash": candidate_hash,
+            "candidate_instructions": instructions,
+            "game_rules": rules,
+
+            "episode": result.to_dict(),
+
+            "metrics": None,
+            "feedback": None,
+        }
+
+        with record_path.open(
+            "x", encoding="utf-8"
+        ) as file:
+            json.dump(episode_record, file, indent=2, ensure_ascii=False)
+
         return dspy.Prediction(
             questions=[m["content"] for m in result.conversation if m["role"] == "assistant"],
             environment_answers=[m["content"] for m in result.env_conversation if m["role"] == "assistant"],
             environment_goal=result.goal_reached,
             judge_label=result.judge_label if self.use_judge else None,
             num_turns=result.num_turns,
+            episode_record_path=str(record_path)
         )
 
 
@@ -380,10 +428,57 @@ class EpisodeFeedback:
             + "\n".join(recent[-12:])
         )
 
-        return dspy.Prediction(
-            score=float(score),
-            feedback="\n".join(feedback_lines),
-        )
+        feedback_text = "\n".join(feedback_lines)
+
+        record_path_value = getattr(pred,"episode_record_path",None)
+
+        if record_path_value is not None:
+            record_path = Path(record_path_value)
+
+            episode_record = json.loads(record_path.read_text(encoding="utf-8"))
+
+            episode_record["metrics"] = {
+                "score": float(score),
+
+                "environment_goal": bool(pred.environment_goal),
+                "judge_label": pred.judge_label,
+
+                "correct_final_guess": bool(correct_guess),
+                "verified_success": bool(success and not leaked),
+
+                "num_turns": turns,
+                "max_turns": self.max_turns,
+
+                "valid_ratio": float(valid_ratio),
+                "unique_ratio": float(unique_ratio),
+
+                "invalid_count": invalid_count,
+                "invalid_turns": invalid_turns,
+
+                "repeat_count": repeat_count,
+                "repeated_pairs": [
+                    {
+                        "current_turn": current,
+                        "original_turn": original,
+                    }
+                    for current, original in repeated_pairs
+                ],
+
+                "environment_leakage": bool(leaked)
+            }
+
+            episode_record["feedback"] = feedback_text
+
+            temporary_path = record_path.with_suffix(".tmp")
+
+            temporary_path.write_text(
+                json.dumps(episode_record,indent=2,ensure_ascii=False),
+                encoding="utf-8"
+            )
+
+            temporary_path.replace(record_path)
+
+        return dspy.Prediction(score=float(score),feedback=feedback_text)
 
 def make_lm(prefix: str, *, max_tokens: int, temperature: float) -> dspy.LM:
     model = os.environ[f"{prefix}_MODEL"]
@@ -449,12 +544,23 @@ def main() -> None:
         else None
     )
 
+    output_dir = args.output_dir or (
+        Path("results")
+        / "gepa"
+        / args.game
+        / datetime.now().strftime("%Y%m%d_%H%M%S")
+    )
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     student = GepaEpisode(
         config,
         scenarios,
         environment,
         judge,
         use_judge=args.use_judge,
+        episode_dir=output_dir / "episodes",
+        val_indices=val_indices
     )
 
     agent_backend.client.close()
@@ -464,8 +570,6 @@ def main() -> None:
         judge.client.close()
 
     metric = EpisodeFeedback(args.game, scenarios, config.max_turns)
-    output_dir = args.output_dir or (Path("results") / "gepa" / args.game / datetime.now().strftime("%Y%m%d_%H%M%S"))
-    output_dir.mkdir(parents=True, exist_ok=True)
     settings = {
         "game": args.game,
         "train_indices": train_indices,
@@ -495,6 +599,72 @@ def main() -> None:
     )
     print(f"GEPA start: {args.game} train={train_indices} val={val_indices}")
     optimized = optimizer.compile(student, trainset=trainset, valset=valset)
+
+    details = getattr(
+        optimized,
+        "detailed_results",
+        None,
+    )
+
+    if details is not None:
+        aggregate_scores = getattr(
+            details,
+            "val_aggregate_scores",
+            [],
+        )
+
+        candidates = []
+
+        for candidate_index, program in enumerate(
+            getattr(details, "candidates", [])
+        ):
+            instructions = (
+                program.ask.signature.instructions
+            )
+
+            candidate_hash = hashlib.sha256(
+                instructions.encode("utf-8")
+            ).hexdigest()[:12]
+
+            score = (
+                aggregate_scores[candidate_index]
+                if candidate_index < len(aggregate_scores)
+                else None
+            )
+
+            candidates.append({
+                "candidate_index": candidate_index,
+                "candidate_hash": candidate_hash,
+                "validation_score": (
+                    float(score)
+                    if score is not None
+                    else None
+                ),
+                "instructions": instructions,
+            })
+
+        summary = {
+            "game": args.game,
+            "seed": args.seed,
+            "best_candidate_index": getattr(
+                details,
+                "best_idx",
+                None,
+            ),
+            "candidates": candidates,
+        }
+
+        summary_path = (output_dir / "candidate_summary.json")
+
+        summary_path.write_text(
+            json.dumps(
+                summary,
+                indent=2,
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
     optimized.save(str(output_dir / "optimized_program.json"))
     (output_dir / "optimized_instructions.txt").write_text(
         optimized.ask.signature.instructions, encoding="utf-8"

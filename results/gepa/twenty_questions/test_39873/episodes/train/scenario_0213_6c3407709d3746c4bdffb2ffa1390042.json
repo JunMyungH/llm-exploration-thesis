@@ -1,0 +1,375 @@
+{
+  "run_id": "6c3407709d3746c4bdffb2ffa1390042",
+  "timestamp_utc": "2026-11-17T20:27:57.341498+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 213,
+  "category": "scientific concept",
+  "target": "Theory of Relativity",
+  "prompt_mode": "paprika",
+  "candidate_hash": "07a139366776",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. Ensure questions are clear and answerable with 'Yes' or 'No'.\n2. **Strategy - Binary Search & Information Gain:** Prioritize questions that split the remaining possibility space as evenly as possible. Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color? Is it a person? Is it a living thing?) to quickly eliminate large groups of candidates. Avoid asking highly specific questions until you have narrowed down the category significantly.\n3. **Context Awareness & Hypothesis Tracking:**\n   - Maintain a mental list of excluded hypotheses based on 'No' answers.\n   - Maintain a mental list of potential candidates based on 'Yes' answers.\n   - If you receive a 'No' for a broad category (e.g., 'Is it a string instrument?'), do not immediately ask for a specific item within that category unless you have already confirmed the broader parent category (e.g., 'Is it an instrument?'). Instead, explore other branches of the decision tree.\n   - Avoid cycling through minor variations of the same unproductive hypothesis. If multiple specific guesses within a sub-category fail, step back to the parent category or a sibling category.\n4. **Progression:**\n   - **Phase 1 (Broad):** Determine the general domain (e.g., Physical vs. Abstract, Living vs. Non-living, Real vs. Fictional, Natural vs. Man-made).\n   - **Phase 2 (Narrowing):** Once the domain is known, narrow down by specific attributes (e.g., for instruments: String, Wind, Percussion, Keyboard; for concepts: Physics, Math, History, Philosophy).\n   - **Phase 3 (Specifics):** Within the identified sub-category, ask about specific types or members. If you have narrowed it down to a small set of likely candidates, you may make a direct guess.\n5. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question (e.g., \"Is it a physical object?\").\n\nAnalyze the history to determine the most informative next question. Focus on eliminating the largest possible number of remaining candidates with each question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 213,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Theory of Relativity",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a physical object?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a fundamental force of nature?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to electromagnetism?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to quantum mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to classical mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to relativity?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to general relativity?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to the curvature of spacetime?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to black holes?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the event horizon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the singularity?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the gravitational time dilation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the Schwarzschild radius?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of Hawking radiation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of gravitational waves?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of a wormhole?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of a black hole itself?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of a black hole's accretion disk?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Theory of Relativity."
+      },
+      {
+        "role": "user",
+        "content": "Is it a physical object?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a fundamental force of nature?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to electromagnetism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to classical mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to relativity?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to general relativity?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to the curvature of spacetime?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to black holes?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it the event horizon?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the singularity?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the gravitational time dilation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the Schwarzschild radius?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of Hawking radiation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of gravitational waves?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of a wormhole?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of a black hole itself?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of a black hole's accretion disk?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is it a concept related to general relativity? -> Yes\n10. Is it a concept related to the curvature of spacetime? -> Yes\n11. Is it a concept related to black holes? -> Yes\n12. Is it the event horizon? -> No\n13. Is it the singularity? -> No\n14. Is it the gravitational time dilation? -> No\n15. Is it the Schwarzschild radius? -> No\n16. Is it the concept of Hawking radiation? -> No\n17. Is it the concept of gravitational waves? -> No\n18. Is it the concept of a wormhole? -> No\n19. Is it the concept of a black hole itself? -> No\n20. Is it the concept of a black hole's accretion disk? -> No"
+}

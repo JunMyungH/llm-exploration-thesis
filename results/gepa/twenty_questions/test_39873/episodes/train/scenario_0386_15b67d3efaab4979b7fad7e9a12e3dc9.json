@@ -1,0 +1,396 @@
+{
+  "run_id": "15b67d3efaab4979b7fad7e9a12e3dc9",
+  "timestamp_utc": "2026-11-17T20:25:42.797401+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 386,
+  "category": "clothing",
+  "target": "Cardigan",
+  "prompt_mode": "paprika",
+  "candidate_hash": "3c72e394d3b7",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. Produce exactly one question at a time.\n2. **Information Gain & Binary Search:** Prioritize questions that split the remaining possibility space as evenly as possible. Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.\n3. **Hypothesis Tracking:** Maintain a mental list of excluded and included hypotheses based on the conversation history. If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts. Do not cycle through minor variations of the same unproductive hypothesis.\n4. **Contextual Deduction:** Use the conversation history to infer the nature of the target. For example, if the target is a \"cardigan\" (clothing, upper body, wool, buttons, preppy style), do not ask generic questions about \"clothing.\" Instead, ask specific questions that differentiate between similar items (e.g., material weight, formality, specific style associations) or make a direct guess if confident.\n5. **Progression:**\n   - **Early Game:** Start with broad categorical questions (e.g., Is it a physical object? Is it a person? Is it a color?).\n   - **Mid Game:** Refine based on answers. If a category is confirmed (e.g., \"Movie\"), switch to attributes specific to that category (e.g., Genre, Era, Color, Language).\n   - **Late Game:** If you have narrowed it down significantly (e.g., to a specific type of object or a small set of candidates), make a direct guess. If you are unsure but have strong leads, ask a question that tests a specific candidate or a key distinguishing feature.\n6. **Avoiding Loops:** If you have asked about a specific attribute (e.g., \"Is it made of wool?\") and the answer was Yes, do not ask \"Is it made of cotton?\" unless you are trying to distinguish between two specific wool-like materials. Instead, move to the next logical attribute (e.g., style, era, usage).\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Focus on eliminating large groups of remaining possibilities or confirming a specific hypothesis.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 386,
+    "agent_game_scenario": "clothing",
+    "env_game_scenario": "Cardigan",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the clothing item worn on the upper body?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a type of jacket or coat?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a shirt or blouse?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a type of sweater or pullover?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of wool?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of cotton?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of synthetic material (such as acrylic, polyester, or nylon)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of cashmere or angora?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a blend of natural fibers (such as wool and silk, or cotton and linen) or a natural fiber other than wool, cotton, cashmere, or angora (such as alpaca, mohair, or silk)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a synthetic blend (such as polyester-acrylic or nylon-cotton blends) or a specific synthetic fiber like fleece?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a plant-based fiber other than cotton, such as linen, hemp, or bamboo?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a natural animal fiber other than wool, cashmere, or angora, such as alpaca, mohair, or camel hair?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a plant-based fiber other than cotton, such as linen, hemp, or bamboo?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a blend of synthetic fibers (e.g., polyester and acrylic)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a natural plant-based fiber such as linen, hemp, or bamboo?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a natural animal fiber other than wool, cashmere, or angora, such as alpaca, mohair, or camel hair?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the sweater or pullover made of a natural plant-based fiber such as linen, hemp, or bamboo?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Cardigan."
+      },
+      {
+        "role": "user",
+        "content": "Is the clothing item worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a type of jacket or coat?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a shirt or blouse?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a type of sweater or pullover?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of wool?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of cotton?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of synthetic material (such as acrylic, polyester, or nylon)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of cashmere or angora?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a blend of natural fibers (such as wool and silk, or cotton and linen) or a natural fiber other than wool, cotton, cashmere, or angora (such as alpaca, mohair, or silk)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a synthetic blend (such as polyester-acrylic or nylon-cotton blends) or a specific synthetic fiber like fleece?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a plant-based fiber other than cotton, such as linen, hemp, or bamboo?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a natural animal fiber other than wool, cashmere, or angora, such as alpaca, mohair, or camel hair?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a plant-based fiber other than cotton, such as linen, hemp, or bamboo?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a blend of synthetic fibers (e.g., polyester and acrylic)?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a natural plant-based fiber such as linen, hemp, or bamboo?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a natural animal fiber other than wool, cashmere, or angora, such as alpaca, mohair, or camel hair?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the sweater or pullover made of a natural plant-based fiber such as linen, hemp, or bamboo?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.15000000000000002,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.75,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 5,
+    "repeated_pairs": [
+      {
+        "current_turn": 14,
+        "original_turn": 11
+      },
+      {
+        "current_turn": 15,
+        "original_turn": 12
+      },
+      {
+        "current_turn": 18,
+        "original_turn": 13
+      },
+      {
+        "current_turn": 19,
+        "original_turn": 12
+      },
+      {
+        "current_turn": 20,
+        "original_turn": 17
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 5\nEnvironment leakage: False\nTraining reward: 0.1500\n\nRepeated questions:\n- Turn 14 repeated turn 11, already answered 'No'.\n- Turn 15 repeated turn 12, already answered 'No'.\n- Turn 18 repeated turn 13, already answered 'No'.\n- Turn 19 repeated turn 12, already answered 'No'.\n- Turn 20 repeated turn 17, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the sweater or pullover made of a blend of natural fibers (such as wool and silk, or cotton and linen) or a natural fiber other than wool, cotton, cashmere, or angora (such as alpaca, mohair, or silk)? -> No\n10. Is the sweater or pullover made of a synthetic blend (such as polyester-acrylic or nylon-cotton blends) or a specific synthetic fiber like fleece? -> No\n11. Is the sweater or pullover made of a plant-based fiber other than cotton, such as linen, hemp, or bamboo? -> No\n12. Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon? -> No\n13. Is the sweater or pullover made of a natural animal fiber other than wool, cashmere, or angora, such as alpaca, mohair, or camel hair? -> No\n14. Is the sweater or pullover made of a plant-based fiber other than cotton, such as linen, hemp, or bamboo? -> No\n15. Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon? -> No\n16. Is the sweater or pullover made of a blend of synthetic fibers (e.g., polyester and acrylic)? -> No\n17. Is the sweater or pullover made of a natural plant-based fiber such as linen, hemp, or bamboo? -> No\n18. Is the sweater or pullover made of a natural animal fiber other than wool, cashmere, or angora, such as alpaca, mohair, or camel hair? -> No\n19. Is the sweater or pullover made of a synthetic material, such as acrylic, polyester, or nylon? -> No\n20. Is the sweater or pullover made of a natural plant-based fiber such as linen, hemp, or bamboo? -> No"
+}

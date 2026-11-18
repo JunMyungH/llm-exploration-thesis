@@ -1,0 +1,375 @@
+{
+  "run_id": "bb1fb1ea3f574b9c9fb0314534fb437f",
+  "timestamp_utc": "2026-11-17T20:26:57.472631+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 549,
+  "category": "brand",
+  "target": "Olympus",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b1baef25b395",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions.\n2. **State Tracking & Deduplication:**\n   - Maintain an internal state of all known facts from the conversation history.\n   - **CRITICAL:** Do not ask a question that has already been asked, even if rephrased, if the answer remains the same. Do not re-ask questions where the answer was 'No' unless you are testing a specific sub-condition that logically differs from the previous broad 'No'.\n   - Explicitly track excluded hypotheses. If you ask \"Is it X?\" and the answer is \"No\", mark X as excluded. Do not guess X again.\n3. **Strategy - Information Gain & Branching:**\n   - Prioritize questions that split the remaining possibility space as evenly as possible (binary search). Avoid questions that are too specific too early.\n   - If a broad category is confirmed (e.g., 'Physics'), do not immediately list every sub-field. Instead, use the history to identify which sub-fields have already been ruled out ('No') and which are still viable.\n   - If you have asked about several specific examples within a category and they were all 'No', stop guessing specific examples and ask a question about the *category* or *properties* of that category to narrow down the type of entity (e.g., \"Is it a fundamental force?\" vs \"Is it a particle?\").\n   - If you are down to a small number of candidates, make a direct guess. Do not ask another diagnostic question if you have enough information to guess with high confidence.\n4. **Context Awareness:**\n   - Use the conversation history to identify the current 'branch' of the decision tree.\n   - If previous answers ruled out broad categories, narrow down to specific sub-fields or related concepts based on affirmative answers.\n   - If you receive a 'No' to a specific example, do not immediately guess the next most likely example. Instead, consider if there is a broader property that distinguishes the remaining candidates from the rejected ones.\n5. **Progression:**\n   - Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?).\n   - Refine based on answers.\n   - If you have narrowed it down significantly, make a direct guess.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.\n\nAnalyze the history to determine the most informative next question. Ensure you are not repeating past questions and are actively eliminating possibilities rather than cycling through them.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 549,
+    "agent_game_scenario": "brand",
+    "env_game_scenario": "Olympus",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand a technology company?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for consumer electronics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Apple?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Samsung?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for smartphones?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for computers or laptops?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for home appliances?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for software or services rather than hardware?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for networking equipment or telecommunications infrastructure?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for gaming consoles or video games?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for computer peripherals (such as mice, keyboards, or monitors)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for wearable technology or smart home devices?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for audio equipment or headphones?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for automotive technology or electric vehicles?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for cameras or imaging equipment?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Sony?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Canon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Nikon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Panasonic?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for professional broadcast or cinema cameras?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is Olympus."
+      },
+      {
+        "role": "user",
+        "content": "Is the brand a technology company?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for consumer electronics?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Apple?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Samsung?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for smartphones?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for computers or laptops?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for home appliances?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for software or services rather than hardware?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for networking equipment or telecommunications infrastructure?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for gaming consoles or video games?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for computer peripherals (such as mice, keyboards, or monitors)?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for wearable technology or smart home devices?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for audio equipment or headphones?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for automotive technology or electric vehicles?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for cameras or imaging equipment?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Sony?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Canon?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Nikon?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Panasonic?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for professional broadcast or cinema cameras?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the brand primarily known for networking equipment or telecommunications infrastructure? -> No\n10. Is the brand primarily known for gaming consoles or video games? -> No\n11. Is the brand primarily known for computer peripherals (such as mice, keyboards, or monitors)? -> No\n12. Is the brand primarily known for wearable technology or smart home devices? -> No\n13. Is the brand primarily known for audio equipment or headphones? -> No\n14. Is the brand primarily known for automotive technology or electric vehicles? -> No\n15. Is the brand primarily known for cameras or imaging equipment? -> Yes\n16. Is the brand Sony? -> No\n17. Is the brand Canon? -> No\n18. Is the brand Nikon? -> No\n19. Is the brand Panasonic? -> No\n20. Is the brand primarily known for professional broadcast or cinema cameras? -> No"
+}

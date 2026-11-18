@@ -1,0 +1,375 @@
+{
+  "run_id": "e4503cd2a4ad4d92b080883fa48ab05c",
+  "timestamp_utc": "2026-11-17T20:26:17.146309+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 213,
+  "category": "scientific concept",
+  "target": "Theory of Relativity",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a5b2d7cde836",
+  "candidate_instructions": "You are playing a game of 20 Questions to guess a specific scientific concept. Your goal is to identify the concept in as few yes-or-no questions as possible.\n\n**Current State Analysis:**\n1.  **Review History:** Analyze the entire conversation history provided. Identify all 'Yes' answers (confirmed attributes) and 'No' answers (excluded attributes).\n2.  **Hypothesis Tracking:** Maintain a mental list of candidate concepts that fit all 'Yes' criteria and do not contradict any 'No' criteria. \n3.  **Avoid Redundancy:** Do not ask questions that have already been asked or ask minor variations of previous 'No' answers. Do not ask questions that are logically implied by previous answers unless narrowing down a specific subset.\n4.  **Information Gain:** Prioritize questions that split the remaining hypothesis space roughly in half (maximizing information gain). If the hypothesis space is very small (e.g., 1-3 candidates), you may make a direct guess.\n\n**Strategy for Scientific Concepts:**\n-   Start broad (e.g., Physics, Chemistry, Biology) and narrow down to sub-fields, then specific phenomena, laws, or entities.\n-   If you have narrowed it down to a specific law or principle (e.g., related to Thermodynamics, Entropy, Heat Engines, Carnot Cycle), ensure you are distinguishing between the *process* (Carnot Cycle) and the *metric/theorem* (Carnot Efficiency/Thermore). \n-   If previous questions about specific named entities (e.g., 'Carnot efficiency', 'Lorentz transformation') have returned 'No', look for closely related but distinct concepts (e.g., 'Maxwell-Boltzmann distribution', 'Spacetime interval', 'Planck's constant').\n\n**Output Format:**\nProduce exactly one yes-or-no question based on the above analysis. Do not include explanations or reasoning in the output, just the question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 213,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Theory of Relativity",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to chemistry?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to biology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to astronomy or astrophysics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the study of stars or stellar evolution?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the study of galaxies or large-scale structure of the universe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to cosmology or the large-scale structure and evolution of the universe itself (e.g., the Big Bang, dark matter, dark energy, cosmic microwave background)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to dark matter or dark energy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Cosmic Microwave Background (CMB)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Big Bang theory or the early universe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the expansion of the universe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to Hubble's Law or the Hubble constant?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the inflationary epoch of the early universe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the formation of light elements (nucleosynthesis) in the early universe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Cosmic Neutrino Background?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Cosmic Microwave Background anisotropies or the acoustic peaks in the power spectrum?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the cosmological constant or vacuum energy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the accelerated expansion of the universe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the cosmological constant (Lambda)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Theory of Relativity."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to chemistry?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to astronomy or astrophysics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the study of stars or stellar evolution?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the study of galaxies or large-scale structure of the universe?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to cosmology or the large-scale structure and evolution of the universe itself (e.g., the Big Bang, dark matter, dark energy, cosmic microwave background)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to dark matter or dark energy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Cosmic Microwave Background (CMB)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Big Bang theory or the early universe?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the expansion of the universe?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to Hubble's Law or the Hubble constant?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the inflationary epoch of the early universe?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the formation of light elements (nucleosynthesis) in the early universe?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Cosmic Neutrino Background?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Cosmic Microwave Background anisotropies or the acoustic peaks in the power spectrum?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the cosmological constant or vacuum energy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the accelerated expansion of the universe?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the cosmological constant (Lambda)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Relativity. Reply with Yes or No in relation to Theory of Relativity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to dark matter or dark energy? -> No\n10. Is the concept related to the Cosmic Microwave Background (CMB)? -> No\n11. Is the concept related to the Big Bang theory or the early universe? -> Yes\n12. Is the concept related to the expansion of the universe? -> Yes\n13. Is the concept related to Hubble's Law or the Hubble constant? -> No\n14. Is the concept related to the inflationary epoch of the early universe? -> No\n15. Is the concept related to the formation of light elements (nucleosynthesis) in the early universe? -> No\n16. Is the concept related to the Cosmic Neutrino Background? -> No\n17. Is the concept related to the Cosmic Microwave Background anisotropies or the acoustic peaks in the power spectrum? -> No\n18. Is the concept related to the cosmological constant or vacuum energy? -> Yes\n19. Is the concept related to the accelerated expansion of the universe? -> Yes\n20. Is the concept related to the cosmological constant (Lambda)? -> Yes"
+}

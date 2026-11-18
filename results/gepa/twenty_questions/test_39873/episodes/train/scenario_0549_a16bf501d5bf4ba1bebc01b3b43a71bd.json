@@ -1,0 +1,375 @@
+{
+  "run_id": "a16bf501d5bf4ba1bebc01b3b43a71bd",
+  "timestamp_utc": "2026-11-17T20:23:53.227262+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 549,
+  "category": "brand",
+  "target": "Olympus",
+  "prompt_mode": "paprika",
+  "candidate_hash": "da2e6148a6fe",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. Output exactly one question at a time.\n2. **Strategy - Information Gain & Binary Search:** Prioritize questions that split the remaining possibility space as evenly as possible. Avoid asking questions that are too specific too early. Do not ask questions that are minor variations of previous unproductive questions (e.g., if asking about 'brand X' failed, do not immediately ask about 'brand Y' if they are in the same small niche, unless you have narrowed the field significantly).\n3. **Hypothesis Tracking:** You must actively track which broad categories and specific hypotheses have been ruled out by previous 'No' answers. \n   - If a broad category is ruled out (e.g., 'Technology Company'), do not ask if it is a 'Tech Startup' or 'Tech Giant' unless you have established it is a tech company. Instead, pivot to other major categories (e.g., Food, Fashion, Automotive).\n   - If specific entities within a category are ruled out (e.g., Canon, Nikon, Sony are not the camera brand), do not list every other minor camera brand. Instead, ask about the *type* of camera (e.g., 'Is it known for professional cinema equipment?' or 'Is it an action camera brand?') to narrow the attribute space.\n4. **Context Awareness:** Use the conversation history to infer what is *likely* remaining. If many hardware categories are 'No' but 'Cameras' is 'Yes', and major players are 'No', consider if it is a niche player (e.g., GoPro, Olympus, Fujifilm) or a different type of imaging device (e.g., drones with cameras, security cameras).\n5. **Progression:** \n   - **Early Game:** Start with broad categorical splits (Physical vs. Abstract, Human vs. Non-human, Natural vs. Man-made).\n   - **Mid Game:** Drill down into sub-categories. If you have narrowed it to a specific domain (e.g., 'Brands'), distinguish by industry (Tech, Fashion, Food, Auto).\n   - **Late Game:** If you have identified a small set of candidates, use specific distinguishing features to isolate the target. If you are confident, make a direct guess.\n6. **Error Prevention:** \n   - Do not repeat the same question or functionally identical questions.\n   - Do not ask about attributes that are irrelevant to the current narrowed-down domain.\n   - If you have used all 20 questions without guessing, acknowledge failure. However, your goal is to maximize the chance of success within 20 turns by being efficient.\n\n**Current State:**\n- Game Rules: Provided in input.\n- History: Provided in input (list of previous Q&A pairs). Analyze the history to determine the most informative next question based on the 'Yes' answers (what it is) and 'No' answers (what it is not).\n\nAnalyze the history to determine the most informative next question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 549,
+    "agent_game_scenario": "brand",
+    "env_game_scenario": "Olympus",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with technology or electronics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for consumer electronics (such as smartphones, laptops, or home appliances)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with professional or industrial technology equipment (such as servers, networking hardware, or enterprise software)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with software or digital services rather than physical hardware?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with automotive vehicles or automotive parts?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with fashion, apparel, or accessories?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with food or beverages?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with sports equipment or athletic apparel?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with cosmetics, skincare, or personal care products?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with toys, games, or entertainment media?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with financial services, banking, or insurance?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with industrial machinery, heavy equipment, or manufacturing tools?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with transportation (such as bicycles, motorcycles, or aviation) or outdoor recreation equipment (such as camping gear or musical instruments)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with pharmaceuticals, healthcare products, or medical devices?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for consumer medical devices (such as home health monitors, diagnostic tools, or personal care health devices) rather than large-scale hospital equipment or pharmaceutical drugs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with diagnostic imaging equipment (such as MRI, CT, or X-ray machines) or other large-scale hospital diagnostic systems?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with surgical instruments, orthopedic implants, or other surgical/implantable medical devices?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with pharmaceutical drugs or biotechnology products?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with laboratory equipment, in-vitro diagnostics (IVD), or clinical laboratory testing solutions?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with in-vitro diagnostics (IVD) for clinical laboratory testing (such as blood tests, chemistry analyzers, or immunoassays)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is Olympus."
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with technology or electronics?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for consumer electronics (such as smartphones, laptops, or home appliances)?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with professional or industrial technology equipment (such as servers, networking hardware, or enterprise software)?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with software or digital services rather than physical hardware?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with automotive vehicles or automotive parts?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with fashion, apparel, or accessories?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with food or beverages?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with sports equipment or athletic apparel?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with cosmetics, skincare, or personal care products?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with toys, games, or entertainment media?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with financial services, banking, or insurance?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with industrial machinery, heavy equipment, or manufacturing tools?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with transportation (such as bicycles, motorcycles, or aviation) or outdoor recreation equipment (such as camping gear or musical instruments)?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with pharmaceuticals, healthcare products, or medical devices?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for consumer medical devices (such as home health monitors, diagnostic tools, or personal care health devices) rather than large-scale hospital equipment or pharmaceutical drugs?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with diagnostic imaging equipment (such as MRI, CT, or X-ray machines) or other large-scale hospital diagnostic systems?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with surgical instruments, orthopedic implants, or other surgical/implantable medical devices?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with pharmaceutical drugs or biotechnology products?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with laboratory equipment, in-vitro diagnostics (IVD), or clinical laboratory testing solutions?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with in-vitro diagnostics (IVD) for clinical laboratory testing (such as blood tests, chemistry analyzers, or immunoassays)?\n(Remember the player is trying to guess a brand, and the correct answer is Olympus. Reply with Yes or No in relation to Olympus.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the brand primarily associated with cosmetics, skincare, or personal care products? -> No\n10. Is the brand primarily associated with toys, games, or entertainment media? -> No\n11. Is the brand primarily associated with financial services, banking, or insurance? -> No\n12. Is the brand primarily associated with industrial machinery, heavy equipment, or manufacturing tools? -> No\n13. Is the brand primarily associated with transportation (such as bicycles, motorcycles, or aviation) or outdoor recreation equipment (such as camping gear or musical instruments)? -> No\n14. Is the brand primarily associated with pharmaceuticals, healthcare products, or medical devices? -> Yes\n15. Is the brand primarily known for consumer medical devices (such as home health monitors, diagnostic tools, or personal care health devices) rather than large-scale hospital equipment or pharmaceutical drugs? -> No\n16. Is the brand primarily associated with diagnostic imaging equipment (such as MRI, CT, or X-ray machines) or other large-scale hospital diagnostic systems? -> No\n17. Is the brand primarily associated with surgical instruments, orthopedic implants, or other surgical/implantable medical devices? -> No\n18. Is the brand primarily associated with pharmaceutical drugs or biotechnology products? -> No\n19. Is the brand primarily associated with laboratory equipment, in-vitro diagnostics (IVD), or clinical laboratory testing solutions? -> Yes\n20. Is the brand primarily associated with in-vitro diagnostics (IVD) for clinical laboratory testing (such as blood tests, chemistry analyzers, or immunoassays)? -> No"
+}

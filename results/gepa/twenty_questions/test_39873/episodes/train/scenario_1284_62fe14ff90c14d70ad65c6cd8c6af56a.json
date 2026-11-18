@@ -1,0 +1,151 @@
+{
+  "run_id": "62fe14ff90c14d70ad65c6cd8c6af56a",
+  "timestamp_utc": "2026-11-17T20:26:28.213101+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1284,
+  "category": "color",
+  "target": "Pink",
+  "prompt_mode": "paprika",
+  "candidate_hash": "c8811fe92f27",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.\n\n**Instructions:**\n1. **Question Format:** Ask only yes-or-no questions. Ensure questions are grammatically correct and unambiguous.\n2. **Strategy - Information Gain:** Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early. If a broad category is ruled out, immediately probe the most likely remaining sub-categories or related concepts.\n3. **Context Awareness & History Utilization:**\n   - Analyze the full conversation history to track excluded hypotheses and confirmed attributes.\n   - Do not re-ask questions that have already been answered, even if phrased differently, unless clarifying a contradiction.\n   - If previous answers ruled out broad categories (e.g., 'physics' but not 'quantum' or 'classical'), narrow down to specific sub-fields or related concepts (e.g., electromagnetism, thermodynamics) based on affirmative answers in those areas.\n   - Use negative answers to eliminate large sets of possibilities. For example, if 'primary colors' are ruled out, do not ask about specific primary colors again; move to secondary/tertiary colors or non-spectral colors (black, white, gray).\n4. **Domain-Specific Logic:**\n   - **For Colors:** If primary and secondary colors are ruled out, consider shades, tints, tones, or specific named colors (e.g., teal, magenta, beige). If black and white are ruled out, look for achromatic or neutral colors.\n   - **For Movies/People/Things:** After establishing basic physical properties (animated vs live-action, physical vs abstract, human vs non-human), move to temporal settings (decade, era), geographical settings (country, city), genre, or specific roles (protagonist, antagonist).\n5. **Progression:** Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?). Refine based on answers. If you have narrowed it down significantly (e.g., to a small set of candidates), make a direct guess. If confidence is high but not absolute, ask a discriminating question between the top 2-3 candidates.\n6. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding. Do not output any explanation, only the question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a color. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1284,
+    "agent_game_scenario": "color",
+    "env_game_scenario": "Pink",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 6,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a color. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the color a primary color?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the color a secondary color?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the color a shade of blue?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the color a shade of red?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the color a shade of purple?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the color a shade of pink?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a color, and the correct answer is Pink."
+      },
+      {
+        "role": "user",
+        "content": "Is the color a primary color?\n(Remember the player is trying to guess a color, and the correct answer is Pink. Reply with Yes or No in relation to Pink.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the color a secondary color?\n(Remember the player is trying to guess a color, and the correct answer is Pink. Reply with Yes or No in relation to Pink.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the color a shade of blue?\n(Remember the player is trying to guess a color, and the correct answer is Pink. Reply with Yes or No in relation to Pink.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the color a shade of red?\n(Remember the player is trying to guess a color, and the correct answer is Pink. Reply with Yes or No in relation to Pink.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the color a shade of purple?\n(Remember the player is trying to guess a color, and the correct answer is Pink. Reply with Yes or No in relation to Pink.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the color a shade of pink?\n(Remember the player is trying to guess a color, and the correct answer is Pink. Reply with Yes or No in relation to Pink.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.9400000000000001,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 6,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 6/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.9400\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n1. Is the color a primary color? -> No\n2. Is the color a secondary color? -> No\n3. Is the color a shade of blue? -> No\n4. Is the color a shade of red? -> Yes\n5. Is the color a shade of purple? -> No\n6. Is the color a shade of pink? -> Goal reached."
+}
