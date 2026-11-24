@@ -1,0 +1,358 @@
+{
+  "timestamp_utc": "2026-11-24T20:44:05.213448+00:00",
+  "mode": "baseline",
+  "scenario_index": 10,
+  "attempt": 1,
+  "target": "Jew's Harp",
+  "category": "instrument",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "settings": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "prompt_mode": "paprika",
+    "agent_model": "Qwen/Qwen3.6-35B-A3B",
+    "environment_model": "Qwen/Qwen3.6-35B-A3B",
+    "judge_model": "Qwen/Qwen3.6-35B-A3B",
+    "agent_temperature": 0.0,
+    "agent_max_tokens": 256,
+    "environment_temperature": 0.0,
+    "environment_max_tokens": 1024,
+    "judge_temperature": 0.0,
+    "judge_max_tokens": 128,
+    "judge_used": true,
+    "max_turns": 20,
+    "vllm_max_model_len": "8192",
+    "dspy_version": "3.4.1",
+    "optimized_program_sha256": "5011f62041d535ecd0b527af4991dcc053ef52302f71888297b531bf62898009",
+    "candidate_hashes": {
+      "baseline": "0bd69960c99c",
+      "gepa": "b6973f63eab0"
+    }
+  },
+  "episode": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "scenario_index": 10,
+    "agent_game_scenario": "instrument",
+    "env_game_scenario": "Jew's Harp",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 17,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a string instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a wind instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a percussion instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument an electronic instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a keyboard instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a brass instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a plucked string instrument (such as a guitar, harp, or banjo)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a bowed string instrument (such as a violin, cello, or double bass)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a woodwind instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a membranophone (such as a drum)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a chordophone that is not a string instrument (such as a zither or autoharp)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a idiophone (such as a xylophone, cymbal, or triangle)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a voice?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a musical bow?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a free aerophone (such as a harmonica or jaw harp)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a harmonica?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a jaw harp?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Jew's Harp."
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a string instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a wind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a percussion instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument an electronic instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a keyboard instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a brass instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a plucked string instrument (such as a guitar, harp, or banjo)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a bowed string instrument (such as a violin, cello, or double bass)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a woodwind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a membranophone (such as a drum)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a chordophone that is not a string instrument (such as a zither or autoharp)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a idiophone (such as a xylophone, cymbal, or triangle)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a voice?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a musical bow?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a free aerophone (such as a harmonica or jaw harp)?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a harmonica?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a jaw harp?\n(Remember the player is trying to guess a instrument, and the correct answer is Jew's Harp. Reply with Yes or No in relation to Jew's Harp.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": [
+      {
+        "role": "system",
+        "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Jew's Harp in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct instrument, which is: Jew's Harp, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+      },
+      {
+        "role": "user",
+        "content": "The conversation begins here: \n\nAgent: Is the instrument a jaw harp?\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct instrument, which is Jew's Harp in this particular game. Reply with <VALID> only if the player has guessed Jew's Harp in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Jew's Harp is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+      },
+      {
+        "role": "assistant",
+        "content": "<VALID>"
+      }
+    ]
+  },
+  "metrics": {
+    "success": true,
+    "goal_reached": true,
+    "environment_goal": false,
+    "final_judge_label": true,
+    "num_turns": 17,
+    "max_turns": 20,
+    "num_questions": 17,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "gepa_style_reward": 0.2,
+    "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 17/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n6. Is the instrument a brass instrument? -> No\n7. Is the instrument a plucked string instrument (such as a guitar, harp, or banjo)? -> No\n8. Is the instrument a bowed string instrument (such as a violin, cello, or double bass)? -> No\n9. Is the instrument a woodwind instrument? -> No\n10. Is the instrument a membranophone (such as a drum)? -> No\n11. Is the instrument a chordophone that is not a string instrument (such as a zither or autoharp)? -> No\n12. Is the instrument a idiophone (such as a xylophone, cymbal, or triangle)? -> No\n13. Is the instrument a voice? -> No\n14. Is the instrument a musical bow? -> No\n15. Is the instrument a free aerophone (such as a harmonica or jaw harp)? -> Yes\n16. Is the instrument a harmonica? -> No\n17. Is the instrument a jaw harp? -> Yes"
+  }
+}

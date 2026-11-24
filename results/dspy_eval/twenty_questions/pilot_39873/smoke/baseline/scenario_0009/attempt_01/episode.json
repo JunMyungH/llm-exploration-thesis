@@ -1,0 +1,393 @@
+{
+  "timestamp_utc": "2026-11-24T20:41:50.068176+00:00",
+  "mode": "baseline",
+  "scenario_index": 9,
+  "attempt": 1,
+  "target": "Battery",
+  "category": "invention",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "settings": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "prompt_mode": "paprika",
+    "agent_model": "Qwen/Qwen3.6-35B-A3B",
+    "environment_model": "Qwen/Qwen3.6-35B-A3B",
+    "judge_model": "Qwen/Qwen3.6-35B-A3B",
+    "agent_temperature": 0.0,
+    "agent_max_tokens": 256,
+    "environment_temperature": 0.0,
+    "environment_max_tokens": 1024,
+    "judge_temperature": 0.0,
+    "judge_max_tokens": 128,
+    "judge_used": true,
+    "max_turns": 20,
+    "vllm_max_model_len": "8192",
+    "dspy_version": "3.4.1",
+    "optimized_program_sha256": "5011f62041d535ecd0b527af4991dcc053ef52302f71888297b531bf62898009",
+    "candidate_hashes": {
+      "baseline": "0bd69960c99c",
+      "gepa": "b6973f63eab0"
+    }
+  },
+  "episode": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "scenario_index": 9,
+    "agent_game_scenario": "invention",
+    "env_game_scenario": "Battery",
+    "goal_reached": false,
+    "judge_label": null,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention electronic?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention related to communication?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention related to transportation?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a vehicle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention related to land travel?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention powered by an internal combustion engine?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention powered by electricity?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a bicycle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a motorized two-wheeled vehicle (such as a motorcycle or scooter)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a three-wheeled vehicle (such as a tricycle or trike)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a four-wheeled vehicle (such as a car, truck, or van)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a train or a tram?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a watercraft (such as a boat or ship)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention an aircraft (such as an airplane or helicopter)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a personal mobility device (such as an electric scooter, skateboard, or hoverboard)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a type of railway vehicle (such as a locomotive, subway car, or monorail)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a type of rail vehicle that runs on a single rail (such as a monorail or monorail system)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a type of rail vehicle that runs on conventional rails (such as a train, tram, or subway car)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a type of vehicle that operates on water but is not a boat or ship (such as a hovercraft or hydrofoil)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a type of vehicle that operates on land but is not a standard car, truck, or bus (such as a tank, tractor, or forklift)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Battery."
+      },
+      {
+        "role": "user",
+        "content": "Is the invention electronic?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention related to communication?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention related to transportation?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a vehicle?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention related to land travel?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention powered by an internal combustion engine?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention powered by electricity?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a bicycle?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a motorized two-wheeled vehicle (such as a motorcycle or scooter)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a three-wheeled vehicle (such as a tricycle or trike)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a four-wheeled vehicle (such as a car, truck, or van)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a train or a tram?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a watercraft (such as a boat or ship)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention an aircraft (such as an airplane or helicopter)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a personal mobility device (such as an electric scooter, skateboard, or hoverboard)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a type of railway vehicle (such as a locomotive, subway car, or monorail)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a type of rail vehicle that runs on a single rail (such as a monorail or monorail system)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a type of rail vehicle that runs on conventional rails (such as a train, tram, or subway car)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a type of vehicle that operates on water but is not a boat or ship (such as a hovercraft or hydrofoil)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a type of vehicle that operates on land but is not a standard car, truck, or bus (such as a tank, tractor, or forklift)?\n(Remember the player is trying to guess a invention, and the correct answer is Battery. Reply with Yes or No in relation to Battery.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "success": false,
+    "goal_reached": false,
+    "environment_goal": false,
+    "final_judge_label": null,
+    "num_turns": 20,
+    "max_turns": 20,
+    "num_questions": 20,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "gepa_style_reward": 0.2,
+    "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the invention a motorized two-wheeled vehicle (such as a motorcycle or scooter)? -> No\n10. Is the invention a three-wheeled vehicle (such as a tricycle or trike)? -> No\n11. Is the invention a four-wheeled vehicle (such as a car, truck, or van)? -> No\n12. Is the invention a train or a tram? -> No\n13. Is the invention a watercraft (such as a boat or ship)? -> No\n14. Is the invention an aircraft (such as an airplane or helicopter)? -> No\n15. Is the invention a personal mobility device (such as an electric scooter, skateboard, or hoverboard)? -> No\n16. Is the invention a type of railway vehicle (such as a locomotive, subway car, or monorail)? -> No\n17. Is the invention a type of rail vehicle that runs on a single rail (such as a monorail or monorail system)? -> No\n18. Is the invention a type of rail vehicle that runs on conventional rails (such as a train, tram, or subway car)? -> No\n19. Is the invention a type of vehicle that operates on water but is not a boat or ship (such as a hovercraft or hydrofoil)? -> No\n20. Is the invention a type of vehicle that operates on land but is not a standard car, truck, or bus (such as a tank, tractor, or forklift)? -> No"
+  }
+}

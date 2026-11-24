@@ -1,0 +1,393 @@
+{
+  "timestamp_utc": "2026-11-24T20:39:15.215242+00:00",
+  "mode": "baseline",
+  "scenario_index": 1,
+  "attempt": 1,
+  "target": "Ring",
+  "category": "shape",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "settings": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "prompt_mode": "paprika",
+    "agent_model": "Qwen/Qwen3.6-35B-A3B",
+    "environment_model": "Qwen/Qwen3.6-35B-A3B",
+    "judge_model": "Qwen/Qwen3.6-35B-A3B",
+    "agent_temperature": 0.0,
+    "agent_max_tokens": 256,
+    "environment_temperature": 0.0,
+    "environment_max_tokens": 1024,
+    "judge_temperature": 0.0,
+    "judge_max_tokens": 128,
+    "judge_used": true,
+    "max_turns": 20,
+    "vllm_max_model_len": "8192",
+    "dspy_version": "3.4.1",
+    "optimized_program_sha256": "5011f62041d535ecd0b527af4991dcc053ef52302f71888297b531bf62898009",
+    "candidate_hashes": {
+      "baseline": "0bd69960c99c",
+      "gepa": "b6973f63eab0"
+    }
+  },
+  "episode": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "scenario_index": 1,
+    "agent_game_scenario": "shape",
+    "env_game_scenario": "Ring",
+    "goal_reached": false,
+    "judge_label": null,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a polygon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a circle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a sphere?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a curve that is not a circle?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a closed curve?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape an ellipse?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape an oval?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a parabola?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a hyperbola?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a line segment?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a spiral?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a straight line?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a heart?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a cardioid?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a lemniscate?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a sine wave?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a cycloid?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a closed curve that is not an ellipse or oval, such as a limacon or a cardioid?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape an open curve?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a circle-like shape that is not a perfect circle, such as a rounded rectangle or a squircle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Ring."
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a sphere?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a curve that is not a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a closed curve?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape an ellipse?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape an oval?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a parabola?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a hyperbola?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a line segment?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a spiral?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a straight line?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a heart?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a cardioid?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a lemniscate?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a sine wave?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a cycloid?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a closed curve that is not an ellipse or oval, such as a limacon or a cardioid?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape an open curve?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a circle-like shape that is not a perfect circle, such as a rounded rectangle or a squircle?\n(Remember the player is trying to guess a shape, and the correct answer is Ring. Reply with Yes or No in relation to Ring.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "success": false,
+    "goal_reached": false,
+    "environment_goal": false,
+    "final_judge_label": null,
+    "num_turns": 20,
+    "max_turns": 20,
+    "num_questions": 20,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "gepa_style_reward": 0.2,
+    "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the shape a hyperbola? -> No\n10. Is the shape a line segment? -> No\n11. Is the shape a spiral? -> No\n12. Is the shape a straight line? -> No\n13. Is the shape a heart? -> No\n14. Is the shape a cardioid? -> No\n15. Is the shape a lemniscate? -> No\n16. Is the shape a sine wave? -> No\n17. Is the shape a cycloid? -> No\n18. Is the shape a closed curve that is not an ellipse or oval, such as a limacon or a cardioid? -> No\n19. Is the shape an open curve? -> No\n20. Is the shape a circle-like shape that is not a perfect circle, such as a rounded rectangle or a squircle? -> No"
+  }
+}
