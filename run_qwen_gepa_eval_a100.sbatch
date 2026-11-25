@@ -76,7 +76,7 @@ fi
 
 NUM_SCENARIOS=$((END - START))
 
-OUTPUT_DIR="results/dspy_eval/$GAME/pilot_39873/$PROFILE"
+OUTPUT_DIR="results/dspy_eval/$GAME/pilot_39873/temp_07/$PROFILE"
 
 export VLLM_MAX_MODEL_LEN=8192
 

@@ -1,0 +1,67 @@
+{
+  "game": "twenty_questions",
+  "split": "eval",
+  "num_scenarios": 20,
+  "repeats": 2,
+  "expected_episodes_per_mode": 40,
+  "modes": {
+    "baseline": {
+      "completed_episodes": 40,
+      "missing_episodes": 0,
+      "successes": 24,
+      "failures": 16,
+      "success_rate": 0.6,
+      "avg_turns_all": 14.1,
+      "avg_turns_success": 10.166666666666666,
+      "complete_scenarios": 20,
+      "pass_at_2": 0.6,
+      "total_questions": 564,
+      "total_repeated_questions": 20,
+      "total_invalid_questions": 12,
+      "repeat_rate": 0.03546099290780142,
+      "invalid_rate": 0.02127659574468085,
+      "avg_gepa_style_reward": 0.5061238406330512
+    },
+    "gepa": {
+      "completed_episodes": 40,
+      "missing_episodes": 0,
+      "successes": 24,
+      "failures": 16,
+      "success_rate": 0.6,
+      "avg_turns_all": 13.9,
+      "avg_turns_success": 9.833333333333334,
+      "complete_scenarios": 20,
+      "pass_at_2": 0.6,
+      "total_questions": 556,
+      "total_repeated_questions": 24,
+      "total_invalid_questions": 4,
+      "repeat_rate": 0.04316546762589928,
+      "invalid_rate": 0.007194244604316547,
+      "avg_gepa_style_reward": 0.5773477272727273
+    }
+  },
+  "settings": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "prompt_mode": "paprika",
+    "agent_model": "Qwen/Qwen3.6-35B-A3B",
+    "environment_model": "Qwen/Qwen3.6-35B-A3B",
+    "judge_model": "Qwen/Qwen3.6-35B-A3B",
+    "agent_temperature": 0.0,
+    "agent_max_tokens": 256,
+    "environment_temperature": 0.0,
+    "environment_max_tokens": 1024,
+    "judge_temperature": 0.0,
+    "judge_max_tokens": 128,
+    "judge_used": true,
+    "max_turns": 20,
+    "vllm_max_model_len": "8192",
+    "dspy_version": "3.4.1",
+    "optimized_program_sha256": "5011f62041d535ecd0b527af4991dcc053ef52302f71888297b531bf62898009",
+    "candidate_hashes": {
+      "baseline": "0bd69960c99c",
+      "gepa": "b6973f63eab0"
+    }
+  },
+  "complete": true
+}

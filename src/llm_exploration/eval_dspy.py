@@ -26,7 +26,7 @@ from llm_exploration.gepa import (
 
 MODES = ("baseline", "gepa")
 
-AGENT_TEMPERATURE = 0.0
+AGENT_TEMPERATURE = 0.7
 AGENT_MAX_TOKENS = 256
 
 
