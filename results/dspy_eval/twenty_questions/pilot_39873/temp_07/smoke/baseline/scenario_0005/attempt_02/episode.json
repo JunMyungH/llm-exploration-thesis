@@ -1,0 +1,393 @@
+{
+  "timestamp_utc": "2026-11-26T09:02:23.221614+00:00",
+  "mode": "baseline",
+  "scenario_index": 5,
+  "attempt": 2,
+  "target": "Meteorite",
+  "category": "natural phenomenon",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "settings": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "prompt_mode": "paprika",
+    "agent_model": "Qwen/Qwen3.6-35B-A3B",
+    "environment_model": "Qwen/Qwen3.6-35B-A3B",
+    "judge_model": "Qwen/Qwen3.6-35B-A3B",
+    "agent_temperature": 0.7,
+    "agent_max_tokens": 256,
+    "environment_temperature": 0.0,
+    "environment_max_tokens": 1024,
+    "judge_temperature": 0.0,
+    "judge_max_tokens": 128,
+    "judge_used": true,
+    "max_turns": 20,
+    "vllm_max_model_len": "8192",
+    "dspy_version": "3.4.1",
+    "optimized_program_sha256": "5011f62041d535ecd0b527af4991dcc053ef52302f71888297b531bf62898009",
+    "candidate_hashes": {
+      "baseline": "0bd69960c99c",
+      "gepa": "b6973f63eab0"
+    }
+  },
+  "episode": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "scenario_index": 5,
+    "agent_game_scenario": "natural phenomenon",
+    "env_game_scenario": "Meteorite",
+    "goal_reached": false,
+    "judge_label": null,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a natural phenomenon. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the atmosphere or weather?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the Earth's crust or geology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to water or the oceans?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to celestial bodies or outer space?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to light or radiation from the sun or stars?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to gravity or the motion of celestial bodies?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to sound or waves (excluding light)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the Earth's magnetic field?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the emission of high-energy particles or radiation (such as solar wind, cosmic rays, or auroras caused by particle interaction)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the formation or evolution of celestial bodies (such as stars, planets, or galaxies)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the gravitational interaction between celestial bodies (such as tides caused by the moon, orbital resonances, or tidal heating)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the expansion or contraction of the universe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the magnetic field of a planet or star (such as a magnetosphere or magnetic storm)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the presence or properties of black holes or neutron stars (such as accretion disks, jets, or Hawking radiation)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the nuclear fusion processes occurring within stars?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the structure or composition of space-time itself (such as gravitational waves, black holes, or cosmic expansion)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the presence or interaction of dark matter or dark energy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the formation, structure, or evolution of galaxies?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the presence or properties of quasars or active galactic nuclei?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the phenomenon related to the lifecycle or death of stars (such as supernovae, planetary nebulae, or stellar winds)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a natural phenomenon, and the correct answer is Meteorite."
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the atmosphere or weather?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the Earth's crust or geology?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to water or the oceans?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to celestial bodies or outer space?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to light or radiation from the sun or stars?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to gravity or the motion of celestial bodies?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to sound or waves (excluding light)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the Earth's magnetic field?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the emission of high-energy particles or radiation (such as solar wind, cosmic rays, or auroras caused by particle interaction)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the formation or evolution of celestial bodies (such as stars, planets, or galaxies)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the gravitational interaction between celestial bodies (such as tides caused by the moon, orbital resonances, or tidal heating)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the expansion or contraction of the universe?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the magnetic field of a planet or star (such as a magnetosphere or magnetic storm)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the presence or properties of black holes or neutron stars (such as accretion disks, jets, or Hawking radiation)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the nuclear fusion processes occurring within stars?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the structure or composition of space-time itself (such as gravitational waves, black holes, or cosmic expansion)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the presence or interaction of dark matter or dark energy?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the formation, structure, or evolution of galaxies?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the presence or properties of quasars or active galactic nuclei?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the phenomenon related to the lifecycle or death of stars (such as supernovae, planetary nebulae, or stellar winds)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "success": false,
+    "goal_reached": false,
+    "environment_goal": false,
+    "final_judge_label": null,
+    "num_turns": 20,
+    "max_turns": 20,
+    "num_questions": 20,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "gepa_style_reward": 0.2,
+    "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the phenomenon related to the emission of high-energy particles or radiation (such as solar wind, cosmic rays, or auroras caused by particle interaction)? -> No\n10. Is the phenomenon related to the formation or evolution of celestial bodies (such as stars, planets, or galaxies)? -> No\n11. Is the phenomenon related to the gravitational interaction between celestial bodies (such as tides caused by the moon, orbital resonances, or tidal heating)? -> No\n12. Is the phenomenon related to the expansion or contraction of the universe? -> No\n13. Is the phenomenon related to the magnetic field of a planet or star (such as a magnetosphere or magnetic storm)? -> No\n14. Is the phenomenon related to the presence or properties of black holes or neutron stars (such as accretion disks, jets, or Hawking radiation)? -> No\n15. Is the phenomenon related to the nuclear fusion processes occurring within stars? -> No\n16. Is the phenomenon related to the structure or composition of space-time itself (such as gravitational waves, black holes, or cosmic expansion)? -> No\n17. Is the phenomenon related to the presence or interaction of dark matter or dark energy? -> No\n18. Is the phenomenon related to the formation, structure, or evolution of galaxies? -> No\n19. Is the phenomenon related to the presence or properties of quasars or active galactic nuclei? -> No\n20. Is the phenomenon related to the lifecycle or death of stars (such as supernovae, planetary nebulae, or stellar winds)? -> No"
+  }
+}

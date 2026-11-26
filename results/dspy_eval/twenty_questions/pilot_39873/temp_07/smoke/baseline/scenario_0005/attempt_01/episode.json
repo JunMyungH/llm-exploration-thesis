@@ -1,0 +1,393 @@
+{
+  "timestamp_utc": "2026-11-26T09:01:57.196249+00:00",
+  "mode": "baseline",
+  "scenario_index": 5,
+  "attempt": 1,
+  "target": "Meteorite",
+  "category": "natural phenomenon",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "settings": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "prompt_mode": "paprika",
+    "agent_model": "Qwen/Qwen3.6-35B-A3B",
+    "environment_model": "Qwen/Qwen3.6-35B-A3B",
+    "judge_model": "Qwen/Qwen3.6-35B-A3B",
+    "agent_temperature": 0.7,
+    "agent_max_tokens": 256,
+    "environment_temperature": 0.0,
+    "environment_max_tokens": 1024,
+    "judge_temperature": 0.0,
+    "judge_max_tokens": 128,
+    "judge_used": true,
+    "max_turns": 20,
+    "vllm_max_model_len": "8192",
+    "dspy_version": "3.4.1",
+    "optimized_program_sha256": "5011f62041d535ecd0b527af4991dcc053ef52302f71888297b531bf62898009",
+    "candidate_hashes": {
+      "baseline": "0bd69960c99c",
+      "gepa": "b6973f63eab0"
+    }
+  },
+  "episode": {
+    "game": "twenty_questions",
+    "split": "eval",
+    "scenario_index": 5,
+    "agent_game_scenario": "natural phenomenon",
+    "env_game_scenario": "Meteorite",
+    "goal_reached": false,
+    "judge_label": null,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a natural phenomenon. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it visible to the naked eye?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it related to weather or atmospheric conditions?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a form of precipitation (such as rain, snow, sleet, or hail)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it related to light or visibility (such as fog, mist, or a rainbow)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a static atmospheric phenomenon (such as fog or mist) rather than a dynamic optical effect or transient event (such as a rainbow, lightning, or aurora)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it an optical phenomenon caused by the reflection, refraction, or scattering of light (such as a rainbow, halo, or glory)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the reflection, refraction, or dispersion of light by ice crystals in the atmosphere (such as a halo, sundog, or circumscribed halo)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the reflection, refraction, or dispersion of light by water droplets in the atmosphere (such as a rainbow or glory)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets or ice crystals that results in a colored band or pattern, such as a corona or iridescence?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by particles in the atmosphere that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a bright circle or ring around the sun or moon, such as a halo or glory?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a phenomenon caused by the diffraction of light?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a colored arc or band, such as a rainbow?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by ice crystals that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by dust, smoke, or other dry particles in the atmosphere, such as a blue sky or red sunset?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets or ice crystals that results in a bright arc or band, such as a rainbow, but specifically involving the sun or moon's position relative to the observer (e.g., a glory, anticyclone, or fog bow)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a phenomenon caused by the reflection of light, such as a mirage or a reflection in water?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a phenomenon caused by the emission of light from a substance not resulting from heat (such as bioluminescence or chemiluminescence)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it an atmospheric optical phenomenon caused by the scattering of light by ice crystals that results in a vertical column of light above or below the sun or moon (such as a light pillar)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a natural phenomenon, and the correct answer is Meteorite."
+      },
+      {
+        "role": "user",
+        "content": "Is it visible to the naked eye?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it related to weather or atmospheric conditions?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a form of precipitation (such as rain, snow, sleet, or hail)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it related to light or visibility (such as fog, mist, or a rainbow)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a static atmospheric phenomenon (such as fog or mist) rather than a dynamic optical effect or transient event (such as a rainbow, lightning, or aurora)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it an optical phenomenon caused by the reflection, refraction, or scattering of light (such as a rainbow, halo, or glory)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the reflection, refraction, or dispersion of light by ice crystals in the atmosphere (such as a halo, sundog, or circumscribed halo)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the reflection, refraction, or dispersion of light by water droplets in the atmosphere (such as a rainbow or glory)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets or ice crystals that results in a colored band or pattern, such as a corona or iridescence?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by particles in the atmosphere that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a bright circle or ring around the sun or moon, such as a halo or glory?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a phenomenon caused by the diffraction of light?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a colored arc or band, such as a rainbow?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by ice crystals that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by dust, smoke, or other dry particles in the atmosphere, such as a blue sky or red sunset?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets or ice crystals that results in a bright arc or band, such as a rainbow, but specifically involving the sun or moon's position relative to the observer (e.g., a glory, anticyclone, or fog bow)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a phenomenon caused by the reflection of light, such as a mirage or a reflection in water?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a phenomenon caused by the emission of light from a substance not resulting from heat (such as bioluminescence or chemiluminescence)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it an atmospheric optical phenomenon caused by the scattering of light by ice crystals that results in a vertical column of light above or below the sun or moon (such as a light pillar)?\n(Remember the player is trying to guess a natural phenomenon, and the correct answer is Meteorite. Reply with Yes or No in relation to Meteorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "success": false,
+    "goal_reached": false,
+    "environment_goal": false,
+    "final_judge_label": null,
+    "num_turns": 20,
+    "max_turns": 20,
+    "num_questions": 20,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "gepa_style_reward": 0.2,
+    "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets or ice crystals that results in a colored band or pattern, such as a corona or iridescence? -> No\n10. Is it a transient atmospheric optical phenomenon caused by the scattering of light by particles in the atmosphere that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)? -> No\n11. Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a bright circle or ring around the sun or moon, such as a halo or glory? -> No\n12. Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)? -> No\n13. Is it a phenomenon caused by the diffraction of light? -> No\n14. Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets that results in a colored arc or band, such as a rainbow? -> No\n15. Is it a transient atmospheric optical phenomenon caused by the scattering of light by ice crystals that results in a bright spot or arc of light, such as a sun dog (parhelion) or a moon dog (paraselene)? -> No\n16. Is it a transient atmospheric optical phenomenon caused by the scattering of light by dust, smoke, or other dry particles in the atmosphere, such as a blue sky or red sunset? -> No\n17. Is it a transient atmospheric optical phenomenon caused by the scattering of light by water droplets or ice crystals that results in a bright arc or band, such as a rainbow, but specifically involving the sun or moon's position relative to the observer (e.g., a glory, anticyclone, or fog bow)? -> No\n18. Is it a phenomenon caused by the reflection of light, such as a mirage or a reflection in water? -> No\n19. Is it a phenomenon caused by the emission of light from a substance not resulting from heat (such as bioluminescence or chemiluminescence)? -> No\n20. Is it an atmospheric optical phenomenon caused by the scattering of light by ice crystals that results in a vertical column of light above or below the sun or moon (such as a light pillar)? -> No"
+  }
+}

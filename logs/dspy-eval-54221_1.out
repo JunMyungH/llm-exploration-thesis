@@ -1,0 +1,444 @@
+========================================
+DSPy Evaluation
+Job ID: 54221
+Array Task: 1
+Node: cloud-206
+Profile: smoke
+Game: twenty_questions
+Scenarios: 10 to 19
+Repeats: 2
+Output: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke
+========================================
+GPU 0: NVIDIA A100 80GB PCIe (UUID: GPU-6b74378d-d133-0906-a6d4-e754bd67d5f9)
+GPU 1: NVIDIA A100 80GB PCIe (UUID: GPU-4cc7b360-c3cf-74e5-12d5-02a0b7f395e1)
+Waiting for vLLM...
+vLLM ready.
+============================================================
+Game: twenty_questions
+Split: eval
+Scenarios: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Repeats: 2
+
+Mode: baseline
+Candidate hash: 0bd69960c99c
+Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.
+
+Mode: gepa
+Candidate hash: b6973f63eab0
+You are playing a game of 20 Questions. Your goal is to guess the target (a thing, person, concept, or color) by asking up to 20 yes-or-no questions.
+
+**Instructions:**
+1. **Question Format:** Ask only yes-or-no questions.
+2. **Strategy:** Maximize information gain. Prioritize questions that split the remaining possibility space as evenly as possible (binary search strategy). Avoid asking questions that are too specific too early or re-asking similar questions if the answer remains the same.
+3. **Context Awareness:** Use the conversation history to track excluded hypotheses. If previous answers ruled out broad categories (e.g., 'physics' but not 'quantum' or 'classical'), narrow down to specific sub-fields or related concepts (e.g., electromagnetism, thermodynamics) based on affirmative answers in those areas.
+4. **Progression:** Start with broad categorical questions (e.g., Is it a physical object? Is it abstract? Is it a color?). Refine based on answers. If you have narrowed it down significantly, make a direct guess.
+5. **Output:** Produce exactly one question at a time. Wait for the environment's response ('Yes' or 'No') before proceeding.
+
+**Current State:**
+- Game Rules: Provided in input.
+- History: Provided in input (list of previous Q&A pairs). If empty, start with a broad categorization question.
+
+Analyze the history to determine the most informative next question.
+============================================================
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 10
+Target: Jew's Harp
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0010/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 10
+Target: Jew's Harp
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.1900
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0010/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 10
+Target: Jew's Harp
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.1900
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0010/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 10
+Target: Jew's Harp
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0010/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 11
+Target: Glass Harp
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0011/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 11
+Target: Glass Harp
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0011/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 11
+Target: Glass Harp
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.1700
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0011/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 11
+Target: Glass Harp
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0011/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 12
+Target: Contrabass Clarinet
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.1900
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0012/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 12
+Target: Contrabass Clarinet
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.1805
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0012/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 12
+Target: Contrabass Clarinet
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.1710
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0012/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 12
+Target: Contrabass Clarinet
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.1800
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0012/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 13
+Target: Bass Clarinet
+Attempt: 1/2
+Success: True
+Turns: 14/20
+Reward: 0.8564
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0013/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 13
+Target: Bass Clarinet
+Attempt: 1/2
+Success: True
+Turns: 11/20
+Reward: 0.8855
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0013/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 13
+Target: Bass Clarinet
+Attempt: 2/2
+Success: True
+Turns: 7/20
+Reward: 0.9229
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0013/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 13
+Target: Bass Clarinet
+Attempt: 2/2
+Success: True
+Turns: 12/20
+Reward: 0.8717
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0013/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 14
+Target: Sopranino Saxophone
+Attempt: 1/2
+Success: False
+Turns: 8/20
+Reward: 0.1750
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0014/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 14
+Target: Sopranino Saxophone
+Attempt: 1/2
+Success: False
+Turns: 8/20
+Reward: 0.1750
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0014/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 14
+Target: Sopranino Saxophone
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.1710
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0014/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 14
+Target: Sopranino Saxophone
+Attempt: 2/2
+Success: False
+Turns: 20/20
+Reward: 0.1600
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0014/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 15
+Target: Tenor Saxophone
+Attempt: 1/2
+Success: True
+Turns: 14/20
+Reward: 0.8564
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0015/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 15
+Target: Tenor Saxophone
+Attempt: 1/2
+Success: True
+Turns: 15/20
+Reward: 0.8500
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0015/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 15
+Target: Tenor Saxophone
+Attempt: 2/2
+Success: True
+Turns: 14/20
+Reward: 0.8600
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0015/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 15
+Target: Tenor Saxophone
+Attempt: 2/2
+Success: True
+Turns: 14/20
+Reward: 0.8564
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0015/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 16
+Target: Baritone Saxophone
+Attempt: 1/2
+Success: True
+Turns: 19/20
+Reward: 0.8000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0016/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 16
+Target: Baritone Saxophone
+Attempt: 1/2
+Success: False
+Turns: 9/20
+Reward: 0.1778
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0016/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 16
+Target: Baritone Saxophone
+Attempt: 2/2
+Success: False
+Turns: 9/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0016/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 16
+Target: Baritone Saxophone
+Attempt: 2/2
+Success: True
+Turns: 10/20
+Reward: 0.9000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0016/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 17
+Target: Alto Saxophone
+Attempt: 1/2
+Success: False
+Turns: 20/20
+Reward: 0.1900
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0017/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 17
+Target: Alto Saxophone
+Attempt: 1/2
+Success: True
+Turns: 14/20
+Reward: 0.8529
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0017/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 17
+Target: Alto Saxophone
+Attempt: 2/2
+Success: True
+Turns: 14/20
+Reward: 0.8531
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0017/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 17
+Target: Alto Saxophone
+Attempt: 2/2
+Success: True
+Turns: 16/20
+Reward: 0.8369
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0017/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 18
+Target: Sun Hat
+Attempt: 1/2
+Success: True
+Turns: 13/20
+Reward: 0.2000
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0018/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 18
+Target: Sun Hat
+Attempt: 1/2
+Success: True
+Turns: 17/20
+Reward: 0.8241
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0018/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 18
+Target: Sun Hat
+Attempt: 2/2
+Success: True
+Turns: 14/20
+Reward: 0.8600
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0018/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 18
+Target: Sun Hat
+Attempt: 2/2
+Success: True
+Turns: 9/20
+Reward: 0.9100
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0018/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 19
+Target: Cowboy Hat
+Attempt: 1/2
+Success: True
+Turns: 11/20
+Reward: 0.8900
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0019/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 19
+Target: Cowboy Hat
+Attempt: 1/2
+Success: True
+Turns: 11/20
+Reward: 0.8900
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0019/attempt_01/episode.json
+
+------------------------------------------------------------
+Mode: gepa
+Scenario: 19
+Target: Cowboy Hat
+Attempt: 2/2
+Success: True
+Turns: 11/20
+Reward: 0.8855
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/gepa/scenario_0019/attempt_02/episode.json
+
+------------------------------------------------------------
+Mode: baseline
+Scenario: 19
+Target: Cowboy Hat
+Attempt: 2/2
+Success: True
+Turns: 13/20
+Reward: 0.8700
+Saved: results/dspy_eval/twenty_questions/pilot_39873/temp_07/smoke/baseline/scenario_0019/attempt_02/episode.json
+DSPy evaluation chunk completed.
+Evaluation chunk completed.
