@@ -1,0 +1,375 @@
+{
+  "run_id": "2240ccd7228d4e4f952bf16a9e180e22",
+  "timestamp_utc": "2026-11-26T20:57:05.763026+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 597,
+  "category": "movie",
+  "target": "Citizen Kane",
+  "prompt_mode": "paprika",
+  "candidate_hash": "9bff086b00d3",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess a specific entity (brand, movie, person, etc.) by asking up to 20 yes-or-no questions. You receive 'Yes' or 'No' answers and must use this information to narrow down the possibilities.\n\n**Instructions:**\n1. **Ask only yes-or-no questions.** Do not ask open-ended questions or multiple questions at once.\n2. **Maximize Information Gain:** Prioritize questions that split the remaining hypothesis space as evenly as possible (binary search strategy). Avoid questions that are likely to receive a 'No' answer if a large portion of candidates would be excluded, unless that exclusion is critical to ruling out major categories.\n3. **Avoid Repetition:** Do not ask questions that have already been answered. Track the history of interactions to ensure you do not repeat hypotheses or categories.\n4. **Adapt Strategy:** Use previous answers to refine your next question. If a broad category is ruled out (e.g., 'European'), move to adjacent or remaining categories (e.g., 'Asian', 'American', 'Other') rather than cycling through specific examples within the ruled-out category.\n5. **Guess when Confident:** If you can identify the specific entity with high confidence before reaching 20 questions, make a direct guess (e.g., 'Is the brand Canon?') to win the game.\n6. **Specific Entity Guessing:** When narrowing down to specific entities, consider well-known examples within the remaining constraints. If multiple strong candidates remain, ask distinguishing questions about their attributes or origins before guessing.\n\n**Current State:**\n- **Game Rules:** [Provided in input]\n- **History:** [Provided in input]\n\nProduce exactly one question based on the history and rules.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 597,
+    "agent_game_scenario": "movie",
+    "env_game_scenario": "Citizen Kane",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie animated?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a live-action production?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie live-action?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a live-action production released in the 21st century (2000 or later)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 20th century (1900-1999)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the United States?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in the action genre?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in the comedy genre?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in the drama genre?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 1990s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 1980s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 1970s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 1960s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 1950s?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 1940s?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a war movie?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a musical?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a thriller?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a western?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a romance?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Citizen Kane."
+      },
+      {
+        "role": "user",
+        "content": "Is the movie animated?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a live-action production?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie live-action?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a live-action production released in the 21st century (2000 or later)?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 20th century (1900-1999)?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the United States?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in the action genre?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in the comedy genre?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in the drama genre?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 1990s?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 1980s?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 1970s?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 1960s?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 1950s?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 1940s?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a war movie?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a musical?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a thriller?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a western?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a romance?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the movie in the drama genre? -> Yes\n10. Is the movie from the 1990s? -> No\n11. Is the movie from the 1980s? -> No\n12. Is the movie from the 1970s? -> No\n13. Is the movie from the 1960s? -> No\n14. Is the movie from the 1950s? -> No\n15. Is the movie from the 1940s? -> Yes\n16. Is the movie a war movie? -> No\n17. Is the movie a musical? -> No\n18. Is the movie a thriller? -> No\n19. Is the movie a western? -> No\n20. Is the movie a romance? -> No"
+}

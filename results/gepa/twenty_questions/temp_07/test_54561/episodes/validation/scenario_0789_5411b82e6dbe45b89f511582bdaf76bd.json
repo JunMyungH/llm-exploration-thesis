@@ -1,0 +1,384 @@
+{
+  "run_id": "5411b82e6dbe45b89f511582bdaf76bd",
+  "timestamp_utc": "2026-11-26T20:59:33.719503+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 789,
+  "category": "Pokémon",
+  "target": "Raichu",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a97539eb92cf",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. Specifically, avoid cycling through lists of specific entities (e.g., directors, actors, brands) without first narrowing down the broader category, as this wastes turns on low-probability guesses.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: \n  1. Maintain a mental list of excluded hypotheses and remaining possibilities. \n  2. Avoid cycling through minor variations of the same unproductive hypothesis. If a broad category (e.g., 'directed by famous Hollywood directors') yields only 'No' answers, pivot to other dimensions (e.g., genre, era, country of origin) rather than listing more specific names within that failed dimension.\n  3. Prioritize questions that split the remaining search space as evenly as possible (high information gain). For example, instead of asking 'Is it a coat?', ask 'Is it an outerwear item?' to cover coats, jackets, parkas, etc., simultaneously.\n  4. If you have narrowed it down to a specific domain (e.g., quantum physics, classic Hollywood), ask broad questions to identify the specific sub-field, genre, or era before guessing the exact term.\n  5. In the final turns, if the search space is small, you may ask specific identification questions, but ensure you haven't already ruled out the target through previous negative answers.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a Pokémon. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 789,
+    "agent_game_scenario": "Pokémon",
+    "env_game_scenario": "Raichu",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a Pokémon. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a Fire-type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a Water-type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon a Grass-type?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Pokémon an Electric-type?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon primarily known for being a legendary or mythical Pokémon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon a pure Electric-type (i.e., it has no secondary type)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon a pure Electric-type that has never had a secondary type in any of its evolutionary forms (e.g., ruling out Pokémon like Pikachu, Raichu, or Magnemite which evolve into or have forms with other types)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an Electric-type that gains a secondary type through evolution (e.g., evolving from a pure Electric-type into a dual-type)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon known as Pikachu?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of a pure Electric-type starter Pokémon (specifically, is it an evolution of Pichu or Eevee)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of Magnemite or Magneton?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of Mareep (specifically, is it Mareep, Flaaffy, or Ampharos)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of a pure Electric-type Pokémon from Generation 1 or 2 (excluding Pikachu, Raichu, Magnemite, Magneton, Mareep, Flaaffy, Ampharos, and Eevee)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of a pure Electric-type Pokémon from Generation 3 or later?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon from Generation 4 or later?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon from Generation 3?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon from Generation 1 or Generation 2?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of Chinchou or Lanturn?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of Magnemite or Magneton?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this Pokémon an evolution of Chinchou or Lanturn?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a Pokémon, and the correct answer is Raichu."
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a Fire-type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a Water-type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon a Grass-type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Pokémon an Electric-type?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon primarily known for being a legendary or mythical Pokémon?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon a pure Electric-type (i.e., it has no secondary type)?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon a pure Electric-type that has never had a secondary type in any of its evolutionary forms (e.g., ruling out Pokémon like Pikachu, Raichu, or Magnemite which evolve into or have forms with other types)?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an Electric-type that gains a secondary type through evolution (e.g., evolving from a pure Electric-type into a dual-type)?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon known as Pikachu?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of a pure Electric-type starter Pokémon (specifically, is it an evolution of Pichu or Eevee)?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of Magnemite or Magneton?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of Mareep (specifically, is it Mareep, Flaaffy, or Ampharos)?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of a pure Electric-type Pokémon from Generation 1 or 2 (excluding Pikachu, Raichu, Magnemite, Magneton, Mareep, Flaaffy, Ampharos, and Eevee)?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of a pure Electric-type Pokémon from Generation 3 or later?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon from Generation 4 or later?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon from Generation 3?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon from Generation 1 or Generation 2?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of Chinchou or Lanturn?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of Magnemite or Magneton?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this Pokémon an evolution of Chinchou or Lanturn?\n(Remember the player is trying to guess a Pokémon, and the correct answer is Raichu. Reply with Yes or No in relation to Raichu.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.18000000000000002,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.9,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 2,
+    "repeated_pairs": [
+      {
+        "current_turn": 19,
+        "original_turn": 11
+      },
+      {
+        "current_turn": 20,
+        "original_turn": 18
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 2\nEnvironment leakage: False\nTraining reward: 0.1800\n\nRepeated questions:\n- Turn 19 repeated turn 11, already answered 'No'.\n- Turn 20 repeated turn 18, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is this Pokémon known as Pikachu? -> No\n10. Is this Pokémon an evolution of a pure Electric-type starter Pokémon (specifically, is it an evolution of Pichu or Eevee)? -> No\n11. Is this Pokémon an evolution of Magnemite or Magneton? -> No\n12. Is this Pokémon an evolution of Mareep (specifically, is it Mareep, Flaaffy, or Ampharos)? -> No\n13. Is this Pokémon an evolution of a pure Electric-type Pokémon from Generation 1 or 2 (excluding Pikachu, Raichu, Magnemite, Magneton, Mareep, Flaaffy, Ampharos, and Eevee)? -> No\n14. Is this Pokémon an evolution of a pure Electric-type Pokémon from Generation 3 or later? -> No\n15. Is this Pokémon from Generation 4 or later? -> No\n16. Is this Pokémon from Generation 3? -> No\n17. Is this Pokémon from Generation 1 or Generation 2? -> Yes\n18. Is this Pokémon an evolution of Chinchou or Lanturn? -> No\n19. Is this Pokémon an evolution of Magnemite or Magneton? -> No\n20. Is this Pokémon an evolution of Chinchou or Lanturn? -> No"
+}

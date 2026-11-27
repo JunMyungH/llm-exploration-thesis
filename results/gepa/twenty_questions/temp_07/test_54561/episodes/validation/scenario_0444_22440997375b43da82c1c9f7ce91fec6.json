@@ -1,0 +1,375 @@
+{
+  "run_id": "22440997375b43da82c1c9f7ce91fec6",
+  "timestamp_utc": "2026-11-26T20:59:49.525214+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 444,
+  "category": "person",
+  "target": "Elon Musk",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a97539eb92cf",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. Specifically, avoid cycling through lists of specific entities (e.g., directors, actors, brands) without first narrowing down the broader category, as this wastes turns on low-probability guesses.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: \n  1. Maintain a mental list of excluded hypotheses and remaining possibilities. \n  2. Avoid cycling through minor variations of the same unproductive hypothesis. If a broad category (e.g., 'directed by famous Hollywood directors') yields only 'No' answers, pivot to other dimensions (e.g., genre, era, country of origin) rather than listing more specific names within that failed dimension.\n  3. Prioritize questions that split the remaining search space as evenly as possible (high information gain). For example, instead of asking 'Is it a coat?', ask 'Is it an outerwear item?' to cover coats, jackets, parkas, etc., simultaneously.\n  4. If you have narrowed it down to a specific domain (e.g., quantum physics, classic Hollywood), ask broad questions to identify the specific sub-field, genre, or era before guessing the exact term.\n  5. In the final turns, if the search space is small, you may ask specific identification questions, but ensure you haven't already ruled out the target through previous negative answers.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 444,
+    "agent_game_scenario": "person",
+    "env_game_scenario": "Elon Musk",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person male?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person alive?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known primarily for their work in entertainment (e.g., actor, musician, comedian)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known primarily for their work in sports?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known primarily for their work in politics or government?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known primarily for their work in science, technology, or academia?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their contributions to computer science or software engineering?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their contributions to biology, medicine, or life sciences?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their contributions to physics or astronomy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known primarily for their work in theoretical physics or particle physics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in astrophysics or cosmology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in experimental physics or engineering-related physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in nuclear physics or engineering?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known for work in electromagnetism, optics, or thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known for their work in fluid dynamics, acoustics, or geophysics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known for their work in condensed matter physics or materials science?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in astrophysics or astronomy (e.g., studying celestial bodies, telescopes, space exploration technology)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known for their work in the field of space exploration technology, such as rocketry or satellite engineering?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person an American citizen?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Robert H. Goddard?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Elon Musk."
+      },
+      {
+        "role": "user",
+        "content": "Is the person male?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person alive?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known primarily for their work in entertainment (e.g., actor, musician, comedian)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known primarily for their work in sports?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known primarily for their work in politics or government?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known primarily for their work in science, technology, or academia?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their contributions to computer science or software engineering?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their contributions to biology, medicine, or life sciences?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their contributions to physics or astronomy?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known primarily for their work in theoretical physics or particle physics?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in astrophysics or cosmology?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in experimental physics or engineering-related physics?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in nuclear physics or engineering?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known for work in electromagnetism, optics, or thermodynamics?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known for their work in fluid dynamics, acoustics, or geophysics?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known for their work in condensed matter physics or materials science?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in astrophysics or astronomy (e.g., studying celestial bodies, telescopes, space exploration technology)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known for their work in the field of space exploration technology, such as rocketry or satellite engineering?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person an American citizen?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Robert H. Goddard?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the person primarily known for their contributions to physics or astronomy? -> Yes\n10. Is the person known primarily for their work in theoretical physics or particle physics? -> No\n11. Is the person primarily known for their work in astrophysics or cosmology? -> No\n12. Is the person primarily known for their work in experimental physics or engineering-related physics? -> Yes\n13. Is the person primarily known for their work in nuclear physics or engineering? -> No\n14. Is the person known for work in electromagnetism, optics, or thermodynamics? -> No\n15. Is the person known for their work in fluid dynamics, acoustics, or geophysics? -> No\n16. Is the person known for their work in condensed matter physics or materials science? -> No\n17. Is the person primarily known for their work in astrophysics or astronomy (e.g., studying celestial bodies, telescopes, space exploration technology)? -> Yes\n18. Is the person known for their work in the field of space exploration technology, such as rocketry or satellite engineering? -> Yes\n19. Is the person an American citizen? -> Yes\n20. Is the person Robert H. Goddard? -> No"
+}

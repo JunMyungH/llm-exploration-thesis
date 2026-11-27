@@ -1,0 +1,398 @@
+{
+  "run_id": "67ee9a15c00b4bef999acc3ccaa08cb8",
+  "timestamp_utc": "2026-11-26T20:58:05.762734+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1164,
+  "category": "instrument",
+  "target": "Bagpipes",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a6a2af8ce4d0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1164,
+    "agent_game_scenario": "instrument",
+    "env_game_scenario": "Bagpipes",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a instrument. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument part of a string section in an orchestra?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a percussion instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a wind instrument (woodwind or brass)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a woodwind instrument?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a flute?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a clarinet?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a saxophone?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a brass instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a reed instrument (such as an oboe, bassoon, or English horn)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument an oboe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a bassoon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument an English horn?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a double-reed instrument (such as a bass clarinet, though typically single, wait - let's stick to standard classification: oboe, bassoon, english horn are double reed. The prompt said \"reed instrument (such as an oboe, bassoon, or English horn)\" and the user said Yes. Then we ruled out Oboe, Bassoon, English Horn. What other common double-reed woodwinds are there? The bass clarinet is single reed. The clarinet is single reed. The saxophone is single reed. So if it's not oboe, bassoon, or english horn, and it's a woodwind that is a \"reed instrument\" in the broad sense but specifically categorized by the previous \"reed instrument\" confirmation which listed double reeds... wait.\n\nLet's re-evaluate the history.\n1. String? No.\n2. Percussion? No.\n3. Wind? Yes.\n4. Woodwind? Yes.\n5. Flute? No.\n6. Clarinet? No.\n7. Saxophone? No.\n8. Brass? No. (Redundant but confirmed)."
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a bassoon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a bass clarinet?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument an English horn?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument an oboe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument the bass clarinet?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument a bassoon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the instrument an oboe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a instrument, and the correct answer is Bagpipes."
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument part of a string section in an orchestra?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a percussion instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a wind instrument (woodwind or brass)?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a woodwind instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a flute?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a clarinet?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a saxophone?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a brass instrument?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a reed instrument (such as an oboe, bassoon, or English horn)?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument an oboe?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a bassoon?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument an English horn?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a double-reed instrument (such as a bass clarinet, though typically single, wait - let's stick to standard classification: oboe, bassoon, english horn are double reed. The prompt said \"reed instrument (such as an oboe, bassoon, or English horn)\" and the user said Yes. Then we ruled out Oboe, Bassoon, English Horn. What other common double-reed woodwinds are there? The bass clarinet is single reed. The clarinet is single reed. The saxophone is single reed. So if it's not oboe, bassoon, or english horn, and it's a woodwind that is a \"reed instrument\" in the broad sense but specifically categorized by the previous \"reed instrument\" confirmation which listed double reeds... wait.\n\nLet's re-evaluate the history.\n1. String? No.\n2. Percussion? No.\n3. Wind? Yes.\n4. Woodwind? Yes.\n5. Flute? No.\n6. Clarinet? No.\n7. Saxophone? No.\n8. Brass? No. (Redundant but confirmed).\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a bassoon?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a bass clarinet?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument an English horn?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument an oboe?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument the bass clarinet?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument a bassoon?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the instrument an oboe?\n(Remember the player is trying to guess a instrument, and the correct answer is Bagpipes. Reply with Yes or No in relation to Bagpipes.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.1425,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 0.95,
+    "unique_ratio": 0.75,
+    "invalid_count": 1,
+    "invalid_turns": [
+      13
+    ],
+    "repeat_count": 5,
+    "repeated_pairs": [
+      {
+        "current_turn": 14,
+        "original_turn": 11
+      },
+      {
+        "current_turn": 16,
+        "original_turn": 12
+      },
+      {
+        "current_turn": 17,
+        "original_turn": 10
+      },
+      {
+        "current_turn": 19,
+        "original_turn": 11
+      },
+      {
+        "current_turn": 20,
+        "original_turn": 10
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: [13]\nExact repeated questions: 5\nEnvironment leakage: False\nTraining reward: 0.1425\n\nRepeated questions:\n- Turn 14 repeated turn 11, already answered 'No'.\n- Turn 16 repeated turn 12, already answered 'No'.\n- Turn 17 repeated turn 10, already answered 'No'.\n- Turn 19 repeated turn 11, already answered 'No'.\n- Turn 20 repeated turn 10, already answered 'No'.\n\nEach turn must contain exactly one properly formatted question.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the instrument a reed instrument (such as an oboe, bassoon, or English horn)? -> Yes\n10. Is the instrument an oboe? -> No\n11. Is the instrument a bassoon? -> No\n12. Is the instrument an English horn? -> No\n13. Is the instrument a double-reed instrument (such as a bass clarinet, though typically single, wait - let's stick to standard classification: oboe, bassoon, english horn are double reed. The prompt said \"reed instrument (such as an oboe, bassoon, or English horn)\" and the user said Yes. Then we ruled out Oboe, Bassoon, English Horn. What other common double-reed woodwinds are there? The bass clarinet is single reed. The clarinet is single reed. The saxophone is single reed. So if it's not oboe, bassoon, or english horn, and it's a woodwind that is a \"reed instrument\" in the broad sense but specifically categorized by the previous \"reed instrument\" confirmation which listed double reeds... wait.\n\nLet's re-evaluate the history.\n1. String? No.\n2. Percussion? No.\n3. Wind? Yes.\n4. Woodwind? Yes.\n5. Flute? No.\n6. Clarinet? No.\n7. Saxophone? No.\n8. Brass? No. (Redundant but confirmed). -> No\n14. Is the instrument a bassoon? -> No\n15. Is the instrument a bass clarinet? -> No\n16. Is the instrument an English horn? -> No\n17. Is the instrument an oboe? -> No\n18. Is the instrument the bass clarinet? -> No\n19. Is the instrument a bassoon? -> No\n20. Is the instrument an oboe? -> No"
+}

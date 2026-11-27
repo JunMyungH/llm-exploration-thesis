@@ -1,0 +1,375 @@
+{
+  "run_id": "52e871690aea4abb9cd6249431e6f26d",
+  "timestamp_utc": "2026-11-26T21:04:27.005335+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1181,
+  "category": "movie",
+  "target": "La La Land",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b6ec268afbfd",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a specific entity (thing, person, concept, book, movie, etc.) by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.'\n\n**Critical Strategy for Information Gain and Hypothesis Tracking:**\n\n1.  **Maintain a Dynamic Hypothesis Space**: Before asking a question, explicitly or implicitly evaluate the set of remaining possibilities. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. If a previous answer was 'No' to a broad category (e.g., 'Is it a superhero film?'), do not ask about specific superhero films or sub-genres of that category unless you are confirming a specific attribute that was previously excluded.\n\n2.  **Maximize Information Gain**: Prioritize questions that split the remaining search space as evenly as possible (binary search strategy). Avoid asking 'low information' questions that eliminate only a tiny fraction of possibilities or ask about very specific entities before narrowing down the domain.\n\n3.  **Avoid Cycling and Redundancy**: Do not cycle through minor variations of the same unproductive hypothesis. For example, if you know the entity is a book, non-fiction, set in Europe, but not in France, Germany, Italy, Russia, or Spain, do not sequentially ask 'Is it set in Portugal?', 'Is it set in Greece?', etc., without first checking if it is a non-European book (which was already excluded) or if the premise itself is flawed. If you have exhausted major geographic or categorical splits, make an educated guess or ask a question that defines a new, high-level attribute (e.g., medium, author nationality, specific award) rather than guessing specific titles prematurely.\n\n4.  **Refine Based on History**: Use the full history of answers to eliminate impossible candidates. If you are stuck, look for attributes that have not been queried yet (e.g., if you've covered genre, era, and location, consider the creator's identity, the work's reception, or specific plot points).\n\n5.  **Guessing**: You may make a guess before reaching 20 questions if you are confident. However, avoid guessing specific titles/names until you have narrowed the domain significantly (e.g., by genre, era, and key attributes).\n\n**Input Format**: You will receive the `TARGET_TYPE` (e.g., 'book', 'movie', 'person') and the `history` of previous questions and answers.\n\n**Output**: Ask only one yes-or-no question. Do not restate the rules. Do not ask multiple questions in one turn.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1181,
+    "agent_game_scenario": "movie",
+    "env_game_scenario": "La La Land",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie a live-action film?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie from the 21st century (released in 2000 or later)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie a superhero film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie an animated film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie a science fiction film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie a fantasy film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie a horror film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this movie a comedy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character of this movie human?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character of this movie a male?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character of this movie a real person (as opposed to a fictional character)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in the present day or modern times (post-1950s)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie set in the United States?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character a police officer, detective, or law enforcement officer?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie primarily a romantic comedy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the 2010s (released between 2010 and 2019)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character a woman?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie \"The Heat\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character a single woman who is often clumsy or awkward?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character a professional who works in a creative field (e.g., journalism, arts, fashion)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is La La Land."
+      },
+      {
+        "role": "user",
+        "content": "Is this movie a live-action film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie from the 21st century (released in 2000 or later)?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie a superhero film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie an animated film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie a science fiction film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie a fantasy film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie a horror film?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this movie a comedy?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character of this movie human?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character of this movie a male?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character of this movie a real person (as opposed to a fictional character)?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in the present day or modern times (post-1950s)?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie set in the United States?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character a police officer, detective, or law enforcement officer?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie primarily a romantic comedy?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the 2010s (released between 2010 and 2019)?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character a woman?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie \"The Heat\"?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character a single woman who is often clumsy or awkward?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character a professional who works in a creative field (e.g., journalism, arts, fashion)?\n(Remember the player is trying to guess a movie, and the correct answer is La La Land. Reply with Yes or No in relation to La La Land.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the main character of this movie human? -> Yes\n10. Is the main character of this movie a male? -> Yes\n11. Is the main character of this movie a real person (as opposed to a fictional character)? -> No\n12. Is the movie set in the present day or modern times (post-1950s)? -> Yes\n13. Is the movie set in the United States? -> Yes\n14. Is the main character a police officer, detective, or law enforcement officer? -> No\n15. Is the movie primarily a romantic comedy? -> Yes\n16. Is the movie from the 2010s (released between 2010 and 2019)? -> Yes\n17. Is the main character a woman? -> Yes\n18. Is the movie \"The Heat\"? -> No\n19. Is the main character a single woman who is often clumsy or awkward? -> No\n20. Is the main character a professional who works in a creative field (e.g., journalism, arts, fashion)? -> Yes"
+}

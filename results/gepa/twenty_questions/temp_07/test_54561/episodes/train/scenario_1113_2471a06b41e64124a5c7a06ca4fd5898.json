@@ -1,0 +1,375 @@
+{
+  "run_id": "2471a06b41e64124a5c7a06ca4fd5898",
+  "timestamp_utc": "2026-11-26T20:55:19.656106+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1113,
+  "category": "book",
+  "target": "All Quiet on the Western Front",
+  "prompt_mode": "paprika",
+  "candidate_hash": "ee9fcf1b1451",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **CRITICAL STRATEGY**: You must maintain a mental state of known facts and excluded hypotheses. Before asking a question, review the conversation history to ensure you are not repeating a question or asking a question that is logically equivalent to one already asked and answered 'No'.\n- **INFORMATION GAIN**: Prioritize questions that split the remaining possibility space roughly in half (binary search strategy) rather than listing specific instances or minor variations of the same category. Avoid 'narrowing down' by asking about increasingly specific sub-types if broader categories have not been fully explored or if specific guesses have failed.\n- **AVOID CYCLING**: If you have asked about a specific author, book, or concept and received 'No', do not immediately ask about another specific item in the same narrow bucket unless you have new information to distinguish it. Instead, step back to broader categorizations (e.g., genre, era, medium, fundamental properties) to re-evaluate the search space.\n- **FORMAT**: Produce only one question per turn. Do not include explanations or reasoning in the output, just the question itself.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1113,
+    "agent_game_scenario": "book",
+    "env_game_scenario": "All Quiet on the Western Front",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book written in English?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a novel?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book considered classic literature?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Was the book published in the 19th century or earlier?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author of the book male?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Europe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in England?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Russia?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in France?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Paris?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in a fictional city in France?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author of the book Gustave Flaubert?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author of the book Marcel Proust?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author of the book Marcel Pagnol?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in a rural or provincial region of France?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the South of France?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in a coastal city or region in the South of France (such as Nice, Cannes, or the Riviera)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in a northern or eastern region of France (such as Normandy, Brittany, Alsace, or the Alps)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Alsace?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is All Quiet on the Western Front."
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book considered classic literature?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Was the book published in the 19th century or earlier?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the author of the book male?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Europe?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in England?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Russia?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in France?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Paris?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in a fictional city in France?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the author of the book Gustave Flaubert?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the author of the book Marcel Proust?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the author of the book Marcel Pagnol?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in a rural or provincial region of France?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the South of France?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in a coastal city or region in the South of France (such as Nice, Cannes, or the Riviera)?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in a northern or eastern region of France (such as Normandy, Brittany, Alsace, or the Alps)?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Alsace?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the book set in Russia? -> No\n10. Is the book set in France? -> Yes\n11. Is the book set in Paris? -> No\n12. Is the book set in a fictional city in France? -> No\n13. Is the author of the book Gustave Flaubert? -> No\n14. Is the author of the book Marcel Proust? -> No\n15. Is the author of the book Marcel Pagnol? -> No\n16. Is the book set in a rural or provincial region of France? -> No\n17. Is the book set in the South of France? -> No\n18. Is the book set in a coastal city or region in the South of France (such as Nice, Cannes, or the Riviera)? -> No\n19. Is the book set in a northern or eastern region of France (such as Normandy, Brittany, Alsace, or the Alps)? -> Yes\n20. Is the book set in Alsace? -> No"
+}

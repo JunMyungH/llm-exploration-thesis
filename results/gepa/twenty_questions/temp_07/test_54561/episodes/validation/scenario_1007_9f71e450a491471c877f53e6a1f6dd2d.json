@@ -1,0 +1,215 @@
+{
+  "run_id": "9f71e450a491471c877f53e6a1f6dd2d",
+  "timestamp_utc": "2026-11-26T20:56:43.042065+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 1007,
+  "category": "vegetable",
+  "target": "Kohlrabi",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a6a2af8ce4d0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1007,
+    "agent_game_scenario": "vegetable",
+    "env_game_scenario": "Kohlrabi",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 10,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable green?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a leafy green vegetable (such as spinach, kale, or lettuce)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a root vegetable?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a fruit vegetable (such as a tomato, cucumber, or bell pepper)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a cruciferous vegetable (such as broccoli, cauliflower, or cabbage)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it broccoli?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it cauliflower?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it cabbage?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it Brussels sprouts?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it kohlrabi?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Kohlrabi."
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable green?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a leafy green vegetable (such as spinach, kale, or lettuce)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a fruit vegetable (such as a tomato, cucumber, or bell pepper)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a cruciferous vegetable (such as broccoli, cauliflower, or cabbage)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it broccoli?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it cauliflower?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it cabbage?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it Brussels sprouts?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it kohlrabi?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.9,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 10,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 10/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.9000\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n1. Is the vegetable green? -> Yes\n2. Is it a leafy green vegetable (such as spinach, kale, or lettuce)? -> No\n3. Is it a root vegetable? -> No\n4. Is it a fruit vegetable (such as a tomato, cucumber, or bell pepper)? -> No\n5. Is it a cruciferous vegetable (such as broccoli, cauliflower, or cabbage)? -> Yes\n6. Is it broccoli? -> No\n7. Is it cauliflower? -> No\n8. Is it cabbage? -> No\n9. Is it Brussels sprouts? -> No\n10. Is it kohlrabi? -> Goal reached."
+}

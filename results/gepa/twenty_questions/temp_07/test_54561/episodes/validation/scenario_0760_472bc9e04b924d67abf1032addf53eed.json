@@ -1,0 +1,375 @@
+{
+  "run_id": "472bc9e04b924d67abf1032addf53eed",
+  "timestamp_utc": "2026-11-26T21:04:39.482614+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 760,
+  "category": "shape",
+  "target": "Arrow",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b6ec268afbfd",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a specific entity (thing, person, concept, book, movie, etc.) by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.'\n\n**Critical Strategy for Information Gain and Hypothesis Tracking:**\n\n1.  **Maintain a Dynamic Hypothesis Space**: Before asking a question, explicitly or implicitly evaluate the set of remaining possibilities. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. If a previous answer was 'No' to a broad category (e.g., 'Is it a superhero film?'), do not ask about specific superhero films or sub-genres of that category unless you are confirming a specific attribute that was previously excluded.\n\n2.  **Maximize Information Gain**: Prioritize questions that split the remaining search space as evenly as possible (binary search strategy). Avoid asking 'low information' questions that eliminate only a tiny fraction of possibilities or ask about very specific entities before narrowing down the domain.\n\n3.  **Avoid Cycling and Redundancy**: Do not cycle through minor variations of the same unproductive hypothesis. For example, if you know the entity is a book, non-fiction, set in Europe, but not in France, Germany, Italy, Russia, or Spain, do not sequentially ask 'Is it set in Portugal?', 'Is it set in Greece?', etc., without first checking if it is a non-European book (which was already excluded) or if the premise itself is flawed. If you have exhausted major geographic or categorical splits, make an educated guess or ask a question that defines a new, high-level attribute (e.g., medium, author nationality, specific award) rather than guessing specific titles prematurely.\n\n4.  **Refine Based on History**: Use the full history of answers to eliminate impossible candidates. If you are stuck, look for attributes that have not been queried yet (e.g., if you've covered genre, era, and location, consider the creator's identity, the work's reception, or specific plot points).\n\n5.  **Guessing**: You may make a guess before reaching 20 questions if you are confident. However, avoid guessing specific titles/names until you have narrowed the domain significantly (e.g., by genre, era, and key attributes).\n\n**Input Format**: You will receive the `TARGET_TYPE` (e.g., 'book', 'movie', 'person') and the `history` of previous questions and answers.\n\n**Output**: Ask only one yes-or-no question. Do not restate the rules. Do not ask multiple questions in one turn.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 760,
+    "agent_game_scenario": "shape",
+    "env_game_scenario": "Arrow",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a shape. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a polygon?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a quadrilateral?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a circle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Does the shape have any straight sides?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Does the shape have exactly three straight sides?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Does the shape have exactly four straight sides?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Does the shape have exactly five straight sides?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a regular pentagon (i.e., are all its sides and angles equal)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a regular pentagram (i.e., a star with five points)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Does the shape have exactly 5 vertices?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a convex polygon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a star-shaped polygon (such as a pentagram)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape self-intersecting?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a concave polygon?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a specific named concave polygon, such as a dart, arrowhead, or chevron?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a dart (also known as a deltoid)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape an arrowhead?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a dart (also known as a kite or deltoid)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the shape a chevron?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the arrowhead symmetric with respect to one of its diagonals?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a shape, and the correct answer is Arrow."
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a quadrilateral?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a circle?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Does the shape have any straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Does the shape have exactly three straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Does the shape have exactly four straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Does the shape have exactly five straight sides?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a regular pentagon (i.e., are all its sides and angles equal)?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a regular pentagram (i.e., a star with five points)?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Does the shape have exactly 5 vertices?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a convex polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a star-shaped polygon (such as a pentagram)?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape self-intersecting?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a concave polygon?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a specific named concave polygon, such as a dart, arrowhead, or chevron?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a dart (also known as a deltoid)?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape an arrowhead?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a dart (also known as a kite or deltoid)?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the shape a chevron?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the arrowhead symmetric with respect to one of its diagonals?\n(Remember the player is trying to guess a shape, and the correct answer is Arrow. Reply with Yes or No in relation to Arrow.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the shape a regular pentagram (i.e., a star with five points)? -> No\n10. Does the shape have exactly 5 vertices? -> Yes\n11. Is the shape a convex polygon? -> No\n12. Is the shape a star-shaped polygon (such as a pentagram)? -> No\n13. Is the shape self-intersecting? -> No\n14. Is the shape a concave polygon? -> Yes\n15. Is the shape a specific named concave polygon, such as a dart, arrowhead, or chevron? -> Yes\n16. Is the shape a dart (also known as a deltoid)? -> No\n17. Is the shape an arrowhead? -> Yes\n18. Is the shape a dart (also known as a kite or deltoid)? -> No\n19. Is the shape a chevron? -> No\n20. Is the arrowhead symmetric with respect to one of its diagonals? -> Yes"
+}

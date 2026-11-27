@@ -1,0 +1,167 @@
+{
+  "run_id": "da5a1575b0ec4f338795abe09a51c7c8",
+  "timestamp_utc": "2026-11-26T20:59:42.664886+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 510,
+  "category": "brand",
+  "target": "Nike",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a97539eb92cf",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. Specifically, avoid cycling through lists of specific entities (e.g., directors, actors, brands) without first narrowing down the broader category, as this wastes turns on low-probability guesses.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: \n  1. Maintain a mental list of excluded hypotheses and remaining possibilities. \n  2. Avoid cycling through minor variations of the same unproductive hypothesis. If a broad category (e.g., 'directed by famous Hollywood directors') yields only 'No' answers, pivot to other dimensions (e.g., genre, era, country of origin) rather than listing more specific names within that failed dimension.\n  3. Prioritize questions that split the remaining search space as evenly as possible (high information gain). For example, instead of asking 'Is it a coat?', ask 'Is it an outerwear item?' to cover coats, jackets, parkas, etc., simultaneously.\n  4. If you have narrowed it down to a specific domain (e.g., quantum physics, classic Hollywood), ask broad questions to identify the specific sub-field, genre, or era before guessing the exact term.\n  5. In the final turns, if the search space is small, you may ask specific identification questions, but ensure you haven't already ruled out the target through previous negative answers.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 510,
+    "agent_game_scenario": "brand",
+    "env_game_scenario": "Nike",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 7,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a brand. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with consumer electronics or technology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily associated with the fashion or apparel industry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for clothing (such as shirts, pants, or dresses) rather than accessories, footwear, or jewelry?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for footwear?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand primarily known for athletic or sports footwear?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand American?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the brand Nike?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a brand, and the correct answer is Nike."
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with consumer electronics or technology?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily associated with the fashion or apparel industry?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for clothing (such as shirts, pants, or dresses) rather than accessories, footwear, or jewelry?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for footwear?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand primarily known for athletic or sports footwear?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand American?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the brand Nike?\n(Remember the player is trying to guess a brand, and the correct answer is Nike. Reply with Yes or No in relation to Nike.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.93,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 7,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 7/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.9300\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n1. Is the brand primarily associated with consumer electronics or technology? -> No\n2. Is the brand primarily associated with the fashion or apparel industry? -> Yes\n3. Is the brand primarily known for clothing (such as shirts, pants, or dresses) rather than accessories, footwear, or jewelry? -> No\n4. Is the brand primarily known for footwear? -> Yes\n5. Is the brand primarily known for athletic or sports footwear? -> Yes\n6. Is the brand American? -> Yes\n7. Is the brand Nike? -> Goal reached."
+}

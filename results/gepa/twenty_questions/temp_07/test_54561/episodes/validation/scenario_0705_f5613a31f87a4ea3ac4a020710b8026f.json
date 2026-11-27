@@ -1,0 +1,375 @@
+{
+  "run_id": "f5613a31f87a4ea3ac4a020710b8026f",
+  "timestamp_utc": "2026-11-26T20:56:39.933296+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 705,
+  "category": "scientific concept",
+  "target": "Theory of Evolution",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a6a2af8ce4d0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 705,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Theory of Evolution",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the scientific concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the scientific concept related to biology?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to genetics or DNA?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the transmission of traits from parents to offspring (heredity)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the physical structure or molecular composition of genes (such as DNA or chromosomes)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the process of gene expression, such as transcription or translation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the patterns of inheritance (such as dominant, recessive, or sex-linked traits) rather than the molecular mechanism itself?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the statistical or probabilistic analysis of genetic variation within populations (population genetics)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Hardy-Weinberg principle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the mechanisms that cause changes in allele frequencies, such as natural selection, genetic drift, mutation, or gene flow?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept specifically related to genetic drift?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept specifically related to natural selection?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept specifically related to sexual selection?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the differential survival and reproduction of individuals due to differences in phenotype?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept specifically related to artificial selection?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the concept of \"fitness\" in evolutionary biology, specifically defining an organism's ability to survive and reproduce in its environment?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the \"fitness landscape\" or the idea of adaptive peaks and valleys in evolutionary biology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the \"Red Queen Hypothesis\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the \"Survival of the Fittest\" principle as formulated by Herbert Spencer and later associated with social Darwinism?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the term \"Survival of the Fittest\" considered a summary or explanation of the mechanism of natural selection, rather than a separate distinct theory?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Theory of Evolution."
+      },
+      {
+        "role": "user",
+        "content": "Is the scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the scientific concept related to biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to genetics or DNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the transmission of traits from parents to offspring (heredity)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the physical structure or molecular composition of genes (such as DNA or chromosomes)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the process of gene expression, such as transcription or translation?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the patterns of inheritance (such as dominant, recessive, or sex-linked traits) rather than the molecular mechanism itself?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the statistical or probabilistic analysis of genetic variation within populations (population genetics)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Hardy-Weinberg principle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the mechanisms that cause changes in allele frequencies, such as natural selection, genetic drift, mutation, or gene flow?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept specifically related to genetic drift?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept specifically related to natural selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept specifically related to sexual selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the differential survival and reproduction of individuals due to differences in phenotype?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept specifically related to artificial selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the concept of \"fitness\" in evolutionary biology, specifically defining an organism's ability to survive and reproduce in its environment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the \"fitness landscape\" or the idea of adaptive peaks and valleys in evolutionary biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the \"Red Queen Hypothesis\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the \"Survival of the Fittest\" principle as formulated by Herbert Spencer and later associated with social Darwinism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the term \"Survival of the Fittest\" considered a summary or explanation of the mechanism of natural selection, rather than a separate distinct theory?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to the Hardy-Weinberg principle? -> No\n10. Is the concept related to the mechanisms that cause changes in allele frequencies, such as natural selection, genetic drift, mutation, or gene flow? -> Yes\n11. Is the concept specifically related to genetic drift? -> No\n12. Is the concept specifically related to natural selection? -> Yes\n13. Is this concept specifically related to sexual selection? -> No\n14. Is this concept related to the differential survival and reproduction of individuals due to differences in phenotype? -> Yes\n15. Is this concept specifically related to artificial selection? -> No\n16. Is this concept related to the concept of \"fitness\" in evolutionary biology, specifically defining an organism's ability to survive and reproduce in its environment? -> Yes\n17. Is the concept related to the \"fitness landscape\" or the idea of adaptive peaks and valleys in evolutionary biology? -> No\n18. Is the concept related to the \"Red Queen Hypothesis\"? -> No\n19. Is the concept related to the \"Survival of the Fittest\" principle as formulated by Herbert Spencer and later associated with social Darwinism? -> Yes\n20. Is the term \"Survival of the Fittest\" considered a summary or explanation of the mechanism of natural selection, rather than a separate distinct theory? -> Yes"
+}

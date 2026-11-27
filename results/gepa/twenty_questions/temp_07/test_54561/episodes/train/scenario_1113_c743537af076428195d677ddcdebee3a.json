@@ -1,0 +1,380 @@
+{
+  "run_id": "c743537af076428195d677ddcdebee3a",
+  "timestamp_utc": "2026-11-26T20:55:03.400212+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1113,
+  "category": "book",
+  "target": "All Quiet on the Western Front",
+  "prompt_mode": "paprika",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1113,
+    "agent_game_scenario": "book",
+    "env_game_scenario": "All Quiet on the Western Front",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book part of a series?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book written in English?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book written in a language that uses the Cyrillic alphabet?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book written in a language that uses the Latin alphabet?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a classic work of literature?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author of the book from Europe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author French?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author German?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author named Thomas Mann?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the author named Hermann Hesse?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"Faust\" by Johann Wolfgang von Goethe?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"The Magic Mountain\" by Thomas Mann?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"Siddhartha\" by Hermann Hesse?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"The Metamorphosis\" by Franz Kafka?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"The Trial\" by Franz Kafka?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"The Brothers Karamazov\" by Fyodor Dostoevsky?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"Death in Venice\" by Thomas Mann?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"The Stranger\" by Albert Camus?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"The Metamorphosis\" by Franz Kafka?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is All Quiet on the Western Front."
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book part of a series?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book written in English?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book written in a language that uses the Cyrillic alphabet?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book written in a language that uses the Latin alphabet?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a classic work of literature?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the author of the book from Europe?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the author French?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the author German?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the author named Thomas Mann?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the author named Hermann Hesse?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"Faust\" by Johann Wolfgang von Goethe?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"The Magic Mountain\" by Thomas Mann?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"Siddhartha\" by Hermann Hesse?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"The Metamorphosis\" by Franz Kafka?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"The Trial\" by Franz Kafka?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"The Brothers Karamazov\" by Fyodor Dostoevsky?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"Death in Venice\" by Thomas Mann?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"The Stranger\" by Albert Camus?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"The Metamorphosis\" by Franz Kafka?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.19,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.95,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 1,
+    "repeated_pairs": [
+      {
+        "current_turn": 20,
+        "original_turn": 15
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 1\nEnvironment leakage: False\nTraining reward: 0.1900\n\nRepeated questions:\n- Turn 20 repeated turn 15, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the author German? -> Yes\n10. Is the author named Thomas Mann? -> No\n11. Is the author named Hermann Hesse? -> No\n12. Is the book \"Faust\" by Johann Wolfgang von Goethe? -> No\n13. Is the book \"The Magic Mountain\" by Thomas Mann? -> No\n14. Is the book \"Siddhartha\" by Hermann Hesse? -> No\n15. Is the book \"The Metamorphosis\" by Franz Kafka? -> No\n16. Is the book \"The Trial\" by Franz Kafka? -> No\n17. Is the book \"The Brothers Karamazov\" by Fyodor Dostoevsky? -> No\n18. Is the book \"Death in Venice\" by Thomas Mann? -> No\n19. Is the book \"The Stranger\" by Albert Camus? -> No\n20. Is the book \"The Metamorphosis\" by Franz Kafka? -> No"
+}

@@ -1,0 +1,375 @@
+{
+  "run_id": "0d172c7d906c4ff3b8c515b3c70765e3",
+  "timestamp_utc": "2026-11-26T21:01:17.173349+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1117,
+  "category": "concept",
+  "target": "Radioactivity",
+  "prompt_mode": "paprika",
+  "candidate_hash": "c5f0eb257857",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). \n- **Domain-Specific Precision**: If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term. Be precise in your terminology. For example, if you know it is a particle in the Standard Model, distinguish clearly between fermions and bosons, and further between specific particles (e.g., W/Z bosons vs. neutrinos). Do not ask vague questions like \"Is it related to X?\" if X is a broad category that has already been partially explored; instead, target specific members or properties within that category.\n- **Avoid Redundancy**: If you have asked \"Is it related to the weak nuclear force?\" and \"Is it related to the W or Z bosons?\" and received 'No', do not immediately ask \"Is it related to the neutrino?\" unless you have ruled out other weak-force carriers. Ensure each question eliminates a significant portion of the remaining hypothesis space.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1117,
+    "agent_game_scenario": "concept",
+    "env_game_scenario": "Radioactivity",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept abstract?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to mathematics or logic?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the natural sciences (such as physics, chemistry, or biology)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to biology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics or chemistry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to chemistry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the properties or reactions of elements and compounds involving the transfer or sharing of electrons (i.e., is it related to redox reactions, bonding types, or chemical kinetics)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the atomic structure or the properties of subatomic particles?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the behavior or properties of subatomic particles specifically within the context of quantum mechanics (e.g., wave-particle duality, superposition, or entanglement)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the structure of the atom, specifically the arrangement of electrons in shells, orbitals, or energy levels (e.g., electron configuration, atomic orbitals, or the quantum numbers describing electron states)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the strong or weak nuclear forces?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the strong nuclear force, specifically involving the interaction between quarks and gluons (quantum chromodynamics) or the binding of nucleons?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the weak nuclear force, specifically involving processes such as beta decay or neutrino interactions?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the weak interaction's role in neutrino physics, such as neutrino oscillation, neutrino mass, or the weak neutral current?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the mechanism of beta decay, specifically involving the transformation of a neutron into a proton (or vice versa) mediated by W bosons?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept specifically the W boson (or W+ / W- bosons), which mediates this charged-current weak interaction?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Z boson, which mediates the weak neutral current?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the Higgs boson?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept the mechanism of beta decay itself (the process), rather than the mediating bosons?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Cabibbo-Kobayashi-Maskawa (CKM) matrix, which describes quark mixing in the Standard Model?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Radioactivity."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept abstract?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to mathematics or logic?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the natural sciences (such as physics, chemistry, or biology)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to biology?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics or chemistry?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to chemistry?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the properties or reactions of elements and compounds involving the transfer or sharing of electrons (i.e., is it related to redox reactions, bonding types, or chemical kinetics)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the atomic structure or the properties of subatomic particles?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the behavior or properties of subatomic particles specifically within the context of quantum mechanics (e.g., wave-particle duality, superposition, or entanglement)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the structure of the atom, specifically the arrangement of electrons in shells, orbitals, or energy levels (e.g., electron configuration, atomic orbitals, or the quantum numbers describing electron states)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the strong or weak nuclear forces?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the strong nuclear force, specifically involving the interaction between quarks and gluons (quantum chromodynamics) or the binding of nucleons?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the weak nuclear force, specifically involving processes such as beta decay or neutrino interactions?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the weak interaction's role in neutrino physics, such as neutrino oscillation, neutrino mass, or the weak neutral current?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the mechanism of beta decay, specifically involving the transformation of a neutron into a proton (or vice versa) mediated by W bosons?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept specifically the W boson (or W+ / W- bosons), which mediates this charged-current weak interaction?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Z boson, which mediates the weak neutral current?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the Higgs boson?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept the mechanism of beta decay itself (the process), rather than the mediating bosons?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Cabibbo-Kobayashi-Maskawa (CKM) matrix, which describes quark mixing in the Standard Model?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to the behavior or properties of subatomic particles specifically within the context of quantum mechanics (e.g., wave-particle duality, superposition, or entanglement)? -> No\n10. Is the concept related to the structure of the atom, specifically the arrangement of electrons in shells, orbitals, or energy levels (e.g., electron configuration, atomic orbitals, or the quantum numbers describing electron states)? -> No\n11. Is the concept related to the strong or weak nuclear forces? -> Yes\n12. Is the concept related to the strong nuclear force, specifically involving the interaction between quarks and gluons (quantum chromodynamics) or the binding of nucleons? -> No\n13. Is the concept related to the weak nuclear force, specifically involving processes such as beta decay or neutrino interactions? -> Yes\n14. Is the concept related to the weak interaction's role in neutrino physics, such as neutrino oscillation, neutrino mass, or the weak neutral current? -> No\n15. Is the concept related to the mechanism of beta decay, specifically involving the transformation of a neutron into a proton (or vice versa) mediated by W bosons? -> Yes\n16. Is the concept specifically the W boson (or W+ / W- bosons), which mediates this charged-current weak interaction? -> No\n17. Is the concept the Z boson, which mediates the weak neutral current? -> No\n18. Is the concept the Higgs boson? -> No\n19. Is the concept the mechanism of beta decay itself (the process), rather than the mediating bosons? -> No\n20. Is the concept related to the Cabibbo-Kobayashi-Maskawa (CKM) matrix, which describes quark mixing in the Standard Model? -> No"
+}

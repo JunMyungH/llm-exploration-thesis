@@ -1,0 +1,263 @@
+{
+  "run_id": "5dc2a22620c44be49b067dda998f212c",
+  "timestamp_utc": "2026-11-26T20:58:58.279584+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 1007,
+  "category": "vegetable",
+  "target": "Kohlrabi",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b7bb1dd9178b",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- **Exclusion Tracking**: Explicitly track what has been ruled out. For example, if you have determined the subject is a \"woodwind instrument\" but not a flute, clarinet, or saxophone, do not ask \"Is it a clarinet?\" again. Instead, consider other woodwinds like oboe, bassoon, or double-reed instruments. If you have ruled out entire categories (e.g., root, leafy, fruit, flower, bulb, stem, pod vegetables), ensure your next question targets a remaining category (e.g., gourd, tuber, fungus, herb/spice) rather than repeating a ruled-out one.\n- **Avoid Redundancy**: Do not ask the same question or a semantically identical question twice. Ensure each question provides new information or significantly narrows down the remaining possibilities.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1007,
+    "agent_game_scenario": "vegetable",
+    "env_game_scenario": "Kohlrabi",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 13,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly considered to be a fruit in botanical terms (e.g., contains seeds)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable commonly considered a root vegetable (e.g., grows underground and is the root or tuber of the plant)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a leafy green (e.g., spinach, lettuce, kale)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a bulb vegetable (e.g., onion, garlic, leek)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a type of cruciferous vegetable (e.g., broccoli, cauliflower, cabbage, Brussels sprouts)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a head-forming brassica (e.g., cabbage or Brussels sprouts)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable broccoli or cauliflower?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a type of kale or collard green?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable broccoli rabe (rapini)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable cauliflower?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable Brussels sprouts?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable broccoli?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable kohlrabi?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Kohlrabi."
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly considered to be a fruit in botanical terms (e.g., contains seeds)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable commonly considered a root vegetable (e.g., grows underground and is the root or tuber of the plant)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a leafy green (e.g., spinach, lettuce, kale)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a bulb vegetable (e.g., onion, garlic, leek)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a type of cruciferous vegetable (e.g., broccoli, cauliflower, cabbage, Brussels sprouts)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a head-forming brassica (e.g., cabbage or Brussels sprouts)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable broccoli or cauliflower?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a type of kale or collard green?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable broccoli rabe (rapini)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable cauliflower?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable Brussels sprouts?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable broccoli?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable kohlrabi?\n(Remember the player is trying to guess a vegetable, and the correct answer is Kohlrabi. Reply with Yes or No in relation to Kohlrabi.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.87,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 13,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 13/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8700\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n2. Is the vegetable commonly considered a root vegetable (e.g., grows underground and is the root or tuber of the plant)? -> No\n3. Is the vegetable a leafy green (e.g., spinach, lettuce, kale)? -> No\n4. Is the vegetable a bulb vegetable (e.g., onion, garlic, leek)? -> No\n5. Is the vegetable a type of cruciferous vegetable (e.g., broccoli, cauliflower, cabbage, Brussels sprouts)? -> Yes\n6. Is the vegetable a head-forming brassica (e.g., cabbage or Brussels sprouts)? -> No\n7. Is the vegetable broccoli or cauliflower? -> No\n8. Is the vegetable a type of kale or collard green? -> No\n9. Is the vegetable broccoli rabe (rapini)? -> No\n10. Is the vegetable cauliflower? -> No\n11. Is the vegetable Brussels sprouts? -> No\n12. Is the vegetable broccoli? -> No\n13. Is the vegetable kohlrabi? -> Goal reached."
+}

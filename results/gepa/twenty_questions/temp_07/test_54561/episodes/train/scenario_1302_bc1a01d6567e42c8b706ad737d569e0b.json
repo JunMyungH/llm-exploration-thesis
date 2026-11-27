@@ -1,0 +1,311 @@
+{
+  "run_id": "bc1a01d6567e42c8b706ad737d569e0b",
+  "timestamp_utc": "2026-11-26T21:02:44.621870+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1302,
+  "category": "vegetable",
+  "target": "Oregano",
+  "prompt_mode": "paprika",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1302,
+    "agent_game_scenario": "vegetable",
+    "env_game_scenario": "Oregano",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 16,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a root vegetable?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a leafy vegetable?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a fruit vegetable (botanically a fruit, like tomatoes, peppers, or eggplants)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a stalk vegetable (like celery or asparagus)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a flower vegetable (like broccoli or cauliflower)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a bulb vegetable (like onions or garlic)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a legume (like beans, peas, or lentils)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a mushroom?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a gourd or squash (like zucchini, pumpkin, or cucumber)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a stem vegetable (like asparagus, rhubarb, or bamboo shoots)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a seed vegetable (like corn, pumpkin seeds, or sunflower seeds)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a spice or herb (like basil, cinnamon, or ginger)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it commonly used as a culinary herb (used fresh or dried for flavoring) rather than a spice (typically dried seeds, bark, roots, or fruits)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it commonly associated with Italian cuisine?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it basil?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it oregano?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Oregano."
+      },
+      {
+        "role": "user",
+        "content": "Is it a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a leafy vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a fruit vegetable (botanically a fruit, like tomatoes, peppers, or eggplants)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a stalk vegetable (like celery or asparagus)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a flower vegetable (like broccoli or cauliflower)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a bulb vegetable (like onions or garlic)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a legume (like beans, peas, or lentils)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a mushroom?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a gourd or squash (like zucchini, pumpkin, or cucumber)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a stem vegetable (like asparagus, rhubarb, or bamboo shoots)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a seed vegetable (like corn, pumpkin seeds, or sunflower seeds)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a spice or herb (like basil, cinnamon, or ginger)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it commonly used as a culinary herb (used fresh or dried for flavoring) rather than a spice (typically dried seeds, bark, roots, or fruits)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it commonly associated with Italian cuisine?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it basil?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it oregano?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8400000000000001,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 16,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 16/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8400\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n5. Is it a flower vegetable (like broccoli or cauliflower)? -> No\n6. Is it a bulb vegetable (like onions or garlic)? -> No\n7. Is it a legume (like beans, peas, or lentils)? -> No\n8. Is it a mushroom? -> No\n9. Is it a gourd or squash (like zucchini, pumpkin, or cucumber)? -> No\n10. Is it a stem vegetable (like asparagus, rhubarb, or bamboo shoots)? -> No\n11. Is it a seed vegetable (like corn, pumpkin seeds, or sunflower seeds)? -> No\n12. Is it a spice or herb (like basil, cinnamon, or ginger)? -> Yes\n13. Is it commonly used as a culinary herb (used fresh or dried for flavoring) rather than a spice (typically dried seeds, bark, roots, or fruits)? -> Yes\n14. Is it commonly associated with Italian cuisine? -> Yes\n15. Is it basil? -> No\n16. Is it oregano? -> Goal reached."
+}

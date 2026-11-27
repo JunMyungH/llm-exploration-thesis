@@ -1,0 +1,375 @@
+{
+  "run_id": "335ff7ee8c20463d81ef3a1fee5034c4",
+  "timestamp_utc": "2026-11-26T21:04:55.685623+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 705,
+  "category": "scientific concept",
+  "target": "Theory of Evolution",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b6ec268afbfd",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a specific entity (thing, person, concept, book, movie, etc.) by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.'\n\n**Critical Strategy for Information Gain and Hypothesis Tracking:**\n\n1.  **Maintain a Dynamic Hypothesis Space**: Before asking a question, explicitly or implicitly evaluate the set of remaining possibilities. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. If a previous answer was 'No' to a broad category (e.g., 'Is it a superhero film?'), do not ask about specific superhero films or sub-genres of that category unless you are confirming a specific attribute that was previously excluded.\n\n2.  **Maximize Information Gain**: Prioritize questions that split the remaining search space as evenly as possible (binary search strategy). Avoid asking 'low information' questions that eliminate only a tiny fraction of possibilities or ask about very specific entities before narrowing down the domain.\n\n3.  **Avoid Cycling and Redundancy**: Do not cycle through minor variations of the same unproductive hypothesis. For example, if you know the entity is a book, non-fiction, set in Europe, but not in France, Germany, Italy, Russia, or Spain, do not sequentially ask 'Is it set in Portugal?', 'Is it set in Greece?', etc., without first checking if it is a non-European book (which was already excluded) or if the premise itself is flawed. If you have exhausted major geographic or categorical splits, make an educated guess or ask a question that defines a new, high-level attribute (e.g., medium, author nationality, specific award) rather than guessing specific titles prematurely.\n\n4.  **Refine Based on History**: Use the full history of answers to eliminate impossible candidates. If you are stuck, look for attributes that have not been queried yet (e.g., if you've covered genre, era, and location, consider the creator's identity, the work's reception, or specific plot points).\n\n5.  **Guessing**: You may make a guess before reaching 20 questions if you are confident. However, avoid guessing specific titles/names until you have narrowed the domain significantly (e.g., by genre, era, and key attributes).\n\n**Input Format**: You will receive the `TARGET_TYPE` (e.g., 'book', 'movie', 'person') and the `history` of previous questions and answers.\n\n**Output**: Ask only one yes-or-no question. Do not restate the rules. Do not ask multiple questions in one turn.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 705,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Theory of Evolution",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this scientific concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this scientific concept related to biology?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this biological concept related to genetics or DNA?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the structure or function of cells (e.g., cell biology, organelles, cellular processes)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the study of disease, including its causes, progression, and treatment?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the study of organisms and their interactions with the environment (e.g., ecology, evolution, or behavior)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to evolution or natural selection?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the mechanism of mutation or genetic variation driving evolution?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the Hardy-Weinberg equilibrium?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the mathematical modeling of allele frequencies in a population?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the Hardy-Weinberg equilibrium considered a null model used to detect evolutionary change in a population?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the Hardy-Weinberg principle's assumption of random mating?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept the Hardy-Weinberg equation (p^2 + 2pq + q^2 = 1)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept the Hardy-Weinberg law?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to genetic drift?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the change in allele frequencies due to random sampling effects in small populations?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the change in allele frequencies due to non-random mating (e.g., inbreeding or assortative mating)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to natural selection?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the difference in reproductive success between individuals with certain heritable traits?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to the differential survival and reproduction of individuals due to differences in phenotype (i.e., the process by which traits become more or less common in a population)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Theory of Evolution."
+      },
+      {
+        "role": "user",
+        "content": "Is this scientific concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this scientific concept related to biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this biological concept related to genetics or DNA?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the structure or function of cells (e.g., cell biology, organelles, cellular processes)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the study of disease, including its causes, progression, and treatment?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the study of organisms and their interactions with the environment (e.g., ecology, evolution, or behavior)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to evolution or natural selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the mechanism of mutation or genetic variation driving evolution?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the Hardy-Weinberg equilibrium?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the mathematical modeling of allele frequencies in a population?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the Hardy-Weinberg equilibrium considered a null model used to detect evolutionary change in a population?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the Hardy-Weinberg principle's assumption of random mating?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept the Hardy-Weinberg equation (p^2 + 2pq + q^2 = 1)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept the Hardy-Weinberg law?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to genetic drift?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the change in allele frequencies due to random sampling effects in small populations?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the change in allele frequencies due to non-random mating (e.g., inbreeding or assortative mating)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to natural selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the difference in reproductive success between individuals with certain heritable traits?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to the differential survival and reproduction of individuals due to differences in phenotype (i.e., the process by which traits become more or less common in a population)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is this concept related to the Hardy-Weinberg equilibrium? -> Yes\n10. Is this concept related to the mathematical modeling of allele frequencies in a population? -> No\n11. Is the Hardy-Weinberg equilibrium considered a null model used to detect evolutionary change in a population? -> No\n12. Is this concept related to the Hardy-Weinberg principle's assumption of random mating? -> No\n13. Is this concept the Hardy-Weinberg equation (p^2 + 2pq + q^2 = 1)? -> No\n14. Is this concept the Hardy-Weinberg law? -> No\n15. Is this concept related to genetic drift? -> Yes\n16. Is this concept related to the change in allele frequencies due to random sampling effects in small populations? -> No\n17. Is this concept related to the change in allele frequencies due to non-random mating (e.g., inbreeding or assortative mating)? -> No\n18. Is this concept related to natural selection? -> Yes\n19. Is this concept related to the difference in reproductive success between individuals with certain heritable traits? -> Yes\n20. Is this concept related to the differential survival and reproduction of individuals due to differences in phenotype (i.e., the process by which traits become more or less common in a population)? -> Yes"
+}

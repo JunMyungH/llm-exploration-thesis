@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEPA Candidate Tree</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fa; display: flex; flex-direction: column; }
+  #header { background: #fff; border-bottom: 1px solid #dee2e6; padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+  #header h1 { font-size: 18px; font-weight: 600; color: #212529; }
+  .legend { display: flex; gap: 14px; font-size: 13px; color: #495057; }
+  .legend-item { display: flex; align-items: center; gap: 4px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #adb5bd; }
+  #graph-container { flex: 1 1 auto; width: 100%; overflow: auto; padding: 20px; text-align: center; }
+  #graph-container svg { width: 100%; height: 100%; }
+  #tooltip {
+    display: none; position: fixed; background: #fff; border: 1px solid #dee2e6;
+    border-radius: 8px; padding: 14px 16px; max-width: 560px; max-height: 70vh; overflow-y: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18); z-index: 1000; font-size: 13px; line-height: 1.5;
+  }
+  #tooltip .tt-header { font-weight: 700; font-size: 15px; margin-bottom: 6px; color: #212529; }
+  #tooltip .tt-meta { color: #6c757d; margin-bottom: 4px; }
+  #tooltip .tt-hint { color: #adb5bd; font-size: 11px; font-style: italic; margin-bottom: 10px; }
+  #tooltip .tt-comp-name { font-weight: 600; color: #495057; margin-top: 10px; border-bottom: 1px solid #e9ecef; padding-bottom: 2px; }
+  #tooltip .tt-comp-text {
+    white-space: pre-wrap; word-break: break-word; background: #f8f9fa;
+    border: 1px solid #e9ecef; border-radius: 4px; padding: 8px 10px; margin-top: 4px;
+    font-family: "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px;
+    max-height: 200px; overflow-y: auto;
+  }
+  .role-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 6px; }
+  .role-best { background: #00e5ff33; color: #006064; }
+  .role-pareto { background: #ff980033; color: #e65100; }
+  .role-seed { background: #e0e0e0; color: #424242; }
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>GEPA Candidate Tree</h1>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:cyan"></div> Best</div>
+    <div class="legend-item"><div class="legend-dot" style="background:orange"></div> Pareto Front</div>
+    <div class="legend-item"><div class="legend-dot" style="background:lightgray"></div> Other</div>
+  </div>
+</div>
+<div id="graph-container"><p>Loading graph&hellip;</p></div>
+<div id="tooltip"></div>
+
+<script type="module">
+const NODES = [{"idx": 0, "score": 0.6733, "parents": "seed", "role": "Best", "components": {"ask": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply."}},
+{"idx": 1, "score": 0.6467, "parents": "0", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\n**Strategic Guidelines for Question Selection:**\n1. **Maximize Information Gain**: Prioritize questions that split the remaining hypothesis space as evenly as possible (binary search strategy). Avoid questions that are too specific or likely to receive a 'No' answer early on, unless they are critical pivot points.\n2. **Track Excluded Hypotheses**: Maintain a mental list of what has been ruled out. Do not ask questions that test hypotheses already eliminated by previous 'No' answers.\n3. **Avoid Redundancy**: Do not merely rewrite or restate previous questions with minor variations. If a broad category is rejected (e.g., 'physics'), do not immediately ask about specific sub-fields (e.g., 'quantum mechanics') without first exploring other major categories (e.g., 'chemistry', 'biology', 'mathematics').\n4. **Progressive Refinement**: Start with broad, high-level categories (e.g., 'Is it alive?', 'Is it abstract?', 'Is it man-made?'). Narrow down to specific attributes only after establishing the general domain.\n5. **Avoid Premature Specificity**: Do not guess specific items (e.g., 'Is it a specific color like pink?') until the general category (e.g., 'Is it a color?') has been confirmed and other possibilities in that category have been largely eliminated.\n\nThe game starts now. You are trying to guess a [TARGET_CATEGORY]. Ask your first question!"}},
+{"idx": 2, "score": 0.5428, "parents": "0", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **CRITICAL STRATEGY**: You must maintain a mental state of known facts and excluded hypotheses. Before asking a question, review the conversation history to ensure you are not repeating a question or asking a question that is logically equivalent to one already asked and answered 'No'.\n- **INFORMATION GAIN**: Prioritize questions that split the remaining possibility space roughly in half (binary search strategy) rather than listing specific instances or minor variations of the same category. Avoid 'narrowing down' by asking about increasingly specific sub-types if broader categories have not been fully explored or if specific guesses have failed.\n- **AVOID CYCLING**: If you have asked about a specific author, book, or concept and received 'No', do not immediately ask about another specific item in the same narrow bucket unless you have new information to distinguish it. Instead, step back to broader categorizations (e.g., genre, era, medium, fundamental properties) to re-evaluate the search space.\n- **FORMAT**: Produce only one question per turn. Do not include explanations or reasoning in the output, just the question itself."}},
+{"idx": 3, "score": 0.6717, "parents": "0", "role": "Pareto Front", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!"}},
+{"idx": 4, "score": 0.545, "parents": "3", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- **Exclusion Tracking**: Explicitly track what has been ruled out. For example, if you have determined the subject is a \"woodwind instrument\" but not a flute, clarinet, or saxophone, do not ask \"Is it a clarinet?\" again. Instead, consider other woodwinds like oboe, bassoon, or double-reed instruments. If you have ruled out entire categories (e.g., root, leafy, fruit, flower, bulb, stem, pod vegetables), ensure your next question targets a remaining category (e.g., gourd, tuber, fungus, herb/spice) rather than repeating a ruled-out one.\n- **Avoid Redundancy**: Do not ask the same question or a semantically identical question twice. Ensure each question provides new information or significantly narrows down the remaining possibilities.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!"}},
+{"idx": 5, "score": 0.4317, "parents": "3", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. Specifically, avoid cycling through lists of specific entities (e.g., directors, actors, brands) without first narrowing down the broader category, as this wastes turns on low-probability guesses.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: \n  1. Maintain a mental list of excluded hypotheses and remaining possibilities. \n  2. Avoid cycling through minor variations of the same unproductive hypothesis. If a broad category (e.g., 'directed by famous Hollywood directors') yields only 'No' answers, pivot to other dimensions (e.g., genre, era, country of origin) rather than listing more specific names within that failed dimension.\n  3. Prioritize questions that split the remaining search space as evenly as possible (high information gain). For example, instead of asking 'Is it a coat?', ask 'Is it an outerwear item?' to cover coats, jackets, parkas, etc., simultaneously.\n  4. If you have narrowed it down to a specific domain (e.g., quantum physics, classic Hollywood), ask broad questions to identify the specific sub-field, genre, or era before guessing the exact term.\n  5. In the final turns, if the search space is small, you may ask specific identification questions, but ensure you haven't already ruled out the target through previous negative answers.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers."}},
+{"idx": 6, "score": 0.6433, "parents": "3", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: \n  1. **Track Hypotheses Explicitly**: Maintain a mental list of excluded hypotheses and remaining possibilities. Before asking a question, consider what set of potential answers it splits. Avoid asking questions that narrow down a very small subset if you haven't yet confirmed the broader category.\n  2. **Avoid Micro-Splitting**: Do not cycle through minor variations of the same unproductive hypothesis (e.g., asking about specific sub-types of a category that has already been partially ruled out or is too narrow). If you ask about a specific item (e.g., \"Is it Gibbs Free Energy?\") and the answer is No, do not immediately ask about its sibling (\"Is it Helmholtz Free Energy?\") unless you have strong reason to believe it is one of those two. Instead, step back and ask about the parent category or defining characteristics.\n  3. **Prioritize High Information Gain**: Ask questions that split the remaining search space as evenly as possible (approximately 50/50). Broad categorical questions (e.g., \"Is it a living thing?\", \"Is it a brand?\", \"Is it a scientific concept?\") are often better early-game moves than specific attribute questions.\n  4. **Domain-Specific Reasoning**: If you have narrowed it down to a specific domain (e.g., thermodynamics, medical devices), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term. For example, in science, distinguish between laws, theories, concepts, and phenomena. In brands, distinguish between industry sectors (tech, automotive, pharma) before narrowing to product lines.\n  5. **Logical Deduction**: Use 'No' answers to eliminate entire branches of possibility. If a question about a specific attribute yields 'No', infer what that implies about the object's nature and adjust your next question to explore a different attribute or a higher-level category.\n\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!"}},
+{"idx": 7, "score": 0.651, "parents": "3", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- **Avoid Redundancy and Over-Specificity**: Do not ask questions that are subsets of questions already answered 'Yes' or supersets of questions already answered 'No'. For example, if 'Quantum Mechanics' is confirmed, do not ask about 'Quantum Entanglement' immediately if it was already ruled out or if the search space is still too broad. Instead, focus on distinguishing between major categories within that domain.\n- **Track Exclusions**: Explicitly keep track of what has been ruled out. If you ask 'Is it X?' and the answer is 'No', you must not ask 'Is it not X?' or similar redundant phrasing. If you ask 'Is it a type of Y?' and the answer is 'No', you must not ask 'Is it a type of Z?' where Z is a sibling category to Y if the previous question implied a broader category was excluded.\n- **Final Guessing**: When the search space is sufficiently narrowed (e.g., to a single famous entity or a very small set of likely candidates), make a direct guess. Do not continue asking questions if you have reached the 20th turn without a guess; your last question should be the guess itself.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!"}},
+{"idx": 8, "score": 0.5283, "parents": "3", "role": "", "components": {"ask": "You are playing a game of 20 Questions. Your goal is to guess the name of a specific entity (thing, person, concept, book, movie, etc.) by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.'\n\n**Critical Strategy for Information Gain and Hypothesis Tracking:**\n\n1.  **Maintain a Dynamic Hypothesis Space**: Before asking a question, explicitly or implicitly evaluate the set of remaining possibilities. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. If a previous answer was 'No' to a broad category (e.g., 'Is it a superhero film?'), do not ask about specific superhero films or sub-genres of that category unless you are confirming a specific attribute that was previously excluded.\n\n2.  **Maximize Information Gain**: Prioritize questions that split the remaining search space as evenly as possible (binary search strategy). Avoid asking 'low information' questions that eliminate only a tiny fraction of possibilities or ask about very specific entities before narrowing down the domain.\n\n3.  **Avoid Cycling and Redundancy**: Do not cycle through minor variations of the same unproductive hypothesis. For example, if you know the entity is a book, non-fiction, set in Europe, but not in France, Germany, Italy, Russia, or Spain, do not sequentially ask 'Is it set in Portugal?', 'Is it set in Greece?', etc., without first checking if it is a non-European book (which was already excluded) or if the premise itself is flawed. If you have exhausted major geographic or categorical splits, make an educated guess or ask a question that defines a new, high-level attribute (e.g., medium, author nationality, specific award) rather than guessing specific titles prematurely.\n\n4.  **Refine Based on History**: Use the full history of answers to eliminate impossible candidates. If you are stuck, look for attributes that have not been queried yet (e.g., if you've covered genre, era, and location, consider the creator's identity, the work's reception, or specific plot points).\n\n5.  **Guessing**: You may make a guess before reaching 20 questions if you are confident. However, avoid guessing specific titles/names until you have narrowed the domain significantly (e.g., by genre, era, and key attributes).\n\n**Input Format**: You will receive the `TARGET_TYPE` (e.g., 'book', 'movie', 'person') and the `history` of previous questions and answers.\n\n**Output**: Ask only one yes-or-no question. Do not restate the rules. Do not ask multiple questions in one turn."}}];
+const DOT = `digraph G {
+    rankdir=TB;
+    node [style=filled, shape=circle, fontsize=14, width=0.6, height=0.6];
+    0 [label="0\\n(0.67)", fillcolor=cyan, tooltip=" "];
+    1 [label="1\\n(0.65)", fillcolor=lightgray, tooltip=" "];
+    2 [label="2\\n(0.54)", fillcolor=lightgray, tooltip=" "];
+    3 [label="3\\n(0.67)", fillcolor=orange, tooltip=" "];
+    4 [label="4\\n(0.55)", fillcolor=lightgray, tooltip=" "];
+    5 [label="5\\n(0.43)", fillcolor=lightgray, tooltip=" "];
+    6 [label="6\\n(0.64)", fillcolor=lightgray, tooltip=" "];
+    7 [label="7\\n(0.65)", fillcolor=lightgray, tooltip=" "];
+    8 [label="8\\n(0.53)", fillcolor=lightgray, tooltip=" "];
+    0 -> 1;
+    0 -> 2;
+    0 -> 3;
+    3 -> 4;
+    3 -> 5;
+    3 -> 6;
+    3 -> 7;
+    3 -> 8;
+}`;
+
+const nodeMap = {};
+NODES.forEach(n => { nodeMap[n.idx] = n; });
+
+let pinnedIdx = null;   // non-null when tooltip is click-pinned (scrollable)
+let hoverIdx = null;    // non-null when hovering over a node
+
+function renderTooltip(idx) {
+  const n = nodeMap[idx];
+  if (!n) return "";
+  let roleBadge = "";
+  if (n.role === "Best") roleBadge = '<span class="role-badge role-best">BEST</span>';
+  else if (n.role === "Pareto Front") roleBadge = '<span class="role-badge role-pareto">PARETO</span>';
+  else if (n.role === "Seed") roleBadge = '<span class="role-badge role-seed">SEED</span>';
+
+  let comps = "";
+  for (const [name, text] of Object.entries(n.components)) {
+    const escaped = text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    comps += '<div class="tt-comp-name">' + name + '</div><div class="tt-comp-text">' + escaped + '</div>';
+  }
+
+  return '<div class="tt-header">Candidate ' + n.idx + roleBadge + '</div>' +
+    '<div class="tt-meta">Score: <strong>' + n.score + '</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Parent(s): ' + n.parents +
+    '</div><div class="tt-hint">' + (pinnedIdx === idx ? 'Click node again to dismiss' : 'Click to pin &amp; scroll') + '</div>' +
+    comps;
+}
+
+function positionTooltip(x, y) {
+  const tt = document.getElementById("tooltip");
+  let tx = x + 16, ty = y + 16;
+  const r = tt.getBoundingClientRect();
+  if (tx + r.width > window.innerWidth - 8) tx = x - r.width - 16;
+  if (ty + r.height > window.innerHeight - 8) ty = y - r.height - 16;
+  if (tx < 8) tx = 8;
+  if (ty < 8) ty = 8;
+  tt.style.left = tx + "px";
+  tt.style.top = ty + "px";
+}
+
+function showTooltip(idx, x, y) {
+  const tt = document.getElementById("tooltip");
+  tt.innerHTML = renderTooltip(idx);
+  tt.style.display = "block";
+  positionTooltip(x, y);
+}
+
+function hideTooltip() {
+  pinnedIdx = null;
+  hoverIdx = null;
+  document.getElementById("tooltip").style.display = "none";
+}
+
+// Click outside tooltip and outside nodes dismisses pinned tooltip
+document.addEventListener("mousedown", function(e) {
+  const tt = document.getElementById("tooltip");
+  if (pinnedIdx !== null && tt.style.display === "block"
+      && !tt.contains(e.target) && !e.target.closest(".node")) {
+    hideTooltip();
+  }
+});
+
+async function render() {
+  const { instance } = await import("https://cdn.jsdelivr.net/npm/@viz-js/viz@3.11.0/lib/viz-standalone.mjs");
+  const viz = await instance();
+  const svg = viz.renderSVGElement(DOT);
+  const container = document.getElementById("graph-container");
+  container.innerHTML = "";
+  container.appendChild(svg);
+
+  // Attach hover listeners and strip native <title> tooltips to avoid double tooltips
+  svg.querySelectorAll(".node").forEach(node => {
+    const title = node.querySelector("title");
+    if (!title) return;
+    const idx = parseInt(title.textContent, 10);
+    if (isNaN(idx)) return;
+    title.remove();  // remove native SVG tooltip
+    node.style.cursor = "pointer";
+    // Hover: show tooltip following the mouse (non-interactive)
+    node.addEventListener("mouseenter", e => {
+      if (pinnedIdx !== null) return;  // don't override a pinned tooltip
+      hoverIdx = idx;
+      showTooltip(idx, e.clientX, e.clientY);
+    });
+    node.addEventListener("mousemove", e => {
+      if (pinnedIdx !== null || hoverIdx !== idx) return;
+      positionTooltip(e.clientX, e.clientY);
+    });
+    node.addEventListener("mouseleave", () => {
+      if (pinnedIdx !== null) return;
+      hoverIdx = null;
+      document.getElementById("tooltip").style.display = "none";
+    });
+    // Click: pin the tooltip so user can scroll it
+    node.addEventListener("click", e => {
+      e.stopPropagation();
+      if (pinnedIdx === idx) { hideTooltip(); return; }
+      pinnedIdx = idx;
+      showTooltip(idx, e.clientX, e.clientY);
+    });
+  });
+  // Also strip <title> from edges and the graph itself
+  svg.querySelectorAll(".edge title").forEach(t => t.remove());
+  const graphTitle = svg.querySelector(":scope > title");
+  if (graphTitle) graphTitle.remove();
+}
+
+render().catch(err => {
+  document.getElementById("graph-container").innerHTML =
+    "<p style='color:red'>Failed to render graph: " + err.message + "</p>" +
+    "<pre>" + DOT.replace(/</g,"&lt;") + "</pre>";
+});
+</script>
+</body>
+</html>

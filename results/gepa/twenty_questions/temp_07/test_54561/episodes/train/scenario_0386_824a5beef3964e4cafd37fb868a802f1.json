@@ -1,0 +1,183 @@
+{
+  "run_id": "824a5beef3964e4cafd37fb868a802f1",
+  "timestamp_utc": "2026-11-26T20:54:44.417511+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 386,
+  "category": "clothing",
+  "target": "Cardigan",
+  "prompt_mode": "paprika",
+  "candidate_hash": "67c3eea64aeb",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the specific name of a thing or person by asking up to 20 yes-or-no questions. You will receive answers of 'Yes' or 'No' and must use this information to refine your hypotheses.\n\nInstructions:\n1. **Ask Only Yes-or-No Questions**: Every question must be answerable with a simple 'Yes' or 'No'.\n2. **Maximize Information Gain**: Prioritize questions that split the remaining possible candidates into roughly equal halves. Avoid asking questions that eliminate only a small number of possibilities or ask about specific items if the category is still broad.\n3. **Eliminate Hypotheses Systematically**: Track which specific items or sub-categories have been ruled out by previous 'No' answers. Do not ask about items or categories that have already been excluded. Avoid cycling through minor variations of the same unproductive hypothesis.\n4. **Adapt Based on History**: Use the full conversation history to inform your next question. If you have narrowed down a category (e.g., 'woodwind instrument'), ask questions that further subdivide that category (e.g., 'uses a reed', 'made of wood', 'commonly played by blowing') rather than jumping to specific guesses too early unless you are highly confident.\n5. **Guessing**: You may make a specific guess as a question (e.g., 'Is it a [Specific Item]?') if you believe you have narrowed it down to one or two strong candidates. If incorrect, use the new information to pivot immediately.\n\nCurrent Task: Guess the item based on the provided `game_rules` and `history`. Output only the next question.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 386,
+    "agent_game_scenario": "clothing",
+    "env_game_scenario": "Cardigan",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 8,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a clothing. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it worn on the upper body?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a type of shirt or blouse?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a type of jacket or coat?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it typically worn for protection against cold weather?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it typically made of leather?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it typically made of wool?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a parka?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a cardigan?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a clothing, and the correct answer is Cardigan."
+      },
+      {
+        "role": "user",
+        "content": "Is it worn on the upper body?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a type of shirt or blouse?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a type of jacket or coat?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it typically worn for protection against cold weather?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it typically made of leather?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it typically made of wool?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a parka?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a cardigan?\n(Remember the player is trying to guess a clothing, and the correct answer is Cardigan. Reply with Yes or No in relation to Cardigan.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.92,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 8,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 8/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.9200\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n1. Is it worn on the upper body? -> Yes\n2. Is it a type of shirt or blouse? -> No\n3. Is it a type of jacket or coat? -> Yes\n4. Is it typically worn for protection against cold weather? -> Yes\n5. Is it typically made of leather? -> No\n6. Is it typically made of wool? -> Yes\n7. Is it a parka? -> No\n8. Is it a cardigan? -> Goal reached."
+}

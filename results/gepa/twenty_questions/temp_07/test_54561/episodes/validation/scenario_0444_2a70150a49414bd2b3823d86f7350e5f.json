@@ -1,0 +1,384 @@
+{
+  "run_id": "2a70150a49414bd2b3823d86f7350e5f",
+  "timestamp_utc": "2026-11-26T20:58:46.252161+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 444,
+  "category": "person",
+  "target": "Elon Musk",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b7bb1dd9178b",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- **Exclusion Tracking**: Explicitly track what has been ruled out. For example, if you have determined the subject is a \"woodwind instrument\" but not a flute, clarinet, or saxophone, do not ask \"Is it a clarinet?\" again. Instead, consider other woodwinds like oboe, bassoon, or double-reed instruments. If you have ruled out entire categories (e.g., root, leafy, fruit, flower, bulb, stem, pod vegetables), ensure your next question targets a remaining category (e.g., gourd, tuber, fungus, herb/spice) rather than repeating a ruled-out one.\n- **Avoid Redundancy**: Do not ask the same question or a semantically identical question twice. Ensure each question provides new information or significantly narrows down the remaining possibilities.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 444,
+    "agent_game_scenario": "person",
+    "env_game_scenario": "Elon Musk",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a real, living individual?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a public figure known primarily for their work in politics or government?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in entertainment (e.g., acting, music, directing)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in sports?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their work in science, technology, engineering, or mathematics (STEM)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their contributions to computer science or information technology?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their contributions to artificial intelligence or machine learning?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for their contributions to software engineering or internet technology (e.g., founders of major tech companies, creators of programming languages or platforms)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Apple Inc.?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Steve Jobs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Bill Gates?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Microsoft?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Google?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Facebook (Meta Platforms)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Amazon?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Yahoo?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Oracle Corporation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Microsoft?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person primarily known for creating a major programming language?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person the co-founder of Google?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Elon Musk."
+      },
+      {
+        "role": "user",
+        "content": "Is the person a real, living individual?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a public figure known primarily for their work in politics or government?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in entertainment (e.g., acting, music, directing)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in sports?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their work in science, technology, engineering, or mathematics (STEM)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their contributions to computer science or information technology?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their contributions to artificial intelligence or machine learning?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for their contributions to software engineering or internet technology (e.g., founders of major tech companies, creators of programming languages or platforms)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Apple Inc.?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Steve Jobs?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Bill Gates?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Microsoft?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Google?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Facebook (Meta Platforms)?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Amazon?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Yahoo?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Oracle Corporation?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Microsoft?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person primarily known for creating a major programming language?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person the co-founder of Google?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.18000000000000002,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.9,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 2,
+    "repeated_pairs": [
+      {
+        "current_turn": 18,
+        "original_turn": 12
+      },
+      {
+        "current_turn": 20,
+        "original_turn": 13
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 2\nEnvironment leakage: False\nTraining reward: 0.1800\n\nRepeated questions:\n- Turn 18 repeated turn 12, already answered 'No'.\n- Turn 20 repeated turn 13, already answered 'No'.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the person the co-founder of Apple Inc.? -> No\n10. Is the person Steve Jobs? -> No\n11. Is the person Bill Gates? -> No\n12. Is the person the co-founder of Microsoft? -> No\n13. Is the person the co-founder of Google? -> No\n14. Is the person the co-founder of Facebook (Meta Platforms)? -> No\n15. Is the person the co-founder of Amazon? -> No\n16. Is the person the co-founder of Yahoo? -> No\n17. Is the person the co-founder of Oracle Corporation? -> No\n18. Is the person the co-founder of Microsoft? -> No\n19. Is the person primarily known for creating a major programming language? -> No\n20. Is the person the co-founder of Google? -> No"
+}

@@ -504,12 +504,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=None)
     parser.add_argument("--use-judge", action="store_true", help="Use a trustworthy model for judging")
     parser.add_argument("--prompt-mode", choices=("paprika", "extended"), default="paprika")
+    parser.add_argument("--agent-temperature", type=float, default=0.0, help="Sampling temperature of the agent during optimization")
     return parser.parse_args()
 
 
 def main() -> None:
     load_dotenv()
     args = parse_args()
+    if not 0.0 <= args.agent_temperature <= 2.0:
+        raise ValueError(
+            "Agent temperature must be between 0.0 and 2.0"
+        )
     if min(args.train_size, args.val_size, args.max_metric_calls, args.max_turns) <= 0:
         raise ValueError("All sizes, metric calls, and turns must be positive")
     config = load_game_config(args.game, prompt_mode=args.prompt_mode)
@@ -528,7 +533,7 @@ def main() -> None:
     trainset = [dspy.Example(scenario_index=i).with_inputs("scenario_index") for i in train_indices]
     valset = [dspy.Example(scenario_index=i).with_inputs("scenario_index") for i in val_indices]
 
-    dspy.configure(lm=make_lm("AGENT", max_tokens=256, temperature=0.0))
+    dspy.configure(lm=make_lm("AGENT", max_tokens=256, temperature=args.agent_temperature))
     
     # Fall back to same Ollama model if a separate reflection model is not configured.
     for suffix in ("MODEL", "API_KEY", "BASE_URL", "REASONING_EFFORT"):
@@ -574,14 +579,36 @@ def main() -> None:
         "game": args.game,
         "train_indices": train_indices,
         "val_indices": val_indices,
+
         "max_turns": config.max_turns,
         "max_metric_calls": args.max_metric_calls,
         "seed": args.seed,
+
         "agent_model": os.getenv("AGENT_MODEL"),
+        "agent_temperature": args.agent_temperature,
+        "agent_max_tokens": 256,
+
         "reflection_model": os.getenv("REFLECTION_MODEL"),
+        "reflection_temperature": 0.7,
+        "reflection_max_tokens": 4096,
+
         "environment_model": environment.model,
+        "environment_temperature": 0.0,
+        "environment_max_tokens": 1024,
+
         "judge_used": args.use_judge,
-        "note": "Development run; no final PAPRIKA eval split was used.",
+
+        "vllm_max_model_len": os.getenv(
+            "VLLM_MAX_MODEL_LEN"
+        ),
+
+        "dspy_version": dspy.__version__,
+
+        "note": (
+            "Development run; no final PAPRIKA "
+            "eval split was used."
+        ),
+
         "prompt_mode": args.prompt_mode,
     }
     (output_dir / "run_config.json").write_text(json.dumps(settings, indent=2), encoding="utf-8")

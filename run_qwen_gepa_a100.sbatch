@@ -30,6 +30,14 @@ RESEARCH_PYTHON="$HOME/micromamba/envs/llm-exploration/bin/python"
 
 PORT=$((18000 + SLURM_JOB_ID % 10000))
 
+AGENT_TEMPERATURE="${1:-0.0}"
+
+TEMPERATURE_TAG="${AGENT_TEMPERATURE//./}"
+
+export VLLM_MAX_MODEL_LEN=8192
+
+OUTPUT_DIR="results/gepa/twenty_questions/temp_${TEMPERATURE_TAG}/test_${SLURM_JOB_ID}"
+
 echo "===================================="
 echo "DSPy GEPA Optimization"
 echo "Job ID: $SLURM_JOB_ID"
@@ -46,7 +54,7 @@ echo "Starting vLLM..."
     --port "$PORT" \
     --tensor-parallel-size 2 \
     --dtype bfloat16 \
-    --max-model-len 8192 \
+    --max-model-len "$VLLM_MAX_MODEL_LEN" \
     --gpu-memory-utilization 0.85 \
     --language-model-only \
     --default-chat-template-kwargs '{"enable_thinking": false}' \
@@ -109,6 +117,8 @@ export REFLECTION_BASE_URL="$API_URL"
 export REFLECTION_API_KEY="EMPTY"
 
 echo "Starting GEPA optimization..."
+echo "Agent temperature: $AGENT_TEMPERATURE"
+echo "Output directory: $OUTPUT_DIR"
 
 "$RESEARCH_PYTHON" -m llm_exploration.gepa \
     --game twenty_questions \
@@ -117,7 +127,8 @@ echo "Starting GEPA optimization..."
     --val-size 6 \
     --max-turns 20 \
     --max-metric-calls 120 \
+    --agent-temperature "$AGENT_TEMPERATURE" \
     --seed 42 \
-    --output-dir "results/gepa/twenty_questions/test_${SLURM_JOB_ID}"
+    --output-dir "$OUTPUT_DIR"
 
 echo "GEPA optimization finished."

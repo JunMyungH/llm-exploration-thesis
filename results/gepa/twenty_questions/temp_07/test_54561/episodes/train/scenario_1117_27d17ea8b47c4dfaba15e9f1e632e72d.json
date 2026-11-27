@@ -1,0 +1,375 @@
+{
+  "run_id": "27d17ea8b47c4dfaba15e9f1e632e72d",
+  "timestamp_utc": "2026-11-26T21:01:01.281328+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1117,
+  "category": "concept",
+  "target": "Radioactivity",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a6a2af8ce4d0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1117,
+    "agent_game_scenario": "concept",
+    "env_game_scenario": "Radioactivity",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept abstract?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to mathematics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the social sciences (e.g., psychology, sociology, economics, political science)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to philosophy or ethics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the natural sciences (e.g., physics, chemistry, biology, astronomy)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to biology or life sciences?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics or chemistry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to quantum mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to subatomic particles?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Standard Model of particle physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to fermions (such as quarks or leptons)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to bosons (force-carrying particles such as photons, gluons, or the Higgs boson)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the fundamental forces of nature (gravity, electromagnetism, strong nuclear force, or weak nuclear force)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the weak nuclear force?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the W or Z bosons?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the neutrino?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to neutrino oscillation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to neutrino mass?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to neutrino detection or interaction cross-sections?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the weak interaction's role in radioactive decay (specifically beta decay)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a concept, and the correct answer is Radioactivity."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept abstract?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to mathematics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the social sciences (e.g., psychology, sociology, economics, political science)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to philosophy or ethics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the natural sciences (e.g., physics, chemistry, biology, astronomy)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to biology or life sciences?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics or chemistry?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to quantum mechanics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to subatomic particles?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Standard Model of particle physics?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to fermions (such as quarks or leptons)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to bosons (force-carrying particles such as photons, gluons, or the Higgs boson)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the fundamental forces of nature (gravity, electromagnetism, strong nuclear force, or weak nuclear force)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the weak nuclear force?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the W or Z bosons?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the neutrino?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to neutrino oscillation?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to neutrino mass?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to neutrino detection or interaction cross-sections?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the weak interaction's role in radioactive decay (specifically beta decay)?\n(Remember the player is trying to guess a concept, and the correct answer is Radioactivity. Reply with Yes or No in relation to Radioactivity.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to subatomic particles? -> Yes\n10. Is the concept related to the Standard Model of particle physics? -> Yes\n11. Is the concept related to fermions (such as quarks or leptons)? -> No\n12. Is the concept related to bosons (force-carrying particles such as photons, gluons, or the Higgs boson)? -> No\n13. Is the concept related to the fundamental forces of nature (gravity, electromagnetism, strong nuclear force, or weak nuclear force)? -> Yes\n14. Is the concept related to the weak nuclear force? -> Yes\n15. Is the concept related to the W or Z bosons? -> No\n16. Is the concept related to the neutrino? -> Yes\n17. Is the concept related to neutrino oscillation? -> No\n18. Is the concept related to neutrino mass? -> No\n19. Is the concept related to neutrino detection or interaction cross-sections? -> No\n20. Is the concept related to the weak interaction's role in radioactive decay (specifically beta decay)? -> Yes"
+}

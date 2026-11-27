@@ -1,0 +1,375 @@
+{
+  "run_id": "35cc21f3e4e54c82877d92a6002cd435",
+  "timestamp_utc": "2026-11-26T20:54:29.408333+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 705,
+  "category": "scientific concept",
+  "target": "Theory of Evolution",
+  "prompt_mode": "paprika",
+  "candidate_hash": "cdf8435d02e5",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\n**Strategic Guidelines for Question Selection:**\n1. **Maximize Information Gain**: Prioritize questions that split the remaining hypothesis space as evenly as possible (binary search strategy). Avoid questions that are too specific or likely to receive a 'No' answer early on, unless they are critical pivot points.\n2. **Track Excluded Hypotheses**: Maintain a mental list of what has been ruled out. Do not ask questions that test hypotheses already eliminated by previous 'No' answers.\n3. **Avoid Redundancy**: Do not merely rewrite or restate previous questions with minor variations. If a broad category is rejected (e.g., 'physics'), do not immediately ask about specific sub-fields (e.g., 'quantum mechanics') without first exploring other major categories (e.g., 'chemistry', 'biology', 'mathematics').\n4. **Progressive Refinement**: Start with broad, high-level categories (e.g., 'Is it alive?', 'Is it abstract?', 'Is it man-made?'). Narrow down to specific attributes only after establishing the general domain.\n5. **Avoid Premature Specificity**: Do not guess specific items (e.g., 'Is it a specific color like pink?') until the general category (e.g., 'Is it a color?') has been confirmed and other possibilities in that category have been largely eliminated.\n\nThe game starts now. You are trying to guess a [TARGET_CATEGORY]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 705,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Theory of Evolution",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a physical quantity?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a branch of science?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a fundamental force of nature?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a fundamental particle?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a mathematical concept?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a principle or law in physics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept in chemistry?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept in biology?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to genetics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a specific structure or molecule within the cell, such as DNA, RNA, or a chromosome?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a process or mechanism within the cell, such as cell division, protein synthesis, or metabolism?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a concept related to evolution or natural selection?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it a specific theory, such as the Theory of Evolution by Natural Selection?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept specifically about the mechanism of how traits are passed from parents to offspring, rather than the origin of species or the diversity of life?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of \"fitness\" (or natural fitness) in evolutionary biology?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of \"natural selection\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of \"genetic drift\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of \"mutation\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of \"speciation\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is it the concept of \"adaptation\"?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Theory of Evolution."
+      },
+      {
+        "role": "user",
+        "content": "Is it a physical quantity?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a branch of science?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a fundamental force of nature?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a fundamental particle?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a mathematical concept?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a principle or law in physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept in chemistry?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept in biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to genetics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a specific structure or molecule within the cell, such as DNA, RNA, or a chromosome?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a process or mechanism within the cell, such as cell division, protein synthesis, or metabolism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it a concept related to evolution or natural selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is it a specific theory, such as the Theory of Evolution by Natural Selection?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept specifically about the mechanism of how traits are passed from parents to offspring, rather than the origin of species or the diversity of life?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of \"fitness\" (or natural fitness) in evolutionary biology?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of \"natural selection\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of \"genetic drift\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of \"mutation\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of \"speciation\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it the concept of \"adaptation\"?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Theory of Evolution. Reply with Yes or No in relation to Theory of Evolution.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is it a concept related to genetics? -> Yes\n10. Is it a specific structure or molecule within the cell, such as DNA, RNA, or a chromosome? -> No\n11. Is it a process or mechanism within the cell, such as cell division, protein synthesis, or metabolism? -> No\n12. Is it a concept related to evolution or natural selection? -> Yes\n13. Is it a specific theory, such as the Theory of Evolution by Natural Selection? -> Yes\n14. Is the concept specifically about the mechanism of how traits are passed from parents to offspring, rather than the origin of species or the diversity of life? -> No\n15. Is it the concept of \"fitness\" (or natural fitness) in evolutionary biology? -> No\n16. Is it the concept of \"natural selection\"? -> No\n17. Is it the concept of \"genetic drift\"? -> No\n18. Is it the concept of \"mutation\"? -> No\n19. Is it the concept of \"speciation\"? -> No\n20. Is it the concept of \"adaptation\"? -> No"
+}

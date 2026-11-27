@@ -1,0 +1,348 @@
+{
+  "run_id": "94b1703d41e44cea8699bb60ab60688c",
+  "timestamp_utc": "2026-11-26T20:59:11.032322+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 597,
+  "category": "movie",
+  "target": "Citizen Kane",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a6a2af8ce4d0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 597,
+    "agent_game_scenario": "movie",
+    "env_game_scenario": "Citizen Kane",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 18,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a movie. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie in color?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a silent film?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from before 1950?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from before 1930?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a drama?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie a musical?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie from the United States?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Alfred Hitchcock?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Frank Capra?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by William Wyler?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by John Ford?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Frank Lloyd?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Fritz Lang?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Ernst Lubitsch?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Frank Capra?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie starring Charlie Chaplin?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie directed by Orson Welles?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the movie the 1941 film \"Citizen Kane\"?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a movie, and the correct answer is Citizen Kane."
+      },
+      {
+        "role": "user",
+        "content": "Is the movie in color?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a silent film?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from before 1950?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from before 1930?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a drama?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie a musical?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie from the United States?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Alfred Hitchcock?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Frank Capra?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by William Wyler?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by John Ford?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Frank Lloyd?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Fritz Lang?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Ernst Lubitsch?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Frank Capra?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie starring Charlie Chaplin?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie directed by Orson Welles?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the movie the 1941 film \"Citizen Kane\"?\n(Remember the player is trying to guess a movie, and the correct answer is Citizen Kane. Reply with Yes or No in relation to Citizen Kane.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8172222222222223,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 18,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 0.9444444444444444,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 1,
+    "repeated_pairs": [
+      {
+        "current_turn": 15,
+        "original_turn": 9
+      }
+    ],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 18/20\nInvalid question turns: []\nExact repeated questions: 1\nEnvironment leakage: False\nTraining reward: 0.8172\n\nRepeated questions:\n- Turn 15 repeated turn 9, already answered 'No'.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n7. Is the movie from the United States? -> Yes\n8. Is the movie directed by Alfred Hitchcock? -> No\n9. Is the movie directed by Frank Capra? -> No\n10. Is the movie directed by William Wyler? -> No\n11. Is the movie directed by John Ford? -> No\n12. Is the movie directed by Frank Lloyd? -> No\n13. Is the movie directed by Fritz Lang? -> No\n14. Is the movie directed by Ernst Lubitsch? -> No\n15. Is the movie directed by Frank Capra? -> No\n16. Is the movie starring Charlie Chaplin? -> No\n17. Is the movie directed by Orson Welles? -> Yes\n18. Is the movie the 1941 film \"Citizen Kane\"? -> Goal reached."
+}

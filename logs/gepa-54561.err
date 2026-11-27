@@ -1,0 +1,399 @@
+2026/11/26 21:53:19 INFO dspy.teleprompt.gepa.gepa: Running GEPA for approx 120 metric calls of the program. This amounts to 6.67 full evals on the train+val set.
+2026/11/26 21:53:19 INFO dspy.teleprompt.gepa.gepa: Using 6 examples for tracking Pareto scores.
+GEPA Optimization:   0%|          | 0/120 [00:00<?, ?rollouts/s]2026/11/26 21:53:42 INFO dspy.evaluate.evaluate: Average Metric: 4.04 / 6 (67.3%)
+2026/11/26 21:53:42 INFO dspy.teleprompt.gepa.gepa: Iteration 0: Base program full valset score: 0.6733333333333333 over 6 / 6 examples
+GEPA Optimization:   5%|▌         | 6/120 [00:22<07:10,  3.78s/rollouts]2026/11/26 21:53:51 INFO dspy.evaluate.evaluate: Average Metric: 1.09 / 2 (54.5%)
+2026/11/26 21:53:51 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:53:54 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you should adapt your questions based on the new information.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+
+**Strategic Guidelines for Question Selection:**
+1. **Maximize Information Gain**: Prioritize questions that split the remaining hypothesis space as evenly as possible (binary search strategy). Avoid questions that are too specific or likely to receive a 'No' answer early on, unless they are critical pivot points.
+2. **Track Excluded Hypotheses**: Maintain a mental list of what has been ruled out. Do not ask questions that test hypotheses already eliminated by previous 'No' answers.
+3. **Avoid Redundancy**: Do not merely rewrite or restate previous questions with minor variations. If a broad category is rejected (e.g., 'physics'), do not immediately ask about specific sub-fields (e.g., 'quantum mechanics') without first exploring other major categories (e.g., 'chemistry', 'biology', 'mathematics').
+4. **Progressive Refinement**: Start with broad, high-level categories (e.g., 'Is it alive?', 'Is it abstract?', 'Is it man-made?'). Narrow down to specific attributes only after establishing the general domain.
+5. **Avoid Premature Specificity**: Do not guess specific items (e.g., 'Is it a specific color like pink?') until the general category (e.g., 'Is it a color?') has been confirmed and other possibilities in that category have been largely eliminated.
+
+The game starts now. You are trying to guess a [TARGET_CATEGORY]. Ask your first question!
+2026/11/26 21:54:04 INFO dspy.evaluate.evaluate: Average Metric: 1.1 / 2 (55.0%)
+2026/11/26 21:54:33 INFO dspy.evaluate.evaluate: Average Metric: 3.880000000000001 / 6 (64.7%)
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Accepted candidate (subsample score 1.09 -> 1.1); running full eval.
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Valset score for new program: 0.6466666666666667 (coverage 6 / 6)
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Val aggregate for new program: 0.6466666666666667
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Individual valset scores for new program: {0: 0.8400000000000001, 1: 0.2, 2: 0.93, 3: 0.8500000000000001, 4: 0.2, 5: 0.8600000000000001}
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.8600000000000001, 4: 0.2, 5: 0.92}
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Valset pareto front aggregate score: 0.6750000000000002
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Updated valset pareto front programs: {0: {0}, 1: {1}, 2: {0}, 3: {0}, 4: {0, 1}, 5: {0}}
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Best program as per aggregate score on valset: 0
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Best score on valset: 0.6733333333333333
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: Linear pareto front program index: 0
+2026/11/26 21:54:33 INFO dspy.teleprompt.gepa.gepa: Iteration 1: New program candidate index: 1
+GEPA Optimization:  13%|█▎        | 16/120 [01:14<08:13,  4.75s/rollouts]2026/11/26 21:54:39 INFO dspy.evaluate.evaluate: Average Metric: 1.11 / 2 (55.5%)
+2026/11/26 21:54:39 INFO dspy.teleprompt.gepa.gepa: Iteration 2: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:54:42 INFO dspy.teleprompt.gepa.gepa: Iteration 2: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the specific name of a thing or person by asking up to 20 yes-or-no questions. You will receive answers of 'Yes' or 'No' and must use this information to refine your hypotheses.
+
+Instructions:
+1. **Ask Only Yes-or-No Questions**: Every question must be answerable with a simple 'Yes' or 'No'.
+2. **Maximize Information Gain**: Prioritize questions that split the remaining possible candidates into roughly equal halves. Avoid asking questions that eliminate only a small number of possibilities or ask about specific items if the category is still broad.
+3. **Eliminate Hypotheses Systematically**: Track which specific items or sub-categories have been ruled out by previous 'No' answers. Do not ask about items or categories that have already been excluded. Avoid cycling through minor variations of the same unproductive hypothesis.
+4. **Adapt Based on History**: Use the full conversation history to inform your next question. If you have narrowed down a category (e.g., 'woodwind instrument'), ask questions that further subdivide that category (e.g., 'uses a reed', 'made of wood', 'commonly played by blowing') rather than jumping to specific guesses too early unless you are highly confident.
+5. **Guessing**: You may make a specific guess as a question (e.g., 'Is it a [Specific Item]?') if you believe you have narrowed it down to one or two strong candidates. If incorrect, use the new information to pivot immediately.
+
+Current Task: Guess the item based on the provided `game_rules` and `history`. Output only the next question.
+2026/11/26 21:54:51 INFO dspy.evaluate.evaluate: Average Metric: 1.09 / 2 (54.5%)
+2026/11/26 21:54:51 INFO dspy.teleprompt.gepa.gepa: Iteration 2: New subsample score 1.09 is not better than old score 1.11, skipping
+GEPA Optimization:  17%|█▋        | 20/120 [01:31<07:43,  4.63s/rollouts]2026/11/26 21:55:03 INFO dspy.evaluate.evaluate: Average Metric: 0.39 / 2 (19.5%)
+2026/11/26 21:55:03 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:55:05 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you should adapt your questions based on the new information.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **CRITICAL STRATEGY**: You must maintain a mental state of known facts and excluded hypotheses. Before asking a question, review the conversation history to ensure you are not repeating a question or asking a question that is logically equivalent to one already asked and answered 'No'.
+- **INFORMATION GAIN**: Prioritize questions that split the remaining possibility space roughly in half (binary search strategy) rather than listing specific instances or minor variations of the same category. Avoid 'narrowing down' by asking about increasingly specific sub-types if broader categories have not been fully explored or if specific guesses have failed.
+- **AVOID CYCLING**: If you have asked about a specific author, book, or concept and received 'No', do not immediately ask about another specific item in the same narrow bucket unless you have new information to distinguish it. Instead, step back to broader categorizations (e.g., genre, era, medium, fundamental properties) to re-evaluate the search space.
+- **FORMAT**: Produce only one question per turn. Do not include explanations or reasoning in the output, just the question itself.
+2026/11/26 21:55:19 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 21:55:50 INFO dspy.evaluate.evaluate: Average Metric: 3.2568750000000004 / 6 (54.3%)
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Accepted candidate (subsample score 0.39 -> 0.4); running full eval.
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Valset score for new program: 0.5428125 (coverage 6 / 6)
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Val aggregate for new program: 0.5428125
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Individual valset scores for new program: {0: 0.2, 1: 0.2, 2: 0.9400000000000001, 3: 0.8800000000000001, 4: 0.2, 5: 0.836875}
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.8800000000000001, 4: 0.2, 5: 0.92}
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Valset pareto front aggregate score: 0.6783333333333333
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Updated valset pareto front programs: {0: {0}, 1: {1, 2}, 2: {0}, 3: {2}, 4: {0, 1, 2}, 5: {0}}
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Best program as per aggregate score on valset: 0
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Best score on valset: 0.6733333333333333
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: Linear pareto front program index: 0
+2026/11/26 21:55:50 INFO dspy.teleprompt.gepa.gepa: Iteration 3: New program candidate index: 2
+GEPA Optimization:  25%|██▌       | 30/120 [02:30<07:54,  5.27s/rollouts]2026/11/26 21:56:02 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 21:56:02 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:56:04 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.
+- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.
+
+The game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!
+2026/11/26 21:56:15 INFO dspy.evaluate.evaluate: Average Metric: 1.04 / 2 (52.0%)
+2026/11/26 21:56:43 INFO dspy.evaluate.evaluate: Average Metric: 4.03 / 6 (67.2%)
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Accepted candidate (subsample score 0.4 -> 1.04); running full eval.
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Valset score for new program: 0.6716666666666667 (coverage 6 / 6)
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Val aggregate for new program: 0.6716666666666667
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Individual valset scores for new program: {0: 0.89, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.9}
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.92}
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Valset pareto front aggregate score: 0.68
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Updated valset pareto front programs: {0: {0}, 1: {1, 2, 3}, 2: {0, 3}, 3: {3}, 4: {0, 1, 2, 3}, 5: {0}}
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Best program as per aggregate score on valset: 0
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Best score on valset: 0.6733333333333333
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: Linear pareto front program index: 0
+2026/11/26 21:56:43 INFO dspy.teleprompt.gepa.gepa: Iteration 4: New program candidate index: 3
+GEPA Optimization:  33%|███▎      | 40/120 [03:23<07:01,  5.27s/rollouts]2026/11/26 21:56:51 INFO dspy.evaluate.evaluate: Average Metric: 1.09 / 2 (54.5%)
+2026/11/26 21:56:51 INFO dspy.teleprompt.gepa.gepa: Iteration 5: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:56:53 INFO dspy.teleprompt.gepa.gepa: Iteration 5: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess a specific entity (brand, movie, person, etc.) by asking up to 20 yes-or-no questions. You receive 'Yes' or 'No' answers and must use this information to narrow down the possibilities.
+
+**Instructions:**
+1. **Ask only yes-or-no questions.** Do not ask open-ended questions or multiple questions at once.
+2. **Maximize Information Gain:** Prioritize questions that split the remaining hypothesis space as evenly as possible (binary search strategy). Avoid questions that are likely to receive a 'No' answer if a large portion of candidates would be excluded, unless that exclusion is critical to ruling out major categories.
+3. **Avoid Repetition:** Do not ask questions that have already been answered. Track the history of interactions to ensure you do not repeat hypotheses or categories.
+4. **Adapt Strategy:** Use previous answers to refine your next question. If a broad category is ruled out (e.g., 'European'), move to adjacent or remaining categories (e.g., 'Asian', 'American', 'Other') rather than cycling through specific examples within the ruled-out category.
+5. **Guess when Confident:** If you can identify the specific entity with high confidence before reaching 20 questions, make a direct guess (e.g., 'Is the brand Canon?') to win the game.
+6. **Specific Entity Guessing:** When narrowing down to specific entities, consider well-known examples within the remaining constraints. If multiple strong candidates remain, ask distinguishing questions about their attributes or origins before guessing.
+
+**Current State:**
+- **Game Rules:** [Provided in input]
+- **History:** [Provided in input]
+
+Produce exactly one question based on the history and rules.
+2026/11/26 21:57:05 INFO dspy.evaluate.evaluate: Average Metric: 1.03 / 2 (51.5%)
+2026/11/26 21:57:05 INFO dspy.teleprompt.gepa.gepa: Iteration 5: New subsample score 1.03 is not better than old score 1.09, skipping
+GEPA Optimization:  37%|███▋      | 44/120 [03:46<06:46,  5.35s/rollouts]2026/11/26 21:57:16 INFO dspy.evaluate.evaluate: Average Metric: 1.06 / 2 (53.0%)
+2026/11/26 21:57:16 INFO dspy.teleprompt.gepa.gepa: Iteration 6: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:57:18 INFO dspy.teleprompt.gepa.gepa: Iteration 6: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information, specifically narrowing down the hypothesis space.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Strategic Focus**: Prioritize questions that maximize information gain by splitting the remaining possibilities as evenly as possible. Do not cycle through minor variations of unproductive hypotheses. Instead, use previous 'No' answers to explicitly exclude categories and pivot to distinct, high-level categories. Avoid asking questions about specific instances if the broader category has not been confirmed.
+- **Contextual Awareness**: Review the entire history of previous interactions to ensure you are not repeating questions or exploring branches that have already been proven false.
+
+The game starts now. You are trying to guess a {category}. Ask your first question!
+2026/11/26 21:57:31 INFO dspy.evaluate.evaluate: Average Metric: 1.04 / 2 (52.0%)
+2026/11/26 21:57:31 INFO dspy.teleprompt.gepa.gepa: Iteration 6: New subsample score 1.04 is not better than old score 1.06, skipping
+GEPA Optimization:  40%|████      | 48/120 [04:11<06:40,  5.56s/rollouts]2026/11/26 21:57:42 INFO dspy.evaluate.evaluate: Average Metric: 1.02 / 2 (51.0%)
+2026/11/26 21:57:42 INFO dspy.teleprompt.gepa.gepa: Iteration 7: Selected program 0 score: 0.6733333333333333
+2026/11/26 21:57:45 INFO dspy.teleprompt.gepa.gepa: Iteration 7: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a specific thing, person, or invention by asking up to 20 yes-or-no questions. You must strictly adhere to the following strategy to maximize information gain and efficiency:
+
+1. **Question Format**: All questions must be strictly yes-or-no questions. Do not ask open-ended questions or make guesses as questions.
+2. **Hypothesis Tracking**: Maintain a mental list of potential candidates. After each 'No' answer, explicitly eliminate hypotheses that are ruled out by that answer. After each 'Yes' answer, narrow down the remaining candidates.
+3. **Information Gain**: Prioritize questions that split the remaining hypothesis space as evenly as possible (50/50 split). Avoid asking questions that are too specific (e.g., guessing a specific name) unless you are highly confident and have few turns left. Avoid asking questions that are too broad if you have already gathered significant specific details.
+4. **Avoid Cycling**: Do not ask questions that are minor variations of previously asked questions if the previous answer was 'No'. If a category was ruled out, move to a different, orthogonal category.
+5. **Adaptation**: Use the history of previous questions and answers to refine your next question. If previous broad categories (e.g., communication, computing) were ruled out, pivot to other major domains (e.g., medical, transportation, household).
+6. **Final Guess**: If you are confident in a specific answer, you may make a guess instead of asking a question. This counts as a turn. If you are not confident, ask a question that helps distinguish between the top remaining candidates.
+
+Do not restate the game rules. Focus solely on generating the next optimal question based on the provided history and the current state of knowledge.
+2026/11/26 21:57:58 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 21:57:58 INFO dspy.teleprompt.gepa.gepa: Iteration 7: New subsample score 0.4 is not better than old score 1.02, skipping
+GEPA Optimization:  43%|████▎     | 52/120 [04:38<06:38,  5.86s/rollouts]2026/11/26 21:58:03 WARNING dspy.clients.lm: LM response was truncated; increase max_tokens or inspect history.
+2026/11/26 21:58:12 INFO dspy.evaluate.evaluate: Average Metric: 0.3225 / 2 (16.1%)
+2026/11/26 21:58:12 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Selected program 3 score: 0.6716666666666667
+2026/11/26 21:58:15 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.
+- **Exclusion Tracking**: Explicitly track what has been ruled out. For example, if you have determined the subject is a "woodwind instrument" but not a flute, clarinet, or saxophone, do not ask "Is it a clarinet?" again. Instead, consider other woodwinds like oboe, bassoon, or double-reed instruments. If you have ruled out entire categories (e.g., root, leafy, fruit, flower, bulb, stem, pod vegetables), ensure your next question targets a remaining category (e.g., gourd, tuber, fungus, herb/spice) rather than repeating a ruled-out one.
+- **Avoid Redundancy**: Do not ask the same question or a semantically identical question twice. Ensure each question provides new information or significantly narrows down the remaining possibilities.
+- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.
+
+The game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!
+2026/11/26 21:58:26 WARNING dspy.clients.lm: LM response was truncated; increase max_tokens or inspect history.
+2026/11/26 21:58:27 INFO dspy.evaluate.evaluate: Average Metric: 0.39 / 2 (19.5%)
+2026/11/26 21:58:58 INFO dspy.evaluate.evaluate: Average Metric: 3.2700000000000005 / 6 (54.5%)
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Accepted candidate (subsample score 0.3225 -> 0.39); running full eval.
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Valset score for new program: 0.545 (coverage 6 / 6)
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Val aggregate for new program: 0.545
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Individual valset scores for new program: {0: 0.89, 1: 0.2, 2: 0.93, 3: 0.18000000000000002, 4: 0.2, 5: 0.87}
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.92}
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Valset pareto front aggregate score: 0.68
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Updated valset pareto front programs: {0: {0}, 1: {1, 2, 3, 4}, 2: {0, 3}, 3: {3}, 4: {0, 1, 2, 3, 4}, 5: {0}}
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Best program as per aggregate score on valset: 0
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Best score on valset: 0.6733333333333333
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: Linear pareto front program index: 0
+2026/11/26 21:58:58 INFO dspy.teleprompt.gepa.gepa: Iteration 8: New program candidate index: 4
+GEPA Optimization:  52%|█████▏    | 62/120 [05:38<05:43,  5.92s/rollouts]2026/11/26 21:59:11 INFO dspy.evaluate.evaluate: Average Metric: 1.0172222222222222 / 2 (50.9%)
+2026/11/26 21:59:11 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Selected program 3 score: 0.6716666666666667
+2026/11/26 21:59:14 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. Specifically, avoid cycling through lists of specific entities (e.g., directors, actors, brands) without first narrowing down the broader category, as this wastes turns on low-probability guesses.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Critical Strategy**: 
+  1. Maintain a mental list of excluded hypotheses and remaining possibilities. 
+  2. Avoid cycling through minor variations of the same unproductive hypothesis. If a broad category (e.g., 'directed by famous Hollywood directors') yields only 'No' answers, pivot to other dimensions (e.g., genre, era, country of origin) rather than listing more specific names within that failed dimension.
+  3. Prioritize questions that split the remaining search space as evenly as possible (high information gain). For example, instead of asking 'Is it a coat?', ask 'Is it an outerwear item?' to cover coats, jackets, parkas, etc., simultaneously.
+  4. If you have narrowed it down to a specific domain (e.g., quantum physics, classic Hollywood), ask broad questions to identify the specific sub-field, genre, or era before guessing the exact term.
+  5. In the final turns, if the search space is small, you may ask specific identification questions, but ensure you haven't already ruled out the target through previous negative answers.
+- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.
+2026/11/26 21:59:26 INFO dspy.evaluate.evaluate: Average Metric: 1.04 / 2 (52.0%)
+2026/11/26 22:00:01 INFO dspy.evaluate.evaluate: Average Metric: 2.59 / 6 (43.2%)
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Accepted candidate (subsample score 1.0172222222222222 -> 1.04); running full eval.
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Valset score for new program: 0.4316666666666667 (coverage 6 / 6)
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Val aggregate for new program: 0.4316666666666667
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Individual valset scores for new program: {0: 0.18000000000000002, 1: 0.2, 2: 0.93, 3: 0.2, 4: 0.2, 5: 0.8800000000000001}
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.92}
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Valset pareto front aggregate score: 0.68
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Updated valset pareto front programs: {0: {0}, 1: {1, 2, 3, 4, 5}, 2: {0, 3}, 3: {3}, 4: {0, 1, 2, 3, 4, 5}, 5: {0}}
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Best program as per aggregate score on valset: 0
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Best score on valset: 0.6733333333333333
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: Linear pareto front program index: 0
+2026/11/26 22:00:01 INFO dspy.teleprompt.gepa.gepa: Iteration 9: New program candidate index: 5
+GEPA Optimization:  60%|██████    | 72/120 [06:41<04:52,  6.08s/rollouts]2026/11/26 22:00:13 INFO dspy.evaluate.evaluate: Average Metric: 0.39 / 2 (19.5%)
+2026/11/26 22:00:13 INFO dspy.teleprompt.gepa.gepa: Iteration 10: Selected program 0 score: 0.6733333333333333
+2026/11/26 22:00:15 INFO dspy.teleprompt.gepa.gepa: Iteration 10: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or scientific concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your strict instructions:
+1. You can ask only yes-or-no questions.
+2. After receiving each answer, you MUST adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant.
+3. Your goal is to guess the topic in as few questions as possible. If you are confident, you can make a direct guess (e.g., 'Is the answer X?') which counts as a question.
+4. Track which hypotheses have been excluded by previous 'No' answers. Avoid cycling through minor variations of the same unproductive hypothesis or asking questions that do not significantly narrow down the search space.
+5. Prioritize questions with high information gain. If a branch of inquiry has been exhausted (multiple 'No' answers regarding related sub-topics), pivot to a different major category or a more specific distinguishing feature.
+
+The game starts now. You are trying to guess a scientific concept. Ask your first question!
+2026/11/26 22:00:29 INFO dspy.evaluate.evaluate: Average Metric: 0.38 / 2 (19.0%)
+2026/11/26 22:00:29 INFO dspy.teleprompt.gepa.gepa: Iteration 10: New subsample score 0.38 is not better than old score 0.39, skipping
+GEPA Optimization:  63%|██████▎   | 76/120 [07:09<04:34,  6.24s/rollouts]2026/11/26 22:00:37 INFO dspy.evaluate.evaluate: Average Metric: 1.7100000000000002 / 2 (85.5%)
+2026/11/26 22:00:37 INFO dspy.teleprompt.gepa.gepa: Iteration 11: Selected program 0 score: 0.6733333333333333
+2026/11/26 22:00:39 INFO dspy.teleprompt.gepa.gepa: Iteration 11: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you should adapt your questions based on the new information.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+
+Strategic Guidelines:
+1. Prioritize information gain: Ask questions that split the remaining possibilities as evenly as possible (e.g., 'Is it a living thing?' rather than 'Is it a dog?').
+2. Avoid redundant or overly specific questions early in the game. Narrow down broad categories (e.g., living vs. non-living, abstract vs. concrete, human vs. object) before drilling into specifics.
+3. Use previous answers to eliminate large sets of candidates. Do not ask questions that have already been answered or whose answers are implied by previous 'Yes'/'No' responses.
+4. When narrowing down to a small set of candidates (e.g., specific movies, colors, or animals), ask targeted questions to distinguish between them.
+5. If you have narrowed it down to one or two highly likely candidates, you may make a direct guess.
+
+Produce one question and then wait for a reply.
+2026/11/26 22:00:49 INFO dspy.evaluate.evaluate: Average Metric: 1.0705 / 2 (53.5%)
+2026/11/26 22:00:49 INFO dspy.teleprompt.gepa.gepa: Iteration 11: New subsample score 1.0705 is not better than old score 1.7100000000000002, skipping
+GEPA Optimization:  67%|██████▋   | 80/120 [07:29<03:59,  5.99s/rollouts]2026/11/26 22:01:01 INFO dspy.evaluate.evaluate: Average Metric: 1.05 / 2 (52.5%)
+2026/11/26 22:01:01 INFO dspy.teleprompt.gepa.gepa: Iteration 12: Selected program 3 score: 0.6716666666666667
+2026/11/26 22:01:04 INFO dspy.teleprompt.gepa.gepa: Iteration 12: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). 
+- **Domain-Specific Precision**: If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term. Be precise in your terminology. For example, if you know it is a particle in the Standard Model, distinguish clearly between fermions and bosons, and further between specific particles (e.g., W/Z bosons vs. neutrinos). Do not ask vague questions like "Is it related to X?" if X is a broad category that has already been partially explored; instead, target specific members or properties within that category.
+- **Avoid Redundancy**: If you have asked "Is it related to the weak nuclear force?" and "Is it related to the W or Z bosons?" and received 'No', do not immediately ask "Is it related to the neutrino?" unless you have ruled out other weak-force carriers. Ensure each question eliminates a significant portion of the remaining hypothesis space.
+- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.
+
+The game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!
+2026/11/26 22:01:17 INFO dspy.evaluate.evaluate: Average Metric: 1.036875 / 2 (51.8%)
+2026/11/26 22:01:17 INFO dspy.teleprompt.gepa.gepa: Iteration 12: New subsample score 1.036875 is not better than old score 1.05, skipping
+GEPA Optimization:  70%|███████   | 84/120 [07:57<03:43,  6.20s/rollouts]2026/11/26 22:01:26 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 22:01:26 INFO dspy.teleprompt.gepa.gepa: Iteration 13: Selected program 0 score: 0.6733333333333333
+2026/11/26 22:01:28 INFO dspy.teleprompt.gepa.gepa: Iteration 13: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess a specific target (a thing, person, concept, etc.) by asking yes-or-no questions.
+
+**Rules:**
+1. You can ask only yes-or-no questions.
+2. You must adapt your questions based on the answers provided in the history.
+3. Your goal is to guess the topic in as few questions as possible.
+4. If you are confident, you can make a direct guess.
+
+**Strategy for Question Selection:**
+1. **Analyze History:** Review all previous questions and answers to identify what has been confirmed ('Yes') and what has been excluded ('No').
+2. **Identify Remaining Hypotheses:** Determine the set of plausible candidates that fit all the 'Yes' constraints and none of the 'No' constraints.
+3. **Maximize Information Gain:** Choose the next question that best splits the remaining hypothesis space. Avoid asking questions about specific items you have already ruled out or minor variations of ruled-out categories. Avoid cycling through similar, unproductive hypotheses.
+4. **Specificity:** Once the broad category is narrowed down, ask questions that distinguish between the most likely remaining candidates.
+
+**Output Format:**
+Produce exactly one question as a string. Do not include any other text or reasoning.
+2026/11/26 22:01:40 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 22:01:40 INFO dspy.teleprompt.gepa.gepa: Iteration 13: New subsample score 0.4 is not better than old score 0.4, skipping
+GEPA Optimization:  73%|███████▎  | 88/120 [08:20<03:15,  6.11s/rollouts]2026/11/26 22:01:54 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 22:01:54 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Selected program 3 score: 0.6716666666666667
+2026/11/26 22:01:58 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Critical Strategy**: 
+  1. **Track Hypotheses Explicitly**: Maintain a mental list of excluded hypotheses and remaining possibilities. Before asking a question, consider what set of potential answers it splits. Avoid asking questions that narrow down a very small subset if you haven't yet confirmed the broader category.
+  2. **Avoid Micro-Splitting**: Do not cycle through minor variations of the same unproductive hypothesis (e.g., asking about specific sub-types of a category that has already been partially ruled out or is too narrow). If you ask about a specific item (e.g., "Is it Gibbs Free Energy?") and the answer is No, do not immediately ask about its sibling ("Is it Helmholtz Free Energy?") unless you have strong reason to believe it is one of those two. Instead, step back and ask about the parent category or defining characteristics.
+  3. **Prioritize High Information Gain**: Ask questions that split the remaining search space as evenly as possible (approximately 50/50). Broad categorical questions (e.g., "Is it a living thing?", "Is it a brand?", "Is it a scientific concept?") are often better early-game moves than specific attribute questions.
+  4. **Domain-Specific Reasoning**: If you have narrowed it down to a specific domain (e.g., thermodynamics, medical devices), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term. For example, in science, distinguish between laws, theories, concepts, and phenomena. In brands, distinguish between industry sectors (tech, automotive, pharma) before narrowing to product lines.
+  5. **Logical Deduction**: Use 'No' answers to eliminate entire branches of possibility. If a question about a specific attribute yields 'No', infer what that implies about the object's nature and adjust your next question to explore a different attribute or a higher-level category.
+
+- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.
+
+The game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!
+2026/11/26 22:02:09 INFO dspy.evaluate.evaluate: Average Metric: 1.04 / 2 (52.0%)
+2026/11/26 22:02:39 INFO dspy.evaluate.evaluate: Average Metric: 3.8600000000000008 / 6 (64.3%)
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Accepted candidate (subsample score 0.4 -> 1.04); running full eval.
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Valset score for new program: 0.6433333333333334 (coverage 6 / 6)
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Val aggregate for new program: 0.6433333333333334
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Individual valset scores for new program: {0: 0.8800000000000001, 1: 0.2, 2: 0.93, 3: 0.8400000000000001, 4: 0.2, 5: 0.81}
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.92}
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Valset pareto front aggregate score: 0.68
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Updated valset pareto front programs: {0: {0}, 1: {1, 2, 3, 4, 5, 6}, 2: {0, 3}, 3: {3}, 4: {0, 1, 2, 3, 4, 5, 6}, 5: {0}}
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Best program as per aggregate score on valset: 0
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Best score on valset: 0.6733333333333333
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: Linear pareto front program index: 0
+2026/11/26 22:02:39 INFO dspy.teleprompt.gepa.gepa: Iteration 14: New program candidate index: 6
+GEPA Optimization:  82%|████████▏ | 98/120 [09:19<02:12,  6.01s/rollouts]2026/11/26 22:02:46 INFO dspy.evaluate.evaluate: Average Metric: 1.7600000000000002 / 2 (88.0%)
+2026/11/26 22:02:46 INFO dspy.teleprompt.gepa.gepa: Iteration 15: Selected program 0 score: 0.6733333333333333
+2026/11/26 22:02:48 INFO dspy.teleprompt.gepa.gepa: Iteration 15: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the specific name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your strict instructions:
+1. You can ask only yes-or-no questions.
+2. After receiving each answer, you must adapt your questions based on the new information to maximize information gain.
+3. Your goal is to guess the topic in as few questions as possible.
+4. If you are confident enough to identify the specific item, you should make a direct guess (e.g., "Is it [Specific Name]?") rather than asking another broad categorization question.
+5. Do not ask questions that have already been asked or are redundant based on previous answers.
+6. Avoid asking vague questions; instead, narrow down the possibilities using specific attributes (e.g., material, function, cultural association, physical characteristics).
+7. When making a final guess, state the specific name clearly.
+
+Analyze the conversation history provided. Consider the category of the target (if known from the game rules or previous answers) and the answers received so far. Formulate the next logical question or a final guess. Output only the question or guess in the following format:
+Question: [Your Question or Guess]
+2026/11/26 22:03:02 INFO dspy.evaluate.evaluate: Average Metric: 0.9800000000000001 / 2 (49.0%)
+2026/11/26 22:03:02 INFO dspy.teleprompt.gepa.gepa: Iteration 15: New subsample score 0.9800000000000001 is not better than old score 1.7600000000000002, skipping
+GEPA Optimization:  85%|████████▌ | 102/120 [09:43<01:47,  5.97s/rollouts]2026/11/26 22:03:15 INFO dspy.evaluate.evaluate: Average Metric: 1.02 / 2 (51.0%)
+2026/11/26 22:03:15 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Selected program 3 score: 0.6716666666666667
+2026/11/26 22:03:18 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.
+
+Here are your instructions:
+- You can ask only yes-or-no questions.
+- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.
+- Your goal is to guess the topic in as few questions as possible.
+- If you're confident, you can make a guess before reaching 20 questions.
+- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.
+- **Avoid Redundancy and Over-Specificity**: Do not ask questions that are subsets of questions already answered 'Yes' or supersets of questions already answered 'No'. For example, if 'Quantum Mechanics' is confirmed, do not ask about 'Quantum Entanglement' immediately if it was already ruled out or if the search space is still too broad. Instead, focus on distinguishing between major categories within that domain.
+- **Track Exclusions**: Explicitly keep track of what has been ruled out. If you ask 'Is it X?' and the answer is 'No', you must not ask 'Is it not X?' or similar redundant phrasing. If you ask 'Is it a type of Y?' and the answer is 'No', you must not ask 'Is it a type of Z?' where Z is a sibling category to Y if the previous question implied a broader category was excluded.
+- **Final Guessing**: When the search space is sufficiently narrowed (e.g., to a single famous entity or a very small set of likely candidates), make a direct guess. Do not continue asking questions if you have reached the 20th turn without a guess; your last question should be the guess itself.
+- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.
+
+The game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!
+2026/11/26 22:03:28 INFO dspy.evaluate.evaluate: Average Metric: 1.09 / 2 (54.5%)
+2026/11/26 22:03:56 INFO dspy.evaluate.evaluate: Average Metric: 3.9061538461538463 / 6 (65.1%)
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Accepted candidate (subsample score 1.02 -> 1.09); running full eval.
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Valset score for new program: 0.6510256410256411 (coverage 6 / 6)
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Val aggregate for new program: 0.6510256410256411
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Individual valset scores for new program: {0: 0.8800000000000001, 1: 0.19, 2: 0.93, 3: 0.8400000000000001, 4: 0.2, 5: 0.866153846153846}
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.92}
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Valset pareto front aggregate score: 0.68
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Updated valset pareto front programs: {0: {0}, 1: {1, 2, 3, 4, 5, 6}, 2: {0, 3}, 3: {3}, 4: {0, 1, 2, 3, 4, 5, 6, 7}, 5: {0}}
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Best program as per aggregate score on valset: 0
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Best score on valset: 0.6733333333333333
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: Linear pareto front program index: 0
+2026/11/26 22:03:56 INFO dspy.teleprompt.gepa.gepa: Iteration 16: New program candidate index: 7
+GEPA Optimization:  93%|█████████▎| 112/120 [10:36<00:45,  5.71s/rollouts]2026/11/26 22:04:09 INFO dspy.evaluate.evaluate: Average Metric: 0.4 / 2 (20.0%)
+2026/11/26 22:04:09 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Selected program 3 score: 0.6716666666666667
+2026/11/26 22:04:13 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Proposed new text for ask: You are playing a game of 20 Questions. Your goal is to guess the name of a specific entity (thing, person, concept, book, movie, etc.) by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.'
+
+**Critical Strategy for Information Gain and Hypothesis Tracking:**
+
+1.  **Maintain a Dynamic Hypothesis Space**: Before asking a question, explicitly or implicitly evaluate the set of remaining possibilities. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. If a previous answer was 'No' to a broad category (e.g., 'Is it a superhero film?'), do not ask about specific superhero films or sub-genres of that category unless you are confirming a specific attribute that was previously excluded.
+
+2.  **Maximize Information Gain**: Prioritize questions that split the remaining search space as evenly as possible (binary search strategy). Avoid asking 'low information' questions that eliminate only a tiny fraction of possibilities or ask about very specific entities before narrowing down the domain.
+
+3.  **Avoid Cycling and Redundancy**: Do not cycle through minor variations of the same unproductive hypothesis. For example, if you know the entity is a book, non-fiction, set in Europe, but not in France, Germany, Italy, Russia, or Spain, do not sequentially ask 'Is it set in Portugal?', 'Is it set in Greece?', etc., without first checking if it is a non-European book (which was already excluded) or if the premise itself is flawed. If you have exhausted major geographic or categorical splits, make an educated guess or ask a question that defines a new, high-level attribute (e.g., medium, author nationality, specific award) rather than guessing specific titles prematurely.
+
+4.  **Refine Based on History**: Use the full history of answers to eliminate impossible candidates. If you are stuck, look for attributes that have not been queried yet (e.g., if you've covered genre, era, and location, consider the creator's identity, the work's reception, or specific plot points).
+
+5.  **Guessing**: You may make a guess before reaching 20 questions if you are confident. However, avoid guessing specific titles/names until you have narrowed the domain significantly (e.g., by genre, era, and key attributes).
+
+**Input Format**: You will receive the `TARGET_TYPE` (e.g., 'book', 'movie', 'person') and the `history` of previous questions and answers.
+
+**Output**: Ask only one yes-or-no question. Do not restate the rules. Do not ask multiple questions in one turn.
+2026/11/26 22:04:20 WARNING dspy.clients.lm: LM response was truncated; increase max_tokens or inspect history.
+2026/11/26 22:04:27 INFO dspy.evaluate.evaluate: Average Metric: 1.0073684210526317 / 2 (50.4%)
+2026/11/26 22:05:00 INFO dspy.evaluate.evaluate: Average Metric: 3.170000000000001 / 6 (52.8%)
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Accepted candidate (subsample score 0.4 -> 1.0073684210526317); running full eval.
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Valset score for new program: 0.5283333333333334 (coverage 6 / 6)
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Val aggregate for new program: 0.5283333333333334
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Individual valset scores for new program: {0: 0.19, 1: 0.2, 2: 0.8800000000000001, 3: 0.8400000000000001, 4: 0.2, 5: 0.8600000000000001}
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: New valset pareto front scores: {0: 0.92, 1: 0.2, 2: 0.9500000000000001, 3: 0.89, 4: 0.2, 5: 0.92}
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Valset pareto front aggregate score: 0.68
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Updated valset pareto front programs: {0: {0}, 1: {1, 2, 3, 4, 5, 6, 8}, 2: {0, 3}, 3: {3}, 4: {0, 1, 2, 3, 4, 5, 6, 7, 8}, 5: {0}}
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Best valset aggregate score so far: 0.6733333333333333
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Best program as per aggregate score on valset: 0
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Best score on valset: 0.6733333333333333
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: Linear pareto front program index: 0
+2026/11/26 22:05:00 INFO dspy.teleprompt.gepa.gepa: Iteration 17: New program candidate index: 8
+GEPA Optimization:  93%|█████████▎| 112/120 [11:40<00:50,  6.26s/rollouts]

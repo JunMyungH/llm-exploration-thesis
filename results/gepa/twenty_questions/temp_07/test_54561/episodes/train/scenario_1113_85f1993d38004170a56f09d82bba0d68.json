@@ -1,0 +1,343 @@
+{
+  "run_id": "85f1993d38004170a56f09d82bba0d68",
+  "timestamp_utc": "2026-11-26T20:57:36.420510+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1113,
+  "category": "book",
+  "target": "All Quiet on the Western Front",
+  "prompt_mode": "paprika",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1113,
+    "agent_game_scenario": "book",
+    "env_game_scenario": "All Quiet on the Western Front",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 18,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a science fiction novel?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a fantasy novel?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of non-fiction?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a mystery or thriller novel?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a romance novel?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a historical fiction novel?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Europe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the Middle Ages?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 20th century?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set during World War II?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set during the American Civil War?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set during World War I?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Germany?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character German?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character a soldier?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the main character a pilot?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book \"All Quiet on the Western Front\"?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is All Quiet on the Western Front."
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a science fiction novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a fantasy novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of non-fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a mystery or thriller novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a romance novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a historical fiction novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Europe?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the Middle Ages?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 20th century?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set during World War II?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set during the American Civil War?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set during World War I?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Germany?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character German?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character a soldier?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the main character a pilot?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book \"All Quiet on the Western Front\"?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8200000000000001,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 18,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 18/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8200\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n7. Is the book a historical fiction novel? -> Yes\n8. Is the book set in Europe? -> Yes\n9. Is the book set in the Middle Ages? -> No\n10. Is the book set in the 20th century? -> Yes\n11. Is the book set during World War II? -> No\n12. Is the book set during the American Civil War? -> No\n13. Is the book set during World War I? -> Yes\n14. Is the book set in Germany? -> Yes\n15. Is the main character German? -> Yes\n16. Is the main character a soldier? -> Yes\n17. Is the main character a pilot? -> No\n18. Is the book \"All Quiet on the Western Front\"? -> Goal reached."
+}

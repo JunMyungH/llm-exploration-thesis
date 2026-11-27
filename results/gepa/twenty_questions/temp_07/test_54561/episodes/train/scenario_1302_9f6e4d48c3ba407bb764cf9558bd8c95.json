@@ -1,0 +1,377 @@
+{
+  "run_id": "9f6e4d48c3ba407bb764cf9558bd8c95",
+  "timestamp_utc": "2026-11-26T20:58:27.688615+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1302,
+  "category": "vegetable",
+  "target": "Oregano",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b7bb1dd9178b",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- **Exclusion Tracking**: Explicitly track what has been ruled out. For example, if you have determined the subject is a \"woodwind instrument\" but not a flute, clarinet, or saxophone, do not ask \"Is it a clarinet?\" again. Instead, consider other woodwinds like oboe, bassoon, or double-reed instruments. If you have ruled out entire categories (e.g., root, leafy, fruit, flower, bulb, stem, pod vegetables), ensure your next question targets a remaining category (e.g., gourd, tuber, fungus, herb/spice) rather than repeating a ruled-out one.\n- **Avoid Redundancy**: Do not ask the same question or a semantically identical question twice. Ensure each question provides new information or significantly narrows down the remaining possibilities.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1302,
+    "agent_game_scenario": "vegetable",
+    "env_game_scenario": "Oregano",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a vegetable. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a root vegetable?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a leafy green?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable spinach?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable lettuce?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable kale?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable Swiss chard?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable cabbage?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable collard greens?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable broccoli?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a cruciferous vegetable (such as Brussels sprouts, cauliflower, or bok choy)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a member of the nightshade family (Solanaceae)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a member of the allium family (such as onion, garlic, leek, or chives)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a member of the cucumber/squash family (Cucurbitaceae)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a member of the bean/pea family (Fabaceae)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a member of the celery/parsley family (Apiaceae), such as parsley, cilantro, or celery?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable a member of the amaranth family (Amaranthaceae), such as Swiss chard (wait, chard was ruled out), amaranth greens, or spinach relatives? Let's try a different angle. Is the vegetable a member of the purslane family (Portulacaceae)?\nNo, let's stick to standard vegetables. Is the vegetable a member of the amaranth family?\nActually, let's look at what's left. We have leafy greens, not root, not cruciferous, not nightshade, not allium, not cucurbit, not fabaceae, not apiaceae.\nCommon leafy greens: Spinach (No), Lettuce (No), Kale (No), Chard (No), Cabbage (No), Collards (No), Broccoli (No, also not cruciferous? Wait, broccoli IS cruciferous. The user said No to broccoli AND No to \"Is it a cruciferous vegetable\". This implies the target is definitely NOT cruciferous.\nOther leafy greens: Arugula (Rocket), Mustard Greens, Bok Choy (Cruciferous - ruled out), Tatsoi"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable arugula (also known as rocket)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable mustard greens?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable bok choy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the vegetable parsley?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a vegetable, and the correct answer is Oregano."
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a root vegetable?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a leafy green?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable spinach?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable lettuce?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable kale?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable Swiss chard?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable cabbage?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable collard greens?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable broccoli?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a cruciferous vegetable (such as Brussels sprouts, cauliflower, or bok choy)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a member of the nightshade family (Solanaceae)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a member of the allium family (such as onion, garlic, leek, or chives)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a member of the cucumber/squash family (Cucurbitaceae)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a member of the bean/pea family (Fabaceae)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a member of the celery/parsley family (Apiaceae), such as parsley, cilantro, or celery?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable a member of the amaranth family (Amaranthaceae), such as Swiss chard (wait, chard was ruled out), amaranth greens, or spinach relatives? Let's try a different angle. Is the vegetable a member of the purslane family (Portulacaceae)?\nNo, let's stick to standard vegetables. Is the vegetable a member of the amaranth family?\nActually, let's look at what's left. We have leafy greens, not root, not cruciferous, not nightshade, not allium, not cucurbit, not fabaceae, not apiaceae.\nCommon leafy greens: Spinach (No), Lettuce (No), Kale (No), Chard (No), Cabbage (No), Collards (No), Broccoli (No, also not cruciferous? Wait, broccoli IS cruciferous. The user said No to broccoli AND No to \"Is it a cruciferous vegetable\". This implies the target is definitely NOT cruciferous.\nOther leafy greens: Arugula (Rocket), Mustard Greens, Bok Choy (Cruciferous - ruled out), Tatsoi\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable arugula (also known as rocket)?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable mustard greens?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable bok choy?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the vegetable parsley?\n(Remember the player is trying to guess a vegetable, and the correct answer is Oregano. Reply with Yes or No in relation to Oregano.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.19,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 0.95,
+    "unique_ratio": 1.0,
+    "invalid_count": 1,
+    "invalid_turns": [
+      16
+    ],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: [16]\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.1900\n\nEach turn must contain exactly one properly formatted question.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the vegetable broccoli? -> No\n10. Is the vegetable a cruciferous vegetable (such as Brussels sprouts, cauliflower, or bok choy)? -> No\n11. Is the vegetable a member of the nightshade family (Solanaceae)? -> No\n12. Is the vegetable a member of the allium family (such as onion, garlic, leek, or chives)? -> No\n13. Is the vegetable a member of the cucumber/squash family (Cucurbitaceae)? -> No\n14. Is the vegetable a member of the bean/pea family (Fabaceae)? -> No\n15. Is the vegetable a member of the celery/parsley family (Apiaceae), such as parsley, cilantro, or celery? -> No\n16. Is the vegetable a member of the amaranth family (Amaranthaceae), such as Swiss chard (wait, chard was ruled out), amaranth greens, or spinach relatives? Let's try a different angle. Is the vegetable a member of the purslane family (Portulacaceae)?\nNo, let's stick to standard vegetables. Is the vegetable a member of the amaranth family?\nActually, let's look at what's left. We have leafy greens, not root, not cruciferous, not nightshade, not allium, not cucurbit, not fabaceae, not apiaceae.\nCommon leafy greens: Spinach (No), Lettuce (No), Kale (No), Chard (No), Cabbage (No), Collards (No), Broccoli (No, also not cruciferous? Wait, broccoli IS cruciferous. The user said No to broccoli AND No to \"Is it a cruciferous vegetable\". This implies the target is definitely NOT cruciferous.\nOther leafy greens: Arugula (Rocket), Mustard Greens, Bok Choy (Cruciferous - ruled out), Tatsoi -> No\n17. Is the vegetable arugula (also known as rocket)? -> No\n18. Is the vegetable mustard greens? -> No\n19. Is the vegetable bok choy? -> No\n20. Is the vegetable parsley? -> No"
+}

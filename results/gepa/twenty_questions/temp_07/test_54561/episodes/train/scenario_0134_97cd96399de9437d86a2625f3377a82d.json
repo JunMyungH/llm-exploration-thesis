@@ -1,0 +1,375 @@
+{
+  "run_id": "97cd96399de9437d86a2625f3377a82d",
+  "timestamp_utc": "2026-11-26T21:01:47.711956+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 134,
+  "category": "scientific concept",
+  "target": "Cryogenics",
+  "prompt_mode": "paprika",
+  "candidate_hash": "a6a2af8ce4d0",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 134,
+    "agent_game_scenario": "scientific concept",
+    "env_game_scenario": "Cryogenics",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a scientific concept. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to physics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is this concept related to quantum mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to classical mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to electromagnetism?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to thermodynamics or statistical mechanics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to heat transfer or phase changes?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to entropy?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the Second Law of Thermodynamics?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the definition or calculation of entropy (e.g., Boltzmann's formula or Shannon entropy) rather than a specific physical law or theorem describing its behavior?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the statistical interpretation of entropy (i.e., entropy as a measure of the number of possible microscopic configurations of a system)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the concept of \"Free Energy\" (such as Gibbs or Helmholtz free energy)?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept specifically Gibbs Free Energy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept specifically Helmholtz Free Energy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant temperature?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to Helmholtz Free Energy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant pressure?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant temperature and pressure?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the chemical potential of a component in a mixture?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the total energy of a thermodynamic system?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the concept related to the energy required to remove an electron from a neutral atom or molecule?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a scientific concept, and the correct answer is Cryogenics."
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to physics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is this concept related to quantum mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to classical mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to electromagnetism?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to thermodynamics or statistical mechanics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to heat transfer or phase changes?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to entropy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the Second Law of Thermodynamics?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the definition or calculation of entropy (e.g., Boltzmann's formula or Shannon entropy) rather than a specific physical law or theorem describing its behavior?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the statistical interpretation of entropy (i.e., entropy as a measure of the number of possible microscopic configurations of a system)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the concept of \"Free Energy\" (such as Gibbs or Helmholtz free energy)?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept specifically Gibbs Free Energy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept specifically Helmholtz Free Energy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant temperature?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to Helmholtz Free Energy?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant pressure?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant temperature and pressure?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the chemical potential of a component in a mixture?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the total energy of a thermodynamic system?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the concept related to the energy required to remove an electron from a neutral atom or molecule?\n(Remember the player is trying to guess a scientific concept, and the correct answer is Cryogenics. Reply with Yes or No in relation to Cryogenics.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the concept related to the definition or calculation of entropy (e.g., Boltzmann's formula or Shannon entropy) rather than a specific physical law or theorem describing its behavior? -> No\n10. Is the concept related to the statistical interpretation of entropy (i.e., entropy as a measure of the number of possible microscopic configurations of a system)? -> No\n11. Is the concept related to the concept of \"Free Energy\" (such as Gibbs or Helmholtz free energy)? -> Yes\n12. Is the concept specifically Gibbs Free Energy? -> No\n13. Is the concept specifically Helmholtz Free Energy? -> No\n14. Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant temperature? -> No\n15. Is the concept related to Helmholtz Free Energy? -> No\n16. Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant pressure? -> No\n17. Is the concept related to the maximum useful work possible during a thermodynamic process that is carried out at constant temperature and pressure? -> No\n18. Is the concept related to the chemical potential of a component in a mixture? -> No\n19. Is the concept related to the total energy of a thermodynamic system? -> No\n20. Is the concept related to the energy required to remove an electron from a neutral atom or molecule? -> No"
+}

@@ -1,0 +1,32 @@
+{
+  "ask": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+      "fields": [
+        {
+          "prefix": "Game Rules:",
+          "description": "Fixed original game rules and interaction protocol"
+        },
+        {
+          "prefix": "History:",
+          "description": "Previous questions and environment replies, in order"
+        },
+        {
+          "prefix": "Question:",
+          "description": "Exactly one legal question, with no simulated answer"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "3.4.1",
+      "cloudpickle": "3.1"
+    }
+  }
+}

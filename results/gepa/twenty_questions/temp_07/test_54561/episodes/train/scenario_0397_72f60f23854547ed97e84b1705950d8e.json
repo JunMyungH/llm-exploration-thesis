@@ -1,0 +1,375 @@
+{
+  "run_id": "72f60f23854547ed97e84b1705950d8e",
+  "timestamp_utc": "2026-11-26T20:57:42.841558+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 397,
+  "category": "invention",
+  "target": "Anesthesia",
+  "prompt_mode": "paprika",
+  "candidate_hash": "0bd69960c99c",
+  "candidate_instructions": "Choose the next question in a multi-turn guessing game. Produce one question and then wait for a reply.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 397,
+    "agent_game_scenario": "invention",
+    "env_game_scenario": "Anesthesia",
+    "goal_reached": false,
+    "judge_label": true,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a invention. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for communication?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for computing or data processing?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for transportation or movement of people or goods?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for generating light or illumination?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for cooking or food preparation?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for entertainment or leisure?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for cleaning or hygiene?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for heating or cooling?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for storing or preserving food?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for construction or building?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for measuring or detecting something?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for providing power or energy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention primarily used for medical or health purposes?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a device used for diagnosing or treating patients?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention an imaging device (such as an X-ray machine or MRI)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a device used to monitor vital signs (such as heart rate, blood pressure, or temperature)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a surgical instrument?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a device used to deliver medication or fluids to a patient (such as an IV pump or syringe)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a device used to replace or assist a missing or impaired body part (such as a prosthetic limb or hearing aid)?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the invention a device used to filter or purify blood, such as a dialysis machine?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a invention, and the correct answer is Anesthesia."
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for communication?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for computing or data processing?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for transportation or movement of people or goods?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for generating light or illumination?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for cooking or food preparation?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for entertainment or leisure?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for cleaning or hygiene?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for heating or cooling?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for storing or preserving food?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for construction or building?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for measuring or detecting something?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for providing power or energy?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention primarily used for medical or health purposes?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a device used for diagnosing or treating patients?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention an imaging device (such as an X-ray machine or MRI)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a device used to monitor vital signs (such as heart rate, blood pressure, or temperature)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a surgical instrument?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a device used to deliver medication or fluids to a patient (such as an IV pump or syringe)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a device used to replace or assist a missing or impaired body part (such as a prosthetic limb or hearing aid)?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the invention a device used to filter or purify blood, such as a dialysis machine?\n(Remember the player is trying to guess a invention, and the correct answer is Anesthesia. Reply with Yes or No in relation to Anesthesia.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.2,
+    "environment_goal": false,
+    "judge_label": null,
+    "correct_final_guess": false,
+    "verified_success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: False\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.2000\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the invention primarily used for storing or preserving food? -> No\n10. Is the invention primarily used for construction or building? -> No\n11. Is the invention primarily used for measuring or detecting something? -> No\n12. Is the invention primarily used for providing power or energy? -> No\n13. Is the invention primarily used for medical or health purposes? -> Yes\n14. Is the invention a device used for diagnosing or treating patients? -> Yes\n15. Is the invention an imaging device (such as an X-ray machine or MRI)? -> No\n16. Is the invention a device used to monitor vital signs (such as heart rate, blood pressure, or temperature)? -> No\n17. Is the invention a surgical instrument? -> No\n18. Is the invention a device used to deliver medication or fluids to a patient (such as an IV pump or syringe)? -> No\n19. Is the invention a device used to replace or assist a missing or impaired body part (such as a prosthetic limb or hearing aid)? -> No\n20. Is the invention a device used to filter or purify blood, such as a dialysis machine? -> No"
+}

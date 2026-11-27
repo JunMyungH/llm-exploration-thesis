@@ -1,0 +1,361 @@
+{
+  "run_id": "ac652ba939d547c2a05d4af87dbc648b",
+  "timestamp_utc": "2026-11-26T21:04:20.632380+00:00",
+  "phase": "train",
+  "game": "twenty_questions",
+  "scenario_index": 1113,
+  "category": "book",
+  "target": "All Quiet on the Western Front",
+  "prompt_mode": "paprika",
+  "candidate_hash": "b6ec268afbfd",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a specific entity (thing, person, concept, book, movie, etc.) by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.'\n\n**Critical Strategy for Information Gain and Hypothesis Tracking:**\n\n1.  **Maintain a Dynamic Hypothesis Space**: Before asking a question, explicitly or implicitly evaluate the set of remaining possibilities. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers. If a previous answer was 'No' to a broad category (e.g., 'Is it a superhero film?'), do not ask about specific superhero films or sub-genres of that category unless you are confirming a specific attribute that was previously excluded.\n\n2.  **Maximize Information Gain**: Prioritize questions that split the remaining search space as evenly as possible (binary search strategy). Avoid asking 'low information' questions that eliminate only a tiny fraction of possibilities or ask about very specific entities before narrowing down the domain.\n\n3.  **Avoid Cycling and Redundancy**: Do not cycle through minor variations of the same unproductive hypothesis. For example, if you know the entity is a book, non-fiction, set in Europe, but not in France, Germany, Italy, Russia, or Spain, do not sequentially ask 'Is it set in Portugal?', 'Is it set in Greece?', etc., without first checking if it is a non-European book (which was already excluded) or if the premise itself is flawed. If you have exhausted major geographic or categorical splits, make an educated guess or ask a question that defines a new, high-level attribute (e.g., medium, author nationality, specific award) rather than guessing specific titles prematurely.\n\n4.  **Refine Based on History**: Use the full history of answers to eliminate impossible candidates. If you are stuck, look for attributes that have not been queried yet (e.g., if you've covered genre, era, and location, consider the creator's identity, the work's reception, or specific plot points).\n\n5.  **Guessing**: You may make a guess before reaching 20 questions if you are confident. However, avoid guessing specific titles/names until you have narrowed the domain significantly (e.g., by genre, era, and key attributes).\n\n**Input Format**: You will receive the `TARGET_TYPE` (e.g., 'book', 'movie', 'person') and the `history` of previous questions and answers.\n\n**Output**: Ask only one yes-or-no question. Do not restate the rules. Do not ask multiple questions in one turn.",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1113,
+    "agent_game_scenario": "book",
+    "env_game_scenario": "All Quiet on the Western Front",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 19,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a book. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a novel?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book science fiction?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book fantasy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book a work of historical fiction?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the 20th century or later?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Europe?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the United Kingdom?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Germany?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set during World War II?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set during World War I?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the protagonist German?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set specifically in Berlin?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in the years 1914-1918?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Vienna?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in Munich?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book set in a rural area or a small town rather than a major city?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book *The Blue Angel* (or a story closely associated with it) or is the protagonist a writer or artist?\n\nWait, let's refine. We know:\n- Fiction Novel\n- Historical Fiction\n- Set in Germany, WWI (1914-1918)\n- Not Berlin, Vienna, Munich\n- Rural/small town setting\n- Protagonist is German\n\nThis narrows it down significantly. *All Quiet on the Western Front* is set in the trenches (not rural/small town in the domestic sense, though technically \"the front\"). *A Farewell to Arms* is Italy. *The Tin Drum* is later. *Mephisto* is later. *The Garden of the Finzi-Continis* is Italy/Jews.\n\nLet's check if it's about the Eastern Front or a specific region. Or perhaps it's a very famous one like *All Quiet on the Western Front* but the \"rural\" clue is tricky. Actually, *All Quiet* starts in a school/rural area before going to the front. But is it *set* in a rural area? The question asked \"Is the book set in a rural area...?\""
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the book *All Quiet on the Western Front* by Erich Maria Remarque?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a book, and the correct answer is All Quiet on the Western Front."
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a novel?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book science fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book fantasy?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book a work of historical fiction?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the 20th century or later?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Europe?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the United Kingdom?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Germany?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set during World War II?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set during World War I?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the protagonist German?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set specifically in Berlin?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in the years 1914-1918?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Vienna?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in Munich?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the book set in a rural area or a small town rather than a major city?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book *The Blue Angel* (or a story closely associated with it) or is the protagonist a writer or artist?\n\nWait, let's refine. We know:\n- Fiction Novel\n- Historical Fiction\n- Set in Germany, WWI (1914-1918)\n- Not Berlin, Vienna, Munich\n- Rural/small town setting\n- Protagonist is German\n\nThis narrows it down significantly. *All Quiet on the Western Front* is set in the trenches (not rural/small town in the domestic sense, though technically \"the front\"). *A Farewell to Arms* is Italy. *The Tin Drum* is later. *Mephisto* is later. *The Garden of the Finzi-Continis* is Italy/Jews.\n\nLet's check if it's about the Eastern Front or a specific region. Or perhaps it's a very famous one like *All Quiet on the Western Front* but the \"rural\" clue is tricky. Actually, *All Quiet* starts in a school/rural area before going to the front. But is it *set* in a rural area? The question asked \"Is the book set in a rural area...?\"\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the book *All Quiet on the Western Front* by Erich Maria Remarque?\n(Remember the player is trying to guess a book, and the correct answer is All Quiet on the Western Front. Reply with Yes or No in relation to All Quiet on the Western Front.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8073684210526316,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 19,
+    "max_turns": 20,
+    "valid_ratio": 0.9473684210526315,
+    "unique_ratio": 1.0,
+    "invalid_count": 1,
+    "invalid_turns": [
+      18
+    ],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 19/20\nInvalid question turns: [18]\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8074\n\nEach turn must contain exactly one properly formatted question.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n8. Is the book set in the United Kingdom? -> No\n9. Is the book set in Germany? -> Yes\n10. Is the book set during World War II? -> No\n11. Is the book set during World War I? -> Yes\n12. Is the protagonist German? -> Yes\n13. Is the book set specifically in Berlin? -> No\n14. Is the book set in the years 1914-1918? -> Yes\n15. Is the book set in Vienna? -> No\n16. Is the book set in Munich? -> No\n17. Is the book set in a rural area or a small town rather than a major city? -> Yes\n18. Is the book *The Blue Angel* (or a story closely associated with it) or is the protagonist a writer or artist?\n\nWait, let's refine. We know:\n- Fiction Novel\n- Historical Fiction\n- Set in Germany, WWI (1914-1918)\n- Not Berlin, Vienna, Munich\n- Rural/small town setting\n- Protagonist is German\n\nThis narrows it down significantly. *All Quiet on the Western Front* is set in the trenches (not rural/small town in the domestic sense, though technically \"the front\"). *A Farewell to Arms* is Italy. *The Tin Drum* is later. *Mephisto* is later. *The Garden of the Finzi-Continis* is Italy/Jews.\n\nLet's check if it's about the Eastern Front or a specific region. Or perhaps it's a very famous one like *All Quiet on the Western Front* but the \"rural\" clue is tricky. Actually, *All Quiet* starts in a school/rural area before going to the front. But is it *set* in a rural area? The question asked \"Is the book set in a rural area...?\" -> Yes\n19. Is the book *All Quiet on the Western Front* by Erich Maria Remarque? -> Goal reached."
+}

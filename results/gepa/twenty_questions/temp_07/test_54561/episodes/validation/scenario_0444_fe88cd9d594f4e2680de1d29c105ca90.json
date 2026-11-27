@@ -1,0 +1,311 @@
+{
+  "run_id": "fe88cd9d594f4e2680de1d29c105ca90",
+  "timestamp_utc": "2026-11-26T21:03:45.719397+00:00",
+  "phase": "validation",
+  "game": "twenty_questions",
+  "scenario_index": 444,
+  "category": "person",
+  "target": "Elon Musk",
+  "prompt_mode": "paprika",
+  "candidate_hash": "fdf304a17eac",
+  "candidate_instructions": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing, person, or concept by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you must adapt your questions based on the new information. Do not ask questions that have already been answered or are logically redundant based on previous 'No' answers.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n- **Critical Strategy**: Maintain a mental list of excluded hypotheses and remaining possibilities. Avoid cycling through minor variations of the same unproductive hypothesis. Prioritize questions that split the remaining search space as evenly as possible (high information gain). If you have narrowed it down to a specific domain (e.g., quantum physics), ask broad questions to identify the specific sub-field or phenomenon before guessing the exact term.\n- **Avoid Redundancy and Over-Specificity**: Do not ask questions that are subsets of questions already answered 'Yes' or supersets of questions already answered 'No'. For example, if 'Quantum Mechanics' is confirmed, do not ask about 'Quantum Entanglement' immediately if it was already ruled out or if the search space is still too broad. Instead, focus on distinguishing between major categories within that domain.\n- **Track Exclusions**: Explicitly keep track of what has been ruled out. If you ask 'Is it X?' and the answer is 'No', you must not ask 'Is it not X?' or similar redundant phrasing. If you ask 'Is it a type of Y?' and the answer is 'No', you must not ask 'Is it a type of Z?' where Z is a sibling category to Y if the previous question implied a broader category was excluded.\n- **Final Guessing**: When the search space is sufficiently narrowed (e.g., to a single famous entity or a very small set of likely candidates), make a direct guess. Do not continue asking questions if you have reached the 20th turn without a guess; your last question should be the guess itself.\n- Do not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nThe game starts now. You are trying to guess a [TARGET_TYPE]. Ask your first question!",
+  "game_rules": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 444,
+    "agent_game_scenario": "person",
+    "env_game_scenario": "Elon Musk",
+    "goal_reached": true,
+    "judge_label": true,
+    "success": true,
+    "num_turns": 16,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a person. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a historical figure who died more than 50 years ago?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a fictional character?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a male?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person an actor or actress?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a politician or government official?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a musician or singer?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a professional athlete?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a scientist or inventor?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person a computer scientist or associated with the tech industry?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person known for founding or co-founding a major technology company?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Steve Jobs?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Bill Gates?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Mark Zuckerberg?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Larry Page?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Larry Ellison?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the person Elon Musk?"
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a person, and the correct answer is Elon Musk."
+      },
+      {
+        "role": "user",
+        "content": "Is the person a historical figure who died more than 50 years ago?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a fictional character?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a male?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person an actor or actress?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a politician or government official?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a musician or singer?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a professional athlete?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a scientist or inventor?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person a computer scientist or associated with the tech industry?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person known for founding or co-founding a major technology company?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Steve Jobs?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Bill Gates?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Mark Zuckerberg?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Larry Page?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Larry Ellison?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the person Elon Musk?\n(Remember the player is trying to guess a person, and the correct answer is Elon Musk. Reply with Yes or No in relation to Elon Musk.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": null
+  },
+  "metrics": {
+    "score": 0.8400000000000001,
+    "environment_goal": true,
+    "judge_label": null,
+    "correct_final_guess": true,
+    "verified_success": true,
+    "num_turns": 16,
+    "max_turns": 20,
+    "valid_ratio": 1.0,
+    "unique_ratio": 1.0,
+    "invalid_count": 0,
+    "invalid_turns": [],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "environment_leakage": false
+  },
+  "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: True\nVerified success: True\nTurns: 16/20\nInvalid question turns: []\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.8400\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n5. Is the person a politician or government official? -> No\n6. Is the person a musician or singer? -> No\n7. Is the person a professional athlete? -> No\n8. Is the person a scientist or inventor? -> Yes\n9. Is the person a computer scientist or associated with the tech industry? -> Yes\n10. Is the person known for founding or co-founding a major technology company? -> Yes\n11. Is the person Steve Jobs? -> No\n12. Is the person Bill Gates? -> No\n13. Is the person Mark Zuckerberg? -> No\n14. Is the person Larry Page? -> No\n15. Is the person Larry Ellison? -> No\n16. Is the person Elon Musk? -> Goal reached."
+}
