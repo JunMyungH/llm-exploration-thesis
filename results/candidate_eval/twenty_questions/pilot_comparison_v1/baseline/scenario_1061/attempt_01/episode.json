@@ -1,0 +1,392 @@
+{
+  "timestamp_utc": "2026-11-27T20:59:12.179787+00:00",
+  "configuration_id": "d3faee755a5e984578b99b9b7ceba9f07d2be0994d300eea122b7561fe15b7a7",
+  "phase": "candidate_development",
+  "mode": "baseline",
+  "scenario_index": 1061,
+  "attempt": 1,
+  "target": "Labradorite",
+  "category": "mineral",
+  "candidate_hash": "0bd69960c99c",
+  "episode": {
+    "game": "twenty_questions",
+    "split": "train",
+    "scenario_index": 1061,
+    "agent_game_scenario": "mineral",
+    "env_game_scenario": "Labradorite",
+    "goal_reached": true,
+    "judge_label": false,
+    "success": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "conversation": [
+      {
+        "role": "user",
+        "content": "You are playing a game of 20 Questions. Your goal is to guess the name of a thing or person by asking up to 20 yes-or-no questions. After each question, you will receive an answer: 'Yes' or 'No.' Use the answers provided to refine your guesses.\n\nHere are your instructions:\n- You can ask only yes-or-no questions.\n- After receiving each answer, you should adapt your questions based on the new information.\n- Your goal is to guess the topic in as few questions as possible.\n- If you're confident, you can make a guess before reaching 20 questions.\n\nThe game starts now. You are trying to guess a mineral. Ask your first question!"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral hard enough to scratch glass?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly found in jewelry or as a gemstone?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral diamond?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral quartz?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral ruby?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral sapphire?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral emerald?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral turquoise?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral corundum?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in industrial abrasives or cutting tools?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in the production of glass or ceramics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used as a pigment or in the production of cosmetics?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in the production of cement or concrete?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in electronics or as an insulator?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in the production of steel or as a flux in metallurgy?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in the production of toothpaste or as an abrasive in cleaning products?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly used in the production of cosmetics, such as face powder or eyeshadow?"
+      },
+      {
+        "role": "user",
+        "content": "No"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral commonly found in the Earth's crust and is it a primary component of granite?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "Is the mineral feldspar?"
+      },
+      {
+        "role": "user",
+        "content": "Yes"
+      },
+      {
+        "role": "assistant",
+        "content": "I have correctly guessed the mineral."
+      },
+      {
+        "role": "user",
+        "content": "Goal reached"
+      }
+    ],
+    "env_conversation": [
+      {
+        "role": "system",
+        "content": "You are the environment for a game of 20 Questions. You will be given a topic (e.g., cat, deer, Abraham Lincoln), and your role is to answer 'Yes' or 'No' to questions about the topic. Respond strictly with 'Yes' or 'No' only, based on the truth of the matter. Do not provide any additional information. If the user guesses the correct answer, respond with 'Goal reached.' Enforce a strict match before saying 'Goal reached.', for example, if the user guesses 'Is the occupation Engineer?' and the topic was software engineering, say 'No'. However, if the user guesses 'Is the occupation a type of engineering?', say 'Yes'. Wait for the user's questions and respond accordingly.\n\nFor example:\n- User: 'Is this person alive?'\n- You: 'No'\n- User: 'Is this a living creature?'\n- You: 'Yes'\n\nThe player is trying to guess a mineral, and the correct answer is Labradorite."
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral hard enough to scratch glass?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly found in jewelry or as a gemstone?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral diamond?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral quartz?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral ruby?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral sapphire?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral emerald?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral turquoise?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral corundum?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in industrial abrasives or cutting tools?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in the production of glass or ceramics?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used as a pigment or in the production of cosmetics?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in the production of cement or concrete?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in electronics or as an insulator?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in the production of steel or as a flux in metallurgy?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in the production of toothpaste or as an abrasive in cleaning products?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly used in the production of cosmetics, such as face powder or eyeshadow?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral commonly found in the Earth's crust and is it a primary component of granite?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is the mineral feldspar?\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "I have correctly guessed the mineral.\n(Remember the player is trying to guess a mineral, and the correct answer is Labradorite. Reply with Yes or No in relation to Labradorite.)"
+      },
+      {
+        "role": "assistant",
+        "content": "Goal reached."
+      }
+    ],
+    "judge_conversation": [
+      {
+        "role": "system",
+        "content": "You are an expert judge for the game of 20 questions. You will be given a question asked by the player, and you need to judge if it successfully guesses the correct topic.\n In particular: Check that the player has precisely guessed Labradorite in their question. Reply with <VALID> or <NOTVALID>. Reply with <VALID> if and only if the given question successfully ends the game by guessing the correct mineral, which is: Labradorite, otherwise reply with <NOTVALID>.\n\nExample 1: Topic to Guess: Car\nPlayer: Is the invention a car?\n Answer: <VALID>\n\nExample 2: Topic to Guess: Car\nPlayer: Does the invention have wheels?\nAnswer: <NOTVALID>\n\n Example 3: Topic to Guess: Apple, Inc.\n Player: Does this company produce IPhones? Answer: <NOTVALID>"
+      },
+      {
+        "role": "user",
+        "content": "The conversation begins here: \n\nAgent: I have correctly guessed the mineral.\n\n (End of Agent Turn)\n\nNow judge whether the player has successfully guessed the correct mineral, which is Labradorite in this particular game. Reply with <VALID> only if the player has guessed Labradorite in the question, otherwise reply with <NOTVALID>. Note that guessing a particular characteristics of Labradorite is not enough, the player needs to arrive at the final answer in order for you to reply with <VALID>.\n\nAnswer:"
+      },
+      {
+        "role": "assistant",
+        "content": "<NOTVALID>"
+      }
+    ]
+  },
+  "metrics": {
+    "success": false,
+    "goal_reached": true,
+    "environment_goal": true,
+    "final_judge_label": false,
+    "num_turns": 20,
+    "max_turns": 20,
+    "num_questions": 20,
+    "invalid_count": 1,
+    "invalid_turns": [
+      20
+    ],
+    "repeat_count": 0,
+    "repeated_pairs": [],
+    "gepa_style_reward": 0.19,
+    "feedback": "Game: twenty_questions\nGoal reached: True\nCorrect final guess: False\nVerified success: False\nTurns: 20/20\nInvalid question turns: [20]\nExact repeated questions: 0\nEnvironment leakage: False\nTraining reward: 0.1900\n\nEach turn must contain exactly one properly formatted question.\n\nThe agent did not identify the target. Improve the strategy for choosing informative questions. Track which hypotheses have been excluded by previous answers. Avoid cycling through minor variations of the same unproductive hypothesis.\n\nDo not merely rewrite or restate the fixed game rules. Focus on improving question-selection strategy, information gain, and the use of previous answers.\n\nRecent interactions:\n9. Is the mineral corundum? -> No\n10. Is the mineral commonly used in industrial abrasives or cutting tools? -> No\n11. Is the mineral commonly used in the production of glass or ceramics? -> No\n12. Is the mineral commonly used as a pigment or in the production of cosmetics? -> No\n13. Is the mineral commonly used in the production of cement or concrete? -> No\n14. Is the mineral commonly used in electronics or as an insulator? -> No\n15. Is the mineral commonly used in the production of steel or as a flux in metallurgy? -> No\n16. Is the mineral commonly used in the production of toothpaste or as an abrasive in cleaning products? -> No\n17. Is the mineral commonly used in the production of cosmetics, such as face powder or eyeshadow? -> No\n18. Is the mineral commonly found in the Earth's crust and is it a primary component of granite? -> Yes\n19. Is the mineral feldspar? -> Yes\n20. I have correctly guessed the mineral. -> Goal reached.",
+    "final_question": "I have correctly guessed the mineral.",
+    "strict_success": false,
+    "success_disagreement": false,
+    "premature_stop": false,
+    "strict_reward": 0.19
+  },
+  "strict_judge_conversation": []
+}
